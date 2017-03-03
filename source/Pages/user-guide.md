@@ -1,7 +1,8 @@
 
-#Data Repository User Guide 
+# Data Repository User Guide 
+
 Data Repository Service is a trusted digital repository that ensures long-term data preservation. The Data Repository provides an online data publication service to disclose, share and publish research data. This document is the user guide for depositing data and describes the online deposite workflow on the Data Repository.  
-##Basic Usage###Obtaining AccessTo get access to the repository service you need to login as a registered user. To obtain user credentials you should first send a regitration request via the Login page.
+## Basic Usage### Obtaining AccessTo get access to the repository service you need to login as a registered user. To obtain user credentials you should first send a regitration request via the Login page.
 
 
 ![Alt Image Text](Screenshots/login.png) 
@@ -9,7 +10,7 @@ Data Repository Service is a trusted digital repository that ensures long-term d
 Click the tab "Create new account", provide the required information and click on the "Create new account" button. Your registration request will be approved by SURFsara and then you can login to use the service.
 
 ![Alt Image Text](Screenshots/create_account.png) 
-###Logging inLogin with your user credentials in the [login page of the Data Repository Service] (https://tdr-test.surfsara.nl/user/login).###Preparing data 
+### Logging inLogin with your user credentials in the [login page of the Data Repository Service] (https://tdr-test.surfsara.nl/user/login).### Preparing data 
 
 To prepare data for a deposit you need to consider the following points:
 - **File formats**
@@ -35,7 +36,7 @@ To prepare data for a deposit you need to consider the following points:
  - **Data anonymization**
 Before you upload the files you should check whether they contain privacy-sensitive information within the meaning of the [Dutch Personal Data Protection Act] (http://www.coe.int/t/dghl/standardsetting/dataprotection/national%20laws/NL_DP_LAW.pdf). 
 If you give access to the data, they must be completely anonimyzed. 
-###Depositing data To deposite data, you should login as a registered user. In the main page click on "Deposit now". Depositing data in Repository service is a 6 step process. 
+### Depositing data To deposite data, you should login as a registered user. In the main page click on "Deposit now". Depositing data in Repository service is a 6 step process. 
 
 *  **Step 1: Select and upload files to deposit**
 	
@@ -88,15 +89,15 @@ To find a data or metadata, use the search functionality on the home page. You c
 
   ![Alt Image Text](Screenshots/find_data.png)
 If you have the PID (Persistent Identifer) of the data you can directly search in the [handle server](http://hdl.handle.net/) and get the url to the location of the data.
-###Exporting metadataTo export metadata you should first find the data and then click on the export link on the top-right corner of the metadata pannel. 
+### Exporting metadataTo export metadata you should first find the data and then click on the export link on the top-right corner of the metadata pannel. 
 
 ![Alt Image Text](Screenshots/export_metadata.png)
-###Downloading files You can download single files by going to the data page, selecting the file and click on download. Or you can add more than one files to your basket and then download them at the same time.
+### Downloading files You can download single files by going to the data page, selecting the file and click on download. Or you can add more than one files to your basket and then download them at the same time.
 
 
 ![Alt Image Text](Screenshots/download_single.png)
-##Advanced Usage
-###Metadata schema definitionA metadata schema is a logical plan showing the relationships between metadata fields, normally through establishing rules for the use and management of metadata.
+## Advanced Usage
+### Metadata schema definitionA metadata schema is a logical plan showing the relationships between metadata fields, normally through establishing rules for the use and management of metadata.
 The first question to ask before making a metadata schema is: Is it necessary to create a new metadata schema, or are there already existing metadata schemas which can be adapted for use? We advice to reuse existing schemas. You can find best practices for defining you metadata schema [here] (http://www.niso.org/apps/group_public/download.php/5271/N800R1_Where_to_start_advice_on_creating_a_metadata_schema.pdf).
 
 To define a metadata schema for your data go to your account page. Your current metadata schemas is listed under the Schema part. To create a metadata schema click on "Add Schema".
@@ -106,7 +107,7 @@ To define a metadata schema for your data go to your account page. Your current 
  To define the metadata schema you need to provide a name, description and add the metadata fields to the schema.
  
   ![Alt Image Text](Screenshots/metadata-schema-define.png)
- ###Community/group membershipsTo denine a new group or community or to see the list of current groups and communities that you are member of, go to your account page. Click on "Add groupd" or "Add community" to create a new group or community.
+ ### Community/group membershipsTo denine a new group or community or to see the list of current groups and communities that you are member of, go to your account page. Click on "Add groupd" or "Add community" to create a new group or community.
 
  ![Alt Image Text](Screenshots/group_community.png)
 
@@ -114,33 +115,10 @@ A new page will be open where you need to provide name and description for the g
 
  ![Alt Image Text](Screenshots/group_create.png)
 
-###Download basket 
+### Download basket 
 To be developed (not in the first release).
 
-#Appendix
 
-##Open adata
-Simply making data available – providing access – is often not enough to be allowed to reuse data. The data has to be available in a format and under a license that allows reuse. 
-
-A piece of data or content is open if anyone is free to use, reuse, and redistribute it — subject only, at most, to the requirement to attribute and/or share-alike. (see http://okfn.org/opendata/).
-
-##Linked data
-If, in addition, the data is also available in a linked data format, this results in new possibilities for use. Linked data have a certain structure(3) allowing for technical interoperability of datawsets. This way data from a variety of sources can be easily linked.  
-
-##Data Provinance
-Data provenance is providing a historical record of the data and its origins. It refers to the process of tracing and recording the origins of data and its movement between databases. (see http://db.cis.upenn.edu/DL/fsttcs.pdf).
-
-## DOI
-The digital object identifier is a unique and stable identifier that ensures that a digital object can be permanently found on the World Wide Web, regardless of changes in the URL where the object is found. A central registry ensures that the user of a DOI will be referred to its current location (http://www.datacite.org/). 
-
-##Persistent Identifiers
-A unique code that is coupled to a digital object. With this code, the object can be identified even when the object is moved to a different location. The DOI and the URN:UBN are examples of persistent identifiers.
-
-##Data seal of approval
-An archive holding a Data Seal of Approval (DSA) complies with requirements ensuring that in the future, research data can still be processed in a high-quality and reliable manner. (see http://www.datasealofapproval.org). 
-
-##Linked data
-A term used to describe a recommended best practice for exposing, sharing, and connecting pieces of data, information and knowledge on the Semantic Web using RDF. Linked data refers to data published on the web in such a way that it is machine-readable, that its meaning is explicitly defined, that it is linked to other external data sets, and that in turn it can be linked to from external data sets. (see http://linkeddata.org).
 
 
 
