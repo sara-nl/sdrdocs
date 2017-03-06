@@ -53,8 +53,8 @@ source_suffix = ['.rst', '.md']
 master_doc = 'index'
 
 # General information about the project.
-project = u'TDR Test Documentation'
-copyright = u'2017, TDR Support <helpdesk@surfsara.nl>'
+project = u'SURFsara Data Repository Documentation'
+copyright = u'2017, Data Repository Support <helpdesk@surfsara.nl>'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
