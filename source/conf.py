@@ -54,7 +54,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'SURFsara Data Repository Documentation'
-copyright = u'2017, Data Repository Support <helpdesk@surfsara.nl>'
+copyright = u'2017, SURFsara Data Repository Support <helpdesk@surfsara.nl>'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
