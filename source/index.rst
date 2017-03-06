@@ -1,4 +1,4 @@
-.. TDR Documentation documentation master file, created by
+.. Data Repository Documentation documentation master file, created by
    sphinx-quickstart on Tue Dec 16 11:32:42 2014.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
@@ -7,10 +7,10 @@
 .. _contents:
 
 ******************
-TDR documentation
+Data Repository documentation
 ******************
 
-Welcome to the documentation for using the TDR services at `SURFsara`_. The information in this tutorial will help you get started with the TDR, learn best practices and techniques publishing your data in our infrastructure and stay up-to-date with our system developments. We welcome your comments at helpdesk@surfsara.nl  to help us improve the documentation.
+Welcome to the documentation for using the Data Repository service at `SURFsara`_. The information in this tutorial will help you get started with the Data Repository, learn best practices and techniques publishing your data in our infrastructure and stay up-to-date with our system developments. We welcome your comments at helpdesk@surfsara.nl  to help us improve the documentation.
 
 
 
