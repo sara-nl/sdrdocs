@@ -45,16 +45,7 @@ Advanced Usage
    
    Pages/advanced-usage.md
 
-======        
-FAQ
-======
-
-.. toctree::
-   :maxdepth: 1
-
-   Pages/FAQ.md
-   
-   
+ 
 .. _appendix:
    
 ===============
@@ -66,17 +57,6 @@ Appendix
    
    Pages/appendix.md
 
-
-.. _termsofuse:
-
-===================================
-Terms of Use
-===================================
-
-.. toctree::
-   :maxdepth: 1
-
-   Pages/terms-of-use.md
 
 
 .. _best-practices:
