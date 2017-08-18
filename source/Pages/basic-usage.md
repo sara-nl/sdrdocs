@@ -1,14 +1,28 @@
-
 # Basic Usage
-## Obtaining AccessTo get access to the repository service you need to login as a registered user. To obtain user credentials you should first send a regitration request via the Login page.
+
+This page provide information on the basic usage of the data repository and how to obtain an account for using the service.
+It also describes the online deposite workflow on the Data Repository.
 
 
-![Alt Image Text](Screenshots/login.png) 
+## Basics
+- [Obtaining Access](#obtaining-access)
+- [Logging in](#logging-in)
+- [Preparing data](#preparing-data)
+- [Depositing data](#depositing-data)
+- [Finding datasets](#finding-data)
+- [Exporting metadata](#exporting-metadata)
+- [Downloading files](#downloading-files)
+
+## <a name="obtaining-access"></a> Obtaining AccessTo get access to the repository service you need to login as a registered user. To obtain user credentials you should first send a regitration request via the Login page.
+
+<img src="Screenshots/login.png" style="max-width:100%">
+
+<!--![Alt Image Text](Screenshots/login.png) -->
 
 Click the tab "Create new account", provide the required information and click on the "Create new account" button. Your registration request will be approved by SURFsara and then you can login to use the service.
 
-![Alt Image Text](Screenshots/create_account.png) 
-## Logging inLogin with your user credentials in the [login page of the Data Repository Service](https://tdr-test.surfsara.nl/user/login).## Preparing data 
+<img src="Screenshots/create_account.png" style="max-width:100%">
+## <a name="logging-in"></a> Logging inLogin with your user credentials in the [login page of the Data Repository Service](https://tdr-test.surfsara.nl/user/login).## <a name="preparing-data"></a> Preparing data 
 
 To prepare data for a deposit you need to consider the following points:
 - **File formats**
@@ -34,7 +48,7 @@ To prepare data for a deposit you need to consider the following points:
  - **Data anonymization**
 Before you upload the files you should check whether they contain privacy-sensitive information within the meaning of the [Dutch Personal Data Protection Act](http://www.coe.int/t/dghl/standardsetting/dataprotection/national%20laws/NL_DP_LAW.pdf). 
 If you give access to the data, they must be completely anonimyzed. 
-## Depositing data To deposite data, you should login as a registered user. In the main page click on "Deposit now". Depositing data in Repository service is a 6 step process. 
+## <a name="depositing-data"></a> Depositing data To deposite data, you should login as a registered user. In the main page click on "Deposit now". Depositing data in Repository service is a 6 step process. 
 
 *  **Step 1: Select and upload files to deposit**
 	
@@ -81,15 +95,15 @@ If you give access to the data, they must be completely anonimyzed.
 
 	In this page you see the deposit overview. You can finalize the deposit by clicking the complete button.
 	
-	 ![Alt Image Text](Screenshots/deposit_step6.png)		## Finding datasets
+	 ![Alt Image Text](Screenshots/deposit_step6.png)		## <a name="finding-data"></a> Finding datasets
 To find a data or metadata, use the search functionality on the home page. You can also see the latest deposits on the the top-right pannel in your homepage. 
 
   ![Alt Image Text](Screenshots/find_data.png)
 If you have the PID (Persistent Identifer) of the data you can directly search in the [handle server](http://hdl.handle.net/) and get the url to the location of the data.
-## Exporting metadataTo export metadata you should first find the data and then click on the export link on the top-right corner of the metadata pannel. 
+## <a name="exporting-metadata"></a> Exporting metadataTo export metadata you should first find the data and then click on the export link on the top-right corner of the metadata pannel. 
 
 ![Alt Image Text](Screenshots/export_metadata.png)
-## Downloading files You can download single files by going to the data page, selecting the file and click on download. Or you can add more than one files to your basket and then download them at the same time.
+## <a name="downloading-files"></a> Downloading files You can download single files by going to the data page, selecting the file and click on download. Or you can add more than one files to your basket and then download them at the same time.
 
 
 ![Alt Image Text](Screenshots/download_single.png)
