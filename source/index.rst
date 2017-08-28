@@ -25,6 +25,7 @@ General
    :maxdepth: 1
    
    Pages/general.md
+   Pages/obtain-access.md
 
 =======
 Basic Usage
