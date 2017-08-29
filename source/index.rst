@@ -46,6 +46,19 @@ Advanced Usage
    
    Pages/advanced-usage.md
 
+
+.. _best-practices:
+
+==============
+Best practices 
+==============
+
+.. toctree::
+   :maxdepth: 1
+   
+   Pages/best-practices.md
+
+
  
 .. _appendix:
    
@@ -60,19 +73,8 @@ Appendix
 
 
 
-.. _best-practices:
-
-==============
-Best practices 
-==============
-
-.. toctree::
-   :maxdepth: 1
-   
-   Pages/best-practices.md
-
-
 .. _documentation-howto:
+
 ==============
 Documentation How-to 
 ==============
