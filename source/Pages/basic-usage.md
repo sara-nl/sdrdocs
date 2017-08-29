@@ -5,32 +5,32 @@ It also describes the online deposite workflow on the Data Repository.
 
 
 ## Basics
-- [Obtaining Access](#obtaining-access)
 - [Logging in](#logging-in)
 - [Homepage](#homepage)
-- [Preparing data](#preparing-data)
 - [Depositing data](#depositing-data)
 - [Finding datasets](#finding-data)
 - [Exporting metadata](#exporting-metadata)
 - [Downloading files](#downloading-files)
 
-## <a name="obtaining-access"></a> Obtaining AccessTo get access to the repository service you need to login as a registered user. To obtain user credentials you should first send a regitration request via the Login page.
+<!--## <a name="obtaining-access"></a> Obtaining AccessTo get access to the repository service you need to login as a registered user. To obtain user credentials you should first send a regitration request via the Login page.
 
-<!-- <img src="Screenshots/login.png" style="max-width:100%"> -->
-
+<img src="Screenshots/login.png" style="max-width:100%">
 ![Alt Image Text](Screenshots/login.png) 
 
 Click the tab "Create new account", provide the required information and click on the "Create new account" button. Your registration request will be approved by SURFsara and then you can login to use the service.
 
 ![Alt Image Text](Screenshots/create_account.png) 
 
-<!--  <img src="Screenshots/create_account.png" style="max-width:100%"> -->
+<img src="Screenshots/create_account.png" style="max-width:100%"> 
+
+-->
 
 ## <a name="logging-in"></a> Logging inLogin with your user credentials in the [login page of the Data Repository Service](https://tdr-test.surfsara.nl/user/login).## <a name="homepage"></a> HomepageAfter logging in to your account, you will be redirected to your homepage where you can quickly deposit or create collections of data.
 
 **Deposit**
 
-**Collection**On the right you can see the latest deposits an collection created on the data repository.## <a name="preparing-data"></a> Preparing data 
+**Collection**On the right you can see the latest deposits an collection created on the data repository.
+<!--## <a name="preparing-data"></a> Preparing data 
 
 To prepare data for a deposit you need to consider the following points:
 - **File formats**
@@ -56,7 +56,7 @@ To prepare data for a deposit you need to consider the following points:
  - **Data anonymization**
 Before you upload the files you should check whether they contain privacy-sensitive information within the meaning of the [Dutch Personal Data Protection Act](http://www.coe.int/t/dghl/standardsetting/dataprotection/national%20laws/NL_DP_LAW.pdf). 
 If you give access to the data, they must be completely anonimyzed. 
-## <a name="depositing-data"></a> Depositing data To deposite data, you should login as a registered user. In the main page click on "Deposit now". Depositing data in Repository service is a 6 step process. 
+-->## <a name="depositing-data"></a> Depositing data To deposite data, you should login as a registered user. In the main page click on "Deposit now". Depositing data in Repository service is a 6 step process. 
 
 *  **Step 1: Select and upload files to deposit**
 	
