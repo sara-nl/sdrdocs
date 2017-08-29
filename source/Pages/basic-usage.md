@@ -8,9 +8,10 @@ It also describes the online deposite workflow on the Data Repository.
 - [Logging in](#logging-in)
 - [Homepage](#homepage)
 - [Depositing data](#depositing-data)
+- [Downloading data](#downloading-data)
 - [Finding datasets](#finding-data)
 - [Exporting metadata](#exporting-metadata)
-- [Downloading files](#downloading-files)
+
 
 <!--## <a name="obtaining-access"></a> Obtaining AccessTo get access to the repository service you need to login as a registered user. To obtain user credentials you should first send a regitration request via the Login page.
 
@@ -25,7 +26,9 @@ Click the tab "Create new account", provide the required information and click o
 
 -->
 
-## <a name="logging-in"></a> Logging inLogin with your user credentials in the [login page of the Data Repository Service](https://tdr-test.surfsara.nl/user/login).## <a name="homepage"></a> HomepageAfter logging in to your account, you will be redirected to your homepage where you can quickly deposit or create collections of data.
+## <a name="logging-in"></a> Logging inLogin with your user credentials in the [Login](https://tdr-test.surfsara.nl/user/login) page of the Data Repository Service.
+
+If you do not have access, go to [Obtaining Access](obtain-access.md) page for more information.## <a name="homepage"></a> HomepageAfter logging in to your account, you will be redirected to your homepage where you can quickly deposit or create collections of data.
 
 **Deposit**
 
@@ -103,7 +106,12 @@ If you give access to the data, they must be completely anonimyzed.
 
 	In this page you see the deposit overview. You can finalize the deposit by clicking the complete button.
 	
-	 ![Alt Image Text](Screenshots/deposit_step6.png)		## <a name="finding-data"></a> Finding datasets
+	 ![Alt Image Text](Screenshots/deposit_step6.png)
+	 
+## <a name="downloading-data"></a> Downloading data You can download single files by going to the data page, selecting the file and click on download. Or you can add more than one files to your basket and then download them at the same time.
+
+
+![Alt Image Text](Screenshots/download_single.png)		## <a name="finding-data"></a> Finding datasets
 To find a data or metadata, use the search functionality on the home page. You can also see the latest deposits on the the top-right pannel in your homepage. 
 
   ![Alt Image Text](Screenshots/find_data.png)
@@ -111,7 +119,4 @@ To find a data or metadata, use the search functionality on the home page. You c
 ## <a name="exporting-metadata"></a> Exporting metadataTo export metadata you should first find the data and then click on the export link on the top-right corner of the metadata pannel. 
 
 ![Alt Image Text](Screenshots/export_metadata.png)
-## <a name="downloading-files"></a> Downloading files You can download single files by going to the data page, selecting the file and click on download. Or you can add more than one files to your basket and then download them at the same time.
 
-
-![Alt Image Text](Screenshots/download_single.png)
