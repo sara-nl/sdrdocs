@@ -7,8 +7,8 @@ There is a direct connection between the data repository service and other SURFs
 
 This document is the user guide for basic and advanced usage of the data repository service and also provide best practicie in preparing your data and using the service.
 
-- [Basic Usage](basic-usage.md)
-- [Advanced Usage](advanced-usage.md)
-- [Best Practices](best-practices.md)
-- [Appendix](appendix.md)
+- [Basic Usage](Pages/basic-usage.md)
+- [Advanced Usage](Pages/advanced-usage.md)
+- [Best Practices](Pages/best-practices.md)
+- [Appendix](Pages/appendix.md)
 

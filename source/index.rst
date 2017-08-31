@@ -27,6 +27,9 @@ General
    Pages/general.md
    Pages/obtain-access.md
 
+
+.. _basic-usage:
+
 =======
 Basic Usage
 =======
@@ -36,6 +39,8 @@ Basic Usage
    
    Pages/basic-usage.md
 
+
+.. _advance-usage:
 
 =======
 Advanced Usage
