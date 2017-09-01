@@ -5,29 +5,14 @@ It also describes the online deposite workflow on the Data Repository.
 
 
 ## Basics
+
 - [Logging in](#logging-in)
 - [Homepage](#homepage)
 - [Preparing your data](#preparing-data)
 - [Depositing data](#depositing-data)
 - [Downloading data](#downloading-data)
 - [Finding datasets](#finding-data)
-- [Exporting metadata](#exporting-metadata)
-
-
-<!--## <a name="obtaining-access"></a> Obtaining AccessTo get access to the repository service you need to login as a registered user. To obtain user credentials you should first send a regitration request via the Login page.
-
-<img src="Screenshots/login.png" style="max-width:100%">
-![Alt Image Text](Screenshots/login.png) 
-
-Click the tab "Create new account", provide the required information and click on the "Create new account" button. Your registration request will be approved by SURFsara and then you can login to use the service.
-
-![Alt Image Text](Screenshots/create_account.png) 
-
-<img src="Screenshots/create_account.png" style="max-width:100%"> 
-
--->
-
-## <a name="logging-in"></a> Logging inLogin with your user credentials in the [Login](https://tdr-test.surfsara.nl/user/login) page of the Data Repository Service.
+- [Exporting metadata](#exporting-metadata)## <a name="logging-in"></a> Logging inLogin with your user credentials in the [Login](https://tdr-test.surfsara.nl/user/login) page of the Data Repository Service.
 
 If you do not have access, go to [Obtaining Access](obtain-access.md) page for more information.## <a name="homepage"></a> HomepageAfter logging in to your account, you will be redirected to your homepage where you can quickly deposit or create collections of data.
 
