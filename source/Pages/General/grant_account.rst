@@ -4,26 +4,31 @@
 How to get access
 *****************
 
-In this page you will find general information about getting access to the Life Science Grid and the National Dutch Grid infrastructure:
+In this page you will find general information about getting access to the SURFsara Data Repository:
 
 .. contents:: 
-    :depth: 4
+    :depth: 1
 
 
-.. _access-local-lsg:
+.. _obtain-account:
 
 ==============================
-Local access to an LSG cluster
+How to obtain an account
 ==============================
 
-Granting local access to a Life Science Grid (LSG) cluster enables you:
+To get access to the repository service you need to login as a registered user. To obtain user credentials you should first send a regitration request via the Login page.
 
-* submitting jobs (:ref:`pbs`) jobs directly to your local cluster
-* the possibility to scale up to other LSG clusters (see :ref:`access-grid`) 
+<!-- <img src="Screenshots/login.png" style="max-width:100%"> -->
 
-If your research applies to one of the life science disciplines and your institute hosts a LSG cluster (see :ref:`lsg-clusters`), you are eligible to obtain an account on your local LSG cluster.
+![Alt Image Text](Screenshots/login.png) 
 
-To get an account on a local user interface, please send a request to your Designated Site Admin (see :ref:`lsg-dsa`) or contact us at helpdesk@surfsara.nl.
+Click the tab "Create new account", provide the required information and click on the "Create new account" button. Your registration request will be approved by SURFsara and then you can login to use the service.
+
+![Alt Image Text](Screenshots/create_account.png)
+
+<img src="Screenshots/create_account.png" style="max-width:100%">
+
+
 
 
 .. _access-grid:
@@ -42,39 +47,7 @@ Researchers at SURF-affiliated institutes can apply for compute and storage capa
 Please contact us at helpdesk@surfsara.nl for any inquiry on our possibilities.
 
 
-.. _quotas:
-
-Estimate your resource needs
-============================
-
-When you request to use the Grid you do so in the context of a project. A project is set to solve a problem, defined as some goals that you want to achieve, which includes a plan on how you will achieve those goals. For each project a suitable amount of resources will be allocated. You can work together with several people in the same project and using the same resource allocation. 
-
-In general, each project resource allocation involves: 
-
-* an amount of compute time, measured in core·hours
-* an amount of storage space, for disk or tape or both
-* a start and end date for your project
-
-In order for us to make a suitable allocation for a project, we need to know what your goals are and how you want to achieve those goals. That is why it is important for you to understand how to estimate the resources for your project.
-
-.. sidebar:: Not sure how to calculate your resource requirements?
-	
-	Contact us at helpdesk@surfsara.nl and we can work together on estimating the resources for running your computation.
-
-For a proper estimation of resources requirements it is best to start with a few test runs of the code (if existing) on another system (e.g.: your laptop). The outcome of such tests will in many cases be sufficient to derive a total requirement for your larger-scale production runs. Sometimes a more elaborate process is needed to come to an estime, for example if the code does not exist yet of if changes to the existing code are still pending. Ideally you have been running a few representative samples of your runs before you file a resource request, in order to have some concrete information ready about the resources needed by your jobs, such as: 
-
-* how long it takes to run a representative input scenario
-* how much space you need to store input, output and intermediate data
-* what the software requirements are (required software tools, libraries, compilers, etc.)
-* how many scenarios (jobs) you need to run for a complete analysis
-
-In case you don't know how to prepare such an inventory, we would be happy to assist you with that. 
 
 
-.. Links:
+To get access to the repository service you need to login as a registered user. To obtain user credentials you should first send a regitration request via the Login page.
 
-.. _`SURFsara helpdesk`: https://www.surf.nl/en/about-surf/contact/helpdesk-surfsara-services/index.html
-
-.. _`Access Grid`: https://www.surf.nl/en/services-and-products/grid/access/index.html
-
-.. _`SURFsara application form`: https://e-infra.surfsara.nl/
