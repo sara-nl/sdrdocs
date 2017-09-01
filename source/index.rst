@@ -14,8 +14,9 @@ Welcome to the documentation for using the Data Repository service at `SURFsara`
 
 
 
-
 .. _userguide:
+
+.. _general:
 
 =======
 General
@@ -24,8 +25,8 @@ General
 .. toctree::
    :maxdepth: 1
    
-   Pages/general.md
-   Pages/obtain-access.md
+   Pages/General/about_the_data_repository
+   Pages/General/grant_account
 
 
 .. _basic-usage:
