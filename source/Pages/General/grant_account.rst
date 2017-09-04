@@ -19,7 +19,6 @@ How to obtain an account
 To get access to the repository service you need to login as a registered user. To obtain user credentials you should first send a registration request via the Login page.
 
 .. image:: figures/login.png
-   :scale: 50 %
    :align: left
 
 
