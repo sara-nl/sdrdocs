@@ -23,3 +23,10 @@ There is a direct connection between the data repository service and other SURFs
 This document is the user guide for basic and advanced usage of the data repository service and also provide best practicie in preparing your data and using the service.
 
 
+.. _data:
+
+====================
+Suitable for what data
+====================
+
+The Data Repository is suitable for publishing very large datasets.

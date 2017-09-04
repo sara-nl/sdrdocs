@@ -23,7 +23,7 @@ General
 =======
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    
    Pages/General/about_the_data_repository
    Pages/General/grant_account
