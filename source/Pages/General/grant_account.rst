@@ -18,13 +18,13 @@ How to obtain an account
 
 To get access to the repository service you need to login as a registered user. To obtain user credentials you should first send a registration request via the Login page.
 
-.. image:: Screenshots/login.png
+.. image:: login.png
 
 
 Click the tab "Create new account", provide the required information and click on the "Create new account" button. Your registration request will be approved by SURFsara and then you can login to use the service.
 
 
-.. image:: Screenshots/Screenshots/create_account.png
+.. image:: create_account.png
 
 
 
