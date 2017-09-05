@@ -23,111 +23,36 @@ If you do not have access, go to [Obtaining Access](obtain-access) page for more
 
 
 	
-To run your application on the Grid you need to describe its requirements in a specific language called **job description language** (JDL). This is similar to the information that we need to specify when we run jobs using a batch scheduling system like :ref:`pbs`, although it is slightly more complex as we are now scheduling jobs across multiple sites.
 
-Except for the application requirements, you also need to specify in the :abbr:`JDL (Job Description Language)` the content of the *input/output sandboxes*. These sandboxes allow you to transfer data to or from the Grid. The input sandbox contains all the files that you want to send with your job to the worker node, like e.g. a script that you want executed. The output sandbox contains all the files that you want to have transferred back to the :abbr:`UI (User Interface)`. 
 
-.. note:: The amount of data that you can transfer using the sandboxes is very limited, in the order of a few megabytes (less than **100MB**). This means that you should normally limit the input sandbox to a few script files and the output sandbox to the stderr and stdout files.
-
-Once you have the :abbr:`JDL (Job Description Language)` file ready, you can submit it to multiple clusters with ``glite-*`` commands. The Workload Management System (WMS) will schedule your job on a Grid worker node. The purpose of WMS is to distribute and manage tasks across computing resources. More specifically, the WMS will accept your job, assign it to the most appropriate Computing Element (CE), record the job status and retrieve the output.
-
-The following animations illustrate the Grid lifecycle as described above:
-
-* `Grid WMS animation`_
-* `Grid job status animation`_
-
-.. _startgridsession:
+.. _homepage:
 
 ================
-StartGridSession
+Homepage
 ================
 
-Before submitting your first Grid job, you need to create a *proxy* from your certificate. This has a short lifetime and prevents you from passing along your personal certificate to the Grid. The job will keep a copy of your proxy and pass it along to the Worker Node.
+After logging in to your account, you will be redirected to your homepage where you can quickly deposit or create collections of data.
 
-This section will show you how to create a valid proxy:
+**Deposit**
 
-* Log in to your :abbr:`UI (User Interface)` account:
+**Collection**On the right you can see the latest deposits an collection created on the data repository.	
 
-  .. code-block:: console
-
-     $ssh homer@ui.grid.sara.nl # replace "homer" with your username
-
-* Create a proxy with the following command and provide your Grid certificate password when prompted:
-
-  .. code-block:: console
-
-     $startGridSession lsgrid  #replace lsgrid with your VO
-     
-  Alternatively, you might have to login to a VO group. In that case, the syntax is as follows:
-  
-  .. code-block:: console
-  
-    $startGridSession lsgrid:/lsgrid/vo_group #replace both the 'lsgrid' words with your VO and 'vo_group' with the name of your VO group
-
-  You should see a similar output displayed in your terminal:
-
-  .. code-block:: console
-
-	Now starting...
-	Please enter your GRID password:
-	voms-proxy-init -voms lsgrid --valid 168:00 -pwstdin
-	Contacting voms.grid.sara.nl:30018 [/O=dutchgrid/O=hosts/OU=sara.nl/CN=voms.grid.sara.nl] "lsgrid"...
-	Remote VOMS server contacted successfully.
-
-	Created proxy in /tmp/x509up_u39111.
-
-	Your proxy is valid until Tue Jan 11 09:31:56 CET 2016
-	Your identity: /O=dutchgrid/O=users/O=sara/CN=Homer Simpson
-	Creating proxy ..................................................... Done
-	Proxy Verify OK
-	Your proxy is valid until: Tue Jan 11 09:31:56 2016
-	A proxy valid for 168 hours (7.0 days) for user /O=dutchgrid/O=users/O=sara/CN=Homer Simpson now exists on px.grid.sara.nl.
-	Your delegation ID is: homer
-
-.. note:: What does the startGridSession script actually do?
-
-	* It generates a *local proxy* ``x509up_uXXX`` in the :abbr:`UI (User Interface)` ``/tmp/`` directory
-	* It uploads this proxy to Myproxy server
-	* It delegates the proxy to the :abbr:`WMS (Workload Management System)` with your user name as the delegation ID (DID)
-
-	If you want to know more, see the advanced section about :ref:`grid-authentication`.
-
-And now you are ready to submit jobs to the Grid! Or copy data from and to the Grid.
-	
-
-.. _jdl:
+.. _prepare_data:
 
 ===============================	
-Describe your job in a JDL file
+Preparing data
 ===============================
 
-To submit a Grid job you must describe this in a plain text file, called :abbr:`JDL (Job Description Language)`. Optionally, you can check the Computing Elements (CEs) that this job may run on. The JDL file will pass the details of your job to the :abbr:`WMS (Workload Management System)`.
-
-.. warning:: Make sure you have started your session and created already a :ref:`valid proxy <startgridsession>`. 
-
-* Log in to your User Interface. 
-* Create a file with the following content describing the job requirements. Save it as ``simple.jdl``: 
-
-  .. code-block:: cfg
-	:linenos:
-	
-	Type = "Job";
-	JobType = "Normal";
-	Executable = "/bin/hostname";
-	Arguments = "-f";
-	StdOutput = "simple.out";
-	StdError = "simple.err";
-	OutputSandbox = {"simple.out","simple.err"}; 
-
-This job involves no large input or output files. It will return to the user the hostname of the Worker Node that the job will land on. This is specified as the ``StdOutput`` file ``simple.out`` declared in the ``OutputSandbox`` statement.
+To prepare data for a deposit there are some best practices for the file format, file size, metadata, data documentation and organisation. For more information, visit the [Best Practices](best-practices.md) page.
 
 
 .. _job-match:
 
-Job list match
+==============
+Depositing data
 ==============
 
-Before actually submitting the job, you can optionally check the matching Computing Elements that satisfy your job description. It does not guarantee anything about the :abbr:`CE (Compute Element)` load, just matches your :abbr:`JDL (Job Description Language)` criteria with the available VO resources:
+To deposite data, you should login as a registered user. In the main page click on "Deposit now". Depositing data in Repository service is a 6 step process. 
 
 .. code-block:: console
 
