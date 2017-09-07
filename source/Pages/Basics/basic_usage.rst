@@ -10,15 +10,15 @@ This page provides information on the basic usage of the data repository. It als
     :depth: 4
 
 
-.. _logging_in:
+.. _log-in:
 
 ==================
 Logging in
 ==================
 
-Login with your user credentials in the `Login <https://tdr-test.surfsara.nl/user/login>`_ page of the Data Repository Service.
+Login with your user credentials in the `Login`_ page of the Data Repository Service.
 
-If you do not have access, go to [Obtaining Access](obtain-access) page for more information.
+If you do not have access, go to :ref:`Obtaining Access <get-access>` page for more information.
 
 
 
@@ -37,7 +37,9 @@ After logging in to your account, you will be redirected to your homepage where 
 
 **Collection**On the right you can see the latest deposits an collection created on the data repository.	
 
-.. _prepare_data:
+
+
+.. _prepare-data:
 
 ===============================	
 Prepare data
@@ -46,7 +48,7 @@ Prepare data
 To prepare data for a deposit there are some best practices for the file format, file size, metadata, data documentation and organisation. For more information, visit the [Best Practices](best-practices.md) page.
 
 
-.. _job-match:
+.. _deposit-data:
 
 ==============
 Deposit data
@@ -62,7 +64,7 @@ To deposit data, you should login as a registered user. In the main page click o
 * :ref:`Status tracking <job-status>`
 * :ref:`Output retrieval <job-output>`
 
-.. _download_data:
+.. _download-data:
 
 ==========================
 Download data
@@ -71,7 +73,7 @@ Download data
 You can download single files by going to the data page, selecting the file and click on download. Or you can add more than one files to your basket and then download them at the same time.
 
 
-.. _find_data:
+.. _find-data:
 
 ====================
 Find data
@@ -92,11 +94,10 @@ Export Metadata
 
 To export metadata you should first find the data and then click on the export link on the top-right corner of the metadata pannel. 
 
-![Alt Image Text](Screenshots/export_metadata.png)
-
+.. image:: ../Screenshots/export_metadata.png
 
 
 .. Links:
 
-.. _`Grid WMS animation`: http://web.grid.sara.nl/mooc/animations/wms.html
+.. _`Login`: https://tdr-test.surfsara.nl/user/login
 .. _`Grid job status animation`: http://web.grid.sara.nl/mooc/animations/wms_with_status.html 

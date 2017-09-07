@@ -1,4 +1,4 @@
-.. _grant-access:
+.. _get-access:
 
 *****************
 How to get access
