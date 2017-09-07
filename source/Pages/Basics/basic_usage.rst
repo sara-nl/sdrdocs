@@ -18,7 +18,7 @@ Logging in
 
 Login with your user credentials in the `Login`_ page of the Data Repository Service.
 
-If you do not have access, go to :ref:`Obtaining Access <general>` page for more information.
+If you do not have access, go to :ref:`Obtaining Access <get-access>` page for more information.
 
 
 
