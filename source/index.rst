@@ -13,9 +13,6 @@ SURFsara Data Repository Documentation
 Welcome to the documentation for using the Data Repository service at `SURFsara`_. The information in this tutorial will help you get started with the Data Repository, learn best practices and techniques publishing your data in our infrastructure and stay up-to-date with our system developments. We welcome your comments at helpdesk@surfsara.nl  to help us improve the documentation.
 
 
-
-.. _userguide:
-
 .. _general:
 
 =======
@@ -41,7 +38,7 @@ Basic Usage
    Pages/Basics/basic_usage
 
 
-.. _advance-usage:
+.. _advanced-usage:
 
 =======
 Advanced Usage
