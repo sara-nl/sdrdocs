@@ -16,16 +16,16 @@ In this page you will find general information about getting access to the SURFs
 Obtain an account
 ==============================
 
-To get access to the repository service you need to login as a registered user. To obtain user credentials you should first send a registration request via the Login page.
+To be able to use the repository service you need to login as a registered user. To obtain user credentials you should first send a registration request via the Login page. Select Login from the top right menu.
 
-.. image:: Images/login.png
+.. image:: ../Screenshots/login.png
    :align: left
 
 
 Click the tab "Create new account", provide the required information and click on the "Create new account" button. Your registration request will be approved by SURFsara and then you can login to use the service.
 
 
-.. image:: Images/create_account.png
+.. image:: ../Screenshots/create_account.png
 
 
 

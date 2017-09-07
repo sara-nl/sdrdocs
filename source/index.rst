@@ -23,7 +23,7 @@ General
    :maxdepth: 2
    
    Pages/General/about_the_data_repository
-   Pages/General/grant_access
+   Pages/General/get_access
 
 
 .. _basic-usage:

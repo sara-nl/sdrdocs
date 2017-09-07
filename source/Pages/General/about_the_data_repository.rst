@@ -20,23 +20,14 @@ SURFsara Data Repository Service is a trusted digital repository that ensures lo
 
 There is a direct connection between the data repository service and other SURFsara services such as the Data Archive. The data that you publish in the data repository will eventually end up on the data archive for long-term storage and preservation.
 
-This document is the user guide for basic and advanced usage of the data repository service and also provide best practicie in preparing your data and using the service.
+This document is the user guide for basic and advanced usage of the data repository service and also provide best practice in preparing your data and using the service.
 
 
-.. _get-access:
+.. _what-data:
 
 ====================
-How to get access
+For what data
 ====================
 
-To get access to the repository service you need to login as a registered user. To obtain user credentials you should first send a registration request via the Login page.
-
-.. image:: ../Screenshots/login.png
-   :align: left
-
-
-Click the tab "Create new account", provide the required information and click on the "Create new account" button. Your registration request will be approved by SURFsara and then you can login to use the service.
-
-
-.. image:: ../Screenshots/create_account.png
+The Data Repository service is suitable for publishing large datasets. 
 
