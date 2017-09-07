@@ -73,7 +73,7 @@ Find data
 To find a data or metadata, use the search functionality on the home page. You can also see the latest deposits on the the top-right pannle in your homepage. 
 
 
-.. image:: ../Images/find_data.png
+.. image:: ../Screenshots/find_data.png
 
 If you have the PID (Persistent Identifier) of the data you can directly search in the `Handle Server`_ and get the url to the location of the data.
 
@@ -85,7 +85,7 @@ Export Metadata
 
 To export metadata you should first find the data and then click on the export link on the top-right corner of the metadata pannle. 
 
-.. image:: ../Images/export_metadata.png
+.. image:: ../Screenshots/export_metadata.png
 
 
 .. Links:
