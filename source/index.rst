@@ -50,7 +50,7 @@ Advanced Usage
    Pages/advanced-usage.md
 
 
-.. _best-practices:
+.. _practices:
 
 ==============
 Best practices 
@@ -59,7 +59,7 @@ Best practices
 .. toctree::
    :maxdepth: 1
    
-   Pages/Practices/best-practices.rst
+   Pages/Practices/best_practices.rst
 
 
  

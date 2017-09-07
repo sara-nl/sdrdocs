@@ -83,7 +83,7 @@ To find a data or metadata, use the search functionality on the home page. You c
 Export Metadata
 ==========
 
-To export metadata you should first find the data and then click on the export link on the top-right corner of the metadata pannel. 
+To export metadata you should first find the data and then click on the export link on the top-right corner of the metadata pannle. 
 
 .. image:: Images/export_metadata.png
 
