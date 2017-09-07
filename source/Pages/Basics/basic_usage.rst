@@ -28,11 +28,11 @@ If you do not have access, go to :ref:`How to get access <get-access>` page for 
 Homepage
 ================
 
-After you login to your account, you will be redirected to your homepage where you can quickly deposit data or find data to download. or create collections of data.
+After you login to your account, you will be redirected to your homepage where you can quickly deposit data, find data to download or create collections of data.
 
-**Deposit**
+**Deposit** is a 
 
-**Collection**On the right you can see the latest deposits  data or find data to download. an collection created on the data repository.	
+**Collection**On the right you can see the latest deposits on the data repository.	
 
 
 
