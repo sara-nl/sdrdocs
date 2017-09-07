@@ -18,7 +18,7 @@ Logging in
 
 Login with your user credentials in the `Login`_ page of the Data Repository Service.
 
-If you do not have access, go to :ref:`Obtaining Access <../General/grant-access>` page for more information.
+If you do not have access, go to :ref:`Obtaining Access <../General/grant-access.rst>` page for more information.
 
 
 
@@ -57,12 +57,6 @@ Deposit data
 To deposit data, you should login as a registered user. In the main page click on "Deposit now". Depositing data in Repository service is a 6 step process. 
 
 
-
-
-
-* :ref:`Job submission <job-submit>`
-* :ref:`Status tracking <job-status>`
-* :ref:`Output retrieval <job-output>`
 
 .. _download-data:
 
