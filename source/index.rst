@@ -59,7 +59,7 @@ Best practices
 .. toctree::
    :maxdepth: 1
    
-   Pages/best-practices.md
+   Pages/Practices/best-practices.rst
 
 
  

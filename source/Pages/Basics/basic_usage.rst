@@ -18,11 +18,8 @@ Logging in
 
 Login with your user credentials in the `Login`_ page of the Data Repository Service.
 
-If you do not have access, go to :ref:`Obtaining Access <get-access>` page for more information.
+If you do not have access, go to :ref:`How to get access <get-access>` page for more information.
 
-
-
-	
 
 
 .. _homepage:
@@ -31,11 +28,11 @@ If you do not have access, go to :ref:`Obtaining Access <get-access>` page for m
 Homepage
 ================
 
-After logging in to your account, you will be redirected to your homepage where you can quickly deposit or create collections of data.
+After you login to your account, you will be redirected to your homepage where you can quickly deposit data or find data to download. or create collections of data.
 
 **Deposit**
 
-**Collection**On the right you can see the latest deposits an collection created on the data repository.	
+**Collection**On the right you can see the latest deposits  data or find data to download. an collection created on the data repository.	
 
 
 
@@ -45,7 +42,7 @@ After logging in to your account, you will be redirected to your homepage where 
 Prepare data
 ===============================
 
-To prepare data for a deposit there are some best practices for the file format, file size, metadata, data documentation and organisation. For more information, visit the [Best Practices](best-practices.md) page.
+To prepare data for a deposit there are some best practices for the file format, file size, metadata, data documentation and organisation. For more information, visit the :ref:`Best Practices <best-practices>` page.
 
 
 .. _deposit-data:
@@ -76,7 +73,7 @@ Find data
 To find a data or metadata, use the search functionality on the home page. You can also see the latest deposits on the the top-right pannle in your homepage. 
 
 
-.. image:: ../Screenshots/find_data.png
+.. image:: Images/find_data.png
 
 If you have the PID (Persistent Identifier) of the data you can directly search in the `Handle Server`_ and get the url to the location of the data.
 
@@ -88,7 +85,7 @@ Export Metadata
 
 To export metadata you should first find the data and then click on the export link on the top-right corner of the metadata pannel. 
 
-.. image:: ../Screenshots/export_metadata.png
+.. image:: Images/export_metadata.png
 
 
 .. Links:

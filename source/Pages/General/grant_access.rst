@@ -7,13 +7,13 @@ How to get access
 In this page you will find general information about getting access to the SURFsara Data Repository:
 
 .. contents:: 
-    :depth: 1
+    :depth: 2
 
 
 .. _obtain-account:
 
 ==============================
-How to obtain an account
+Obtain an account
 ==============================
 
 To get access to the repository service you need to login as a registered user. To obtain user credentials you should first send a registration request via the Login page.
