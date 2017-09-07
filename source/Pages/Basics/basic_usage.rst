@@ -42,7 +42,7 @@ After you login to your account, you will be redirected to your homepage where y
 Prepare data
 ===============================
 
-To prepare data for a deposit there are some best practices for the file format, file size, metadata, data documentation and organisation. For more information, visit the :ref:`How to get access <get-access>` page.
+To prepare data for a deposit there are some best practices for the file format, file size, metadata, data documentation and organisation. For more information, visit the :ref:`Best Practices <best-practices>` page.
 
 
 .. _deposit-data:
