@@ -18,7 +18,7 @@ Logging in
 
 Login with your user credentials in the `Login`_ page of the Data Repository Service.
 
-If you do not have access, go to :ref:`Obtaining Access <get-access>` page for more information.
+If you do not have access, go to :ref:`Obtaining Access <../General/grant-access>` page for more information.
 
 
 
@@ -79,12 +79,12 @@ You can download single files by going to the data page, selecting the file and 
 Find data
 ====================
 
-To find a data or metadata, use the search functionality on the home page. You can also see the latest deposits on the the top-right pannel in your homepage. 
+To find a data or metadata, use the search functionality on the home page. You can also see the latest deposits on the the top-right pannle in your homepage. 
 
 
+.. image:: ../Screenshots/find_data.png
 
-  ![Alt Image Text](Screenshots/find_data.png)
-If you have the PID (Persistent Identifer) of the data you can directly search in the [handle server](http://hdl.handle.net/) and get the url to the location of the data.
+If you have the PID (Persistent Identifier) of the data you can directly search in the `Handle Server`_ and get the url to the location of the data.
 
 .. _export-metadata:
 
@@ -100,4 +100,4 @@ To export metadata you should first find the data and then click on the export l
 .. Links:
 
 .. _`Login`: https://tdr-test.surfsara.nl/user/login
-.. _`Grid job status animation`: http://web.grid.sara.nl/mooc/animations/wms_with_status.html 
+.. _`Handle Server`: http://hdl.handle.net/
