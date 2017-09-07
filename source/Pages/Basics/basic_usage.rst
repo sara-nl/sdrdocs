@@ -42,7 +42,7 @@ After you login to your account, you will be redirected to your homepage where y
 Prepare data
 ===============================
 
-To prepare data for a deposit there are some best practices for the file format, file size, metadata, data documentation and organisation. For more information, visit the :ref:`Best Practices <best-practices>` page.
+To prepare data for a deposit there are some best practices for the file format, file size, metadata, data documentation and organisation. For more information, visit the :ref:`How to get access <get-access>` page.
 
 
 .. _deposit-data:
@@ -73,7 +73,7 @@ Find data
 To find a data or metadata, use the search functionality on the home page. You can also see the latest deposits on the the top-right pannle in your homepage. 
 
 
-.. image:: Images/find_data.png
+.. image:: ../Images/find_data.png
 
 If you have the PID (Persistent Identifier) of the data you can directly search in the `Handle Server`_ and get the url to the location of the data.
 
@@ -85,7 +85,7 @@ Export Metadata
 
 To export metadata you should first find the data and then click on the export link on the top-right corner of the metadata pannle. 
 
-.. image:: Images/export_metadata.png
+.. image:: ../Images/export_metadata.png
 
 
 .. Links:
