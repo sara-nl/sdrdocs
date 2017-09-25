@@ -37,7 +37,7 @@ After you login to your account, you will be redirected to your homepage where y
 On the right you can see the latest deposits and collections that are uploaded on the data repository.	
 
 .. image:: ../Screenshots/homepage.png
-  :align: center
+   :align: center
 
 
 
@@ -91,6 +91,8 @@ To search for data use the search functionality on the home page. The text enter
 Both registered and unregistered users can search for data. Unregistered users can only search for data sets that are publicly accessible.
 
 .. image:: ../Screenshots/find_data.png
+   :align: center
+
 
 Advanced searches can be performed by clicking the Search button, then entering the additional search criteria on the page that is shown
 
@@ -115,6 +117,7 @@ Export Metadata
 To export metadata you should first find the data and then click on the export link on the top-right corner of the metadata pannle. 
 
 .. image:: ../Screenshots/export_metadata.png
+   :align: center
 
 
 .. Links:
