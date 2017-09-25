@@ -36,7 +36,7 @@ After you login to your account, you will be redirected to your homepage where y
 
 On the right you can see the latest deposits and collections that are uploaded on the data repository.	
 
-.. image:: ../Screenshots/homepage.png
+ .. image:: ../Screenshots/homepage.png
    :align: center
 
 
@@ -66,9 +66,12 @@ Deposit is the act of uploading data to the Data Repository. Only registered use
 
  Then provide the basic metadata for your file such as Title, Creator, keywords (for searching purposes) and Description. The fields with a * are mandatory fields.
 
- In this step you should also select the type of data and language of the data and a license for ypublication. The license can be selected through a built-in wizard. If you are not sure which license to choose, answer the questions on the top of the built-in wizard form to find the appropriate license. If your data is completely open to the public, no license is needed and this field can be skipped.
-
  .. image:: ../Screenshots/deposit1.png
+   :align: center
+
+In this step you should also select the type of data and language of the data and a license for ypublication. The license can be selected through a built-in wizard. If you are not sure which license to choose, answer the questions on the top of the built-in wizard form to find the appropriate license. If your data is completely open to the public, no license is needed and this field can be skipped.
+
+ .. image:: ../Screenshots/license.png
    :align: center
 
 
@@ -90,7 +93,7 @@ Search data
 To search for data use the search functionality on the home page. The text entered can be part of a title, keyword, abstract or any other metadata. 
 Both registered and unregistered users can search for data. Unregistered users can only search for data sets that are publicly accessible.
 
-.. image:: ../Screenshots/find_data.png
+ .. image:: ../Screenshots/find_data.png
    :align: center
 
 
