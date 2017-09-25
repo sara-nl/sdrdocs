@@ -37,9 +37,8 @@ After you login to your account, you will be redirected to your homepage where y
 On the right you can see the latest deposits and collections that are uploaded on the data repository.	
 
 .. image:: ../Screenshots/homepage.png
-  :width: 7000px
   :align: center
-  :height: 700px
+
 
 
 
@@ -70,16 +69,14 @@ Deposit is the act of uploading data to the Data Repository. Only registered use
  In this step you should also select the type of data and language of the data and a license for ypublication. The license can be selected through a built-in wizard. If you are not sure which license to choose, answer the questions on the top of the built-in wizard form to find the appropriate license. If your data is completely open to the public, no license is needed and this field can be skipped.
 
  .. image:: ../Screenshots/deposit1.png
-   :width: 800px
    :align: center
-   :height: 800px
+
 
 2. Next you can optionally select a community, collection and/or metadata schema. If you are a memeber of a community and you want to deposit data in that community, select the community name. The collection and metadata schema will be prepopulated based on which community you choose. If you are not member of any communities, you will see the collections and schemas defined by yourself. This step is optional and can be skipped.
 
  .. image:: ../Screenshots/deposit2.png
-   :width: 900px
    :align: center
-   :height: 900px
+ 
 
 3. Finally you can fill in optional information about privacy settings on your data such as Embargo and end publication date. You can also specify links that are related to this publication. Please read the terms of use and agree with that by checking the checkbox before depositing data. In the end, click on the **Complete** button to finalize your deposit.
 
