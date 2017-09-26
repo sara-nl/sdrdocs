@@ -87,6 +87,17 @@ Deposit is the act of uploading data to the Data Repository. Only registered use
    :align: center
 
 
+.. _landing-page:
+
+==========================
+Data landing page
+==========================
+
+After you deposit data, a landing page will be created for that data. In the landing page you can see the metadata and more information about the status of the data, for example if the data is offline (on tape) or online (on disk).
+
+ .. image:: ../Screenshots/landing-page.png
+   :align: center
+
 .. _search-data:
 
 ====================
@@ -108,13 +119,19 @@ Advanced searches can be performed by clicking the Search button, then entering 
 If you have the PID (Persistent Identifier) of the data you can directly search in the `Handle Server`_ and get the url to the location of the data.
 
 
+
+
 .. _download-data:
 
 ==========================
 Download data
 ==========================
 
-You can download single files by going to the data page, selecting the file and click on download. Or you can add more than one files to your basket and then download them at the same time.
+To download data from the Data Repository you have to be logged in as a registered user. Unregistered users can only download data sets that are publically accessible. 
+
+You can download single files by going to the data landing page, selecting the file and click on download. If the data is **offline** you should first request the data. This means that the data is being requested to be staged from the tape.
+
+To download several files at the same time, your can add the files to your basket and then download them all at once.
 
 
 .. _export-metadata:
