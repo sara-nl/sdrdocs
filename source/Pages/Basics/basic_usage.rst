@@ -71,13 +71,11 @@ Deposit is the act of uploading data to the Data Repository. Only registered use
 
  In this step you should also select the type of data and language of the data and a license for ypublication. The license can be selected through a built-in wizard. If you are not sure which license to choose, answer the questions on the top of the built-in wizard form to find the appropriate license. If your data is completely open to the public, no license is needed and this field can be skipped.
 
- .. image:: ../Screenshots/license.png
+  .. image:: ../Screenshots/license.png
    :align: center
 
 
-2. Next you can optionally select a community, collection and/or metadata schema. If you are a memeber of a community and you want to deposit data in that community, select the community name. The collection and metadata schema will be prepopulated based on which community you choose. If you are not member of any communities, you will see the collections and schemas defined by yourself. 
-
- .. sidebar:: This step is optional and can be skipped. In the right you can the basic metadata you defined for the deposit.
+2. Next you can optionally select a community, collection and/or metadata schema. If you are a memeber of a community and you want to deposit data in that community, select the community name. The collection and metadata schema will be prepopulated based on which community you choose. If you are not member of any communities, you will see the collections and schemas defined by yourself. This step is optional and can be skipped. In the right you can the basic metadata you defined for the deposit.
 
  .. image:: ../Screenshots/deposit2.png
    :align: center
@@ -89,7 +87,7 @@ Deposit is the act of uploading data to the Data Repository. Only registered use
    :align: center
 
 
-.. _find-data:
+.. _search-data:
 
 ====================
 Search data
@@ -97,11 +95,15 @@ Search data
 To search for data use the search functionality on the home page. The text entered can be part of a title, keyword, abstract or any other metadata. 
 Both registered and unregistered users can search for data. Unregistered users can only search for data sets that are publicly accessible.
 
- .. image:: ../Screenshots/find_data.png
+ .. image:: ../Screenshots/search.png
    :align: center
 
 
-Advanced searches can be performed by clicking the Search button, then entering the additional search criteria on the page that is shown
+Advanced searches can be performed by clicking the Search button, then entering the additional search criteria on the page that is shown.
+
+ .. image:: ../Screenshots/search-advance.png
+   :align: center
+
 
 If you have the PID (Persistent Identifier) of the data you can directly search in the `Handle Server`_ and get the url to the location of the data.
 
@@ -121,9 +123,9 @@ You can download single files by going to the data page, selecting the file and 
 Export Metadata
 ==========
 
-To export metadata you should first find the data and then click on the export link on the top-right corner of the metadata pannle. 
+To export metadata you should first find the data and then click on the export link on the top-right corner of the metadata pannle.  
 
-.. image:: ../Screenshots/export_metadata.png
+ .. image:: ../Screenshots/export_metadata.png
    :align: center
 
 
