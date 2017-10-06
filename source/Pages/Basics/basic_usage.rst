@@ -30,9 +30,10 @@ Homepage
 
 After you login to your account, you will be redirected to your homepage where you can quickly deposit data, find data to download or create collections of data.
 
-**Deposit** is an object containing one or more files and corresponding metadata
+.. sidebar::
+    **Deposit** is an object containing one or more files and corresponding metadata
 
-**Collection** is a bunch of deposits combined
+    **Collection** is a bunch of deposits combined
 
 On the right bar you can see the latest deposits and collections that are uploaded on the data repository.	
 
@@ -137,7 +138,7 @@ Export Metadata
 
 To export metadata you should first find the data by search. Then  go to the landing page of the data and click on the export link on the top-right corner of the metadata pannle. You can choose to export all the meta data or based on other criteria such as dublin core or community specific metadata.
 
- .. image:: ../Screenshots/export_metadata.png
+ .. image:: ../Screenshots/export-metadata.png
    :align: center
 
 
