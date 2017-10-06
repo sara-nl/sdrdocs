@@ -95,7 +95,7 @@ Deposit is the act of uploading data to the Data Repository. Only registered use
 .. _search-data:
 
 ====================
-Search data
+Search and discover datasets
 ====================
 To search for data use the search functionality on the home page. The text entered can be part of a title, keyword, abstract or any other metadata. 
 Both registered and unregistered users can search for data. Unregistered users can only search for data sets that are publicly accessible.
