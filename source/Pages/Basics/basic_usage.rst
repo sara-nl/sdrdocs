@@ -34,7 +34,11 @@ After you login to your account, you will be redirected to your homepage where y
 
 **Collection** is a bunch of deposits combined
 
-On the right you can see the latest deposits and collections that are uploaded on the data repository.	
+On the right bar you can see the latest deposits and collections that are uploaded on the data repository.	
+
+On the top left you see some statistics of your account such as the number of deposits and collections you have. "Show account detail" redirects you to your profile page.
+
+On the buttom left bar, the are  shortcuts for defining new collections, metadata schemas and groups, explained more in the :ref:`Advanced usage <advanced-usage>`.
 
  .. image:: ../Screenshots/homepage.png
    :align: center
@@ -87,17 +91,6 @@ Deposit is the act of uploading data to the Data Repository. Only registered use
    :align: center
 
 
-.. _landing-page:
-
-==========================
-Data landing page
-==========================
-
-After you deposit data, a landing page will be created for that data. In the landing page you can see the metadata and more information about the status of the data, for example if the data is offline (on tape) or online (on disk).
-
- .. image:: ../Screenshots/landing-page.png
-   :align: center
-
 .. _search-data:
 
 ====================
@@ -116,9 +109,7 @@ Advanced searches can be performed by clicking the Search button, then entering 
    :align: center
 
 
-If you have the PID (Persistent Identifier) of the data you can directly search in the `Handle Server`_ and get the url to the location of the data.
-
-
+.. note:: If you have the PID (Persistent Identifier) of the data you can directly search in the `Handle Server`_ and get the url to the location of the data.
 
 
 .. _download-data:
@@ -129,10 +120,14 @@ Download data
 
 To download data from the Data Repository you have to be logged in as a registered user. Unregistered users can only download data sets that are publically accessible. 
 
-You can download single files by going to the data landing page, selecting the file and click on download. If the data is **offline** you should first request the data. This means that the data is being requested to be staged from the tape.
+
+To download data you should first go to the data landing page. AThe data landing page is created for the data after each deposit. In the landing page you can see the metadata and more information about the status of the data, for example if the data is offline (on tape) or online (on disk).
+You can download single files by going to the data landing page, select the file you want to download. Then click on **download** link. If the data is **offline**, it means that the data is currently on tape. You should first request the data to be staged from the tape by clicking the **request** link.
 
 To download several files at the same time, your can add the files to your basket and then download them all at once.
 
+ .. image:: ../Screenshots/landing-page.png
+   :align: center
 
 .. _export-metadata:
 
@@ -140,7 +135,7 @@ To download several files at the same time, your can add the files to your baske
 Export Metadata
 ==========
 
-To export metadata you should first find the data and then click on the export link on the top-right corner of the metadata pannle.  
+To export metadata you should first find the data by search. Then  go to the landing page of the data and click on the export link on the top-right corner of the metadata pannle. You can choose to export all the meta data or based on other criteria such as dublin core or community specific metadata.
 
  .. image:: ../Screenshots/export_metadata.png
    :align: center
