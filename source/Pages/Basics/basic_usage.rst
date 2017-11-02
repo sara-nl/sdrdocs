@@ -119,11 +119,14 @@ You can also make search within specific communities, which means the search res
 
 Advanced searches can be performed by clicking the Search button, then entering the additional search criteria on the page that is shown. You can set advanced search criteria to search for deposits, collections, schemas, communities or combinations of any of them. You can also order the search results by Title, Creator, Identifier, or Creation date.
 
- .. image:: ../Screenshots/search-advance.png
+.. sidebar::
+    If you have the PID (Persistent Identifier) of the data you can directly search in the `Handle Server`_ and get the url to the location of the data.
    :align: center
 
 
 .. note:: If you have the PID (Persistent Identifier) of the data you can directly search in the `Handle Server`_ and get the url to the location of the data.
+
+
 
 
 .. _download-data:
