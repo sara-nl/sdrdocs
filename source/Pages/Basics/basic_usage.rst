@@ -4,7 +4,7 @@
 Basic Usage
 **************
 
-This page provides information on the basic usage of the data repository. It also describes the online deposite workflow on the Data Repository.
+This page provides information on the basic usage of the data repository, such as depositing data, searching data and downloading data. It also describes the online deposite workflow which is the steps that you take to deposit data on the Data Repository.
 
 .. contents:: 
     :depth: 4
@@ -31,6 +31,8 @@ Homepage
 After you login to your account, you will be redirected to your homepage where you can quickly deposit data, find data to download or create collections of data.
 
 .. sidebar::
+    **Note:**
+
     **Deposit** is an object containing one or more files and corresponding metadata
 
     **Collection** is a bunch of deposits combined
@@ -49,9 +51,9 @@ On the buttom left bar, the are  shortcuts for defining new collections, metadat
 
 .. _prepare-data:
 
-===============================	
+==============
 Prepare data
-===============================
+==============
 
 To prepare data for a deposit there are some best practices for the file format, file size, metadata, data documentation and organisation. For more information, visit the :ref:`Best Practices <best-practices>` page.
 
@@ -92,19 +94,28 @@ Deposit is the act of uploading data to the Data Repository. Only registered use
    :align: center
 
 
+.. _deposit-landing-page:
+
+==============
+Deposit landing page
+==============
+Deposit landing page is created after each deposit. In the deposit landing page you can see the metadata and more information about the status of the data, for example if the data is offline (on tape) or online (on disk).
+
+
 .. _search-data:
 
 ====================
 Search and discover datasets
 ====================
 To search for data use the search functionality on the home page. The text entered can be part of a title, keyword, abstract or any other metadata. 
-Both registered and unregistered users can search for data. Unregistered users can only search for data sets that are publicly accessible.
+Both registered and unregistered users can search for data. Unregistered users can only search for data sets that are publicly accessible. 
+You can also make search within specific communities, which means the search results will be limited to that community.
 
  .. image:: ../Screenshots/search.png
    :align: center
 
 
-Advanced searches can be performed by clicking the Search button, then entering the additional search criteria on the page that is shown.
+Advanced searches can be performed by clicking the Search button, then entering the additional search criteria on the page that is shown. You can set advanced search criteria to search for deposits, collections, schemas, communities or combinations of any of them. You can also order the search results by Title, Creator, Identifier, or Creation date.
 
  .. image:: ../Screenshots/search-advance.png
    :align: center
@@ -122,7 +133,7 @@ Download data
 To download data from the Data Repository you have to be logged in as a registered user. Unregistered users can only download data sets that are publically accessible. 
 
 
-To download data you should first go to the data landing page. AThe data landing page is created for the data after each deposit. In the landing page you can see the metadata and more information about the status of the data, for example if the data is offline (on tape) or online (on disk).
+To download data you should first go to data landing page. 
 You can download single files by going to the data landing page, select the file you want to download. Then click on **download** link. If the data is **offline**, it means that the data is currently on tape. You should first request the data to be staged from the tape by clicking the **request** link.
 
 To download several files at the same time, your can add the files to your basket and then download them all at once.
