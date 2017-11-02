@@ -99,8 +99,10 @@ Deposit is the act of uploading data to the Data Repository. Only registered use
 ==============
 Deposit landing page
 ==============
-Deposit landing page is created after each deposit. In the deposit landing page you can see the metadata and more information about the status of the data, for example if the data is offline (on tape) or online (on disk).
+Deposit landing page is created after each deposit. In the deposit landing page you can see the deposit description, metadata and more information about the status of the data, for example if the data is online (on disk) or offline (on tape).
 
+ .. image:: ../Screenshots/landing-page.png
+   :align: center
 
 .. _search-data:
 
@@ -133,8 +135,8 @@ Download data
 To download data from the Data Repository you have to be logged in as a registered user. Unregistered users can only download data sets that are publically accessible. 
 
 
-To download data you should first go to data landing page. 
-You can download single files by going to the data landing page, select the file you want to download. Then click on **download** link. If the data is **offline**, it means that the data is currently on tape. You should first request the data to be staged from the tape by clicking the **request** link.
+To download data you should first go to the deposit landing page. 
+You can download single files by selecting the file you want to download and then clicking on the **download** link. If the data is **offline**, it means that the data is currently on tape. You should first request the data to be staged from the tape by clicking the **request** link.
 
 To download several files at the same time, your can add the files to your basket and then download them all at once.
 
