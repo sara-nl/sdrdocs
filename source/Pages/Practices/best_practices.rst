@@ -18,9 +18,9 @@ Preparing data
 
 To prepare data for a deposit you need to consider the following points:
 - **File formats**
-	- **Prefered formats** are file formats of which SURFsara is confident that they will offer the best long-term guarantees in terms of usability, accessibility and sustainability. Depositing research data in preferred formats will always be accepted by SURFsara. Here is a list with [SURFsara prefered formats](http://datasupport.researchdata.nl/en/start-de-cursus/iii-onderzoeksfase/dataformaten/preferred-formats/).
+	- **Prefered formats** are file formats of which SURFsara is confident that they will offer the best long-term guarantees in terms of usability, accessibility and sustainability. Depositing research data in preferred formats will always be accepted by SURFsara. Here is a list with `SURFsara prefered formats`_ .
 
-	- **Acceptale formats** are file formats that are widely used in addition to the preferred formats, and which will be moderately to reasonably usable, accessible and robust in the long term. SURFsara favours the use of preferred formats, but acceptable formats will in most cases also be allowed. Here is a list with [SURFsara acceptable formats](http://datasupport.researchdata.nl/en/start-de-cursus/iii-onderzoeksfase/dataformaten/preferred-formats/).
+	- **Acceptale formats** are file formats that are widely used in addition to the preferred formats, and which will be moderately to reasonably usable, accessible and robust in the long term. SURFsara favours the use of preferred formats, but acceptable formats will in most cases also be allowed. Here is a list with `SURFsara acceptable formats`_ .
 
 - **Files size**
 	- **Maximum file size**: 4 GB using the online deposit form
@@ -41,5 +41,12 @@ To prepare data for a deposit you need to consider the following points:
 	If you want your research data to be easily traced and interpreted, the folder structure and the file names used for the data files should be logical. Its also a good practice to note the file naming and its meaning in a readme.txt file.
  
 - **Data anonymization**
-	Before you upload the files you should check whether they contain privacy-sensitive information within the meaning of the [Dutch Personal Data Protection Act](http://www.coe.int/t/dghl/standardsetting/dataprotection/national%20laws/NL_DP_LAW.pdf). 
+	Before you upload the files you should check whether they contain privacy-sensitive information within the meaning of the `Dutch Personal Data Protection Act`_ . 
 	If you give access to the data, they must be completely anonimyzed.
+
+
+.. Links:
+
+.. _`SURFsara prefered formats`: 
+.. _`SURFsara acceptable formats`: 
+.. _`Dutch Personal Data Protection Act`: http://www.coe.int/t/dghl/standardsetting/dataprotection/national%20laws/NL_DP_LAW.pdf
