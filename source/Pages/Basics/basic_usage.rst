@@ -160,5 +160,5 @@ To export metadata you should first find the data by search. Then  go to the lan
 
 .. Links:
 
-.. _`Login`: https://tdr-test.surfsara.nl/user/login
+.. _`Login`: https://repo-test.surfsara.nl/user/login
 .. _`Handle Server`: http://hdl.handle.net/
