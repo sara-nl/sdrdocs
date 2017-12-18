@@ -55,16 +55,18 @@ Deposit data
 
 Deposit is the act of uploading data to the Data Repository. Only registered users are permitted to deposit new records. 
 
---------------
+
+.. _prepare-data:
 Prepare data
---------------
-Before you make any deposits, you should make sure that your data has the right format. To prepare data for a deposit there are some best practices for the file format, file size, metadata, data documentation and organisation. For more information, visit the :ref:`Best Practices <best-practices>` page. 
+==============
 
+ Before you make any deposits, you should make sure that your data has the right format. To prepare data for a deposit there are some best practices for the file format, file size, metadata, data documentation and organisation. For more information, visit the :ref:`Best Practices <best-practices>` page. 
 
---------------
-Deposit workflow  
---------------
-Clicking the deposit link in the main interface opens the first of a three stage process required to upload data. The steps are as follows:
+.. _deposit-workflow:
+ Deposit workflow  
+==============
+
+ Clicking the deposit link in the main interface opens the first of a three stage process required to upload data. The steps are as follows:
 
 1. In the Create a new deposit page, select files to deposit and then click on Upload to upload the file.
 
