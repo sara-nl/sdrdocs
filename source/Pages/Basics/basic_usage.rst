@@ -58,9 +58,9 @@ Deposit is the act of uploading data to the Data Repository. Only registered use
 
 .. _prepare-data:
 Prepare data
-==============
+--------------
 
- Before you make any deposits, you should make sure that your data has the right format. To prepare data for a deposit there are some best practices for the file format, file size, metadata, data documentation and organisation. For more information, visit the :ref:`Best Practices <best-practices>` page. 
+  Before you make any deposits, you should make sure that your data has the right format. To prepare data for a deposit there are some best practices for the file format, file size, metadata, data documentation and organisation. For more information, visit the :ref:`Best Practices <best-practices>` page. 
 
 .. _deposit-workflow:
  Deposit workflow  
