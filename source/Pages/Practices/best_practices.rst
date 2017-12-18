@@ -47,6 +47,6 @@ To prepare data for a deposit you need to consider the following points:
 
 .. Links:
 
-.. _`SURFsara prefered formats`: 
-.. _`SURFsara acceptable formats`: 
+.. _`SURFsara prefered formats`: https://repo-test.surfsara.nl/faq
+.. _`SURFsara acceptable formats`: https://repo-test.surfsara.nl/faq
 .. _`Dutch Personal Data Protection Act`: http://www.coe.int/t/dghl/standardsetting/dataprotection/national%20laws/NL_DP_LAW.pdf
