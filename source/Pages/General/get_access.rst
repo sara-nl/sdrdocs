@@ -18,7 +18,7 @@ Obtain an account
 
 To be able to use the repository service you need to login as a registered user. To obtain user credentials you should first send a registration request via the Login page. Select Login icon from the top right menu. 
 
- .. image:: ../Screenshots/login-icon.png
+ .. image:: ../Screenshots/login_icon.png
    :align: center
 
 
