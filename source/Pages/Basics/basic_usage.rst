@@ -35,13 +35,13 @@ After you login to your account, you will be redirected to your homepage where y
 
     **Deposit** is an object containing one or more files and corresponding metadata
 
-    **Collection** is a bunch of deposits combined
+    **Collection** is a bunch of deposits
 
-On the right bar you can see the latest deposits and collections that are uploaded on the data repository.	
+On the right column you can see the latest deposits and collections that are uploaded on the data repository.	
 
 On the top left you see some statistics of your account such as the number of deposits and collections you have. "Show account detail" redirects you to your profile page.
 
-On the buttom left bar, the are  shortcuts for defining new collections, metadata schemas and groups, explained more in the :ref:`Advanced usage <advanced-usage>`.
+On the buttom left column, the are  shortcuts for defining new collections, metadata schemas and groups, explained more in the :ref:`Advanced usage <advanced-usage>`.
 
  .. image:: ../Screenshots/homepage.png
    :align: center
