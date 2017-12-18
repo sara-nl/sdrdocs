@@ -47,17 +47,6 @@ On the buttom left column, the are  shortcuts for defining new collections, meta
    :align: center
 
 
-
-
-.. _prepare-data:
-
-==============
-Prepare data
-==============
-
-To prepare data for a deposit there are some best practices for the file format, file size, metadata, data documentation and organisation. For more information, visit the :ref:`Best Practices <best-practices>` page.
-
-
 .. _deposit-data:
 
 ==============
