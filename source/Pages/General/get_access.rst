@@ -21,8 +21,7 @@ To be able to use the repository service you need to login as a registered user.
  .. image:: ../Screenshots/login_icon.png
    :align: center
 
-
-Then click on "Create new account" tab. Enter your required information and agree to the **Terms of Use** and **Priavcy policy** of the service. Then click on 'Request registration' to apply for registration with the SURFsara Data Repository. You will be contacted as soon as possible with your new credentials.	
+Then click on **Create new account** tab. Enter your required information and agree to the **Terms of Use** and **Priavcy policy** of the service. Then click on **Request registration** to apply for registration with the SURFsara Data Repository. You will be contacted as soon as possible with your new credentials.	
 
  .. image:: ../Screenshots/create_account.png
    :align: center
