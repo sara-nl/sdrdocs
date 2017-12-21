@@ -47,7 +47,7 @@ Advanced Usage
 .. toctree::
    :maxdepth: 2
    
-   Pages/advanced-usage.md
+   Pages/Advanced/advanced_usage
 
 
 .. _practices:
@@ -59,7 +59,7 @@ Best practices
 .. toctree::
    :maxdepth: 1
    
-   Pages/Practices/best_practices.rst
+   Pages/Practices/best_practices
 
 
  
