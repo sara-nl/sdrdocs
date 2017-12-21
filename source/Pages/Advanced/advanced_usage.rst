@@ -39,15 +39,21 @@ Groups
 
 A group is a simple bundling of one or more users. They can be used to provide access or administrative privileges to a bunch of people using only a single relation.
 
-To denine a new group or community or to see the list of current groups and communities that you are member of, go to your account page. Click on "Add groupd" or "Add community" to create a new group or community.
+To create a new group or to see the list of current groups are member of, go to your account page and then choose the **Groups** tab on the left. 
 
-
- .. image:: ../Screenshots/group_community.png
+ .. image:: ../Screenshots/group_creation.png
    :align: center 
 
-A new page will be open where you need to provide name and description for the group or community and invite other members to join. 
 
-  .. image:: ../Screenshots/group_create.png
+You can also create a group by going to the profile tab of account overview page click on **Create new group** to go to the group creation form. 
+
+ .. image:: ../Screenshots/profie_group_creation.png
+   :align: center 
+
+
+A new page will be open where you need to provide name and description for the group, invite other members to join the group, and assign admins to the group. After you enter the information, click on the **Create** button.
+
+  .. image:: ../Screenshots/create_new_group.png
    :align: center 
 
 
