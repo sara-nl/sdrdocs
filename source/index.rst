@@ -45,7 +45,7 @@ Advanced Usage
 =======
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    
    Pages/advanced-usage.md
 
