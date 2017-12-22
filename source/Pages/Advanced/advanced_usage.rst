@@ -10,6 +10,21 @@ This page provides information on the advanced usage of the data repository, suc
     :depth: 8
 
 
+.. _account-overview:
+
+=================
+Account overview
+=================
+The account overview page provides an overview of the number of deposits and collections you have, also the number of groups and communities you are part of. From your account, there are links to quick actions for advanced functionalities such as creating a new  metadata schema, creating new groups and creating new communitites. Each of these will be explained in more detail in the following sections. 
+
+On the left side of your account overview page there are links to different parts of your account such as your profile, deposits, collections, groups, communities, messages, ... . Some other options are: 
+ - **Administrator:** shows an overview of all the items you currently have administrative rights to.
+ - **Basket:** An overview of all the items you currently have in your basket. You can chose any item to download or remove from your basket. The Basket functionality is very useful if you want to download a bunch of individual object (or files). Go to the landing page of an object to add it to your basket.
+ - **Favorites:** An overview of all the items you currently have marked as favourite. Click on the title of a favourite to go to the landing page, or the cross to remove the item from your list. To add an object to your favourites, go to the corresponding landing page and add it. 
+ 
+ .. image:: ../Screenshots/account_overview_page.png
+   :align: center 
+
 .. _metadata-schema:
 
 =================
@@ -60,12 +75,6 @@ To create a new group or to see the list of current groups are member of, go to 
    :align: center 
 
 
-You can also create a group by going to the profile tab of account overview page click on **Create new group** to go to the group creation form. 
-
- .. image:: ../Screenshots/profile_group_creation.png
-   :align: center 
-
-
 A new page will be open where you need to provide name and description for the group, invite other members to join the group, and assign admins to the group. After you enter the information, click on the **Create** button.
 
   .. image:: ../Screenshots/create_new_group.png
@@ -93,7 +102,19 @@ More information such as description, default collection and default metadata sc
 
 Your community is now created and will be available during the workflow of new deposits. It is also visible in the community tab of your account overview page
 
+.. _api-token:
+
+=================
+API tokens
+=================
+Te HTTP REST API can be used for interacting with SURF Data Repository via external services or applications, for example for integrating with other web-sites (research community portals) or for uploading or downloading large data sets that are not easily handled via a web browser. 
+
+Go to the **API tokens** on the left side of your account page to see an overview of all tokens you have generated for accessing this service externally through the REST API. To create a new API token, enter a name and click on **Add API token** to generate a new token.
+
+  .. image:: ../Screenshots/api_token.png
+   :align: center 
+
+
 .. Links:
 
-.. _`est practices for defining you metadata schema`: http://www.niso.org/apps/group_public/download.php/5271/N800R1_Where_to_start_advice_on_creating_a_metadata_schema.pdf
-.. _`Handle Server`: http://hdl.handle.net/
+.. _`best practices for defining you metadata schema`: http://www.niso.org/apps/group_public/download.php/5271/N800R1_Where_to_start_advice_on_creating_a_metadata_schema.pdf
