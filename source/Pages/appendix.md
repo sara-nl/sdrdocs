@@ -7,8 +7,7 @@ Simply making data available – providing access – is often not enough to be 
 
 A piece of data or content is open if anyone is free to use, reuse, and redistribute it — subject only, at most, to the requirement to attribute and/or share-alike. (see http://okfn.org/opendata/).
 
-## Linked data
-If, in addition, the data is also available in a linked data format, this results in new possibilities for use. Linked data have a certain structure(3) allowing for technical interoperability of datawsets. This way data from a variety of sources can be easily linked.
+All publications made in the SURF Data Repository include a license that specifies what a data consumer can or can't do with the data. By downloading data from the service, the user agrees to comply with these terms.
 
 ## Data Provenance
 Data provenance is providing a historical record of the data and its origins. It refers to the process of tracing and recording the origins of data and its movement between databases. (see http://db.cis.upenn.edu/DL/fsttcs.pdf).
