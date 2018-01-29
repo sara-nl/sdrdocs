@@ -243,8 +243,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'tdrdocumentation', u'TDR Documentation Documentation',
-     [u'TDR Support <helpdesk@surfsara.nl>'], 1)
+    ('index', 'surfdatarepodocumentation', u'SURF Data Repository Documentation',
+     [u'SURF Data Repository support <helpdesk@surfsara.nl>'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -257,8 +257,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'TDRDocumentation', u'TDR Documentation Documentation',
-   u'TDR Support <helpdesk@surfsara.nl>', 'TDRDocumentation', 'One line description of project.',
+  ('index', 'SURFDataRepoDocumentation', u'SURF Data Repository Documentation',
+   u'SURF Data Repository support <helpdesk@surfsara.nl>', 'SURFDataRepoDocumentation', 'The SURF Data Repository user documentation.',
    'Miscellaneous'),
 ]
 

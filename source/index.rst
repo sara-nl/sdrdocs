@@ -83,19 +83,6 @@ Appendix
 
 
 
-.. _documentation-howto:
-
-==============
-Documentation How-to
-==============
-
-.. toctree::
-   :maxdepth: 1
-
-   Pages/documentation-howto.md
-
-
-
 .. sidebar:: Need help?
 
 	Do you need help with this tutorial? We are more than willing to assist! Just contact us at helpdesk@surfsara.nl.
@@ -103,4 +90,4 @@ Documentation How-to
 
 .. Links:
 
-.. _`SURFsara`: https://surfsara.nl/
+.. _`SURFsara`: https://www.surfsara.nl/
