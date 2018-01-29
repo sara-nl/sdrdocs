@@ -11,8 +11,8 @@ SURF Data Repository Documentation
 ******************
 
 .. image:: logo.png
-   :height: 700px
-   :width: 154px
+   :height: 700 px
+   :width: 154 px
    :scale: 50 %
    :alt: SURF Data Repository logo
    :align: right
