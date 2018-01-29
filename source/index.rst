@@ -7,10 +7,17 @@
 .. _contents:
 
 ******************
-SURFsara Data Repository Documentation
+SURF Data Repository Documentation
 ******************
 
-Welcome to the documentation for using the Data Repository service at `SURFsara`_. The information in this tutorial will help you get started with the Data Repository, learn best practices and techniques publishing your data in our infrastructure and stay up-to-date with our system developments. We welcome your comments at helpdesk@surfsara.nl  to help us improve the documentation.
+.. image:: logo.png
+   :height: 700px
+   :width: 154px
+   :scale: 50 %
+   :alt: SURF Data Repository logo
+   :align: right
+
+Welcome to the user documentation of the SURF Data Repository service provided by `SURFsara`_. The information in this tutorial will help you get started with using the Data Repository, learn best practices and techniques for publishing your data and stay up-to-date with the service developments. We welcome your comments at helpdesk@surfsara.nl to help us improve the documentation.
 
 
 .. _general:
@@ -21,7 +28,7 @@ General
 
 .. toctree::
    :maxdepth: 2
-   
+
    Pages/General/about_the_data_repository
    Pages/General/get_access
 
@@ -34,7 +41,7 @@ Basic Usage
 
 .. toctree::
    :maxdepth: 2
-   
+
    Pages/Basics/basic_usage
 
 
@@ -46,32 +53,32 @@ Advanced Usage
 
 .. toctree::
    :maxdepth: 2
-   
+
    Pages/Advanced/advanced_usage
 
 
 .. _practices:
 
 ==============
-Best practices 
+Best practices
 ==============
 
 .. toctree::
    :maxdepth: 1
-   
+
    Pages/Practices/best_practices
 
 
- 
+
 .. _appendix:
-   
+
 ===============
 Appendix
 ===============
-   
+
 .. toctree::
    :maxdepth: 1
-   
+
    Pages/appendix.md
 
 
@@ -79,12 +86,12 @@ Appendix
 .. _documentation-howto:
 
 ==============
-Documentation How-to 
+Documentation How-to
 ==============
 
 .. toctree::
    :maxdepth: 1
-   
+
    Pages/documentation-howto.md
 
 
