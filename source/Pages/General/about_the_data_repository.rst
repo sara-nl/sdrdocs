@@ -9,7 +9,6 @@ In this page you will find general information about the Data Repository, how it
 .. contents::
     :depth: 4
 
-
 .. _intro-datarepo:
 
 ====================
@@ -22,12 +21,10 @@ There is a direct connection between the data repository service and other SURFs
 
 This document is the user guide for basic and advanced usage of the data repository service and also provide best practice in preparing your data and using the service.
 
-
 .. _what-data:
 
 ====================
 For what data
 ====================
 
-The Data Repository service is suitable for publishing research data especially in the field of Big Data sciences
-
+The Data Repository service is suitable for publishing research data especially in the field of Big Data sciences. The repository imposes no limits on the data volume and number of files, but does have some guidelines on how to efficiently store your data for publication.
