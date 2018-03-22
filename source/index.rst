@@ -29,8 +29,8 @@ General
 .. toctree::
    :maxdepth: 2
 
-    pages/general/about_the_data_repository
-    pages/general/get_access
+    pages/general/about
+    pages/general/access
     pages/general/objects
 
 
@@ -85,7 +85,7 @@ Appendix
 
 .. sidebar:: Need help?
 
-    Do you need help with this tutorial? We are more than willing to assist! Just contact us at helpdesk@surfsara.nl.
+    Do you need help with this user documentation? We are more than willing to assist! Just contact us at helpdesk@surfsara.nl.
 
 
 .. Links:
