@@ -29,9 +29,9 @@ General
 .. toctree::
    :maxdepth: 2
 
-    pages/general/about
-    pages/general/access
-    pages/general/objects
+   pages/general/about
+   pages/general/access
+   pages/general/objects
 
 
 .. _basic-usage:
@@ -43,7 +43,7 @@ Basic Usage
 .. toctree::
    :maxdepth: 2
 
-    pages/basics/basic_usage
+   pages/basics/basic_usage
 
 
 .. _advanced-usage:
@@ -55,7 +55,7 @@ Advanced Usage
 .. toctree::
    :maxdepth: 2
 
-    pages/advanced/advanced_usage
+   pages/advanced/advanced_usage
 
 
 .. _practices:
@@ -67,9 +67,7 @@ Best practices
 .. toctree::
    :maxdepth: 1
 
-    pages/practices/best_practices
-
-
+   pages/practices/best_practices
 
 .. _appendix:
 
