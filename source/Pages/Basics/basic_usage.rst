@@ -45,7 +45,7 @@ On the buttom left column, the are  shortcuts for defining new collections, meta
 
  .. image:: ../img/homepage.png
    :align: center
-
+   :width: 75%
 
 .. _deposit-data:
 
@@ -79,24 +79,25 @@ _________________
 
  .. image:: ../img/deposit1.png
    :align: center
+   :width: 75%
 
  In this step you should also select the type of data and language of the data and a license for ypublication. The license can be selected through a built-in wizard. If you are not sure which license to choose, answer the questions on the top of the built-in wizard form to find the appropriate license. If your data is completely open to the public, no license is needed and this field can be skipped.
 
   .. image:: ../img/license.png
    :align: center
-
+   :width: 75%
 
 2. Next you can optionally select a community, collection and/or metadata schema. If you are a memeber of a community and you want to deposit data in that community, select the community name. The collection and metadata schema will be prepopulated based on which community you choose. If you are not member of any communities, you will see the collections and schemas defined by yourself. This step is optional and can be skipped. In the right you can the basic metadata you defined for the deposit.
 
  .. image:: ../img/deposit2.png
    :align: center
-
+   :width: 75%
 
 3. Finally you can fill in optional information about privacy settings on your data such as Embargo and end publication date. You can also specify links that are related to this publication. Please read the terms of use and agree with that by checking the checkbox before depositing data. In the end, click on the **Complete** button to finalize your deposit.
 
  .. image:: ../img/deposit3.png
    :align: center
-
+   :width: 75%
 
 .. _deposit-landing-page:
 
@@ -107,6 +108,7 @@ Deposit landing page is created after each deposit. In the deposit landing page 
 
  .. image:: ../img/landing-page.png
    :align: center
+   :width: 75%
 
 .. _search-data:
 
@@ -119,7 +121,7 @@ You can also make search within specific communities, which means the search res
 
  .. image:: ../img/search.png
    :align: center
-
+   :width: 75%
 
 Advanced searches can be performed by clicking the Search button, then entering the additional search criteria on the page that is shown. You can set advanced search criteria to search for deposits, collections, schemas, communities or combinations of any of them. You can also order the search results by Title, Creator, Identifier, or Creation date.
 
@@ -129,9 +131,6 @@ Advanced searches can be performed by clicking the Search button, then entering 
 
 
 .. note:: If you have the PID (Persistent Identifier) of the data you can directly search in the `Handle Server`_ and get the url to the location of the data.
-
-
-
 
 .. _download-data:
 
@@ -149,6 +148,7 @@ To download several files at the same time, your can add the files to your baske
 
  .. image:: ../img/landing-page.png
    :align: center
+   :width: 75%
 
 .. _export-metadata:
 
@@ -160,7 +160,7 @@ To export metadata you should first find the data by search. Then  go to the lan
 
  .. image:: ../img/export-metadata.png
    :align: center
-
+   :width: 75%
 
 .. Links:
 

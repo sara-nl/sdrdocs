@@ -24,6 +24,7 @@ On the left side of your account overview page there are links to different part
 
  .. image:: ../img/account_overview_page.png
    :align: center
+   :width: 75%
 
 .. _metadata-schema:
 
@@ -39,7 +40,7 @@ To define a metadata schema for your data, go to the profile tab of account over
 
  .. image:: ../img/create_new_metadata_schema.png
    :align: center
-
+   :width: 75%
 
 
  You need to provide a title, creator, and description for the metadata schema. Then add metadata fields to the schema. Metadata field contains information about the field such as description, default value, type and if the field is optional or not. To save the field click on the **Save** icon under **Actions**.
@@ -58,6 +59,7 @@ workflow.
 
   .. image:: ../img/create_new_collection.png
    :align: center
+   :width: 75%
 
 To see the list of your current collections, go to your account page and then choose the **Collection** tab on the left.
 
@@ -93,12 +95,14 @@ To create a new group or to see the list of current groups are member of, go to 
 
   .. image:: ../img/community_creation.png
    :align: center
+   :width: 75%
 
 A new page will be open where you need to provide more information about the new community you make such as the title, creator, and description. You should assign at least one member to the community. You can also choose who can be the administrators of the community. If you are a community administrator, you have special privileges regarding the reviewing of objects, and editing their metadata.
 More information such as description, default collection and default metadata schema can be defined for the community. In the end you can choose the policies you want to apply to the community. After you enter the information, click **Create** to make the community.
 
   .. image:: ../img/create_new_community.png
    :align: center
+   :width: 75%
 
 Your community is now created and will be available during the workflow of new deposits. It is also visible in the community tab of your account overview page
 
@@ -113,7 +117,7 @@ Go to the **API tokens** on the left side of your account page to see an overvie
 
   .. image:: ../img/api_token.png
    :align: center
-
+   :width: 75%
 
 .. Links:
 
