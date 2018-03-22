@@ -1,6 +1,6 @@
 # Advanced Usage
 
-This page provides documentation on the advanced usage of the SURF Data Repository.
+This page provides documentation on the advanced usage of the Data Repository.
 
 ## Metadata schema definition
 A metadata schema provides a standardized means to define required metadata fields for a set of publications. It is a logical plan showing the relationships between metadata fields, normally through establishing rules for the use and management of metadata.
@@ -9,20 +9,20 @@ The first question to ask before making a metadata schema is: is it necessary to
 
 To define a metadata schema for your data go to your account page. Your current metadata schemas is listed under the Schema part. To create a metadata schema click on "Add Schema".
 
- ![Alt Image Text](Screenshots/metadata-schema-add.png)
+ ![Alt Image Text](img/metadata-schema-add.png)
 
  To define the metadata schema you need to provide a name, description and add the metadata fields to the schema.
 
- ![Alt Image Text](Screenshots/metadata-schema-define.png)
+ ![Alt Image Text](img/metadata-schema-define.png)
 
 ## Community/group memberships
 To denine a new group or community or to see the list of current groups and communities that you are member of, go to your account page. Click on "Add groupd" or "Add community" to create a new group or community.
 
- ![Alt Image Text](Screenshots/group_community.png)
+ ![Alt Image Text](img/group_community.png)
 
 A new page will be open where you need to provide name and description for the group or community and invite other members to join.
 
- ![Alt Image Text](Screenshots/group_create.png)
+ ![Alt Image Text](img/group_create.png)
 
 ## Download basket
 To be developed (not in the first release).

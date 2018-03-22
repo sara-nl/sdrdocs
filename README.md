@@ -1,5 +1,5 @@
-# SURF Data Repository User Documentation
-This repository contains the source code of SURF Data Repository user documentation maintained with the Sphinx documentation system.
+# Data Repository User Documentation
+This repository contains the source code of Data Repository user documentation maintained with the Sphinx documentation system.
 
 - The Data Repository documentation page is linked through: [http://repository.surfsara.nl/documentation](http://repository.surfsara.nl/documentation)
 - The source code of documentation is in GitHub: [https://github.com/sara-nl/tdrdocs](https://github.com/sara-nl/tdrdocs/tree/master/source/)

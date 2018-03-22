@@ -53,7 +53,7 @@ source_suffix = ['.rst', '.md']
 master_doc = 'index'
 
 # General information about the project.
-project = u'SURF Data Repository Documentation'
+project = u'Data Repository Documentation'
 copyright = u'2017, SURFsara Support <helpdesk@surfsara.nl>'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -243,8 +243,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'surfdatarepodocumentation', u'SURF Data Repository Documentation',
-     [u'SURF Data Repository support <helpdesk@surfsara.nl>'], 1)
+    ('index', 'surfdatarepodocumentation', u'Data Repository Documentation',
+     [u'Data Repository support <helpdesk@surfsara.nl>'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -257,8 +257,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'SURFDataRepoDocumentation', u'SURF Data Repository Documentation',
-   u'SURF Data Repository support <helpdesk@surfsara.nl>', 'SURFDataRepoDocumentation', 'The SURF Data Repository user documentation.',
+  ('index', 'SURFDataRepoDocumentation', u'Data Repository Documentation',
+   u'Data Repository support <helpdesk@surfsara.nl>', 'SURFDataRepoDocumentation', 'The Data Repository user documentation.',
    'Miscellaneous'),
 ]
 
