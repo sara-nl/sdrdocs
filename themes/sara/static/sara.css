@@ -8,11 +8,11 @@
  * :license: BSD, see LICENSE for details.
  *
  */
- 
+
 @import url("basic.css");
- 
+
 /* -- page layout ----------------------------------------------------------- */
- 
+
 body {
     font-family: sans-serif;
     font-size: 100%;
@@ -60,7 +60,7 @@ div.body {
     border-right-style: none;
     overflow: auto;
 }
- 
+
 div.footer {
     color: #ffffff;
     width: 100%;
@@ -70,7 +70,7 @@ div.footer {
     background: transparent;
     clear:both;
 }
- 
+
 div.footer a {
     color: #ffffff;
     text-decoration: none;
@@ -88,7 +88,7 @@ div.related {
     background-color: #004421;
     background: linear-gradient(to bottom, #008741, #004421)
 }
- 
+
 div.related a {
     color: #fff;
 }
@@ -96,7 +96,7 @@ div.related a {
 div.related ul {
     padding-left: 1em;
 }
- 
+
 div.sphinxsidebar {
     font-size: 0.75em;
     line-height: 1.5em;
@@ -105,7 +105,7 @@ div.sphinxsidebar {
 div.sphinxsidebarwrapper{
     padding: 10px 0;
 }
- 
+
 div.sphinxsidebar h3,
 div.sphinxsidebar h4 {
     font-family: sans-serif;
@@ -119,30 +119,30 @@ div.sphinxsidebar h4 {
 div.sphinxsidebar h4{
     font-size: 1.3em;
 }
- 
+
 div.sphinxsidebar h3 a {
     color: #000000;
 }
- 
- 
+
+
 div.sphinxsidebar p {
     color: #888;
     padding: 5px 20px;
 }
- 
+
 div.sphinxsidebar p.topless {
 }
- 
+
 div.sphinxsidebar ul {
     margin: 10px 20px;
     padding: 0;
     color: #373839;
 }
- 
+
 div.sphinxsidebar a {
     color: #444;
 }
- 
+
 div.sphinxsidebar input {
     border: 1px solid #ccc;
     font-family: sans-serif;
@@ -193,7 +193,7 @@ div.body h2 a,
 div.body h3 a,
 div.body h4 a,
 div.body h5 a,
-div.body h6 a, 
+div.body h6 a,
 div.body h1,
 div.body h2,
 div.body h3,
@@ -212,18 +212,18 @@ div.body h3 { font-size: 150%; margin-left: -30px; margin-top: 1.6em; }
 div.body h4 { font-size: 120%; margin-left: -20px; margin-top: 2em; }
 div.body h5 { font-size: 110%; margin-left: 0px; }
 div.body h6 { font-size: 100%; margin-left: 0px; }
- 
+
 a.headerlink {
     color: #1b61d6;
     font-size: 0.8em;
     padding: 0 4px 0 4px;
     text-decoration: none;
 }
- 
+
 a.headerlink:hover {
     text-decoration: underline;
 }
- 
+
 div.body p, div.body dd, div.body li {
     line-height: 1.5em;
 }
@@ -277,7 +277,7 @@ div.note {
     background: #def url(dialog-note.png) no-repeat 12px 15px;
     padding: 20px 20px 20px 60px;
 }
- 
+
 div.seealso {
     background: #fff6bf url(dialog-seealso.png) no-repeat 12px 15px;
     border: 1px solid #ffd324;
@@ -293,7 +293,7 @@ div.warning {
 p.admonition-title {
     display: none;
 }
- 
+
 p.admonition-title:after {
     content: ":";
 }
