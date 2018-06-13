@@ -49,13 +49,14 @@ Basic Usage
 .. _advanced-usage:
 
 =======
-Advanced Usage
+Advanced
 =======
 
 .. toctree::
    :maxdepth: 2
 
    pages/advanced/advanced_usage
+   pages/advanced/objects
 
 
 .. _practices:
@@ -83,7 +84,7 @@ Appendix
 
 .. sidebar:: Need help?
 
-    Do you need help with this user documentation? We are more than willing to assist! Just contact us at helpdesk@surfsara.nl.
+    Do you need help with the use of the Data Repository or this user documentation? We are more than willing to assist! Just contact us at helpdesk@surfsara.nl.
 
 
 .. Links:

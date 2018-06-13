@@ -42,7 +42,19 @@ To deposite data, you should login as a registered user. In the main page click 
 
 	Then enter the general information that is required (Title, Creator and Description). These information will be the basic  metadata for the files. The fields with * are compolsury.
 
-![Alt Image Text](img/deposit_step1.png)
+    ![Deposit step 1](img/deposit_step1.png)
+
+    In this step you can select a license for your data. Click on "Select" button next to the License field, which opens the license selector tool. Depending on the requirements for your data, you can answer several questions that lead you to the right license that will accompany your dataset.
+
+    ![Alt Image Text](img/deposit_step4.png)
+
+    You can use license selector tool to find the license. If you are not sure which license to choose, answer the questions on the top of the form to find the appropriate license.
+
+    ![Alt Image Text](img/deposit_step4_license.png)
+
+    The license you choose will be added to the metadata.
+
+     ![Alt Image Text](img/deposit_step4_license2.png)
 
 * **Step 2: Select a community, collection and/or metadata schema**
 	If you are a memeber of a community and you want to deposit data in that community, select the community name.
@@ -50,28 +62,17 @@ To deposite data, you should login as a registered user. In the main page click 
 	If you are not member of any communities, you will see the collections and schemas defined by yourself.
 	This step is optional and can be skipped.
 
-	![Alt Image Text](img/deposit_step2.png)
+    ![Deposit step 2](img/deposit_step2.png)
 
-* **Step 3: Provide information on privacy, relations and other identifiers**
+* **Step 3: Provide information on privacy, relations and other additional metadata**
 
 	In this step you can provide any privacy settings such as Embargo and Publish untill. You can also provide any linked information to the data.
 	If the data is not linked and has no privacy constrains you can skip this step.
 
-	![Alt Image Text](img/deposit_step3.png)
+    ![Deposit step 3](img/deposit_step3.png)
 
 * **Step 4: Select license**
 
-	In this step you can select a license for your data. Click on "Choose license" and a license selector tool will be open. If your data is completely open to the public, no license is needed and this step can be skipped.
-
-	![Alt Image Text](img/deposit_step4.png)
-
-	You can use license selector tool to find the license. If you are not sure which license to choose, answer the questions on the top of the form to find the appropriate license.
-
-	![Alt Image Text](img/deposit_step4_license.png)
-
-	The license you choose will be added to the metadata.
-
-	 ![Alt Image Text](img/deposit_step4_license2.png)
 * **Step 5: Terms of Use / Producer contract**
 
 	Please read the terms of use and agree with that by checking the checkbox before depositing data.

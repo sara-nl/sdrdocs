@@ -4,7 +4,7 @@
 Basic Usage
 ***********
 
-This page provides information on the basic usage of the data repository, such as depositing data, searching data and downloading data. It also describes the online deposite workflow which is the steps that you take to deposit data on the Data Repository.
+This page provides information on the basic usage of the data repository, such as depositing, searching or downloading data. It also describes the online deposite workflow which are the steps that you take to deposit data into the Data Repository.
 
 .. contents::
     :depth: 8
@@ -104,9 +104,20 @@ _________________
 ==============
 Deposit landing page
 ==============
-Deposit landing page is created after each deposit. In the deposit landing page you can see the deposit description, metadata and more information about the status of the data, for example if the data is online (on disk) or offline (on tape).
+The landing page of the new deposit is created after completion of the deposit workflow. In the deposit landing page you can see the deposit basic details, additional metadata and more information about the status of the data, for example if the data is currently online or offline and therfore needs to be staged.
 
- .. image:: ../img/landing-page.png
+ .. image:: ../img/deposit-landing-page2.png
+   :align: center
+   :width: 75%
+
+.. _collection-landing-page:
+
+==============
+Collection landing page
+==============
+A landing page of a collection is similar to those of a deposit. In the colleciton landing page the basic details of the collection are listed, as well as the member objects of that collection, which can be other collections or deposits.
+
+ .. image:: ../img/collection-landing-page.png
    :align: center
    :width: 75%
 
@@ -131,24 +142,6 @@ Advanced searches can be performed by clicking the Search button, then entering 
 
 
 .. note:: If you have the PID (Persistent Identifier) of the data you can directly search in the `Handle Server`_ and get the url to the location of the data.
-
-.. _download-data:
-
-==========================
-Download data
-==========================
-
-To download data from the Data Repository you have to be logged in as a registered user. Unregistered users can only download data sets that are publically accessible.
-
-
-To download data you should first go to the deposit landing page.
-You can download single files by selecting the file you want to download and then clicking on the **download** link. If the data is **offline**, it means that the data is currently on tape. You should first request the data to be staged from the tape by clicking the **request** link.
-
-To download several files at the same time, your can add the files to your basket and then download them all at once.
-
- .. image:: ../img/landing-page.png
-   :align: center
-   :width: 75%
 
 .. _export-metadata:
 
