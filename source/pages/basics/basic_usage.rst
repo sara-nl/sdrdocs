@@ -57,12 +57,24 @@ The landing page of a deposit is created after completion of the online deposit 
    :align: center
    :width: 75%
 
+.. _export-metadata:
+
+
+Export Metadata
+_________________
+
+To export metadata of an object go to the object's landing page and click on the export link on the top-right corner of the metadata panel. You can choose to export all the metadata or make a specific selection such as the default (Dublin Core) or community-specific metadata.
+
+ .. image:: ../img/export-metadata.png
+   :align: center
+   :width: 75%
+
 .. _collection-landing-page:
 
 ==============
 Collection landing page
 ==============
-A landing page of a collection is similar to those of a deposit. In the colleciton landing page the basic details of the collection are listed, as well as the member objects of that collection, which can be other collections or deposits.
+A landing page of a collection is similar to those of a deposit. In the collection landing page the basic details of the collection are listed, as well as the member objects of that collection, which can be other collections or deposits.
 
  .. image:: ../img/collection-landing-page.png
    :align: center
@@ -89,18 +101,6 @@ Advanced searches can be performed by clicking the Search button, then entering 
 
 
 .. note:: If you have the PID (Persistent Identifier) of the data you can directly search in the `Handle Server`_ and get the url to the location of the data.
-
-.. _export-metadata:
-
-==========
-Export Metadata
-==========
-
-To export metadata you should first find the data by search. Then  go to the landing page of the data and click on the export link on the top-right corner of the metadata pannle. You can choose to export all the meta data or based on other criteria such as dublin core or community specific metadata.
-
- .. image:: ../img/export-metadata.png
-   :align: center
-   :width: 75%
 
 .. Links:
 
