@@ -43,6 +43,7 @@ Basic Usage
    :maxdepth: 2
 
    pages/basics/basic_usage
+   pages/basics/deposit
    pages/basics/downloads
 
 

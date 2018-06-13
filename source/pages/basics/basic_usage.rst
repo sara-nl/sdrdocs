@@ -21,7 +21,6 @@ Login with your user credentials in the `Login`_ page of the Data Repository Ser
 If you do not have access, go to :ref:`How to get access <get-access>` page for more information.
 
 
-
 .. _homepage:
 
 ================
@@ -47,64 +46,12 @@ On the buttom left column, the are  shortcuts for defining new collections, meta
    :align: center
    :width: 75%
 
-.. _deposit-data:
-
-==============
-Deposit data
-==============
-
-Deposit is the act of uploading data to the Data Repository. Only registered users are permitted to deposit new records.
-
-
-.. _prepare-data:
-
-Prepare data
-______________
-
- Before you make any deposits, you should make sure that your data has the right format. To prepare data for a deposit there are some best practices for the file format, file size, metadata, data documentation and organisation. For more information, visit the :ref:`Best Practices <best-practices>` page.
-
-.. _deposit-workflow:
-
-Deposit workflow
-_________________
-
- Clicking the deposit link in the main interface opens the first of a three stage process required to upload data. The steps are as follows:
-
-1. In the Create a new deposit page, select files to deposit and then click on Upload to upload the file.
-
- .. note:: Make sure that you are uploading an acceptable file format. Valid file extensions are: .jpg, .jpeg, .gif, .png, .txt, .text, .md, .pdf, .odt, .ods, .odp, .mp4, .avi, .hdf5, .h5, .hdf4, .nc, .cdl. If the data format you are trying to upload is not supported, you can always contact us for support.
-
-
- Then provide the basic metadata for your file such as Title, Creator, keywords (for searching purposes) and Description. The fields with a * are mandatory fields.
-
- .. image:: ../img/deposit1.png
-   :align: center
-   :width: 75%
-
- In this step you should also select the type of data and language of the data and a license for ypublication. The license can be selected through a built-in wizard. If you are not sure which license to choose, answer the questions on the top of the built-in wizard form to find the appropriate license. If your data is completely open to the public, no license is needed and this field can be skipped.
-
-  .. image:: ../img/license.png
-   :align: center
-   :width: 75%
-
-2. Next you can optionally select a community, collection and/or metadata schema. If you are a memeber of a community and you want to deposit data in that community, select the community name. The collection and metadata schema will be prepopulated based on which community you choose. If you are not member of any communities, you will see the collections and schemas defined by yourself. This step is optional and can be skipped. In the right you can the basic metadata you defined for the deposit.
-
- .. image:: ../img/deposit2.png
-   :align: center
-   :width: 75%
-
-3. Finally you can fill in optional information about privacy settings on your data such as Embargo and end publication date. You can also specify links that are related to this publication. Please read the terms of use and agree with that by checking the checkbox before depositing data. In the end, click on the **Complete** button to finalize your deposit.
-
- .. image:: ../img/deposit3.png
-   :align: center
-   :width: 75%
-
 .. _deposit-landing-page:
 
 ==============
 Deposit landing page
 ==============
-The landing page of the new deposit is created after completion of the deposit workflow. In the deposit landing page you can see the deposit basic details, additional metadata and more information about the status of the data, for example if the data is currently online or offline and therfore needs to be staged.
+The landing page of a deposit is created after completion of the online deposit workflow. In the deposit landing page you can see the deposit's basic details, additional metadata and information about the status of the files contained in the deposit, for example if the data is currently online or offline and therefore needs to be staged.
 
  .. image:: ../img/deposit-landing-page2.png
    :align: center
@@ -157,5 +104,5 @@ To export metadata you should first find the data by search. Then  go to the lan
 
 .. Links:
 
-.. _`Login`: https://repo-test.surfsara.nl/user/login
+.. _`Login`: https://repository.surfsara.nl/user/login
 .. _`Handle Server`: http://hdl.handle.net/
