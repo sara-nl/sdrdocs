@@ -31,7 +31,6 @@ General
 
    pages/general/about
    pages/general/access
-   pages/general/objects
 
 
 .. _basic-usage:
@@ -44,6 +43,7 @@ Basic Usage
    :maxdepth: 2
 
    pages/basics/basic_usage
+   pages/basics/downloads
 
 
 .. _advanced-usage:
@@ -69,6 +69,7 @@ Best practices
    :maxdepth: 1
 
    pages/practices/best_practices
+
 
 .. _appendix:
 
