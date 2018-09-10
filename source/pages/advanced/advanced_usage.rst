@@ -10,22 +10,6 @@ This page provides information on the advanced usage of the data repository, suc
     :depth: 8
 
 
-.. _account-overview:
-
-=================
-Account overview
-=================
-The account overview page provides an overview of the number of deposits and collections you have, also the number of groups and communities you are part of. From your account, there are links to quick actions for advanced functionalities such as creating a new  metadata schema, creating new groups and creating new communitites. Each of these will be explained in more detail in the following sections.
-
-On the left side of your account overview page there are links to different parts of your account such as your profile, deposits, collections, groups, communities, messages, ... . Some other options are:
- - **Administrator:** shows an overview of all the items you currently have administrative rights to.
- - **Basket:** An overview of all the items you currently have in your basket. You can chose any item to download or remove from your basket. The Basket functionality is very useful if you want to download a bunch of individual object (or files). Go to the landing page of an object to add it to your basket.
- - **Favorites:** An overview of all the items you currently have marked as favourite. Click on the title of a favourite to go to the landing page, or the cross to remove the item from your list. To add an object to your favourites, go to the corresponding landing page and add it.
-
- .. image:: ../img/account_overview_page.png
-   :align: center
-   :width: 75%
-
 .. _metadata-schema:
 
 =================
