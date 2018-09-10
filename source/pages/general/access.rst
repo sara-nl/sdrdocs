@@ -34,3 +34,5 @@ Then click on **Request registration** tab. Enter your required information and 
  .. image:: ../img/account.png
    :align: center
    :width: 75%
+
+An alternative is to send an email to helpdesk@surfsara.nl with a description of your request.

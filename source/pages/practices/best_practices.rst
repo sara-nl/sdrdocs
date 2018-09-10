@@ -34,23 +34,25 @@ To prepare data for a deposit you need to consider the following points:
 - **Metadata**
     Metadata provides structured information about the data. Depending on the type of data, there are different types of metadata:
 
-    - **Descriptive metadata** describes and identifies information resources (minimal metdata required to find a digital object). In includes elements such as title, abstract, author, and keywords.
+    - **Descriptive metadata** describes and identifies information resources (minimal metdata required to find a digital object). In includes elements such as title, abstract, author, and keywords
+
 	- **Structural metadata** provides information about the internal structure of resources including page, section, chapter numbering, indexes, and realtions to other digital objects.
-	- **Technical metadata** provides information on the technical aspects of the datasets	 such as data formats, hardware/software used, calibration, version, authentication, encryption.
-	- **Administrative metadata**	provides information on user rights and management of digital objects	 such as license, rights management, and access control.
+
+    - **Technical metadata** provides information on the technical aspects of the datasets such as data formats, hardware/software used, calibration, version, authentication, encryption.
+
+    - **Administrative metadata** provides information on user rights and management of digital objects such as license, rights management, and access control.
 
     The repository will only ask for descriptive metadata during the deposit workflow, but it is highly recommended to add links to additional documentation or files containing metadata of any kind.
 
 - **Data organisation**
-	If you want your research data to be easily traced and interpreted, the folder structure and the file names used for the data files should be logical. Its also a good practice to note the file naming and its meaning in a readme.txt file.
+	If you want your research data to be easily traced and interpreted, the collection and deposit structure and the file names used for the data files should be logical. Make sure to use the correct file extensions to avoid files being rejected or misinterpreted by other users. Its also a good practice to note the file naming and its meaning in a separate readme file.
 
 - **Data anonymization**
-	Before you upload the files you should check whether they contain privacy-sensitive information within the meaning of the `Dutch Personal Data Protection Act`_ .
+	Before you upload the files you should check whether they contain privacy-sensitive information within the meaning of the regulations and guidelines in the `General Data Protection Regulation`_ (GDPR).
 	If you give access to the data, they must be completely anonimyzed.
-
 
 .. Links:
 
-.. _`SURFsara prefered formats`: https://repo-test.surfsara.nl/formats
-.. _`SURFsara acceptable formats`: https://repo-test.surfsara.nl/formats
-.. _`Dutch Personal Data Protection Act`: http://www.coe.int/t/dghl/standardsetting/dataprotection/national%20laws/NL_DP_LAW.pdf
+.. _`SURFsara prefered formats`: https://repository.surfsara.nl/formats
+.. _`SURFsara acceptable formats`: https://repository.surfsara.nl/formats
+.. _`General Data Protection Regulation`: https://www.government.nl/privacy
