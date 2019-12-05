@@ -58,6 +58,6 @@ To prepare data for a deposit you need to consider the following points:
 
 .. Links:
 
-.. _`SURFsara prefered formats`: https://repository.surfsara.nl/formats
-.. _`SURFsara acceptable formats`: https://repository.surfsara.nl/formats
+.. _`SURFsara prefered formats`: https://repository.surfsara.nl/docs/formats
+.. _`SURFsara acceptable formats`: https://repository.surfsara.nl/docs/formats
 .. _`General Data Protection Regulation`: https://www.government.nl/privacy

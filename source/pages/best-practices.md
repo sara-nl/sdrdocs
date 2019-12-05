@@ -11,7 +11,7 @@ To prepare data for a deposit you need to consider the following points:
 
 	- **Accepted formats** are file formats that are widely used in addition to the preferred formats, and which will be moderately to reasonably usable, accessible and robust in the long term. SURFsara favours the use of preferred formats, but acceptable formats will in most cases also be allowed. Here is a list with [SURFsara acceptable formats](http://datasupport.researchdata.nl/en/start-de-cursus/iii-onderzoeksfase/dataformaten/preferred-formats/).
 
-    Please read about our [preservation policy](https://repository.surfsara.nl/preservation-policy) on how the service will deal with preferred and accepted formats.
+    Please read about our [preservation policy](https://repository.surfsara.nl/docs/preservation-policy) on how the service will deal with preferred and accepted formats.
 
     If you feel your file format of choice is not listed, but should be included, please contact us at [helpdesk@surfsara.nl](mailto:helpdesk@surfsara.nl).
 
@@ -35,4 +35,4 @@ To prepare data for a deposit you need to consider the following points:
 - **Data anonymization**
     Before you upload the files you should check whether they contain privacy-sensitive information within the meaning of the [Dutch Personal Data Protection Act](http://www.coe.int/t/dghl/standardsetting/dataprotection/national%20laws/NL_DP_LAW.pdf).
 
-    Please read about our [Data Producer Agreements](https://repository.surfsara.nl/data-producer) and [Terms of Use](https://repository.surfsara.nl/terms) to learn about the requirements for data privacy and anonymisation.
+    Please read about our [Data Producer Agreements](https://repository.surfsara.nl/docs/data-producer) and [Terms of Use](https://repository.surfsara.nl/docs/terms) to learn about the requirements for data privacy and anonymisation.
