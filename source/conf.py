@@ -15,8 +15,9 @@
 import sys
 import os
 
-#Added by Narges, to use md
 from recommonmark.parser import CommonMarkParser
+
+import sphinx_rtd_theme
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -31,7 +32,9 @@ from recommonmark.parser import CommonMarkParser
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = []
+extensions = [
+    "sphinx_rtd_theme"
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -111,7 +114,7 @@ pygments_style = 'sphinx'
 
 #Narges: To quickly build docs
 #html_theme = 'sara'
-html_theme = 'classic'
+html_theme = "sphinx_rtd_theme"
 html_theme_options = {
     "rightsidebar": "true",
     "relbarbgcolor": "black"
