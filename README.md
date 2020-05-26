@@ -3,4 +3,4 @@ This repository contains the source code of Data Repository user documentation m
 
 - The Data Repository documentation page is linked through: http://repository.surfsara.nl/docs/user-guide
 - The source code of documentation is in GitHub: https://github.com/sara-nl/sdrdocs
-- The readthedocs overview page is: http://surfdatarepo.readthedocs.io
+- The readthedocs overview page is: http://sdrdocs.readthedocs.io
