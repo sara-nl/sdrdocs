@@ -27,18 +27,20 @@ If you do not have access, go to :ref:`How to get access <get-access>` page for 
 Homepage
 ================
 
-After you login to your account, you will be redirected to your homepage where you can quickly deposit data, find data to download or create collections of data.
+After you login to your account, you will be redirected to the homepage where you can quickly find the latest deposits and collections, start depositing your own data, or search for existing digital objects for download.
 
 .. sidebar::
     **Note:**
 
     **Deposit** is an object containing one or more files and corresponding metadata
 
-    **Collection** is a bunch of deposits
+    **Collection** is a bunch of deposits and/or collections and has metadata of its own
 
-On the right column you can see the latest deposits and collections that are uploaded on the data repository.
+    **Community** is a group of common users that are part of a research domain or initiative
 
-On the top left you see some statistics of your account such as the number of deposits and collections you have. "Show account detail" redirects you to your profile page.
+The top region allows searching for deposits and collections immediately. It supports faceted search by prepending a field (e.g. 'title') before your search term, for example 'title:data'.
+
+On the top right you can locate your account details and find some links in the dropdown menu when the avatar is clicked. The 'My account' option sends you to your `account page`_. Here you can easily start creating new deposits, collections, groups and, if allowed, communities and schemas.
 
 On the buttom left column, the are  shortcuts for defining new collections, metadata schemas and groups, explained more in the :ref:`Advanced usage <advanced-usage>`.
 
@@ -53,19 +55,29 @@ Deposit landing page
 ==============
 The landing page of a deposit is created after completion of the online deposit workflow. In the deposit landing page you can see the deposit's basic details, additional metadata and information about the status of the files contained in the deposit, for example if the data is currently online or offline and therefore needs to be staged.
 
- .. image:: ../img/deposit-landing-page2.png
+ .. image:: ../img/deposit-landing-page.png
    :align: center
    :width: 75%
 
 .. _export-metadata:
 
-
 Export Metadata
 _________________
 
-To export metadata of an object go to the object's landing page and click on the export link on the top-right corner of the metadata panel. You can choose to export all the metadata or make a specific selection such as the default (Dublin Core) or community-specific metadata.
+To export metadata of an object go to the object's landing page and click on the 'Export' dropdown button on the top-right corner of the page. You can choose different metadata format options here.
 
- .. image:: ../img/export-metadata.png
+ .. image:: ../img/deposit-landing-page-export.png
+   :align: center
+   :width: 75%
+
+.. _download-zipped:
+
+Download zipped archive
+_________________
+
+You can download all files and optionally the metadata using the 'Download as' dropdown button and choosing 'ZIP'. If all files are online, a ZIP archive file will be offered for download. You can also get a BagIt format archive file.
+
+ .. image:: ../img/deposit-landing-page-download.png
    :align: center
    :width: 75%
 
@@ -86,8 +98,8 @@ A landing page of a collection is similar to those of a deposit. In the collecti
 Search and discover datasets
 ====================
 To search for data use the search functionality on the home page. The text entered can be part of a title, keyword, abstract or any other metadata.
-Both registered and unregistered users can search for data. Unregistered users can only search for data sets that are publicly accessible.
-You can also make search within specific communities, which means the search results will be limited to that community.
+
+Both registered and unregistered users can search for data. You can also make search within specific communities, which means the search results will be limited to that community.
 
  .. image:: ../img/search.png
    :align: center
@@ -96,13 +108,14 @@ You can also make search within specific communities, which means the search res
 Advanced searches can be performed by clicking the Search button, then entering the additional search criteria on the page that is shown. You can set advanced search criteria to search for deposits, collections, schemas, communities or combinations of any of them. You can also order the search results by Title, Creator, Identifier, or Creation date.
 
 .. sidebar::
-    If you have the PID (Persistent Identifier) of the data you can directly search in the `Handle Server`_ and get the url to the location of the data.
+    If you have the PID (Persistent Identifier) of the data you can directly search in the `Handle Server`_ and get the URL to the location of the data.
    :align: center
 
 
-.. note:: If you have the PID (Persistent Identifier) of the data you can directly search in the `Handle Server`_ and get the url to the location of the data.
+.. note:: If you have the PID (Persistent Identifier) of the data you can directly search in the `Handle Server`_ and get the URL to the location of the data.
 
 .. Links:
 
 .. _`Login`: https://repository.surfsara.nl/user/login
+.. _`account page`: https://repository.surfsara.nl/user
 .. _`Handle Server`: http://hdl.handle.net/
