@@ -4,7 +4,7 @@
 About the Data Repository
 **************
 
-In this page you will find general information about the Data Repository, how it works and how to get access:
+In this page you will find general information about the Data Repository, how it works and how to get access.
 
 .. contents::
     :depth: 4
@@ -28,3 +28,13 @@ For what data
 ====================
 
 The Data Repository service is suitable for publishing research data especially in the field of Big Data sciences. The repository imposes no limits on the data volume and number of files, but does have some guidelines on how to efficiently store your data for publication.
+
+.. _get-access:
+
+====================
+How to get access
+====================
+
+You can get access to the Data Repository by contacting the SURF helpdesk at helpdesk.surfsara.nl. For large publications you will need a contract or be incorporated in existing contracts of your institute.
+
+You can also contact your institute's IT department or research desk for more information and further assistance.

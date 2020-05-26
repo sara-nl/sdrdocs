@@ -1,10 +1,10 @@
 .. _get-access:
 
 *****************
-How to get access
+Accessing the service
 *****************
 
-On this page you will find general information about getting access to the Data Repository service.
+On this page you will find general information about accessing the Data Repository service once you have obtained an account.
 
 .. contents::
     :depth: 2
@@ -15,24 +15,18 @@ On this page you will find general information about getting access to the Data 
 General access
 ==============================
 
-The repository provides access to mostly open access data which can be found and downloaded by anyone interested without requiring registration.
+The repository provides access to mostly open access data which can be found and downloaded by anyone interested. You can find the service website at repository.surfsara.nl.
 
-.. _obtain-account:
+.. _authenticated-access:
 
 ==============================
-Obtain an account
+Logging in
 ==============================
 
-To be able to administer publications and other objects in the repository service, you need to login as a registered user. To obtain user credentials you should first send a registration request via the Login page. Select 'Log in' from the top right menu under the avatar image.
+You can log in to the service by visiting the website and clicking on the user avatar on the top-right corner. Fill in the credentials you have obtained from SURFsara.
 
- .. image:: ../img/login_icon.png
-   :align: center
-   :width: 75%
-
-Then click on **Request registration** tab. Enter your required information and agree to the **Terms of Use** and **Privacy policy** of the service. Then click on **Request registration** to apply for registration with the SURFsara Data Repository. You will be contacted as soon as possible by the SURFsara advisors. If your request is approved, your credentials will be sent to the email address you provided during the request.
-
- .. image:: ../img/account.png
-   :align: center
-   :width: 75%
-
-An alternative is to send an email to helpdesk@surfsara.nl with a description of your request.
+Once you have successfully authenticated, you can start:
+- Uploading your own files and create deposits
+- Managing existing deposits and other digital objects
+- Select files for your basket and favourites
+- Administer digital objects of other users that belong to your community (community administrator only)

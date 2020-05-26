@@ -17,7 +17,9 @@ Data Repository Documentation
    :alt: Data Repository logo
    :align: right
 
-Welcome to the user documentation of the Data Repository service provided by `SURFsara`_. The information in this tutorial will help you get started with using the Data Repository, learn best practices and techniques for publishing your data and stay up-to-date with the service developments. We welcome your comments at helpdesk@surfsara.nl to help us improve the documentation.
+Welcome to the user documentation of the Data Repository service provided by `SURFsara`_. The information in this tutorial will help you get started with using the Data Repository, learn best practices and techniques for publishing your data and stay up-to-date with the service developments.
+
+We welcome your comments at helpdesk@surfsara.nl to help us improve the documentation.
 
 
 .. _general:
