@@ -38,11 +38,11 @@ _________________
 
  Provide the basic metadata for your deposit such as the title, creator(s), keywords (for searching purposes) and description. The fields in the upper section are mandatory fields, while the optional fields are shown in the lower section.
 
- .. image:: ../img/deposit1.png
+ .. image:: ../img/deposit-workflow-1.png
    :align: center
    :width: 75%
 
- In this step you should also select the type of data and language of the data and a license for publication. The license can be selected through a built-in wizard. If you are not sure which license to choose, answer the questions on the top of the built-in wizard form to find the appropriate license.
+ In this step you can also set the type of data and language of the data and you must add a license for the publication. The license can be selected through a built-in wizard. If you are not sure which license to choose, answer the questions on the top of the built-in wizard form to find the appropriate license.
 
   .. image:: ../img/license.png
    :align: center
@@ -52,7 +52,7 @@ _________________
 
 2. Next you can optionally select a community, collection and/or metadata schema. If you are a memeber of a community and you want to deposit data in that community, select the community name. The collection and metadata schema will be prepopulated based on which community you choose. If you are not member of any communities, you will see the collections and schemas defined by yourself. This step is optional and can be skipped. In the right you can the basic metadata you defined for the deposit.
 
- .. image:: ../img/deposit2.png
+ .. image:: ../img/deposit-workflow-2.png
    :align: center
    :width: 75%
 
@@ -62,7 +62,7 @@ Click 'Next >>' to go to the third and final step of the online deposit workflow
 
 Please carefully read the `Terms of use`_ and `Data Producer Agreement`_ before you agree by checking the checkbox before depositing data. In the end, click on the **Complete** button to finalize your deposit.
 
- .. image:: ../img/deposit3.png
+ .. image:: ../img/deposit-workflow-3.png
    :align: center
    :width: 75%
 
