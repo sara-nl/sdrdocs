@@ -10,7 +10,7 @@
 Data Repository Documentation
 ******************
 
-.. image:: logo.png
+.. image:: pages/img/logo.png
    :width: 700 px
    :height: 154 px
    :scale: 50 %
@@ -62,6 +62,16 @@ Advanced
    pages/advanced/account
    pages/advanced/objects
 
+.. _rest-api:
+
+=======
+REST API
+=======
+
+.. toctree::
+   :maxdepth: 2
+
+   pages/rest-api/intro
 
 .. _practices:
 

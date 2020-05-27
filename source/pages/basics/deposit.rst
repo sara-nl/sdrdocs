@@ -60,12 +60,21 @@ Click 'Next >>' to go to the third and final step of the online deposit workflow
 
 3. In this final step you can fill in optional information such as the embargo data of your data. You can also specify links that are related to this publication. If you have any metadata that does not fit the basic or community metadata fields, you can add them here. For every field there needs to be a unique field name and a value.
 
-Please carefully read the `Terms of use`_ and `Data Producer Agreement`_ before you agree by checking the checkbox before depositing data. In the end, click on the **Complete** button to finalize your deposit.
+Please carefully read the `Terms of use`_ and `Data Producer Agreement`_ before you agree by checking the checkbox before depositing data.
 
  .. image:: ../img/deposit-workflow-3.png
    :align: center
    :width: 75%
 
+When you have checked all metadata in the right sidebar, click on the **Complete** button to finalize your deposit.
+
+.. _automated-depositing:
+
+==============
+Automated depositing
+==============
+
+If you have many deposits to create, or have an automated workflow set up or application that generates data that needs to be published, you can make use of the REST API provided by the service. Please refer to the :ref:`REST API <rest-api>` page for more information.
 
 .. Links:
 
