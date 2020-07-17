@@ -4,21 +4,12 @@
 Basic Usage
 ***********
 
-This page provides information on the basic usage of the data repository, such as depositing, searching or downloading data. It also describes the online deposite workflow which are the steps that you take to deposit data into the Data Repository.
+This page provides information on the basic usage of the data repository, such as discovering, searching or downloading data.
+
+Basic usage does not require logging into the service.
 
 .. contents::
     :depth: 8
-
-
-.. _log-in:
-
-===========
-Logging in
-===========
-
-Login with your user credentials in the `Login`_ page of the Data Repository Service.
-
-If you do not have access, go to :ref:`How to get access <get-access>` page for more information.
 
 
 .. _homepage:
@@ -120,6 +111,5 @@ Advanced searches can be performed by clicking the Search button, then entering 
 
 .. Links:
 
-.. _`Login`: https://repository.surfsara.nl/user/login
 .. _`account page`: https://repository.surfsara.nl/user
 .. _`Handle Server`: http://hdl.handle.net/

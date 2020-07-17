@@ -1,10 +1,10 @@
-.. _basic-usage:
+.. _deposit:
 
 ***********
 Deposit
 ***********
 
-This page explains how to get your data into the data repository using the online deposit workflow.
+This page explains how to get your data into the data repository using the online deposit workflow. Once depositing is completed, you will have a publication for your dataset.
 
 .. contents::
     :depth: 8
@@ -16,23 +16,23 @@ This page explains how to get your data into the data repository using the onlin
 Deposit data
 ==============
 
-Deposit is the act of uploading data to the Data Repository. Only registered users are permitted to deposit new records.
+Depositing is the act of uploading data to the Data Repository. Only registered users are permitted to deposit data and create publications.
 
 .. _prepare-data:
 
 Prepare data
 ______________
 
- To prepare data for a deposit there are some best practices for the file format, file size, metadata, data documentation and organisation. For more information, visit the :ref:`Best Practices <best-practices>` page.
+To prepare data for a deposit there are some best practices for the file format, file size, metadata, data documentation and structuring. For more information, visit the :ref:`Best Practices <best-practices>` page.
 
 .. _deposit-workflow:
 
 Deposit workflow
 _________________
 
- Clicking the deposit link in the main interface opens the first of a three stage process required to upload data. The steps are as follows:
+Clicking the deposit link in the main page opens the first of the three steps required to create a publication. The steps are as follows:
 
-1. In the Create a new deposit page, select files to deposit and then click on Upload to upload the file.
+1. In the 'Create a new deposit' page, select files to deposit and then click on 'Start upload' to upload the file(s).
 
  .. note:: Make sure that you are uploading an acceptable file format. Valid file formats can be found on the `File formats`_ documentation page. If the data format you are trying to upload is not supported, you can always contact us for support.
 
@@ -50,7 +50,9 @@ _________________
 
  Click 'Next >>' to go to the second step of the online deposit workflow.
 
-2. Next you can optionally select a community, collection and/or metadata schema. If you are a memeber of a community and you want to deposit data in that community, select the community name. The collection and metadata schema will be prepopulated based on which community you choose. If you are not member of any communities, you will see the collections and schemas defined by yourself. This step is optional and can be skipped. In the right you can the basic metadata you defined for the deposit.
+2. Next you must select a community, and optionally a collection and/or a metadata schema (if possible). If you are a member of a community and you want to deposit data in that community, select the community name. The available collections will be pre-populated based on which community you choose and which collections you have created yourself.
+
+If a community or collection has a metadata schema attached, the corresponding form will be shown and all mandatory fields need to be filled in.
 
  .. image:: ../img/deposit-workflow-2.png
    :align: center
@@ -58,9 +60,11 @@ _________________
 
 Click 'Next >>' to go to the third and final step of the online deposit workflow.
 
-3. In this final step you can fill in optional information such as the embargo data of your data. You can also specify links that are related to this publication. If you have any metadata that does not fit the basic or community metadata fields, you can add them here. For every field there needs to be a unique field name and a value.
+3. In this final step you can fill in optional information such as the embargo data of your data (if configured).
 
-Please carefully read the `Terms of use`_ and `Data Producer Agreement`_ before you agree by checking the checkbox before depositing data.
+You can also specify links that are related to this publication. If you have any metadata that does not fit the basic or community metadata fields, you can add them here. For every field there needs to be a unique field name and a value.
+
+Please carefully read the `Terms of use`_ and `Data Producer Agreement`_ before you agree by checking the checkbox.
 
  .. image:: ../img/deposit-workflow-3.png
    :align: center
@@ -68,10 +72,10 @@ Please carefully read the `Terms of use`_ and `Data Producer Agreement`_ before 
 
 When you have checked all metadata in the right sidebar, click on the **Complete** button to finalize your deposit.
 
-.. _automated-depositing:
+.. _workflows-applications:
 
 ==============
-Automated depositing
+Workflows and applications
 ==============
 
 If you have many deposits to create, or have an automated workflow set up or application that generates data that needs to be published, you can make use of the REST API provided by the service. Please refer to the :ref:`REST API <rest-api>` page for more information.
