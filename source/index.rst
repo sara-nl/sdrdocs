@@ -59,6 +59,7 @@ Advanced
    :maxdepth: 2
 
    pages/advanced/advanced_usage
+   pages/advanced/massive
    pages/advanced/account
    pages/advanced/objects
 
