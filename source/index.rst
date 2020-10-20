@@ -46,6 +46,7 @@ Basic Usage
 
    pages/basics/basic_usage
    pages/basics/deposit
+   pages/basics/metadata
    pages/basics/downloads
 
 
