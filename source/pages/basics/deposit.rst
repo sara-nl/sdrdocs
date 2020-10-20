@@ -4,7 +4,7 @@
 Deposit
 ***********
 
-This page explains how to get your data into the data repository using the online deposit workflow. Once depositing is completed, you will have a publication for your dataset.
+The process of getting data into the data repository and publishing it is called depositing. This can be done using the online deposit workflow that is part of the Data Repository service. Once depositing is completed, you will have a publication for your dataset.
 
 .. contents::
     :depth: 8
@@ -16,7 +16,7 @@ This page explains how to get your data into the data repository using the onlin
 Deposit data
 ==============
 
-Depositing is the act of uploading data to the Data Repository. Only registered users are permitted to deposit data and create publications.
+Only registered users can deposit data and create publications.
 
 .. _prepare-data:
 
