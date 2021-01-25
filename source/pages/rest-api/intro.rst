@@ -46,7 +46,7 @@ To intergrate the API in your application using Python, please make use of the '
 Authentication
 ==================
 
-Although listing and accessing public data is not access-controlled, only registered users can use the API to its full extent. Authentication during requests is done by passing an access token along with the request. The access token is an randomly-generated string which can be created in the Data Repository user account page after logging in to the web user interface. See :ref:`API tokens <api-tokens>`
+Although listing and accessing public data is not access-controlled, only registered users can use the API to its full extent. Authentication during requests is done by passing an access token along with the request. The access token is an randomly-generated string which can be created in the Data Repository user account page after logging in to the web user interface. See :ref:`API tokens <api-tokens>`.
 
 .. _using-the-api:
 
@@ -73,16 +73,18 @@ Depending on the result you want to achieve and the request you want to make, yo
 Methods
 _________________
 
-============ ======================   =============
-Method       Authentication required  Typical use
-============ ======================   =============
-GET          Typically no             Get current state of an object or resource, including header information
-POST         Yes                      Create new object
-PUT          Yes                      Upload file to deposit
-PATCH        Yes                      Update descriptive metadata state of an object or resource
-DELETE       Yes                      Delete a (part of a) resource or object
-HEAD         Typically no             Identical to GET method, but without response body
-============ ======================   =============
+In the table below, the most used HTTP methods for interaction using the REST API are listed.
+
+============ =======================   =============
+Method       Authentication required   Typical use
+============ =======================   =============
+GET          Typically no              Get current state of an object or resource, including header information
+POST         Yes                       Create new object
+PUT          Yes                       Upload file to deposit
+PATCH        Yes                       Update descriptive metadata state of an object or resource
+DELETE       Yes                       Delete a (part of a) resource or object
+HEAD         Typically no              Identical to GET method, but without response body
+============ =======================   =============
 
 .. _rest-api-endpoints:
 
