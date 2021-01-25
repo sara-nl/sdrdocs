@@ -6,6 +6,18 @@ Large-scale depositing
 
 This page explains how to get your large-scale dataset into the data repository. It requires access to the storage infrastructure of SURFsara and assistance of an advisor.
 
+Depositing is the act of uploading data to the Data Repository. Only registered users are permitted to deposit data and create publications.
+
+When your dataset is very large in size and/or number of files, it is much more efficient to upload your data to the storage infrastructure of SURFsara and publish data from there. Generally, any dataset larger than 100 GB can be considered large-scale and this workflow applies.
+
+You don't have access by default to the storage infrastructure, so please contact an advisor in order to assist you on this.
+
+==============
+Uploading data via the REST API
+==============
+
+The Data Repository service provides a REST API that enables users to upload data and create deposits and other objects via tools or the command line. See the :ref:`REST API <rest-api>` page of this help documentation.
+
 .. contents::
     :depth: 8
 
@@ -14,12 +26,6 @@ This page explains how to get your large-scale dataset into the data repository.
 ==============
 Creating the deposits
 ==============
-
-Depositing is the act of uploading data to the Data Repository. Only registered users are permitted to deposit data and create publications.
-
-When your dataset is very large in size and/or number of files, it is much more efficient to upload your data to the storage infrastructure of SURFsara and publish data from there. Generally, any dataset larger than 50 GB can be considered large-scale and this workflow applies.
-
-You don't have access by default to the storage infrastructure, so please contact an advisor in order to assist you on this.
 
 .. _prepare-data:
 

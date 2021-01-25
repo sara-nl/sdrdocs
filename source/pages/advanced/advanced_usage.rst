@@ -4,7 +4,7 @@
 Advanced Usage
 ***********
 
-This page provides information on the advanced usage of the data repository, such as Metadata schema definition, and community/group memberships. It also describes the online deposite workflow which is the steps that you take to deposit data on the Data Repository.
+This page provides information on advanced usage of the SURF Data Repository, such as metadata schema definition, and community/group creation and memberships. It also describes the online deposit workflow which are the steps that you must take to deposit data in the service.
 
 .. contents::
     :depth: 8
@@ -135,7 +135,8 @@ Your community is now created and will be available during the workflow of new d
 =================
 API tokens
 =================
-Te HTTP REST API can be used for interacting with Data Repository via external services or applications, for example for integrating with other web-sites (research community portals) or for uploading or downloading large data sets that are not easily handled via a web browser. When requesting user-specific information through the API, an access token is required. A token can be generated in your account page.
+
+The HTTP REST API can be used for interaction with Data Repository via external services or applications, for example for integration with other websites (research community portals) or for uploading or downloading large data sets that are not easily handled via a web browser. When requesting user-specific information through the REST API, an API access token is required. A token can be generated in your account page via the web interface.
 
 Go to the **API tokens** tab on the left side of your account page to see an overview of all tokens you have generated. To create a new API token, enter a name and click on **Add API token** to generate a new token.
 
