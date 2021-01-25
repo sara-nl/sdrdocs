@@ -46,7 +46,7 @@ To intergrate the API in your application using Python, please make use of the '
 Authentication
 ==================
 
-Although listing and accessing public data is not access-controlled, only registered users can use the API to its full extent. Authentication during requests is done by passing an access token along with the request. The access token is an randomly-generated string which can be created in the Data Repository user account page after logging in to the web user interface. See
+Although listing and accessing public data is not access-controlled, only registered users can use the API to its full extent. Authentication during requests is done by passing an access token along with the request. The access token is an randomly-generated string which can be created in the Data Repository user account page after logging in to the web user interface. See :ref:`API tokens <api-tokens>`
 
 .. _using-the-api:
 
@@ -58,9 +58,53 @@ The general command to use the REST API looks as follows (using cURL):
 
 ``curl https://$SDR_HOST/api/$PATH``
 
+where ``SDR_HOST`` is the Data Repository host you want to communicate with (typically repository.surfsara.nl) and ``PATH`` is the endpoint to use. An endpoint uniquely identifies the resource(s) you are requesting or want to modify. See below for more information.
+
 To authenticate yourself during a request, use the ``token`` parameter (see :ref:`API tokens <api-token>` to generate a token):
 
 ``curl https://$SDR_HOST/api/$PATH?token=$TOKEN``
+
+Depending on the result you want to achieve and the request you want to make, you can change the method for the request (default GET), e.g. to post a change to specific deposit (see also next section):
+
+``curl -X POST https://$SDR_HOST/api/objects/deposit/1?token=$TOKEN``
+
+.. _rest-api-methods:
+
+Methods
+_________________
+
+============ ======================   =============
+Method       Authentication required  Typical use
+============ ======================   =============
+GET          Typically no             Get current state of an object or resource, including header information
+POST         Yes                      Create new object
+PUT          Yes                      Upload file to deposit
+PATCH        Yes                      Update descriptive metadata state of an object or resource
+DELETE       Yes                      Delete a (part of a) resource or object
+HEAD         Typically no             Identical to GET method, but without response body
+============ ======================   =============
+
+.. _rest-api-endpoints:
+
+Endpoints
+_________________
+
+An endpoint uniquely identifies the resource(s) you are requesting or want to modify. An endpoint always starts with the general ``/api`` part and is logically followed by the type of information represented in the endpoint and optionally a unique identifier that represents an resource or object.
+
+In the table below, the most important endpoints are listed together with the available methods:
+
+======================================= ====================== =============
+Endpoint                                Methods                Description
+======================================= ====================== =============
+``/api``                                GET                    General information about the REST API
+``/api/objects``                        GET                    Object listing and search (with parameters)
+``/api/objects/deposit/<id>``           GET, POST, PATCH       Deposit metadata retrieval or updates
+``/api/objects/collection/<id>``        GET, POST, PATCH       Collection metadata retrieval or updates
+``/api/objects/communities/<id>``       GET                    Community metadata retrieval
+``/api/objects/groups/<id>``            GET                    Group metadata retrieval
+``/api/objects/schema/<id>``            GET                    Schema metadata retrieval
+======================================= ====================== =============
+
 
 .. Links:
 

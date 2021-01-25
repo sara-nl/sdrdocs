@@ -30,6 +30,8 @@ The administrator tab shows a listing of all the objects you have administrative
    :align: center
    :width: 75%
 
+.. _account-review:
+
 Review
 ______________
 
@@ -41,6 +43,8 @@ The review tab shows a listing of all the objects that need review before they a
 
 By clicking on the edit icon next to an item listed in the table, you will go to the object's edit form and you will be able to modify metadata and/or approve the publication.
 
+.. _account-objects:
+
 Objects
 ______________
 
@@ -49,6 +53,8 @@ The various tabs for each type of object show a listing of all objects of that t
  .. image:: ../img/account-deposits.png
    :align: center
    :width: 75%
+
+.. _account-basket:
 
 Basket
 ______________
@@ -59,6 +65,8 @@ The basket tab shows all items currently in your basket. You can use the 'Downlo
    :align: center
    :width: 75%
 
+.. _account-favourites:
+
 Favourites
 ______________
 
@@ -67,6 +75,8 @@ The favourites tab shows all items currently marked as favourite. You can use th
  .. image:: ../img/account-favourites.png
    :align: center
    :width: 75%
+
+.. _account-api-tokens:
 
 API tokens
 ______________
@@ -78,3 +88,16 @@ The API tokens tab shows all generated tokens that can be used to communicate wi
    :width: 75%
 
 By default, a token is valid for one year.
+
+.. _account-sharelinks:
+
+Share links
+______________
+
+The share links tab shows all generated share links that have been generated for a specific object. Share links can be used to give access to closed source publications by sharing the link with a specific group of persons or entities. Share links are generated on the landing page of a closed-source publication.
+
+ .. image:: ../img/account-sharelinks.png
+   :align: center
+   :width: 75%
+
+Share links are valid for a single year by default.
