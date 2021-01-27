@@ -38,12 +38,12 @@ A deposit contains a set of common metadata fields and a set of custom metadata 
 .. _rest-api-objects:
 
 ==================
-Modifying objects
+Object state
 ==================
 
-A deposit or collection can exist in several states. Immediately after creation a deposit enters the 'draft' state. In this state the deposit is only accessible by its owner and can be freely modified: its metadata can be changed and files can be uploaded into or removed from it. A draft can be published at any time, and through this action it changes its state from 'draft' to 'published', is assigned persistent identifiers, and becomes publicly accessible. Please note that after publication, the list of files in a published deposit cannot be changed.
+An object (such as a deposit or collection) can exist in several states. Immediately after creation a deposit enters the 'draft' state. In this state the deposit is only accessible by its owner and can be freely modified: its metadata can be changed and files can be uploaded into or removed from it. A draft can be published at any time, and through this action it changes its state from 'draft' to 'published', is assigned persistent identifiers, and becomes publicly accessible. Please note that after publication, the list of files in a published deposit cannot be changed.
 
-To update the metadata of a deposit through the API, a `JSON Patch`_ must be supplied with the request. Please read the documentation on this website carefully to fully understand how these patches work. In the request below, the term 'JSONPath' is used which indicates a path in the metadata relative to the root of the structure.
+To update the metadata of a deposit through the API, a `JSON Patch`_ must be supplied with the request. Please read the documentation on this website carefully to fully understand how these patches work.
 
 .. _rest-api-making-requests:
 
@@ -98,7 +98,7 @@ Timestamps are in UTC and formatted according to ISO 8601:
 .. code-block:: json
 
 	{
-	  "updated": "YYYY-MM-DDTHH:MM:SS.ssssss+00:00"
+	  "updated": "YYYY-MM-DDTHH:MM:SS.ssssssZ"
 	}
 
 In case a request fails, the body of the response body contains details about the error, for Command:
@@ -137,7 +137,7 @@ In case the request failed, the body of the response usually contains details, a
 
     ``404`` - Requested object not found or API endpoint does not exist
 
-Any status code greater then or equal to 500 indicates that internally something went wrong in the server. If in this case the problem persists, kindly report this to SURF.
+Any status code greater then or equal to ``500`` indicates that internally something went wrong in the server. If in this case the problem persists, kindly report this to SURF.
 
 .. _rest-api-authentication:
 

@@ -23,7 +23,7 @@ General
 =======
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    pages/general/about
    pages/general/access
@@ -36,7 +36,7 @@ Basic Usage
 =======
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    pages/basics/basic_usage
    pages/basics/deposit
@@ -51,7 +51,7 @@ Advanced
 =======
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    pages/advanced/advanced_usage
    pages/advanced/advanced_usage_admins
@@ -66,7 +66,7 @@ REST API
 =======
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    pages/rest-api/intro
    pages/rest-api/workflow-deposit
