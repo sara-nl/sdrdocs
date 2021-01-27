@@ -6,13 +6,19 @@ REST API reference
 
 In this page all available REST API requests are listed, together with examples.
 
-.. _rest-api-ref-structure:-Structure-______________________
+.. contents::
+    :depth: 4
+
+.. _rest-api-ref-structure:
+
+Structure
+______________________
 
 Each allowed request is described as follows:
 
 - Description - A description of the function of the request.
 
-- HTTP method - which HTTP protocol such as GET or POST method is used.
+- HTTP method - which HTTP protocol such as ``GET`` or ``POST`` method is used.
 
 - URL path - grammar for the allowed paths used together with one of the base URLs above.
 
@@ -20,8 +26,7 @@ Each allowed request is described as follows:
 
 - Returns - the returned data in the body of the response upon a successful request.
 
-- Example
-^^^^^^^^^^^ - an example of usage using the program curl from the command line.
+- Example - an example of usage using the program curl from the command line.
 
 Some of the requests additionally might have the following information:
 
@@ -68,7 +73,7 @@ List all the communities, without any filtering.
 
 - HTTP method: ``GET``
 
-- URL path: ``/api/communities/``
+- URL path: ``/api/objects/community``
 
 - Required parameters: None
 
@@ -78,7 +83,7 @@ List all the communities, without any filtering.
 
 Command:
 
-``curl "https://$SDR_HOST/api/communities/"``
+``curl "https://$SDR_HOST/api/objects/community"``
 
 Returns:
 
@@ -92,7 +97,7 @@ Returns:
           "description": "The big Eudat community. Use this community if no other is suited for you",
           "id": "e9b9792e-79fb-4b07-b6b4-b9c2bd06d095",
           "links": {
-            "self": "https://trng-b2share.eudat.eu/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095"
+            "self": "https://trng-repository.surfsara.nl/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095"
           },
           "logo": "/img/communities/eudat.png",
           "name": "EUDAT",
@@ -103,7 +108,55 @@ Returns:
       "total": 11
     },
     "links": {
-      "self": "https://trng-b2share.eudat.eu/api/communities/"
+      "self": "https://trng-repository.surfsara.nl/api/communities/"
+    }
+  }
+
+.. _rest-api-ref-list-all-community-collections:
+
+List all community collections
+______________________
+
+List all collections of a community.
+
+- HTTP method: ``GET``
+
+- URL path: ``/api/objects/community/COMMUNITY_ID/collections``
+
+- Required parameters: None
+
+- Status code on success: ``200``
+
+- Returns: the list of communities (in JSON format) or an error message.
+
+Command:
+
+``curl "https://$SDR_HOST/api/objects/community/$COMMUNITY_ID/collections"``
+
+Returns:
+
+.. code-block:: json
+
+  {
+    "hits": {
+      "hits": [
+        {
+          "created": "Tue, 18 Oct 2016 08:30:47 GMT",
+          "description": "The big Eudat community. Use this community if no other is suited for you",
+          "id": "e9b9792e-79fb-4b07-b6b4-b9c2bd06d095",
+          "links": {
+            "self": "https://trng-repository.surfsara.nl/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095"
+          },
+          "logo": "/img/communities/eudat.png",
+          "name": "EUDAT",
+          "updated": "Tue, 18 Oct 2016 08:30:47 GMT"
+        },
+        ...
+      ],
+      "total": 11
+    },
+    "links": {
+      "self": "https://trng-repository.surfsara.nl/api/communities/"
     }
   }
 
@@ -135,7 +188,7 @@ Returns:
   {
     "community": "e9b9792e-79fb-4b07-b6b4-b9c2bd06d095",
     "draft_json_schema": {
-      "$ref": "https://trng-b2share.eudat.eu/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/json_schema",
+      "$ref": "https://trng-repository.surfsara.nl/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/json_schema",
       "$schema": "http://json-schema.org/draft-04/schema#"
     },
     "json_schema": {
@@ -144,17 +197,17 @@ Returns:
       ]
     },
     "links": {
-      "self": "https://trng-b2share.eudat.eu/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0"
+      "self": "https://trng-repository.surfsara.nl/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0"
     },
     "version": 0
   }
 
-.. _rest-api-ref-list-all-deposits:
+.. _rest-api-ref-list-all-objects:
 
-List all deposits
+List all objects
 ______________________
 
-List all the deposits, without any filtering.
+List all the objects, without any filtering.
 
 - HTTP method: ``GET``
 
@@ -166,7 +219,7 @@ List all the deposits, without any filtering.
 
 - Status code on success: ``200``
 
-- Returns: the list of deposits (in JSON format) or an error message.
+- Returns: the list of objects (in JSON format) or an error message.
 
 Command:
 
@@ -199,8 +252,8 @@ Returns:
           ],
           "id": "a1c2ef96a1e446fa9bd7a2a46d2242d4",
           "links": {
-            "files": "https://trng-b2share.eudat.eu/api/files/473086fc-e125-4389-8483-b8a4f130e181",
-            "self": "https://trng-b2share.eudat.eu/api/objects/a1c2ef96a1e446fa9bd7a2a46d2242d4"
+            "files": "https://trng-repository.surfsara.nl/api/files/473086fc-e125-4389-8483-b8a4f130e181",
+            "self": "https://trng-repository.surfsara.nl/api/objects/a1c2ef96a1e446fa9bd7a2a46d2242d4"
           },
           "metadata": {
             ...: ...
@@ -212,8 +265,8 @@ Returns:
       "total": 51
     },
     "links": {
-      "next": "https://trng-b2share.eudat.eu/api/objects/?sort=mostrecent&q=&page=2",
-      "self": "https://trng-b2share.eudat.eu/api/objects/?sort=mostrecent&q=&page=1"
+      "next": "https://trng-repository.surfsara.nl/api/objects/?sort=mostrecent&q=&page=2",
+      "self": "https://trng-repository.surfsara.nl/api/objects/?sort=mostrecent&q=&page=1"
     }
   }
 
@@ -258,9 +311,9 @@ Returns:
           "created": "2016-10-24T11:29:27.016892+00:00",
           "id": "f7fddf6f111f4362a9e4661294e2b59e",
           "links": {
-            "files": "https://trng-b2share.eudat.eu/api/files/90ea3483-2792-4483-9392-7d624b610398",
-            "self": "https://trng-b2share.eudat.eu/api/objects/f7fddf6f111f4362a9e4661294e2b59e",
-            "versions": "https://trng-b2share.eudat.eu/api/objects/d855e187e3864ddcaa1b68625866dd78/versions"
+            "files": "https://trng-repository.surfsara.nl/api/files/90ea3483-2792-4483-9392-7d624b610398",
+            "self": "https://trng-repository.surfsara.nl/api/objects/f7fddf6f111f4362a9e4661294e2b59e",
+            "versions": "https://trng-repository.surfsara.nl/api/objects/d855e187e3864ddcaa1b68625866dd78/versions"
           },
           "updated": "2016-10-24T11:29:27.016900+00:00",
           ...: ...
@@ -270,8 +323,8 @@ Returns:
       "total": 32
     },
     "links": {
-      "next": "https://trng-b2share.eudat.eu/api/objects/?sort=bestmatch&q=community%3Ae9b9792e-79fb-4b07-b6b4-b9c2bd06d095&size=10&page=2",
-      "self": "https://trng-b2share.eudat.eu/api/objects/?sort=bestmatch&q=community%3Ae9b9792e-79fb-4b07-b6b4-b9c2bd06d095&size=10&page=1"
+      "next": "https://trng-repository.surfsara.nl/api/objects/?sort=bestmatch&q=community%3Ae9b9792e-79fb-4b07-b6b4-b9c2bd06d095&size=10&page=2",
+      "self": "https://trng-repository.surfsara.nl/api/objects/?sort=bestmatch&q=community%3Ae9b9792e-79fb-4b07-b6b4-b9c2bd06d095&size=10&page=1"
     }
   }
 
@@ -296,19 +349,19 @@ Search all the published objects for a query string.
 
 - Notes:
 
--     The parameter ``query`` determines the keywords to search for, separated by a space.
+ - The parameter ``query`` determines the keywords to search for, separated by a space.
 
--         If a field name is prepended followed by a colon and the search value, the search is limited to that field, e.g. 'creators.creator:user' searches for deposits with a 'user' in the creator metadata field.
+ -     If a field name is prepended followed by a colon and the search value, the search is limited to that field, e.g. 'creators.creator:user' searches for deposits with a 'user' in the creator metadata field.
 
--         If the parameter q is omitted, all deposits are returned (in paginated form). See also 'List all deposits'.
+ -     If the parameter q is omitted, all deposits are returned (in paginated form). See also :ref:`List all deposits <rest-api-ref-list-all-objects>`.
 
--         For a better understanding of search queries, a listing of available search fields and advanced options like operators, please refer to the Data Repository Advanced Search documentation on how to create them.
+ -     For a better understanding of search queries, a listing of available search fields and advanced options like operators, please refer to the Data Repository Advanced Search documentation on how to create them.
 
--     Using the page and size parameter, pagination can be established by providing integer values for these parameters. The page parameter is 1-based.
+ - Using the page and size parameter, pagination can be established by providing integer values for these parameters. The page parameter is 1-based.
 
--         For example: using a value of 2 for page and 50 for size will return the deposits from number 51 to 100 (if there are at least 100 deposits available on the instance)
+ -     For example: using a value of 2 for page and 50 for size will return the deposits from number 51 to 100 (if there are at least 100 deposits available on the instance)
 
--     The sort parameter can be either 'mostrecent' or 'bestmatch'.
+ - The sort parameter can be either ``asc`` or ``desc``.
 
 Command:
 
@@ -335,9 +388,9 @@ List all your draft objects.
 
 - Notes:
 
--     You can only list your own draft objects.
+ - You can only list your own draft objects.
 
--     You can add search parameters to narrow down your search, see 'Search objects'
+ - You can add search parameters to narrow down your search, see :ref:`Search objects <rest-api-ref-search-objects>`.
 
 Command:
 
@@ -348,7 +401,7 @@ Command:
 Get specific deposit
 ______________________
 
-List the metadata of the deposit specified by NAMESPACE and DEPOSIT_ID. The metadata of all deposits are always public.
+List the metadata of the deposit specified by ``NAMESPACE`` and ``DEPOSIT_ID``. The metadata of all deposits are always public.
 
 - HTTP method: ``GET``
 
@@ -369,21 +422,21 @@ Command:
 Get specific collection
 ______________________
 
-List the metadata of the collection specified by NAMESPACE and COLLECTION_ID. The metadata of all deposits are always public.
+List the metadata of the collection specified by ``COLLECTION_ID``. The metadata of all collections are always public.
 
 - HTTP method: ``GET``
 
-- URL path: ``/api/objects/NAMESPACE/DEPOSIT_ID``
+- URL path: ``/api/objects/NAMESPACE/COLLECTION_ID``
 
-- Required parameters: token
+- Optional parameters: token
 
 - Status code on success: ``200``
 
-- Notes: the access token is only required when a deposit is not publicly available.
+- Notes: the access token is only required when a collection is not publicly available.
 
 Command:
 
-``curl "https://$SDR_HOST/api/objects/deposit/c800a32839fa47d9"``
+``curl "https://$SDR_HOST/api/objects/collection/$COLLECTION_ID"``
 
 .. _rest-api-ref-deposit-administration:
 
@@ -402,7 +455,7 @@ Create a new deposit, in the draft state.
 
 - HTTP method: ``POST``
 
-- URL path: ``/api/objects/``
+- URL path: ``/api/objects/deposit``
 
 - Required parameters: token
 
@@ -415,13 +468,13 @@ Create a new deposit, in the draft state.
 - Notes: you cannot change the community the deposit resides in after you have created the deposit.
 
 Example 1
-^^^^^^^^^^^
+-----------
 
 The following example creates an open-access deposit for a community with identifier e9b9792e-79fb-4b07-b6b4-b9c2bd06d095 with title 'My dataset deposit', creators 'John Smith' and 'Jane Smith' and description of type abstract 'A simple description'.
 
 Command:
 
-``curl -X POST -H "Content-Type:application/json" -d '{"titles":[{"title":"My dataset deposit"}], "creators":[{"creator_name": "John Smith"}, {"creator_name": "Jane Smith"}], "descriptions":[{"description": "A simple description", "description_type": "Abstract"}], "community":"e9b9792e-79fb-4b07-b6b4-b9c2bd06d095", "open_access":true}' "https://$SDR_HOST/api/objects/?token=$TOKEN"``
+``curl -X POST -H "Content-Type:application/json" -d '{"title":"My dataset deposit"}], "creators":[{"creator_name": "John Smith"}, {"creator_name": "Jane Smith"}], "descriptions":[{"description": "A simple description", "description_type": "Abstract"}], "community":"e9b9792e-79fb-4b07-b6b4-b9c2bd06d095", "open_access":true}' "https://$SDR_HOST/api/objects/?token=$TOKEN"``
 
 Payload:
 
@@ -459,13 +512,13 @@ Returns:
     "created": "2016-10-24T12:21:21.697737+00:00",
     "id": "01826ff3e4974415afdb2574a7ea5a91",
     "links": {
-      "files": "https://trng-b2share.eudat.eu/api/files/5594a1bf-1484-4a01-b7d3-f1eb3d2e1dc6",
-      "publication": "https://trng-b2share.eudat.eu/api/objects/01826ff3e4974415afdb2574a7ea5a91",
-      "self": "https://trng-b2share.eudat.eu/api/objects/01826ff3e4974415afdb2574a7ea5a91/draft",
-      "versions": "https://trng-b2share.eudat.eu/api/objects/d855e187e3864ddcaa1b68625866dd78/versions"
+      "files": "https://trng-repository.surfsara.nl/api/files/5594a1bf-1484-4a01-b7d3-f1eb3d2e1dc6",
+      "publication": "https://trng-repository.surfsara.nl/api/objects/01826ff3e4974415afdb2574a7ea5a91",
+      "self": "https://trng-repository.surfsara.nl/api/objects/01826ff3e4974415afdb2574a7ea5a91/draft",
+      "versions": "https://trng-repository.surfsara.nl/api/objects/d855e187e3864ddcaa1b68625866dd78/versions"
     },
     "metadata": {
-      "$schema": "https://trng-b2share.eudat.eu/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/draft_json_schema",
+      "$schema": "https://trng-repository.surfsara.nl/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/draft_json_schema",
       "community": "e9b9792e-79fb-4b07-b6b4-b9c2bd06d095",
       "community_specific": {
         "field_1": "value_1",
@@ -494,7 +547,7 @@ Returns:
   }
 
 Example 2
-^^^^^^^^^^^
+-----------
 
 The next example creates an open-access deposit for a community with identifier 94a9567e-2fba-4677-8fde-a8b68bdb63e8 with title 'My community deposit', creator 'John Smith'. The following community-specific fields are added: 'field_1' and 'field_2'.
 
@@ -537,13 +590,13 @@ Returns:
     "created": "2016-10-24T12:21:21.697737+00:00",
     "id": "01826ff3e4974415afdb2574a7ea5a91",
     "links": {
-      "files": "https://trng-b2share.eudat.eu/api/files/5594a1bf-1484-4a01-b7d3-f1eb3d2e1dc6",
-      "publication": "https://trng-b2share.eudat.eu/api/objects/01826ff3e4974415afdb2574a7ea5a91",
-      "self": "https://trng-b2share.eudat.eu/api/objects/01826ff3e4974415afdb2574a7ea5a91/draft",
-      "versions": "https://trng-b2share.eudat.eu/api/objects/d855e187e3864ddcaa1b68625866dd78/versions"
+      "files": "https://trng-repository.surfsara.nl/api/files/5594a1bf-1484-4a01-b7d3-f1eb3d2e1dc6",
+      "publication": "https://trng-repository.surfsara.nl/api/objects/01826ff3e4974415afdb2574a7ea5a91",
+      "self": "https://trng-repository.surfsara.nl/api/objects/01826ff3e4974415afdb2574a7ea5a91/draft",
+      "versions": "https://trng-repository.surfsara.nl/api/objects/d855e187e3864ddcaa1b68625866dd78/versions"
     },
     "metadata": {
-      "$schema": "https://trng-b2share.eudat.eu/api/communities/94a9567e-2fba-4677-8fde-a8b68bdb63e8/schemas/0#/draft_json_schema",
+      "$schema": "https://trng-repository.surfsara.nl/api/communities/94a9567e-2fba-4677-8fde-a8b68bdb63e8/schemas/0#/draft_json_schema",
       "community": "94a9567e-2fba-4677-8fde-a8b68bdb63e8",
       "community_specific": {
         "5108aff5-be5b-4d92-968a-22930ee65e94": {
@@ -575,9 +628,8 @@ Returns:
 
 .. _rest-api-ref-common-errors:
 
-=============
 Common errors
-=============
+-------------
 
 On metadata validation error:
 
@@ -611,11 +663,11 @@ To upload a new file into a draft deposit object, first you need to identify the
 
 - Notes:
 
--     Using the --data-binary option will load the entire file into memory before being sent to Data Repository
+ - Using the ``--data-binary`` option will load the entire file into memory before being sent to Data Repository
 
--     For large files instead use the -T option followed by the file name (without a @ sign)
+ - For large files instead use the ``-T`` option followed by the file name (without a ``@`` sign)
 
--     Also, to avoid timeouts please use the -H "Transfer-Encoding: chunked" option to send a file in chunks instead of all at once.
+ - Also, to avoid timeouts please use the ``-H "Transfer-Encoding: chunked"`` option and value to send a file in chunks instead of all at once.
 
 Command:
 
@@ -691,7 +743,7 @@ This action updates the draft deposit with new information.
 - Notes: The JSON Patch format contains one or more JSONPath strings. The root of these paths are the metadata object, as this is the only mutable object. For instance, to update the title field of the deposit, use this JSONPath: /titles/title
 
 Example 1
-^^^^^^^^^^^
+-----------
 
 The following example adds two values to the metadata field `keywords` of an existing draft deposit.
 
@@ -707,13 +759,13 @@ Returns:
     "created": "2016-10-24T12:21:21.697737+00:00",
     "id": "01826ff3e4974415afdb2574a7ea5a91",
     "links": {
-      "files": "https://trng-b2share.eudat.eu/api/files/5594a1bf-1484-4a01-b7d3-f1eb3d2e1dc6",
-      "publication": "https://trng-b2share.eudat.eu/api/objects/01826ff3e4974415afdb2574a7ea5a91",
-      "self": "https://trng-b2share.eudat.eu/api/objects/01826ff3e4974415afdb2574a7ea5a91/draft",
-      "versions": "https://trng-b2share.eudat.eu/api/objects/d855e187e3864ddcaa1b68625866dd78/versions"
+      "files": "https://trng-repository.surfsara.nl/api/files/5594a1bf-1484-4a01-b7d3-f1eb3d2e1dc6",
+      "publication": "https://trng-repository.surfsara.nl/api/objects/01826ff3e4974415afdb2574a7ea5a91",
+      "self": "https://trng-repository.surfsara.nl/api/objects/01826ff3e4974415afdb2574a7ea5a91/draft",
+      "versions": "https://trng-repository.surfsara.nl/api/objects/d855e187e3864ddcaa1b68625866dd78/versions"
     },
     "metadata": {
-      "$schema": "https://trng-b2share.eudat.eu/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/draft_json_schema",
+      "$schema": "https://trng-repository.surfsara.nl/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/draft_json_schema",
       "community": "e9b9792e-79fb-4b07-b6b4-b9c2bd06d095",
       "community_specific": {},
       "keywords": [
@@ -735,13 +787,13 @@ Returns:
   }
 
 Example 2
-^^^^^^^^^^^
+-----------
 
-This example replaces the value of the title of a deposit. This requires a JSONPath /titles/0/title as we are updated an existing value of multivalued field.
+This example replaces the value of the title of a deposit. This requires a JSONPath ``/title`` as we are updated an existing value of multivalued field.
 
 Command:
 
-``curl -X PATCH -H 'Content-Type:application/json-patch+json' -d '[{"op": "replace", "path":"/titles/0/title", "value": ["The new title"]}]' "https://$SDR_HOST/api/objects/$NAMESPACE/$OBJECT_ID?token=$TOKEN"``
+``curl -X PATCH -H 'Content-Type:application/json-patch+json' -d '[{"op": "replace", "path":"/title", "value": ["The new title"]}]' "https://$SDR_HOST/api/objects/$NAMESPACE/$DEPOSIT_ID?token=$TOKEN"``
 
 Returns:
 
@@ -751,13 +803,13 @@ Returns:
     "created": "2016-10-24T12:21:21.697737+00:00",
     "id": "01826ff3e4974415afdb2574a7ea5a91",
     "links": {
-      "files": "https://trng-b2share.eudat.eu/api/files/5594a1bf-1484-4a01-b7d3-f1eb3d2e1dc6",
-      "publication": "https://trng-b2share.eudat.eu/api/objects/01826ff3e4974415afdb2574a7ea5a91",
-      "self": "https://trng-b2share.eudat.eu/api/objects/01826ff3e4974415afdb2574a7ea5a91/draft",
-      "versions": "https://trng-b2share.eudat.eu/api/objects/d855e187e3864ddcaa1b68625866dd78/versions"
+      "files": "https://trng-repository.surfsara.nl/api/files/5594a1bf-1484-4a01-b7d3-f1eb3d2e1dc6",
+      "publication": "https://trng-repository.surfsara.nl/api/objects/01826ff3e4974415afdb2574a7ea5a91",
+      "self": "https://trng-repository.surfsara.nl/api/objects/01826ff3e4974415afdb2574a7ea5a91/draft",
+      "versions": "https://trng-repository.surfsara.nl/api/objects/d855e187e3864ddcaa1b68625866dd78/versions"
     },
     "metadata": {
-      "$schema": "https://trng-b2share.eudat.eu/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/draft_json_schema",
+      "$schema": "https://trng-repository.surfsara.nl/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/draft_json_schema",
       "community": "e9b9792e-79fb-4b07-b6b4-b9c2bd06d095",
       "community_specific": {},
       "open_access": true,
@@ -775,15 +827,13 @@ Returns:
   }
 
 Example 3
-^^^^^^^^^^^
+-----------
 
-The next example updates the community-specific metadata fields `field_1` and `field_2` of an existing draft deposit of community with identifier `e9b9792e-79fb-4b07-b6b4-b9c2bd06d095`. Note that in order to update a community-specific field, the JSONPath `/community-specific/SCHEMA_ID/FIELD_NAME` is required which contains the schema identifier used by the community.
-
-For this to work, the block schema identifier of the community metadata schema is required. You can get this information from the community metadata using the Get community schema request, although it is a bit hidden. The correct JSONPath for this metadata is /json_schema/allOf/1/properties/community_specific/required. Starting from Data Repository version 2.1.4, you can get the block schema identifier on the corresponding community landing page in the block schema at the bottom of the page.
+The next example updates the community-specific metadata fields ``field_1`` and ``field_2`` of an existing draft deposit of community with identifier ``community:surf``. Note that in order to update a community-specific field, the JSONPath `/community/FIELD_NAME` is required.
 
 Command:
 
-``curl -X POST -H "Content-Type:application/json-patch+json" -d '[{"op": "add", "path": "/community/field_1", "value": "value_1"}, {"op": "add", "path": "/community/field_2", "value": "value_2"}]' "https://$SDR_HOST/api/objects/$NAMESPACE/$OBJECT_ID?token=$TOKEN"``
+``curl -X POST -H "Content-Type:application/json-patch+json" -d '[{"op": "add", "path": "/community/field_1", "value": "value_1"}, {"op": "add", "path": "/community/field_2", "value": "value_2"}]' "https://$SDR_HOST/api/objects/$NAMESPACE/$DEPOSIT_ID?token=$TOKEN"``
 
 Returns:
 
@@ -793,13 +843,13 @@ Returns:
     "created": "2016-10-24T12:21:21.697737+00:00",
     "id": "01826ff3e4974415afdb2574a7ea5a91",
     "links": {
-      "files": "https://trng-b2share.eudat.eu/api/files/5594a1bf-1484-4a01-b7d3-f1eb3d2e1dc6",
-      "publication": "https://trng-b2share.eudat.eu/api/objects/01826ff3e4974415afdb2574a7ea5a91",
-      "self": "https://trng-b2share.eudat.eu/api/objects/01826ff3e4974415afdb2574a7ea5a91/draft",
-      "versions": "https://trng-b2share.eudat.eu/api/objects/d855e187e3864ddcaa1b68625866dd78/versions"
+      "files": "https://trng-repository.surfsara.nl/api/files/5594a1bf-1484-4a01-b7d3-f1eb3d2e1dc6",
+      "publication": "https://trng-repository.surfsara.nl/api/objects/01826ff3e4974415afdb2574a7ea5a91",
+      "self": "https://trng-repository.surfsara.nl/api/objects/01826ff3e4974415afdb2574a7ea5a91/draft",
+      "versions": "https://trng-repository.surfsara.nl/api/objects/d855e187e3864ddcaa1b68625866dd78/versions"
     },
     "metadata": {
-      "$schema": "https://trng-b2share.eudat.eu/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/draft_json_schema",
+      "$schema": "https://trng-repository.surfsara.nl/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/draft_json_schema",
       "community": "e9b9792e-79fb-4b07-b6b4-b9c2bd06d095",
       "community_specific": {
         "field_1": "value_1",
@@ -820,6 +870,7 @@ Returns:
   }
 
 Common errors
+-------------
 
 On JSON Patch operation error:
 
@@ -874,11 +925,11 @@ To add files that are located outside of Data Repository, a reference to that fi
 
 - HTTP method: ``PATCH``
 
-- URL path: ``/api/objects/DEPOSIT_ID/draft``
+- URL path: ``/api/objects/NAMESPACE/DEPOSIT_ID/files``
 
-- Required parameters: token
+- Required parameters: ``token``
 
-- Payload data: the list of external references provided as a JSON Patch.
+- Payload data: the list of external references provided as JSON.
 
 - Status code on success: ``200``
 
@@ -888,7 +939,7 @@ To add files that are located outside of Data Repository, a reference to that fi
 
 Command:
 
-``curl -X PATCH -H 'Accept:application/json-patch+json' -d '["op": "add", "path": "/external_pids", "value": "[{\"ePIC_PID\": \"prefix/suffix-of-file\", \"key\": \"filename\"},{\"ePIC_PID\": \"prefix/suffix-of-file-2\", \"key\": \"filename-2\"}]' "https://$SDR_HOST/api/objects/$NAMESPACE/$OBJECT_ID?token=$TOKEN"``
+``curl -X PATCH -H 'Accept:application/json-patch+json' -d '' "https://$SDR_HOST/api/objects/$NAMESPACE/$DEPOSIT_ID?token=$TOKEN"``
 
 .. _rest-api-ref-submit-draft-deposit-for-publication:
 
@@ -901,13 +952,13 @@ A draft deposit is submitted for publication if a special metadata field, called
 
 Depending on the community specification, other fields could be required in order to successfully publish a deposit. In case one of the required fields is missing the request fails and an error message is returned with further details.
 
-- HTTP method: ``GET``
+- HTTP method: ``POST``
 
-- URL path: ``/api/objects/$NAMESPACE/$OBJECT_ID``
+- URL path: ``/api/objects/$NAMESPACE/$DEPOSIT_ID/submit``
 
-- Required parameters: token
+- Required parameters: ``token``
 
-- Payload data: JSON Patch operation that alters the publication_state metadata field of the deposit metadata, see example below.
+- Payload data: None
 
 - Status code on success: ``200``
 
@@ -915,7 +966,7 @@ Depending on the community specification, other fields could be required in orde
 
 Command:
 
-``curl -X PATCH -H 'Content-Type:application/json-patch+json' -d '[{"op": "add", "path":"/publication_state", "value": "submitted"}]' "https://$SDR_HOST/api/objects/$NAMESPACE/$OBJECT_ID?token=$TOKEN"``
+``curl -X POST "https://$SDR_HOST/api/objects/$NAMESPACE/$DEPOSIT_ID/submit?token=$TOKEN"``
 
 Returns:
 
@@ -925,13 +976,13 @@ Returns:
     "created": "2016-10-24T12:21:21.697737+00:00",
     "id": "01826ff3e4974415afdb2574a7ea5a91",
     "links": {
-      "files": "https://trng-b2share.eudat.eu/api/files/5594a1bf-1484-4a01-b7d3-f1eb3d2e1dc6",
-      "publication": "https://trng-b2share.eudat.eu/api/objects/01826ff3e4974415afdb2574a7ea5a91",
-      "versions": "https://trng-b2share.eudat.eu/api/objects/c1d28e53db104cb286425902af134579/versions",
-      "self": "https://trng-b2share.eudat.eu/api/objects/01826ff3e4974415afdb2574a7ea5a91/draft"
+      "files": "https://trng-repository.surfsara.nl/api/files/5594a1bf-1484-4a01-b7d3-f1eb3d2e1dc6",
+      "publication": "https://trng-repository.surfsara.nl/api/objects/01826ff3e4974415afdb2574a7ea5a91",
+      "versions": "https://trng-repository.surfsara.nl/api/objects/c1d28e53db104cb286425902af134579/versions",
+      "self": "https://trng-repository.surfsara.nl/api/objects/01826ff3e4974415afdb2574a7ea5a91/draft"
     },
     "metadata": {
-      "$schema": "https://trng-b2share.eudat.eu/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/draft_json_schema",
+      "$schema": "https://trng-repository.surfsara.nl/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/draft_json_schema",
       "DOI": "10.5072/b2share.cdb15c27-326e-4e95-b812-6b1c6b54c299",
       "community": "e9b9792e-79fb-4b07-b6b4-b9c2bd06d095",
       "community_specific": {},
@@ -963,9 +1014,9 @@ This request updates the metadata of an already published deposit without creati
 
 - HTTP method: ``PATCH``
 
-- URL path: ``/api/objects/DEPOSIT_ID/``
+- URL path: ``/api/objects/NAMESPACE/DEPOSIT_ID/``
 
-- Required parameters: token
+- Required parameters: ``token``
 
 - Payload data: the metadata for the published deposit object to be updated, in the JSON Patch format (see http://jsonpatch.com/)
 
@@ -973,7 +1024,7 @@ This request updates the metadata of an already published deposit without creati
 
 - Notes: The JSON Patch format contains one or more JSONPath strings. The root of these paths are the metadata object, as this is the only mutable object. For instance, to update the title field of the deposit, use this JSONPath: /titles/title
 
-See the Update draft deposit metadata request for examples.
+See the :ref:`Update draft deposit metadata <rest-api-ref-update-draft-deposit-metadata>` request for examples.
 
 .. _rest-api-ref-other-requests:
 
@@ -983,39 +1034,39 @@ Other requests
 
 The following requests are the remaining requests possible in Data Repository. Click on a title to show details.
 
-.. _rest-api-ref-delete-draft-deposit:
+.. _rest-api-ref-delete-draft-object:
 
-Delete draft deposit
+Delete draft object
 ______________________
 
-Delete a draft deposit.
+Delete a draft object.
 
 - HTTP method: ``DELETE``
 
-- URL path: ``/api/objects/DEPOSIT_ID/draft``
+- URL path: ``/api/objects/NAMESPACE/OBJECT_ID``
 
-- Required parameters: token
+- Required parameters: ``token``
 
 - Status code on success: ``204``
 
 - Returns: no contents.
 
-- Notes: you can only delete draft deposits that you own, not published deposits.
+- Notes: you can only delete draft objects that you own, not published objects.
 
 Command:
 
 ``curl -X DELETE "https://$SDR_HOST/api/objects/$NAMESPACE/$OBJECT_ID?token=$TOKEN"``
 
-.. _rest-api-ref-delete-published-deposit:
+.. _rest-api-ref-delete-published-object:
 
-Delete published deposit
+Delete published object
 ______________________
 
-Delete a published deposit.
+Delete a published object.
 
 - HTTP method: ``DELETE``
 
-- URL path: ``/api/objects/DEPOSIT_ID``
+- URL path: ``/api/objects/NAMESPACE/DEPOSIT_ID``
 
 - Required parameters: token
 
@@ -1023,8 +1074,8 @@ Delete a published deposit.
 
 - Returns: no contents.
 
-- Notes: only a site administrator can delete a published deposit.
+- Notes: only a site administrator can delete a published object.
 
 Command:
 
-``curl -X DELETE "https://$SDR_HOST/api/objects/$DEPOSIT_ID/?token=$TOKEN"``
+``curl -X DELETE "https://$SDR_HOST/api/objects/NAMESPACE/$DEPOSIT_ID/?token=$TOKEN"``

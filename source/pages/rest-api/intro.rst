@@ -55,9 +55,30 @@ The REST API is used by making API requests using the `methods`_ of the standard
 
 If a request is received by the Data Repository, it will be processed and a response will be given. This response is according to the HTTP protocol and will include a `status codes`_ indicating whether the processing was successful or an error occured. Based on this code a body is included that either gives the updated state of the object being requested or modified, or a description of the error that occurred.
 
-All requests that provide data must be formatted in JSON or JSON Patch, indicated by the ``Content-type`` header valued ``application/json;charset=UTF-8`` or ``application/json-patch+json;charset=UTF-8`` respectively. This generally only applies to requests that use the POST or PATCH method.
+Of all requests that provide data, the data must be provided in JSON or JSON Patch format. To indicate what kind of data is provided, a request header entry is added, namely the ``Content-type`` header valued ``application/json;charset=UTF-8`` or ``application/json-patch+json;charset=UTF-8`` respectively. This generally only applies to requests that use the POST or PATCH method.
 
 By making a set of requests successively, an existing object can be modified in its description, relationship to other objects or visibility on the web interface. More importantly, new objects can be created from scratch that contain descriptive metadata and files for publication.
+
+.. _rest-api-object-identifiers:
+
+Object identifiers
+_________________
+
+Every object stored in the Data Repository has a unique identifier. To access a specific object using the REST API, this object identifier needs to be provided as part of the URL. These identifiers `always` consists of a namespace followed by a colon ``:`` and the object identifier itself. For example, a deposit usually looks like ``deposit:c800a32839fa47d9``, where the namespace here is ``deposit``. For large datasets it is possible that the namespace for deposits differ, e.g. ``cosmogrid:128`` is then also possible.
+
+For collections, the namespace is always ``collection``. For an overview of all namespaces and example object identifiers, see the table below:
+
+============ =======================                 =============
+Type         Namespace                               Example identifiers
+============ =======================                 =============
+Deposit      ``deposit`` or anything not listed here ``deposit:c800a32839fa47d9`` or ``cosmogrid:471``
+Collection   ``collection``						     ``collection:cosmogrid``
+Community    ``community``							 ``community:surf``
+Group        ``group``								 ``group:80a32839fa47d9aa``
+Schema       ``schema``								 ``schema:dublin``
+============ =======================                 =============
+
+For objects created using the REST API, the default namespace for any object type is used.
 
 .. _rest-api-making-responses:
 
