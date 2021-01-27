@@ -70,6 +70,7 @@ REST API
 
    pages/rest-api/intro
    pages/rest-api/workflow-deposit
+   pages/rest-api/reference
 
 .. _practices:
 
