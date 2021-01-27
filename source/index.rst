@@ -60,6 +60,7 @@ Advanced
    :maxdepth: 2
 
    pages/advanced/advanced_usage
+   pages/advanced/advanced_usage_admins
    pages/advanced/massive
    pages/advanced/account
    pages/advanced/objects
@@ -74,6 +75,7 @@ REST API
    :maxdepth: 2
 
    pages/rest-api/intro
+   pages/rest-api/workflow-deposit
 
 .. _practices:
 

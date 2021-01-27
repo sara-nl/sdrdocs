@@ -33,9 +33,9 @@ If a request is received by the Data Repository, it will be processed and a resp
 
 By making a set of requests successively, an existing object can be modified in its description, relationship to other objects or visibility on the web interface. More importantly, new objects can be created from scratch that contain descriptive metadata and files for publication.
 
-.. _rest-api-integration:
+.. _rest-api-integration-python:
 
-Integration
+Integration with Python
 _________________
 
 To intergrate the API in your application using Python, please make use of the 'requests' package that allows excellent and straightforward interaction possibilities from within your Python scripts.
@@ -46,7 +46,7 @@ To intergrate the API in your application using Python, please make use of the '
 Authentication
 ==================
 
-Although listing and accessing public data is not access-controlled, only registered users can use the API to its full extent. Authentication during requests is done by passing an access token along with the request. The access token is an randomly-generated string which can be created in the Data Repository user account page after logging in to the web user interface. See :ref:`API tokens <api-tokens>`.
+Although listing and accessing public data is not access-controlled, only registered users can use the API to its full extent. Authentication during requests is done by passing an access token along with the request. The access token is an randomly-generated string which can be created in the Data Repository user account page after logging in to the web user interface. See :ref:`API tokens <account-api-tokens>`.
 
 .. _using-the-api:
 
@@ -60,7 +60,7 @@ The general command to use the REST API looks as follows (using cURL):
 
 where ``SDR_HOST`` is the Data Repository host you want to communicate with (typically repository.surfsara.nl) and ``PATH`` is the endpoint to use. An endpoint uniquely identifies the resource(s) you are requesting or want to modify. See below for more information.
 
-To authenticate yourself during a request, use the ``token`` parameter (see :ref:`API tokens <api-token>` to generate a token):
+To authenticate yourself during a request, use the ``token`` parameter (see :ref:`API tokens <account-api-tokens>` to generate a token):
 
 ``curl https://$SDR_HOST/api/$PATH?token=$TOKEN``
 
