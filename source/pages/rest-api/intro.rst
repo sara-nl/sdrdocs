@@ -78,7 +78,8 @@ In the table below, the most used HTTP methods for interaction using the REST AP
 ============ =======================   =============
 Method       Authentication required   Typical use
 ============ =======================   =============
-GET          Typically no              Get current state of an object or resource, including header information
+GET          Typically no              Get current state of an object or resource,
+									   including header information
 POST         Yes                       Create new object
 PUT          Yes                       Upload file to deposit
 PATCH        Yes                       Update descriptive metadata state of an object or resource
@@ -91,7 +92,7 @@ HEAD         Typically no              Identical to GET method, but without resp
 Endpoints
 _________________
 
-An endpoint uniquely identifies the resource(s) you are requesting or want to modify. An endpoint always starts with the general ``/api`` part and is logically followed by the type of information represented in the endpoint and optionally a unique identifier that represents an resource or object.
+An endpoint uniquely identifies the resource(s) you are requesting or want to modify. An endpoint always starts with the general ``/api`` part and is logically followed by the type of information represented in the endpoint. Optionally a unique identifier that represents a resource or object can be added.
 
 In the table below, some endpoints are listed together with the available methods:
 
