@@ -407,11 +407,11 @@ List the metadata of the deposit specified by ``NAMESPACE`` and ``DEPOSIT_ID``. 
 
 - URL path: ``/api/objects/NAMESPACE/DEPOSIT_ID``
 
-- Required parameters: token
+- Optional parameters: ``token``
 
 - Status code on success: ``200``
 
-- Notes: the access token is only required when a deposit is not publicly available.
+- Notes: the access token is only required when a deposit is in draft state.
 
 Command:
 
@@ -426,9 +426,9 @@ List the metadata of the collection specified by ``COLLECTION_ID``. The metadata
 
 - HTTP method: ``GET``
 
-- URL path: ``/api/objects/NAMESPACE/COLLECTION_ID``
+- URL path: ``/api/objects/collection/COLLECTION_ID``
 
-- Optional parameters: token
+- Optional parameters: ``token``
 
 - Status code on success: ``200``
 
@@ -457,7 +457,7 @@ Create a new deposit, in the draft state.
 
 - URL path: ``/api/objects/deposit``
 
-- Required parameters: token
+- Required parameters: ``token``
 
 - Payload data: JSON object with basic metadata of the object, at least the required fields of the basic metadata schema of each new deposit: titles, community and open_access.
 
@@ -635,7 +635,7 @@ To upload a new file into a draft deposit object, first you need to identify the
 
 - URL path: ``/api/object/NAMESPACE/DEPOSIT_ID/files/FILE_NAME``
 
-- Required parameters: token
+- Required parameters: ``token``
 
 - Payload data: the file, sent as direct stream, for curl use the --data-binary @FILE_NAME option for this.
 
@@ -668,9 +668,9 @@ Send a DELETE request to the file's URL, which is the same URL used for uploadin
 
 - HTTP method: ``DELETE``
 
-- URL path: ``/api/objects/NAMESPACE/OBJECT_ID/files/FILE_NAME``
+- URL path: ``/api/objects/NAMESPACE/DEPOSIT_ID/files/FILE_NAME``
 
-- Required parameters: token
+- Required parameters: ``token``
 
 - Status code on success: ``204``
 
@@ -678,20 +678,20 @@ Send a DELETE request to the file's URL, which is the same URL used for uploadin
 
 Command:
 
-``curl -X DELETE -H 'Accept:application/json' "https://$SDR_HOST/api/files/$FILE_BUCKET_ID/FileToBeRemoved.txt?token=$TOKEN"``
+``curl -X DELETE -H 'Accept:application/json' "https://$SDR_HOST/api/objects/$NAMESPACE/$DEPOSIT_ID/files/FileToBeRemoved.txt?token=$TOKEN"``
 
 .. _rest-api-ref-list-files-of-deposit:
 
 List files of deposit
 ______________________
 
-List the files uploaded into a deposit object. For this request you need the FILE_BUCKET_ID which can be found in the metadata of the deposit. This does not include files that are referenced externally.
+List the files uploaded into a deposit object.
 
 - HTTP method: ``GET``
 
 - URL path: ``/api/objects/NAMESPACE/OBJECT_ID/files``
 
-- Required parameters: token
+- Required parameters: ``token``
 
 - Status code on success: ``200``
 
@@ -701,7 +701,7 @@ List the files uploaded into a deposit object. For this request you need the FIL
 
 Command:
 
-``curl "https://$SDR_HOST/api/objects/NAMESPACE/OBJECT_ID/files?token=$TOKEN"``
+``curl "https://$SDR_HOST/api/objects/$NAMESPACE/$OBJECT_ID/files?token=$TOKEN"``
 
 .. _rest-api-ref-update-draft-deposit-metadata:
 
@@ -714,7 +714,7 @@ This action updates the draft deposit with new information.
 
 - URL path: ``/api/objects/NAMESPACE/OBJECT_ID``
 
-- Required parameters: token
+- Required parameters: ``token``
 
 - Payload data: the metadata for the draft deposit to be updated, in the JSON Patch format (see http://jsonpatch.com/)
 
@@ -771,7 +771,7 @@ Returns:
 Example 2
 -----------
 
-This example replaces the value of the title of a deposit. This requires a JSONPath ``/title`` as we are updated an existing value of multivalued field.
+This example replaces the value of the title of a deposit. This requires a JSONPath ``/title`` with operation ``replace`` as we are updating an existing value of a multivalued field.
 
 Command:
 
@@ -917,11 +917,11 @@ To add files that are located outside of Data Repository, a reference to that fi
 
 - Returns: informations about the updated metadata of the draft deposit
 
-- Notes: you must provide the external references using EPIC PIDs and therefore you need to be able to register new PIDs with an EPIC PID hosting institute using a registered prefix. It is possible to get a prefix through EUDAT, please use the contact form for this.
+- Notes: you must provide the external references using EPIC PIDs and therefore you need to be able to register new PIDs with an EPIC PID hosting institute using a registered prefix. It is possible to get a prefix through SURF, send an email through helpdesk@surfsara.nl or use the service desk.
 
 Command:
 
-``curl -X PATCH -H 'Accept:application/json-patch+json' -d '' "https://$SDR_HOST/api/objects/$NAMESPACE/$DEPOSIT_ID?token=$TOKEN"``
+``curl -X PATCH -H 'Accept:application/json-patch+json' -d '' "https://$SDR_HOST/api/objects/$NAMESPACE/$DEPOSIT_ID/files?token=$TOKEN"``
 
 .. _rest-api-ref-submit-draft-deposit-for-publication:
 
@@ -1050,7 +1050,7 @@ Delete a published object.
 
 - URL path: ``/api/objects/NAMESPACE/DEPOSIT_ID``
 
-- Required parameters: token
+- Required parameters: ``token``
 
 - Status code on success: ``204``
 
