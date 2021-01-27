@@ -4,11 +4,11 @@
 Large-scale depositing
 ***********
 
-This page explains how to get your large-scale dataset into the data repository. It requires access to the storage infrastructure of SURFsara and assistance of an advisor.
+This page explains how to get your large-scale dataset into the data repository. It requires access to the storage infrastructure of SURF and assistance of an advisor.
 
 Depositing is the act of uploading data to the Data Repository. Only registered users are permitted to deposit data and create publications.
 
-When your dataset is very large in size and/or number of files, it is much more efficient to upload your data to the storage infrastructure of SURFsara and publish data from there. Generally, any dataset larger than 100 GB can be considered large-scale and this workflow applies.
+When your dataset is very large in size and/or number of files, it is much more efficient to upload your data to the storage infrastructure of SURF and publish data from there. Generally, any dataset larger than 100 GB can be considered large-scale and this workflow applies.
 
 You don't have access by default to the storage infrastructure, so please contact an advisor in order to assist you on this.
 

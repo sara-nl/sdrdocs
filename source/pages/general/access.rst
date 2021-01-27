@@ -23,7 +23,7 @@ The repository provides access to mostly open access data which can be found and
 Logging in
 ==============================
 
-You can log in to the service by visiting the website and clicking on the user avatar on the top-right corner. Fill in the credentials you have obtained from SURFsara in the `Login`_ page of the service.
+You can log in to the service by visiting the website and clicking on the user avatar on the top-right corner. Fill in the credentials you have obtained from SURF in the `Login`_ page of the service.
 
 Once you have successfully authenticated, you can start:
 - Uploading your own files and create deposits

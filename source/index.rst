@@ -1,9 +1,3 @@
-.. Data Repository Documentation documentation master file, created by
-   sphinx-quickstart on Tue Dec 16 11:32:42 2014.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-
 .. _contents:
 
 ******************
@@ -17,7 +11,7 @@ Data Repository Documentation
    :alt: Data Repository logo
    :align: right
 
-Welcome to the user documentation of the Data Repository service provided by `SURFsara`_. The information in this tutorial will help you get started with using the Data Repository, learn best practices and techniques for publishing your data and stay up-to-date with the service developments.
+Welcome to the user documentation of the Data Repository service provided by `SURF`_. The information in this tutorial will help you get started with using the Data Repository, learn best practices and techniques for publishing your data and stay up-to-date with the service developments.
 
 We welcome your comments at helpdesk@surfsara.nl to help us improve the documentation.
 
@@ -108,4 +102,4 @@ Appendix
 
 .. Links:
 
-.. _`SURFsara`: https://www.surfsara.nl/
+.. _`SURF`: https://www.surfsara.nl/

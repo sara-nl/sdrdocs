@@ -24,9 +24,9 @@ _________________
 
 By default, the repository does not accept all file formats. This is to ensure future compatibility, understanding and support of published data by the repository itself, but also by other users. The repository distinguishes two kinds of formats: preferred and accepted formats.
 
-- **Preferred formats** are file formats of which SURFsara is confident that they will offer the best long-term guarantees in terms of usability, accessibility and sustainability. Depositing research data in preferred formats will always be accepted by SURFsara. Here is a list with `SURFsara preferred formats`_ .
+- **Preferred formats** are file formats of which SURF is confident that they will offer the best long-term guarantees in terms of usability, accessibility and sustainability. Depositing research data in preferred formats will always be accepted by SURF. Here is a list with `SURF preferred formats`_ .
 
-- **Acceptable formats** are file formats that are widely used in addition to the preferred formats, and which will be moderately to reasonably usable, accessible and robust in the long term. SURFsara favours the use of preferred formats, but acceptable formats will in most cases also be allowed. Here is a list with `SURFsara acceptable formats`_ .
+- **Acceptable formats** are file formats that are widely used in addition to the preferred formats, and which will be moderately to reasonably usable, accessible and robust in the long term. SURF favours the use of preferred formats, but acceptable formats will in most cases also be allowed. Here is a list with `SURF acceptable formats`_ .
 
 If you think your file format should be accepted by the repository, but is currently not on one of the lists, please contact us. A reason could be that a community uses a file format that is widely used within that community but not outside of it.
 
@@ -81,6 +81,6 @@ Before you upload the files you should check whether they contain privacy-sensit
 
 .. Links:
 
-.. _`SURFsara preferred formats`: https://repository.surfsara.nl/docs/formats
-.. _`SURFsara acceptable formats`: https://repository.surfsara.nl/docs/formats
+.. _`SURF preferred formats`: https://repository.surfsara.nl/docs/formats
+.. _`SURF acceptable formats`: https://repository.surfsara.nl/docs/formats
 .. _`General Data Protection Regulation`: https://www.government.nl/privacy
