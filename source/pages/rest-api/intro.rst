@@ -29,7 +29,7 @@ Using the API
 
 The REST API is used by making API requests using the `methods`_ of the standard HTTP protocol. Typically an application like curl is used to make requests, but it is also possible to do this from within your custom-built applications.
 
-If a request is received by the Data Repository, it will be processed and a response will be given. This response is according to the HTTP protocol and will include a `status code`_ indicating whether the processing was successful or an error occured. Based on this code a body is included that either gives the updated state of the object being requested or modified, or a description of the error that occurred.
+If a request is received by the Data Repository, it will be processed and a response will be given. This response is according to the HTTP protocol and will include a `status codes`_ indicating whether the processing was successful or an error occured. Based on this code a body is included that either gives the updated state of the object being requested or modified, or a description of the error that occurred.
 
 By making a set of requests successively, an existing object can be modified in its description, relationship to other objects or visibility on the web interface. More importantly, new objects can be created from scratch that contain descriptive metadata and files for publication.
 
@@ -93,7 +93,7 @@ _________________
 
 An endpoint uniquely identifies the resource(s) you are requesting or want to modify. An endpoint always starts with the general ``/api`` part and is logically followed by the type of information represented in the endpoint and optionally a unique identifier that represents an resource or object.
 
-In the table below, the most important endpoints are listed together with the available methods:
+In the table below, some endpoints are listed together with the available methods:
 
 ======================================= ====================== =============
 Endpoint                                Methods                Description
@@ -102,11 +102,27 @@ Endpoint                                Methods                Description
 ``/api/objects``                        GET                    Object listing and search (with parameters)
 ``/api/objects/deposit/<id>``           GET, POST, PATCH       Deposit metadata retrieval or updates
 ``/api/objects/collection/<id>``        GET, POST, PATCH       Collection metadata retrieval or updates
-``/api/objects/communities/<id>``       GET                    Community metadata retrieval
-``/api/objects/groups/<id>``            GET                    Group metadata retrieval
+``/api/objects/community/<id>``         GET                    Community metadata retrieval
+``/api/objects/group/<id>``             GET                    Group metadata retrieval
 ``/api/objects/schema/<id>``            GET                    Schema metadata retrieval
 ======================================= ====================== =============
 
+.. _rest-api-objects:
+
+Objects
+_________________
+
+In the table below, the available object types and corresponding operations for interaction using the REST API are listed.
+
+============ ==============
+Type         Operations
+============ ==============
+Deposit      List, retrieve, create, modify, publish, delete (draft)
+Collection   List, retrieve, modify, publish, delete (draft)
+Community    List, retrieve
+Group        List, retrieve
+Schema       List, retrieve
+============ ==============
 
 .. Links:
 
