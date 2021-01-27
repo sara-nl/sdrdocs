@@ -217,7 +217,7 @@ In the table below, the available object types and corresponding operations for 
 Type         Operations
 ============ ==============
 Deposit      List, retrieve, create, modify, publish, delete (draft)
-Collection   List, retrieve, modify, publish, delete (draft)
+Collection   List, retrieve, create, modify, publish, delete (draft)
 Community    List, retrieve
 Group        List, retrieve
 Schema       List, retrieve
