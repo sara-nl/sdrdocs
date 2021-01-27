@@ -58,11 +58,11 @@ For most requests, an example is shown using a cURL command. If a payload is sen
 
 .. _rest-api-ref-object-retrieval:
 
-=============
+==============
 Object retrieval
 ==============
 
-The following requests concern the retrieval of information about deposits and communities. Click on a title to show details.
+The following requests concern the retrieval of information about deposits and communities.
 
 .. _rest-api-ref-list-all-communities:
 
@@ -470,38 +470,20 @@ Create a new deposit, in the draft state.
 Example 1
 -----------
 
-The following example creates an open-access deposit for a community with identifier e9b9792e-79fb-4b07-b6b4-b9c2bd06d095 with title 'My dataset deposit', creators 'John Smith' and 'Jane Smith' and description of type abstract 'A simple description'.
+The following example creates an open-access deposit for a community with identifier ``community:surf`` with title 'My dataset deposit'. Any other metadata fields cannot be provided here.
 
 Command:
 
-``curl -X POST -H "Content-Type:application/json" -d '{"title":"My dataset deposit"}], "creators":[{"creator_name": "John Smith"}, {"creator_name": "Jane Smith"}], "descriptions":[{"description": "A simple description", "description_type": "Abstract"}], "community":"e9b9792e-79fb-4b07-b6b4-b9c2bd06d095", "open_access":true}' "https://$SDR_HOST/api/objects/?token=$TOKEN"``
+``curl -X POST -H "Content-Type:application/json" -d '{"title":"My dataset deposit", "community":"community:surf", "sharelevel": "O"}' "https://$SDR_HOST/api/objects/deposit?token=$TOKEN"``
 
 Payload:
 
 .. code-block:: json
 
   {
-    "titles": [
-      {
-        "title": "My dataset deposit"
-      }
-    ],
-    "creators": [
-      {
-        "creator_name": "John Smith"
-      },
-      {
-        "creator_name": "Jane Smith"
-      }
-    ],
-    "descriptions": [
-      {
-        "description": "A simple description",
-        "description_type": "Abstract"
-      }
-    ],
-    "community": "e9b9792e-79fb-4b07-b6b4-b9c2bd06d095",
-    "open_access": true,
+    "title": "My dataset deposit",
+    "community": "community:surf",
+    "sharelevel": "O",
   }
 
 Returns:
@@ -651,7 +633,7 @@ To upload a new file into a draft deposit object, first you need to identify the
 
 - HTTP method: ``PUT``
 
-- URL path: ``/api/files/FILE_BUCKET_ID/FILE_NAME``
+- URL path: ``/api/object/NAMESPACE/DEPOSIT_ID/files/FILE_NAME``
 
 - Required parameters: token
 
@@ -671,11 +653,11 @@ To upload a new file into a draft deposit object, first you need to identify the
 
 Command:
 
-``curl -X PUT -H 'Accept:application/json' -H 'Content-Type:application/octet-stream' --data-binary @$FILE_NAME "https://$SDR_HOST/api/files/$FILE_BUCKET_ID/$FILE_NAME?token=$TOKEN"``
+``curl -X PUT -H 'Accept:application/json' -H 'Content-Type:application/octet-stream' --data-binary @$FILE_NAME "https://$SDR_HOST/api/objects/$NAMESPACE/$DEPOSIT_ID/files/$FILE_NAME?token=$TOKEN"``
 
 Command:
 
-``curl -X PUT -H 'Accept:application/json' -H 'Content-Type:application/octet-stream' -H 'Transfer-Encoding:chunked' -T $FILE_NAME "https://$SDR_HOST/api/files/$FILE_BUCKET_ID/$FILE_NAME?token=$TOKEN"``
+``curl -X PUT -H 'Accept:application/json' -H 'Content-Type:application/octet-stream' -H 'Transfer-Encoding:chunked' -T $FILE_NAME "https://$SDR_HOST/api/objects/$NAMESPACE/$DEPOSIT_ID/files/$FILE_NAME?token=$TOKEN"``
 
 .. _rest-api-ref-delete-file-from-draft-deposit:
 
@@ -686,7 +668,7 @@ Send a DELETE request to the file's URL, which is the same URL used for uploadin
 
 - HTTP method: ``DELETE``
 
-- URL path: ``/api/NAMESPACE/OBJECT_ID/files/FILE_NAME``
+- URL path: ``/api/objects/NAMESPACE/OBJECT_ID/files/FILE_NAME``
 
 - Required parameters: token
 
@@ -954,7 +936,7 @@ Depending on the community specification, other fields could be required in orde
 
 - HTTP method: ``POST``
 
-- URL path: ``/api/objects/$NAMESPACE/$DEPOSIT_ID/submit``
+- URL path: ``/api/objects/NAMESPACE/DEPOSIT_ID/submit``
 
 - Required parameters: ``token``
 
