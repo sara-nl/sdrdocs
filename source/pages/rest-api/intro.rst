@@ -66,17 +66,19 @@ _________________
 
 All request responses will be in JSON format and UTF-8 encoded, indicated by the ``Content-type`` header valued ``application/json;charset=UTF-8``.
 
-A record is represented as a JSON object:
+A deposit is represented as a JSON object:
 
 .. code-block:: json
+
 	{
 	  "field1": "value"
 	}
 
 
-A collection of records is represented as a JSON array of objects:
+A collection of deposits is represented as a JSON array of objects:
 
 .. code-block:: json
+
 	{
 	  "collection": [
 	    {
@@ -94,6 +96,7 @@ A collection of records is represented as a JSON array of objects:
 Timestamps are in UTC and formatted according to ISO 8601:
 
 .. code-block:: json
+
 	{
 	  "updated": "YYYY-MM-DDTHH:MM:SS.ssssss+00:00"
 	}
@@ -101,6 +104,7 @@ Timestamps are in UTC and formatted according to ISO 8601:
 In case a request fails, the body of the response body contains details about the error, for Command:
 
 .. code-block:: json
+
 	{
 	  "message": "The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.",
 	  "code": 404
@@ -117,21 +121,21 @@ The request status codes indicate whether the request was successfully received,
 
 One of the following status codes is returned in case the request was successful:
 
-    200 - Request was successfully received and executed, see body for results
+    ``200`` - Request was successfully received and executed, see body for results
 
-    201 - Object created, see body for results
+    ``201`` - Object created, see body for results
 
-    204 - No contents, this occurs when for example an object is successfully deleted
+    ``204`` - No contents, this occurs when for example an object is successfully deleted
 
 In case the request failed, the body of the response usually contains details, and one of the following status codes is returned:
 
-    400 - Request was not understood
+    ``400`` - Request was not understood
 
-    401 - User must authenticate first, usually because no access token was provided with the request
+    ``401`` - User must authenticate first, usually because no access token was provided with the request
 
-    403 - User is not authorized to perform request, missing permission to do so
+    ``403`` - User is not authorized to perform request, missing permission to do so
 
-    404 - Requested object not found or API endpoint does not exist
+    ``404`` - Requested object not found or API endpoint does not exist
 
 Any status code greater then or equal to 500 indicates that internally something went wrong in the server. If in this case the problem persists, kindly report this to SURF.
 
@@ -173,8 +177,7 @@ In the table below, the most used HTTP methods for interaction using the REST AP
 ============ =======================   =============
 Method       Authentication required   Typical use
 ============ =======================   =============
-GET          Typically no              Get current state of an object or resource,
-									   including header information
+GET          Typically no              Get current state of an object or resource, including header information
 POST         Yes                       Create new object
 PUT          Yes                       Upload file to deposit
 PATCH        Yes                       Update descriptive metadata state of an object or resource
