@@ -215,7 +215,7 @@ List all the objects, without any filtering.
 
 - Required parameters: None
 
-- Optional parameters: page, size, mostrecent
+- Optional parameters: ``page``, ``size``, ``type``
 
 - Status code on success: ``200``
 
