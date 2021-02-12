@@ -51,7 +51,7 @@ To update the metadata of a deposit through the API, a `JSON Patch`_ must be sup
 Making requests
 ==================
 
-The REST API is used by making API requests using the `methods`_ of the standard HTTP protocol. Typically an application like curl is used to make requests, but it is also possible to do this from within your custom-built applications.
+The REST API is used by making API requests using the `methods`_ of the standard HTTP protocol. Typically an application like cURL is used to make requests, but it is also possible to do this from within your tools or custom-built applications.
 
 If a request is received by the Data Repository, it will be processed and a response will be given. This response is according to the HTTP protocol and will include a `status codes`_ indicating whether the processing was successful or an error occured. Based on this code a body is included that either gives the updated state of the object being requested or modified, or a description of the error that occurred.
 
@@ -68,15 +68,15 @@ Every object stored in the Data Repository has a unique identifier. To access a 
 
 For collections, the namespace is always ``collection``. For an overview of all namespaces and example object identifiers, see the table below:
 
-============ =======================================  =============
+============ =======================================  ===================
 Type         Namespace                                Example identifiers
-============ =======================================  =============
+============ =======================================  ===================
 Deposit      ``deposit`` or anything not listed here  ``deposit:c800a32839fa47d9`` or ``cosmogrid:471``
 Collection   ``collection``						      ``collection:cosmogrid``
 Community    ``community``							  ``community:surf``
 Group        ``group``								  ``group:80a32839fa47d9aa``
 Schema       ``schema``								  ``schema:dublin``
-============ =======================================  =============
+============ =======================================  ===================
 
 For objects created using the REST API, the default namespace for any object type is used.
 
@@ -167,6 +167,24 @@ Authentication
 ==================
 
 Although listing and accessing public data is not access-controlled, only registered users can use the API to its full extent. Authentication during requests is done by passing an access token along with the request. The access token is an randomly-generated string which can be created in the Data Repository user account page after logging in to the web user interface. See :ref:`API tokens <account-api-tokens>`.
+
+.. _rest-api-hosts:
+
+==================
+Hosts
+==================
+
+Unless you are using an instance of Data Repository hosted by yourself or your institution, different hosts are available for different purposes. Make sure to select the host that suits your needs. For every host specific authorization is needed and to log in you need to register with SURF first.
+
+============ =================================== ==============
+Host         Address                             Use when
+============ =================================== ==============
+Test         https://tdr-test.surfsara.nl        You are actively participating in a pilot or test project with SURF.
+Training     https://trng-repository.surfsara.nl You want to make a test upload or are participating in a training.
+Production   https://repository.surfsara.nl      You want to make an actual data publication.
+============ =================================== ==============
+
+In the documentation from now on the selected host will be shown as a variable ``$SDR_HOST``. Keep in mind that for different hosts you need different API access tokens, so make sure to generate one in the currently-used host.
 
 .. _rest-api-general-usage:
 
