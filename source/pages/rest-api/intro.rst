@@ -68,15 +68,15 @@ Every object stored in the Data Repository has a unique identifier. To access a 
 
 For collections, the namespace is always ``collection``. For an overview of all namespaces and example object identifiers, see the table below:
 
-============ =======================                 =============
-Type         Namespace                               Example identifiers
-============ =======================                 =============
-Deposit      ``deposit`` or anything not listed here ``deposit:c800a32839fa47d9`` or ``cosmogrid:471``
-Collection   ``collection``						     ``collection:cosmogrid``
-Community    ``community``							 ``community:surf``
-Group        ``group``								 ``group:80a32839fa47d9aa``
-Schema       ``schema``								 ``schema:dublin``
-============ =======================                 =============
+============ =======================================  =============
+Type         Namespace                                Example identifiers
+============ =======================================  =============
+Deposit      ``deposit`` or anything not listed here  ``deposit:c800a32839fa47d9`` or ``cosmogrid:471``
+Collection   ``collection``						      ``collection:cosmogrid``
+Community    ``community``							  ``community:surf``
+Group        ``group``								  ``group:80a32839fa47d9aa``
+Schema       ``schema``								  ``schema:dublin``
+============ =======================================  =============
 
 For objects created using the REST API, the default namespace for any object type is used.
 
@@ -87,7 +87,7 @@ _________________
 
 All request responses will be in JSON format and UTF-8 encoded, indicated by the ``Content-type`` header valued ``application/json;charset=UTF-8``.
 
-A deposit is represented as a JSON object:
+A deposit is represented as a typical JSON object with keys and their values:
 
 .. code-block:: json
 
@@ -220,11 +220,11 @@ Endpoint                                Methods                Description
 ======================================= ====================== =============
 ``/api``                                GET                    General information about the REST API
 ``/api/objects``                        GET                    Object listing and search (with parameters)
-``/api/objects/deposit/<id>``           GET, POST, PATCH       Deposit metadata retrieval or updates
-``/api/objects/collection/<id>``        GET, POST, PATCH       Collection metadata retrieval or updates
-``/api/objects/community/<id>``         GET                    Community metadata retrieval
-``/api/objects/group/<id>``             GET                    Group metadata retrieval
-``/api/objects/schema/<id>``            GET                    Schema metadata retrieval
+``/api/objects/deposit/<id>``           GET, POST, PATCH       Deposit object metadata retrieval or updates
+``/api/objects/collection/<id>``        GET, POST, PATCH       Collection object metadata retrieval or updates
+``/api/objects/community/<id>``         GET                    Community object metadata retrieval
+``/api/objects/group/<id>``             GET                    Group object metadata retrieval
+``/api/objects/schema/<id>``            GET                    Schema object metadata retrieval
 ======================================= ====================== =============
 
 .. _rest-api-objects:
