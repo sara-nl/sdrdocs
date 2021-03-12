@@ -4,7 +4,7 @@
 REST API reference
 **************
 
-In this page all available REST API requests are listed, together with examples.
+In this page all available REST API requests are listed, together with examples. In all examples, the training instance of the Data Repository is used.
 
 .. contents::
     :depth: 4
@@ -35,6 +35,8 @@ Some of the requests additionally might have the following information:
 - Required data - the data that needs to be sent with the request, the expected structure is shown in the example.
 
 Variables in the descriptions:
+
+- ``SDR_HOST`` - the host of the instance used for interaction
 
 - ``TOKEN`` - your personal access token used for authentication
 
@@ -75,6 +77,8 @@ List all the communities, without any filtering.
 
 - URL path: ``/api/objects/community``
 
+- URL alias: ``/api/communities``
+
 - Required parameters: None
 
 - Status code on success: ``200``
@@ -85,32 +89,143 @@ Command:
 
 ``curl "https://$SDR_HOST/api/objects/community"``
 
+Returns (example):
+
+.. code-block:: json
+
+  [
+    {
+      "id": "astrophysics",
+      "created": "2020-04-12T16:25:26.064000Z",
+      "properties": {
+        "pid": "community:astrophysics",
+        "namespace": "community",
+        "type": "Community",
+        "state": "Published",
+        "sharelevel": "Open"
+      },
+      "metadata": {
+        "base": {
+          "title": "Astrophysics",
+          "description": "This is the Astrophysics community"
+        }
+      },
+      "links": {
+        "self": "https://$SDR_HOST/api/objects/community/astrophysics"
+      }
+    },
+    {
+      "id": "surf",
+      "created": "2020-04-12T16:25:28.420000Z",
+      "properties": {
+        "pid": "community:surf",
+        "namespace": "community",
+        "type": "Community",
+        "state": "Published",
+        "sharelevel": "Open"
+      },
+      "metadata": {
+        "base": {
+          "title": "SURF",
+          "description": "This is the SURF community"
+        }
+      },
+      "links": {
+        "self": "https://$SDR_HOST/api/objects/community/surf"
+      }
+    },
+    {
+      "id": "lofar",
+      "created": "2020-05-18T12:50:21.340000Z",
+      "properties": {
+        "pid": "community:lofar",
+        "namespace": "community",
+        "type": "Community",
+        "state": "Published",
+        "sharelevel": "Open"
+      },
+      "metadata": {
+        "base": {
+          "title": "LOFAR",
+          "description": "This is the LOFAR community"
+        }
+      },
+      "links": {
+        "self": "https://$SDR_HOST/api/objects/community/lofar"
+      }
+    }
+  ]
+
+
+.. _rest-api-ref-list-deposits-per-community:
+
+List all community deposits
+______________________
+
+List all deposits of a specific community.
+
+- HTTP method: ``GET``
+
+- URL path: ``/api/objects/community/$COMMUNITY_ID/deposits``
+
+- Required parameters: None
+
+- Status code on success: ``200``
+
+- Returns: the list of deposits (in JSON format) or an error message
+
+Command:
+
+``curl "https://$SDR_HOST/api/objects/community/$COMMUNITY_ID/deposits"``
+
 Returns:
 
 .. code-block:: json
 
-  {
-    "hits": {
-      "hits": [
-        {
-          "created": "Tue, 18 Oct 2016 08:30:47 GMT",
-          "description": "The big Eudat community. Use this community if no other is suited for you",
-          "id": "e9b9792e-79fb-4b07-b6b4-b9c2bd06d095",
-          "links": {
-            "self": "https://trng-repository.surfsara.nl/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095"
-          },
-          "logo": "/img/communities/eudat.png",
-          "name": "EUDAT",
-          "updated": "Tue, 18 Oct 2016 08:30:47 GMT"
-        },
-        ...
-      ],
-      "total": 11
+  [
+    {
+      "id": "f3b7fc8498cf5a17",
+      "created": "2021-03-05T15:25:24.331000Z",
+      "properties": {
+        "pid": "deposit:f3b7fc8498cf5a17",
+        "namespace": "deposit",
+        "type": "Deposit"
+      },
+      "metadata": {
+        "base": {
+          "title": "Test API",
+          "creator": [
+            "Test creator",
+            "Test unique"
+          ]
+        }
+      },
+      "links": {
+        "self": "https://$SDR_HOST/api/objects/deposit/f3b7fc8498cf5a17"
+      }
     },
-    "links": {
-      "self": "https://trng-repository.surfsara.nl/api/communities/"
+    {
+      "id": "50253b9ac1405e7e",
+      "created": "2021-02-25T21:03:50.779000Z",
+      "properties": {
+        "pid": "deposit:50253b9ac1405e7e",
+        "namespace": "deposit",
+        "type": "Deposit"
+      },
+      "metadata": {
+        "base": {
+          "title": "Test closed API update",
+          "creator": [
+            "Test"
+          ]
+        }
+      },
+      "links": {
+        "self": "https://$SDR_HOST/api/objects/deposit/50253b9ac1405e7e"
+      }
     }
-  }
+  ]
+
 
 .. _rest-api-ref-list-all-community-collections:
 
@@ -137,28 +252,70 @@ Returns:
 
 .. code-block:: json
 
-  {
-    "hits": {
-      "hits": [
-        {
-          "created": "Tue, 18 Oct 2016 08:30:47 GMT",
-          "description": "The big Eudat community. Use this community if no other is suited for you",
-          "id": "e9b9792e-79fb-4b07-b6b4-b9c2bd06d095",
-          "links": {
-            "self": "https://trng-repository.surfsara.nl/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095"
-          },
-          "logo": "/img/communities/eudat.png",
-          "name": "EUDAT",
-          "updated": "Tue, 18 Oct 2016 08:30:47 GMT"
-        },
-        ...
-      ],
-      "total": 11
+  [
+    {
+      "id": "e4cbd982d2426eba",
+      "created": "2020-10-06T12:58:15.058000Z",
+      "properties": {
+        "pid": "collection:e4cbd982d2426eba",
+        "namespace": "collection",
+        "type": "Collection"
+      },
+      "metadata": {
+        "base": {
+          "title": "Test admin",
+          "creator": [
+            "Admin"
+          ]
+        }
+      },
+      "links": {
+        "self": "https://$SDR_HOST/api/objects/collection/e4cbd982d2426eba"
+      }
     },
-    "links": {
-      "self": "https://trng-repository.surfsara.nl/api/communities/"
+    {
+      "id": "a18755837dd9c65c",
+      "created": "2020-10-07T12:13:26.258000Z",
+      "properties": {
+        "pid": "collection:a18755837dd9c65c",
+        "namespace": "collection",
+        "type": "Collection"
+      },
+      "metadata": {
+        "base": {
+          "title": "Test collection 114",
+          "creator": [
+            "Test",
+            "Test 3",
+            "Test123"
+          ]
+        }
+      },
+      "links": {
+        "self": "https://$SDR_HOST/api/objects/collection/a18755837dd9c65c"
+      }
+    },
+    {
+      "id": "cc99ce5f61719f0b",
+      "created": "2021-02-01T21:09:10.076000Z",
+      "properties": {
+        "pid": "collection:cc99ce5f61719f0b",
+        "namespace": "collection",
+        "type": "Collection"
+      },
+      "metadata": {
+        "base": {
+          "title": "Test no DOI policy",
+          "creator": [
+            "Test"
+          ]
+        }
+      },
+      "links": {
+        "self": "https://$SDR_HOST/api/objects/collection/cc99ce5f61719f0b"
+      }
     }
-  }
+  ]
 
 .. _rest-api-ref-get-community-schema:
 
@@ -186,20 +343,70 @@ Returns:
 .. code-block:: json
 
   {
-    "community": "e9b9792e-79fb-4b07-b6b4-b9c2bd06d095",
-    "draft_json_schema": {
-      "$ref": "https://trng-repository.surfsara.nl/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/json_schema",
-      "$schema": "http://json-schema.org/draft-04/schema#"
+    "$schema": "https://$SDR_HOST/static/schemas/object-metadata",
+    "id": "astrophysics",
+    "created": "2019-07-23T09:57:53.528000Z",
+    "updated": "2020-10-05T19:17:43.031000Z",
+    "properties": {
+      "namespace": "schema",
+      "pid": "schema:astrophysics",
+      "epicpid": "21.T12996/0B6983E7-F185-449A-97EE-F63BED651ED0",
+      "doi": "10.21945/SURF-image.8ff2ae03-c9cac144",
+      "type": "schema",
+      "state": "published",
+      "sharelevel": "open public access",
+      "owner": "user:1"
     },
-    "json_schema": {
-      "allOf": [
-        ...
-      ]
-    },
+    "fields": [
+      {
+        "index": "0",
+        "name": "datatype",
+        "type": "xs:normalizedString",
+        "use": "M",
+        "label": "Data type",
+        "desc": "The type of data in the dataset",
+        "useString": "Mandatory"
+      },
+      {
+        "index": "1",
+        "name": "study",
+        "type": "vocabulary",
+        "use": "M",
+        "label": "Study type",
+        "desc": "Astrophysical study type",
+        "useString": "Mandatory"
+      },
+      {
+        "index": "2",
+        "name": "simulation",
+        "type": "vocabulary",
+        "use": "M",
+        "label": "Simulation type",
+        "desc": "Type of simulation",
+        "useString": "Mandatory"
+      }
+    ],
     "links": {
-      "self": "https://trng-repository.surfsara.nl/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0"
+      "self": "https://$SDR_HOST/api/objects/schema/astrophysics",
+      "landing": "https://$SDR_HOST/schema/astrophysics",
+      "relationships": {
+        "schema": "https://$SDR_HOST"
+      }
     },
-    "version": 0
+    "metadata": {
+      "base": {
+        "$schema": "https://$SDR_HOST/api/objects/schema/dublin",
+        "title": "Astrophysics metadata schema",
+        "identifier": [
+          "schema:astrophysics",
+          "epic:21.T12996/0B6983E7-F185-449A-97EE-F63BED651ED0",
+          "hdl:21.T12996/0B6983E7-F185-449A-97EE-F63BED651ED0"
+        ],
+        "rights": [
+          "info:eu-repo/semantics/openAccess"
+        ]
+      }
+    }
   }
 
 .. _rest-api-ref-list-all-objects:
@@ -230,103 +437,56 @@ Returns:
 .. code-block:: json
 
   {
-    "aggregations": {
-      "type": {
-        "buckets": [],
-        "doc_count_error_upper_bound": 0,
-        "sum_other_doc_count": 0
-      }
+    "params": {
+      "query": "*",
+      "type": "",
+      "page": 1,
+      "size": 25,
+      "start": 1,
+      "end": 25,
+      "pages": 33
     },
     "hits": {
       "hits": [
         {
-          "created": "2016-10-19T11:32:46.095143+00:00",
-          "files": [
-            {
-              "bucket": "473086fc-e125-4389-8483-b8a4f130e181",
-              "checksum": "md5:c8afdb36c52cf4727836669019e69222",
-              "key": "myfile",
-              "size": 9,
-              "version_id": "324fdf1d-0005-41b1-a9c5-26a8eabd05a2"
-            }
-          ],
-          "id": "a1c2ef96a1e446fa9bd7a2a46d2242d4",
-          "links": {
-            "files": "https://trng-repository.surfsara.nl/api/files/473086fc-e125-4389-8483-b8a4f130e181",
-            "self": "https://trng-repository.surfsara.nl/api/objects/a1c2ef96a1e446fa9bd7a2a46d2242d4"
-          },
-          "metadata": {
-            ...: ...
-          },
-          "updated": "2016-10-19T11:32:46.095152+00:00"
+          "pid": "category:agricultural",
+          "title": "Agricultural Sciences",
+          "description": "This is the Agricultural Sciences category",
+          "createdDate": "2019-03-28T09:53:27.919000Z",
+          "state": "Published",
+          "url": "https://$SDR_HOST/category/agricultural",
+          "type": "Category"
         },
         ...
-      ],
-      "total": 51
-    },
-    "links": {
-      "next": "https://trng-repository.surfsara.nl/api/objects/?sort=mostrecent&q=&page=2",
-      "self": "https://trng-repository.surfsara.nl/api/objects/?sort=mostrecent&q=&page=1"
-    }
-  }
-
-.. _rest-api-ref-list-deposits-per-community:
-
-List deposits per community
-______________________
-
-List all deposits of a specific community.
-
-- HTTP method: ``GET``
-
-- URL path: ``/api/objects``
-
-- Required parameters: ``context`` with value ``community:COMMUNITY_ID``
-
-- Status code on success: ``200``
-
-- Returns: the list of deposits (in JSON format) or an error message
-
-- Notes: you can use search parameters to further narrow your search as described in the 'Search deposits' section.
-
-Command:
-
-``curl "https://$SDR_HOST/api/objects/?context=community:$COMMUNITY_ID"``
-
-Returns:
-
-.. code-block:: json
-
-  {
-    "aggregations": {
-      "type": {
-        "buckets": [],
-        "doc_count_error_upper_bound": 0,
-        "sum_other_doc_count": 0
-      }
-    },
-    "hits": {
-      "hits": [
         {
-          "created": "2016-10-24T11:29:27.016892+00:00",
-          "id": "f7fddf6f111f4362a9e4661294e2b59e",
-          "links": {
-            "files": "https://trng-repository.surfsara.nl/api/files/90ea3483-2792-4483-9392-7d624b610398",
-            "self": "https://trng-repository.surfsara.nl/api/objects/f7fddf6f111f4362a9e4661294e2b59e",
-            "versions": "https://trng-repository.surfsara.nl/api/objects/d855e187e3864ddcaa1b68625866dd78/versions"
-          },
-          "updated": "2016-10-24T11:29:27.016900+00:00",
-          ...: ...
+          "pid": "collection:cosmogrid-2048",
+          "title": "The Cosmogrid Simulation: Statistical Properties of Small Dark Matter Halos 2048³ resolution",
+          "description": "...",
+          "createdDate": "2020-04-22T19:41:21.212000Z",
+          "state": "Published",
+          "url": "https://$SDR_HOST/collection/cosmogrid-2048",
+          "type": "Collection"
         },
-        ...
+        {
+          "pid": "collection:cosmogrid-512",
+          "title": "The Cosmogrid Simulation: Statistical Properties of Small Dark Matter Halos 512³ resolution",
+          "description": "...",
+          "createdDate": "2020-04-22T19:40:38.620000Z",
+          "state": "Published",
+          "url": "https://$SDR_HOST/collection/cosmogrid-512",
+          "type": "Collection"
+        }
       ],
-      "total": 32
+      "total": 819
     },
     "links": {
-      "next": "https://trng-repository.surfsara.nl/api/objects/?sort=bestmatch&q=community%3Ae9b9792e-79fb-4b07-b6b4-b9c2bd06d095&size=10&page=2",
-      "self": "https://trng-repository.surfsara.nl/api/objects/?sort=bestmatch&q=community%3Ae9b9792e-79fb-4b07-b6b4-b9c2bd06d095&size=10&page=1"
+      "self": "https://$SDR_HOST/api/objects?",
+      "next": "https://$SDR_HOST/api/objects?page=2",
+      "first": "https://$SDR_HOST/api/objects?page=1",
+      "last": "https://$SDR_HOST/api/objects?page=33"
     }
   }
+
 
 .. _rest-api-ref-search-objects:
 
