@@ -623,7 +623,7 @@ Create a new deposit, in the draft state.
 
 - Status code on success: ``201``
 
-- Returns: the new draft deposit metadata including new URL location. Please note that the returned JSON object contains also the URL of the file bucket used for the deposit. Also note that the URL of the draft deposit, needed for setting deposit metadata, will end in '/draft/'
+- Returns: the new draft deposit metadata including new URL of the object.
 
 - Notes: you cannot change the community the deposit resides in after you have created the deposit.
 
@@ -634,7 +634,8 @@ The following example creates an open-access deposit for a community with identi
 
 Command:
 
-``curl -X POST -H "Content-Type:application/json" -d '{"title":"My dataset deposit", "community":"community:surf", "sharelevel": "O"}' "https://$SDR_HOST/api/objects/deposit?token=$TOKEN"``
+``curl -X POST -H "Content-Type:application/json"
+  -d '{"title":"My dataset deposit", "community":"community:surf", "sharelevel": "Open"}' "https://$SDR_HOST/api/objects/deposit?token=$TOKEN"``
 
 Payload:
 
@@ -643,7 +644,7 @@ Payload:
   {
     "title": "My dataset deposit",
     "community": "community:surf",
-    "sharelevel": "O",
+    "sharelevel": "Open",
   }
 
 Returns:
@@ -651,138 +652,59 @@ Returns:
 .. code-block:: json
 
   {
-    "created": "2016-10-24T12:21:21.697737+00:00",
-    "id": "01826ff3e4974415afdb2574a7ea5a91",
+    "$schema": "https://tdr-image.surfsara.nl/static/schemas/object-metadata",
+    "id": "bd387af9afe48d0a",
+    "created": "2021-03-10T20:05:43.250000Z",
+    "updated": "2021-03-10T20:05:43.250000Z",
+    "properties": {
+      "namespace": "deposit",
+      "pid": "deposit:bd387af9afe48d0a",
+      "type": "deposit",
+      "state": "draft",
+      "sharelevel": "open public access",
+      "owner": "user:86"
+    },
     "links": {
-      "files": "https://trng-repository.surfsara.nl/api/files/5594a1bf-1484-4a01-b7d3-f1eb3d2e1dc6",
-      "publication": "https://trng-repository.surfsara.nl/api/objects/01826ff3e4974415afdb2574a7ea5a91",
-      "self": "https://trng-repository.surfsara.nl/api/objects/01826ff3e4974415afdb2574a7ea5a91/draft",
-      "versions": "https://trng-repository.surfsara.nl/api/objects/d855e187e3864ddcaa1b68625866dd78/versions"
+      "self": "https://tdr-image.surfsara.nl/api/objects/deposit/bd387af9afe48d0a",
+      "landing": "https://tdr-image.surfsara.nl/deposit/bd387af9afe48d0a",
+      "relationships": {
+        "community": "https://tdr-image.surfsara.nl/api/objects/community/surf",
+        "schema": "https://tdr-image.surfsara.nl"
+      }
     },
     "metadata": {
-      "$schema": "https://trng-repository.surfsara.nl/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/draft_json_schema",
-      "community": "e9b9792e-79fb-4b07-b6b4-b9c2bd06d095",
-      "community_specific": {
-        "field_1": "value_1",
-        "field_2": "value_2"
-      },
-      "open_access": true,
-      "owners": [
-        8
-      ],
-      "publication_state": "draft",
-      "titles": [
-        {
-          "title": "My dataset deposit"
-        }
-      ],
-      "creators": [
-        {
-          "creator_name": "John Smith"
-        },
-        {
-          "creator_name": "Jane Smith"
-        }
-      ]
-    },
-    "updated": "2016-10-24T12:21:21.697744+00:00"
-  }
-
-Example 2
------------
-
-The next example creates an open-access deposit for a community with identifier 94a9567e-2fba-4677-8fde-a8b68bdb63e8 with title 'My community deposit', creator 'John Smith'. The following community-specific fields are added: 'field_1' and 'field_2'.
-
-For this to work, the schema identifier of the community metadata schema is required. You can get this information from the community metadata using the Get community schema request, although it is a bit hidden. The correct JSONPath for this metadata is /json_schema/allOf/1/properties/community_specific/required, in this example 5108aff5-be5b-4d92-968a-22930ee65e94.
-
-Command:
-
-``curl -X POST -H "Content-Type:application/json" -d '{"titles":[{"title":"My community deposit"}], "creators":[{"creator_name": "John Smith"}], "community":"94a9567e-2fba-4677-8fde-a8b68bdb63e8", "open_access":true, "community_specific": {"5108aff5-be5b-4d92-968a-22930ee65e94": {"field_1": "value", "field_2": "value"}}}' "https://$SDR_HOST/api/objects/?token=$TOKEN"``
-
-Payload:
-
-.. code-block:: json
-
-  {
-    "titles": [
-      {
-        "title": "My community deposit"
-      }
-    ],
-    "creators": [
-      {
-        "creator_name": "John Smith"
-      }
-    ],
-    "community": "94a9567e-2fba-4677-8fde-a8b68bdb63e8",
-    "open_access": true,
-    "community_specific": {
-      "5108aff5-be5b-4d92-968a-22930ee65e94": {
-        "field_1": "value",
-        "field_2": "value"
+      "base": {
+        "$schema": "https://tdr-image.surfsara.nl/api/objects/schema/dublin",
+        "title": "My dataset deposit",
+        "identifier": "deposit:bd387af9afe48d0a",
+        "rights": [
+          "info:eu-repo/semantics/openAccess"
+        ]
       }
     }
   }
 
-Returns:
-
-.. code-block:: json
-
-  {
-    "created": "2016-10-24T12:21:21.697737+00:00",
-    "id": "01826ff3e4974415afdb2574a7ea5a91",
-    "links": {
-      "files": "https://trng-repository.surfsara.nl/api/files/5594a1bf-1484-4a01-b7d3-f1eb3d2e1dc6",
-      "publication": "https://trng-repository.surfsara.nl/api/objects/01826ff3e4974415afdb2574a7ea5a91",
-      "self": "https://trng-repository.surfsara.nl/api/objects/01826ff3e4974415afdb2574a7ea5a91/draft",
-      "versions": "https://trng-repository.surfsara.nl/api/objects/d855e187e3864ddcaa1b68625866dd78/versions"
-    },
-    "metadata": {
-      "$schema": "https://trng-repository.surfsara.nl/api/communities/94a9567e-2fba-4677-8fde-a8b68bdb63e8/schemas/0#/draft_json_schema",
-      "community": "94a9567e-2fba-4677-8fde-a8b68bdb63e8",
-      "community_specific": {
-        "5108aff5-be5b-4d92-968a-22930ee65e94": {
-          "field_1": "value_1",
-          "field_2": "value_2"
-        }
-      },
-      "open_access": true,
-      "owners": [
-        8
-      ],
-      "publication_state": "draft",
-      "titles": [
-        {
-          "title": "My community deposit"
-        }
-      ],
-      "creators": [
-        {
-          "creator_name": "John Smith"
-        },
-        {
-          "creator_name": "Jane Smith"
-        }
-      ]
-    },
-    "updated": "2016-10-24T12:21:21.697744+00:00"
-  }
 
 .. _rest-api-ref-common-errors:
 
 Common errors
 -------------
 
-On metadata validation error:
+On metadata validation error when an incorrect share level is given:
 
 .. code-block:: json
 
   {
-    "message": "Validation error.",
-    "status": 400
+    "error": "Invalid share level 'O', choose from 'Open', 'Restricted', 'Closed'"
   }
 
-The supplied metadata is invalid or incorrectly structured. This means that either a specified field does not exist in the metadata schema, or that one of the values for a given field is invalid.
+On metadata validation error when a required field is missing:
+
+.. code-block:: json
+
+  {
+    "error": "Missing mandatory fields: 'title'"
+  }
 
 .. _rest-api-ref-upload-file-into-draft-deposit:
 
@@ -819,6 +741,56 @@ Command:
 
 ``curl -X PUT -H 'Accept:application/json' -H 'Content-Type:application/octet-stream' -H 'Transfer-Encoding:chunked' -T $FILE_NAME "https://$SDR_HOST/api/objects/$NAMESPACE/$DEPOSIT_ID/files/$FILE_NAME?token=$TOKEN"``
 
+Returns:
+
+.. code-block:: json
+
+  {
+    "$schema": "https://tdr-image.surfsara.nl/static/schemas/object-metadata",
+    "id": "bd387af9afe48d0a",
+    "created": "2021-03-10T20:05:43.250000Z",
+    "updated": "2021-03-10T20:09:30.379000Z",
+    "properties": {
+      "namespace": "deposit",
+      "pid": "deposit:bd387af9afe48d0a",
+      "type": "deposit",
+      "state": "draft",
+      "sharelevel": "open public access",
+      "owner": "user:86"
+    },
+    "files": [
+      {
+        "name": "$FILE_NAME",
+        "url": "https://tdr-image.surfsara.nl/deposit/bd387af9afe48d0a/files/$FILE_NAME",
+        "external": false,
+        "size": 691,
+        "mimetype": "text/plain",
+        "md5": "",
+        "epicpid": "21.T12996/5ddde41c-a461-a861-45fd-76594f2b5a20"
+      }
+    ],
+    "links": {
+      "self": "https://tdr-image.surfsara.nl/api/objects/deposit/bd387af9afe48d0a",
+      "landing": "https://tdr-image.surfsara.nl/deposit/bd387af9afe48d0a",
+      "relationships": {
+        "community": "https://tdr-image.surfsara.nl/api/objects/community/surf",
+        "schema": "https://tdr-image.surfsara.nl"
+      },
+      "files": "https://tdr-image.surfsara.nl/api/objects/deposit/bd387af9afe48d0a/files"
+    },
+    "metadata": {
+      "base": {
+        "$schema": "https://tdr-image.surfsara.nl/api/objects/schema/dublin",
+        "title": "Test API #22",
+        "identifier": "deposit:bd387af9afe48d0a",
+        "rights": [
+          "info:eu-repo/semantics/openAccess"
+        ]
+      }
+    }
+  }
+
+
 .. _rest-api-ref-delete-file-from-draft-deposit:
 
 Delete file from draft deposit
@@ -838,7 +810,8 @@ Send a DELETE request to the file's URL, which is the same URL used for uploadin
 
 Command:
 
-``curl -X DELETE -H 'Accept:application/json' "https://$SDR_HOST/api/objects/$NAMESPACE/$DEPOSIT_ID/files/FileToBeRemoved.txt?token=$TOKEN"``
+``curl -X DELETE "https://$SDR_HOST/api/objects/$NAMESPACE/$DEPOSIT_ID/files/$FILE_NAME?token=$TOKEN"``
+
 
 .. _rest-api-ref-list-files-of-deposit:
 
@@ -863,6 +836,40 @@ Command:
 
 ``curl "https://$SDR_HOST/api/objects/$NAMESPACE/$OBJECT_ID/files?token=$TOKEN"``
 
+Returns:
+
+.. code-block:: json
+
+  [
+    {
+      "name": "data.txt",
+      "url": "https://$SDR_HOST/deposit/f3b7fc8498cf5a17/files/data.txt",
+      "external": false,
+      "size": 691,
+      "mimetype": "text/plain",
+      "md5": "341fb1bc1d92d82d1a79d9f4d80f649b",
+      "epicpid": "21.T12996/ec16cef9-ff29-a39e-45da-40e1338fc4c3"
+    },
+    {
+      "name": "data2.txt",
+      "url": "https://$SDR_HOST/deposit/f3b7fc8498cf5a17/files/data2.txt",
+      "external": false,
+      "size": 691,
+      "mimetype": "text/plain",
+      "md5": "341fb1bc1d92d82d1a79d9f4d80f649b",
+      "epicpid": "21.T12996/db9d92a9-bde1-bc96-432f-1fc65b8c2f0e"
+    },
+    {
+      "name": "data2.txt2",
+      "url": "https://$SDR_HOST/deposit/f3b7fc8498cf5a17/files/data2.txt2",
+      "external": false,
+      "size": 691,
+      "mimetype": "text/plain",
+      "md5": "341fb1bc1d92d82d1a79d9f4d80f649b",
+      "epicpid": "21.T12996/59239fbb-9238-b975-49c4-4187feed59b2"
+    }
+  ]
+
 .. _rest-api-ref-update-draft-deposit-metadata:
 
 Update draft deposit metadata
@@ -882,7 +889,7 @@ This action updates the draft deposit with new information.
 
 - Returns: the updated metadata of the draft deposit.
 
-- Notes: The JSON Patch format contains one or more JSONPath strings. The root of these paths are the metadata object, as this is the only mutable object. For instance, to update the title field of the deposit, use this JSONPath: /titles/title
+- Notes: The JSON Patch format contains one or more JSONPath strings. The root of these paths are the metadata object, as this is the only mutable object. For instance, to update the title field of the deposit, use this JSONPath: '/title'. To update a field in a community or collection metadata schema, use the '/community/<field>' or '/collection/<field>' paths respectively.
 
 Example 1
 -----------
@@ -891,41 +898,46 @@ The following example adds two values to the metadata field `keywords` of an exi
 
 Command:
 
-``curl -X PATCH -H 'Content-Type:application/json-patch+json' -d '[{"op": "add", "path":"/keywords", "value": ["keyword1", "keyword2"]}]' "https://$SDR_HOST/api/objects/$NAMESPACE/$OBJECT_ID?token=$TOKEN"``
+``curl -X PATCH -H 'Content-Type:application/json-patch+json' -d '[{"op": "add", "path":"/creator", "value": ["Creator #1"]}]' "https://$SDR_HOST/api/objects/$NAMESPACE/$OBJECT_ID?token=$TOKEN"``
 
 Returns:
 
 .. code-block:: json
 
   {
-    "created": "2016-10-24T12:21:21.697737+00:00",
-    "id": "01826ff3e4974415afdb2574a7ea5a91",
+    "$schema": "https://tdr-image.surfsara.nl/static/schemas/object-metadata",
+    "id": "bd387af9afe48d0a",
+    "created": "2021-03-10T20:05:43.250000Z",
+    "updated": "2021-03-10T20:12:15.939000Z",
+    "properties": {
+      "namespace": "deposit",
+      "pid": "deposit:bd387af9afe48d0a",
+      "type": "deposit",
+      "state": "draft",
+      "sharelevel": "open public access",
+      "owner": "user:86"
+    },
     "links": {
-      "files": "https://trng-repository.surfsara.nl/api/files/5594a1bf-1484-4a01-b7d3-f1eb3d2e1dc6",
-      "publication": "https://trng-repository.surfsara.nl/api/objects/01826ff3e4974415afdb2574a7ea5a91",
-      "self": "https://trng-repository.surfsara.nl/api/objects/01826ff3e4974415afdb2574a7ea5a91/draft",
-      "versions": "https://trng-repository.surfsara.nl/api/objects/d855e187e3864ddcaa1b68625866dd78/versions"
+      "self": "https://tdr-image.surfsara.nl/api/objects/deposit/bd387af9afe48d0a",
+      "landing": "https://tdr-image.surfsara.nl/deposit/bd387af9afe48d0a",
+      "relationships": {
+        "community": "https://tdr-image.surfsara.nl/api/objects/community/surf",
+        "schema": "https://tdr-image.surfsara.nl"
+      }
     },
     "metadata": {
-      "$schema": "https://trng-repository.surfsara.nl/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/draft_json_schema",
-      "community": "e9b9792e-79fb-4b07-b6b4-b9c2bd06d095",
-      "community_specific": {},
-      "keywords": [
-        "keyword1",
-        "keyword2"
-      ],
-      "open_access": true,
-      "owners": [
-        8
-      ],
-      "publication_state": "draft",
-      "titles": [
-        {
-          "title": "My community title"
-        }
-      ]
-    },
-    "updated": "2016-10-24T12:23:59.454951+00:00"
+      "base": {
+        "$schema": "https://tdr-image.surfsara.nl/api/objects/schema/dublin",
+        "title": "My data deposit",
+        "identifier": "deposit:bd387af9afe48d0a",
+        "creator": [
+          "Creator #1"
+        ],
+        "rights": [
+          "info:eu-repo/semantics/openAccess"
+        ]
+      }
+    }
   }
 
 Example 2
@@ -935,37 +947,46 @@ This example replaces the value of the title of a deposit. This requires a JSONP
 
 Command:
 
-``curl -X PATCH -H 'Content-Type:application/json-patch+json' -d '[{"op": "replace", "path":"/title", "value": ["The new title"]}]' "https://$SDR_HOST/api/objects/$NAMESPACE/$DEPOSIT_ID?token=$TOKEN"``
+``curl -X PATCH -H 'Content-Type:application/json-patch+json' -d '[{"op": "replace", "path":"/title", "value": ["New title"]}]' "https://$SDR_HOST/api/objects/$NAMESPACE/$DEPOSIT_ID?token=$TOKEN"``
 
 Returns:
 
 .. code-block:: json
 
   {
-    "created": "2016-10-24T12:21:21.697737+00:00",
-    "id": "01826ff3e4974415afdb2574a7ea5a91",
+    "$schema": "https://tdr-image.surfsara.nl/static/schemas/object-metadata",
+    "id": "bd387af9afe48d0a",
+    "created": "2021-03-10T20:05:43.250000Z",
+    "updated": "2021-03-10T20:14:11.996000Z",
+    "properties": {
+      "namespace": "deposit",
+      "pid": "deposit:bd387af9afe48d0a",
+      "type": "deposit",
+      "state": "draft",
+      "sharelevel": "open public access",
+      "owner": "user:86"
+    },
     "links": {
-      "files": "https://trng-repository.surfsara.nl/api/files/5594a1bf-1484-4a01-b7d3-f1eb3d2e1dc6",
-      "publication": "https://trng-repository.surfsara.nl/api/objects/01826ff3e4974415afdb2574a7ea5a91",
-      "self": "https://trng-repository.surfsara.nl/api/objects/01826ff3e4974415afdb2574a7ea5a91/draft",
-      "versions": "https://trng-repository.surfsara.nl/api/objects/d855e187e3864ddcaa1b68625866dd78/versions"
+      "self": "https://tdr-image.surfsara.nl/api/objects/deposit/bd387af9afe48d0a",
+      "landing": "https://tdr-image.surfsara.nl/deposit/bd387af9afe48d0a",
+      "relationships": {
+        "community": "https://tdr-image.surfsara.nl/api/objects/community/surf",
+        "schema": "https://tdr-image.surfsara.nl"
+      }
     },
     "metadata": {
-      "$schema": "https://trng-repository.surfsara.nl/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/draft_json_schema",
-      "community": "e9b9792e-79fb-4b07-b6b4-b9c2bd06d095",
-      "community_specific": {},
-      "open_access": true,
-      "owners": [
-        8
-      ],
-      "publication_state": "draft",
-      "titles": [
-        {
-          "title": "The new title"
-        }
-      ]
-    },
-    "updated": "2016-10-24T12:23:59.454951+00:00"
+      "base": {
+        "$schema": "https://tdr-image.surfsara.nl/api/objects/schema/dublin",
+        "title": "New title",
+        "identifier": "deposit:bd387af9afe48d0a",
+        "creator": [
+          "Creator #1"
+        ],
+        "rights": [
+          "info:eu-repo/semantics/openAccess"
+        ]
+      }
+    }
   }
 
 Example 3
@@ -982,34 +1003,45 @@ Returns:
 .. code-block:: json
 
   {
-    "created": "2016-10-24T12:21:21.697737+00:00",
-    "id": "01826ff3e4974415afdb2574a7ea5a91",
+    "$schema": "https://tdr-image.surfsara.nl/static/schemas/object-metadata",
+    "id": "bd387af9afe48d0a",
+    "created": "2021-03-10T20:05:43.250000Z",
+    "updated": "2021-03-10T20:14:11.996000Z",
+    "properties": {
+      "namespace": "deposit",
+      "pid": "deposit:bd387af9afe48d0a",
+      "type": "deposit",
+      "state": "draft",
+      "sharelevel": "open public access",
+      "owner": "user:86"
+    },
     "links": {
-      "files": "https://trng-repository.surfsara.nl/api/files/5594a1bf-1484-4a01-b7d3-f1eb3d2e1dc6",
-      "publication": "https://trng-repository.surfsara.nl/api/objects/01826ff3e4974415afdb2574a7ea5a91",
-      "self": "https://trng-repository.surfsara.nl/api/objects/01826ff3e4974415afdb2574a7ea5a91/draft",
-      "versions": "https://trng-repository.surfsara.nl/api/objects/d855e187e3864ddcaa1b68625866dd78/versions"
+      "self": "https://tdr-image.surfsara.nl/api/objects/deposit/bd387af9afe48d0a",
+      "landing": "https://tdr-image.surfsara.nl/deposit/bd387af9afe48d0a",
+      "relationships": {
+        "community": "https://tdr-image.surfsara.nl/api/objects/community/surf",
+        "schema": "https://tdr-image.surfsara.nl"
+      }
     },
     "metadata": {
-      "$schema": "https://trng-repository.surfsara.nl/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/draft_json_schema",
-      "community": "e9b9792e-79fb-4b07-b6b4-b9c2bd06d095",
-      "community_specific": {
+      "base": {
+        "$schema": "https://tdr-image.surfsara.nl/api/objects/schema/dublin",
+        "title": "New title",
+        "identifier": "deposit:bd387af9afe48d0a",
+        "creator": [
+          "Creator #1"
+        ],
+        "rights": [
+          "info:eu-repo/semantics/openAccess"
+        ]
+      },
+      "community": {
         "field_1": "value_1",
         "field_2": "value_2"
-      },
-      "open_access": true,
-      "owners": [
-        8
-      ],
-      "publication_state": "draft",
-      "titles": [
-        {
-          "title": "My dataset deposit"
-        }
-      ]
-    },
-    "updated": "2016-10-24T12:21:21.697744+00:00"
+      }
+    }
   }
+
 
 Common errors
 -------------
@@ -1018,15 +1050,7 @@ On JSON Patch operation error:
 
 .. code-block:: json
 
-  {
-    "message": "Invalid Operation.",
-    "errors": [
-      {
-        "message": "Invalid JSON Pointer"
-      }
-    ],
-    "status": 400
-  }
+TBD
 
 One of the JSON Patch operations is invalid.
 
@@ -1034,10 +1058,8 @@ On JSON Patch content type error:
 
 .. code-block:: json
 
-  {
-    "message": "Invalid 'Content-Type' header. Expected one of: application/json-patch+json",
-    "status": 415
-  }
+TBD
+
 
 The supplied content type header value is invalid.
 
@@ -1045,16 +1067,7 @@ On metadata validation error:
 
 .. code-block:: json
 
-  {
-    "message": "Validation error.",
-    "errors": [
-      {
-        "message": "{'title': 'Some title'} is not of type 'array'",
-        "field": "titles"
-      }
-    ],
-    "status": 400
-  }
+TBD
 
 The supplied value for the metadata field is invalid.
 
@@ -1088,11 +1101,9 @@ Command:
 Submit draft deposit for publication
 ______________________
 
-This action marks the draft deposit as complete and submits it for publication. Currently Data Repository automatically publishes all the submitted drafts. Please be advised that publishing the draft will make its files immutable.
+This action marks the draft deposit as complete and submits it for publication. Please be advised that publishing the draft will make its files immutable.
 
-A draft deposit is submitted for publication if a special metadata field, called 'publication_state' is set to 'submitted'. This field can be set using the metadata update request described above.
-
-Depending on the community specification, other fields could be required in order to successfully publish a deposit. In case one of the required fields is missing the request fails and an error message is returned with further details.
+Depending on the community and collection attached metadata schemas, specific metadata fields could be required in order to successfully publish a deposit. In case one of the required fields is missing the request fails and an error message is returned with further details.
 
 - HTTP method: ``POST``
 
@@ -1115,37 +1126,84 @@ Returns:
 .. code-block:: json
 
   {
-    "created": "2016-10-24T12:21:21.697737+00:00",
-    "id": "01826ff3e4974415afdb2574a7ea5a91",
+    "$schema": "https://$SDR_HOST/static/schemas/object-metadata",
+    "id": "f3b7fc8498cf5a17",
+    "created": "2021-03-05T15:25:24.331000Z",
+    "updated": "2021-03-05T17:21:57.448000Z",
+    "properties": {
+      "namespace": "deposit",
+      "pid": "deposit:f3b7fc8498cf5a17",
+      "epicpid": "21.T12996/1dd4137e-e262-83db-4f10-a27054c41fa6",
+      "doi": "10.21945/SURF-image.1f9b3206-f3b7fc8498cf5a17",
+      "type": "deposit",
+      "state": "published",
+      "sharelevel": "open public access",
+      "owner": "user:86"
+    },
+    "files": [
+      {
+        "name": "data.txt",
+        "url": "https://$SDR_HOST/deposit/f3b7fc8498cf5a17/files/data.txt",
+        "external": false,
+        "size": 691,
+        "mimetype": "text/plain",
+        "md5": "341fb1bc1d92d82d1a79d9f4d80f649b",
+        "epicpid": "21.T12996/ec16cef9-ff29-a39e-45da-40e1338fc4c3"
+      },
+      {
+        "name": "data2.txt",
+        "url": "https://$SDR_HOST/deposit/f3b7fc8498cf5a17/files/data2.txt",
+        "external": false,
+        "size": 691,
+        "mimetype": "text/plain",
+        "md5": "341fb1bc1d92d82d1a79d9f4d80f649b",
+        "epicpid": "21.T12996/db9d92a9-bde1-bc96-432f-1fc65b8c2f0e"
+      },
+      {
+        "name": "data3.txt",
+        "url": "https://$SDR_HOST/deposit/f3b7fc8498cf5a17/files/data2.txt2",
+        "external": false,
+        "size": 691,
+        "mimetype": "text/plain",
+        "md5": "341fb1bc1d92d82d1a79d9f4d80f649b",
+        "epicpid": "21.T12996/59239fbb-9238-b975-49c4-4187feed59b2"
+      }
+    ],
     "links": {
-      "files": "https://trng-repository.surfsara.nl/api/files/5594a1bf-1484-4a01-b7d3-f1eb3d2e1dc6",
-      "publication": "https://trng-repository.surfsara.nl/api/objects/01826ff3e4974415afdb2574a7ea5a91",
-      "versions": "https://trng-repository.surfsara.nl/api/objects/c1d28e53db104cb286425902af134579/versions",
-      "self": "https://trng-repository.surfsara.nl/api/objects/01826ff3e4974415afdb2574a7ea5a91/draft"
+      "self": "https://$SDR_HOST/api/objects/deposit/f3b7fc8498cf5a17",
+      "landing": "https://$SDR_HOST/deposit/f3b7fc8498cf5a17",
+      "relationships": {
+        "community": "https://$SDR_HOST/api/objects/community/surf",
+        "schema": "https://$SDR_HOST"
+      },
+      "files": "https://$SDR_HOST/api/objects/deposit/f3b7fc8498cf5a17/files"
     },
     "metadata": {
-      "$schema": "https://trng-repository.surfsara.nl/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/draft_json_schema",
-      "DOI": "10.5072/b2share.cdb15c27-326e-4e95-b812-6b1c6b54c299",
-      "community": "e9b9792e-79fb-4b07-b6b4-b9c2bd06d095",
-      "community_specific": {},
-      "keywords": [
-        "keyword1",
-        "keyword2"
-      ],
-      "ePIC_PID": "http://hdl.handle.net/11304/2c473f04-d997-47d9-9bdb-d3d71800f870",
-      "open_access": true,
-      "owners": [
-        8
-      ],
-      "publication_state": "published",
-      "titles": [
-        {
-          "title": "TestRest"
-        }
-      ]
-    },
-    "updated": "2016-10-24T12:26:51.538025+00:00"
+      "base": {
+        "$schema": "https://$SDR_HOST/api/objects/schema/dublin",
+        "title": "Test API",
+        "identifier": "deposit:f3b7fc8498cf5a17",
+        "creator": [
+          "Test creator",
+          "Test unique"
+        ],
+        "description": "Test description",
+        "type": "Dataset",
+        "subject": [
+          "Test",
+          "REST API"
+        ],
+        "rights": [
+          {
+            "name": "Public Domain (PD)"
+          },
+          "info:eu-repo/semantics/openAccess"
+        ],
+        "date": "2021-01-01"
+      }
+    }
   }
+
 
 .. _rest-api-ref-update-published-deposit-metadata:
 
@@ -1156,7 +1214,7 @@ This request updates the metadata of an already published deposit without creati
 
 - HTTP method: ``PATCH``
 
-- URL path: ``/api/objects/NAMESPACE/DEPOSIT_ID/``
+- URL path: ``/api/objects/deposit/DEPOSIT_ID``
 
 - Required parameters: ``token``
 
@@ -1167,6 +1225,7 @@ This request updates the metadata of an already published deposit without creati
 - Notes: The JSON Patch format contains one or more JSONPath strings. The root of these paths are the metadata object, as this is the only mutable object. For instance, to update the title field of the deposit, use this JSONPath: /titles/title
 
 See the :ref:`Update draft deposit metadata <rest-api-ref-update-draft-deposit-metadata>` request for examples.
+
 
 .. _rest-api-ref-other-requests:
 
@@ -1199,16 +1258,17 @@ Command:
 
 ``curl -X DELETE "https://$SDR_HOST/api/objects/$NAMESPACE/$OBJECT_ID?token=$TOKEN"``
 
+
 .. _rest-api-ref-delete-published-object:
 
 Delete published object
 ______________________
 
-Delete a published object.
+Delete a published object, either a collection or deposit. This can only be done by a site administrator.
 
 - HTTP method: ``DELETE``
 
-- URL path: ``/api/objects/NAMESPACE/DEPOSIT_ID``
+- URL path: ``/api/objects/NAMESPACE/OBJECT_ID``
 
 - Required parameters: ``token``
 
@@ -1220,4 +1280,4 @@ Delete a published object.
 
 Command:
 
-``curl -X DELETE "https://$SDR_HOST/api/objects/NAMESPACE/$DEPOSIT_ID/?token=$TOKEN"``
+``curl -X DELETE "https://$SDR_HOST/api/objects/NAMESPACE/$OBJECT_ID/?token=$TOKEN"``
