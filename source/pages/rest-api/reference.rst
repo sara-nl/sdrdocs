@@ -11,8 +11,9 @@ In this page all available REST API requests are listed, together with examples.
 
 .. _rest-api-ref-structure:
 
+==============
 Structure
-______________________
+==============
 
 Each allowed request is described as follows:
 
