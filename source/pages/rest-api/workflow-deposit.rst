@@ -319,7 +319,9 @@ The file names (`key`) of each file does not necessarily have to match the file 
 
 Using this list, create a JSON Patch as described in [Create a JSON Patch](06_Update_deposit_metadata.md#creating-a-json-patch) and submit it following the steps described in [Submitting the patch](06_Update_deposit_metadata.md#submitting-the-patch).
 
-### Publishing your draft deposit
+Publishing your draft deposit
+---------------------
+
 The final step will complete the draft deposit by altering it using a patch request. After this request, the files of the deposit are immutable and your deposit is published!
 
 In this case, the only thing that needs to be changed is the value of the `publication_state` metadata field. The metadata field will be set to 'submitted', and therefore the patch can be created directly as a string. Also, the header of the request is set:
@@ -413,3 +415,4 @@ Once the deposit process is completed, the results can be checked by requesting 
 The deposit identifier `id` in the response message can directly be used to see the landing page of the newly created deposit: [b43a0e6914e34de8bd19613bcdc0d364](https://$SDR_HOST/deposits/b43a0e6914e34de8bd19613bcdc0d364). If the page displays a restriction message, this is due the server-side processing of the ingestion. As soon as this is finished, the message will disappear.
 
 Unfortunately, some of the metadata schema fields are missing since during the metadata update step, these fields were not added to the patch. It is highly recommended to complete all fields during this step in order to increase the discoverability, authenticity and reusability of the dataset. Please check the [Update deposit metadata](06_Update_deposit_metadata.md) module to update your published deposit's metadata.
+
