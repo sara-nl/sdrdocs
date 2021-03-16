@@ -24,6 +24,7 @@ General
 
 .. toctree::
    :maxdepth: 1
+   :caption: General
 
    pages/general/about
    pages/general/access
@@ -37,6 +38,7 @@ Basic Usage
 
 .. toctree::
    :maxdepth: 1
+   :caption: Basic usage
 
    pages/basics/basic_usage
    pages/basics/deposit
@@ -52,6 +54,7 @@ Advanced
 
 .. toctree::
    :maxdepth: 1
+   :caption: Advanced
 
    pages/advanced/advanced_usage
    pages/advanced/advanced_usage_admins
@@ -66,6 +69,7 @@ REST API
 =======
 
 .. toctree::
+   :caption: REST API
    :maxdepth: 1
 
    pages/rest-api/intro

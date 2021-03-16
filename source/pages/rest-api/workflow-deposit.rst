@@ -43,7 +43,7 @@ Please note that the Data Repository service makes a distinction between the two
 Tools
 ---------------------
 
-In the descriptions of each step of the workflow, the programming language Python is used.
+In the descriptions of each step of the workflow, the programming language Python is used. Any language or tool that supports HTTP protocol methods can be used instead. Examples are cURL or wget.
 
 .. _rest-api-deposit-workflow:
 
