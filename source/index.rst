@@ -18,10 +18,6 @@ We welcome your comments at helpdesk@surfsara.nl to help us improve the document
 
 .. _general:
 
-=======
-General
-=======
-
 .. toctree::
    :maxdepth: 1
    :caption: General
@@ -32,10 +28,6 @@ General
 
 
 .. _basic-usage:
-
-=======
-Basic Usage
-=======
 
 .. toctree::
    :maxdepth: 1
@@ -49,10 +41,6 @@ Basic Usage
 
 .. _advanced-usage:
 
-=======
-Advanced
-=======
-
 .. toctree::
    :maxdepth: 1
    :caption: Advanced
@@ -65,10 +53,6 @@ Advanced
 
 .. _rest-api:
 
-=======
-REST API
-=======
-
 .. toctree::
    :caption: REST API
    :maxdepth: 1
@@ -79,19 +63,11 @@ REST API
 
 .. _practices:
 
-==============
-Best practices
-==============
-
 .. toctree::
    :maxdepth: 1
 
 
 .. _appendix:
-
-===============
-Appendix
-===============
 
 .. toctree::
    :maxdepth: 1

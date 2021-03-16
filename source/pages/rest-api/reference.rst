@@ -455,7 +455,6 @@ Returns:
           "url": "https://$SDR_HOST/category/agricultural",
           "type": "Category"
         },
-        ...
         {
           "pid": "collection:cosmogrid-2048",
           "title": "The Cosmogrid Simulation: Statistical Properties of Small Dark Matter Halos 2048³ resolution",
@@ -873,7 +872,7 @@ This action updates the draft deposit with new information.
 
 - HTTP method: ``PATCH``
 
-- URL path: ``/api/objects/NAMESPACE/OBJECT_ID``
+- URL path: ``/api/objects/deposit/DEPOSIT_ID``
 
 - Required parameters: ``token``
 
