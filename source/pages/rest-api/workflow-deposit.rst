@@ -55,7 +55,7 @@ In the following diagram the general deposit workflow of Data Repository is show
 
  .. image:: ../img/deposit-workflow.png
    :align: center
-   :width: 75%
+   :width: 100%
 
 The red boxes indicate an object state, where in this workflow only draft, submitted and published deposits exist. Files and metadata can be added multiple times. Persistent identifiers (PIDs) and checksum are automatically added by Data Repository (green boxes). Once a draft deposit is committed, depending on the community's requirements, the deposit is either in submitted state and needs further approval or is immediately published.
 
@@ -98,8 +98,7 @@ On success, the response status code and text will be different this time:
           "self": "https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a",
           "landing": "https://$SDR_HOST/deposit/bd387af9afe48d0a",
           "relationships": {
-            "community": "https://$SDR_HOST/api/objects/community/surf",
-            "schema": "https://$SDR_HOST"
+            "community": "https://$SDR_HOST/api/objects/community/surf"
           }
         },
         "metadata": {
@@ -137,8 +136,9 @@ Please note that the deposit identifier will remain the same during the draft st
 
 .. _rest-api-add-files-draft-deposit:
 
+==================
 Add files to your new draft deposit
----------------------
+==================
 
 After creation of the draft deposit, files can be added. This is achieved in a similar way as the previous example via a PUT request. Make sure your data files are accessible in the Python session. In this case the files named `sequence.txt` and `sequence2.txt` are added to the draft deposit. For every file to add to the deposit, a separate request is required.
 
@@ -501,7 +501,7 @@ The final commit request will return the final deposit metadata in case the requ
     >>> print(json.dumps(result, indent=4))
 
 
-Your draft deposit is now published and is available under the REST API URL `https://$SDR_HOST/api/objects/deposit/`!
+Your draft deposit is now published and is available under the REST API URL ```https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a```!
 
 An EPIC persistent identifier and DOI (`epicpid` and `doi` fields) have been automatically generated and added to the metadata.
 
@@ -513,6 +513,6 @@ Check and display your results
 
 Once the deposit process is completed, the results can be checked by requesting the deposit data using the new deposit identifier. Follow the [deposit retrieval guide](01_Retrieve_existing_deposit.md) for an extensive description on how to do this.
 
-The deposit identifier `id` in the response message can directly be used to see the landing page of the newly created deposit: [bd387af9afe48d0a](https://$SDR_HOST/deposit/bd387af9afe48d0a). If the page displays a restriction message, this is due the server-side processing of the ingestion. As soon as this is finished, the message will disappear.
+The deposit identifier `id` in the response message can directly be used to see the landing page of the newly created deposit: `bd387af9afe48d0a <https://$SDR_HOST/deposit/bd387af9afe48d0a>`_. If the page displays a restriction message, this is due the server-side processing of the ingestion. As soon as this is finished, the message will disappear.
 
 Unfortunately, some of the metadata schema fields are missing since during the metadata update step, these fields were not added to the patch. It is highly recommended to complete all fields during this step in order to increase the discoverability, authenticity and reusability of the dataset. Please check the :ref:`Update metadata of draft deposit <rest-api-ref-update-draft-deposit-metadata>` reference to update the metadata of your published deposit.
