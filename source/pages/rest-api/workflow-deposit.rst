@@ -37,15 +37,23 @@ When your dataset is ready for publication, it can be uploaded to the Data Repos
 
 Please note that the Data Repository service makes a distinction between the two terms `deposit` and `draft deposit` (or simply `draft`). A **deposit** is published and therefore unchangeable and has persistent identifiers (PID) assigned to it, as well as checksums. A user can create a deposit by **first creating a draft deposit**, which is modifiable. Files and metadata can be placed into a draft deposit, but not into an already published deposit.
 
+.. _rest-api-deposit-workflow:
+
+==================
 Deposit workflow
-==============
+==================
 
 In the following diagram the general deposit workflow of Data Repository is shown. All blue boxes require a request interaction with the Data Repository service.
 
-![Data Repository deposit workflow](img/Data Repository-deposit-workflow.png "Data Repository deposit workflow")
+ .. image:: ../img/deposit-workflow.png
+   :align: center
+   :width: 75%
 
 The red boxes indicate an object state, where in this workflow only draft, submitted and published deposits exist. Files and metadata can be added multiple times. Persistent identifiers (PIDs) and checksum are automatically added by Data Repository (green boxes). Once a draft deposit is committed, depending on the community's requirements, the deposit is either in submitted state and needs further approval or is immediately published.
 
+.. _rest-api-create-new-draft-deposit:
+
+==================
 Create a new draft deposit
 ==================
 
@@ -111,6 +119,8 @@ The deposit is still in a draft state, as is indicated in the `publication_state
 After creation, the next steps are to add files and metadata. This can be done in any order and repeatedly after each addition until the draft deposit is finally published. In the next sections, both procedures are explained.
 
 Please note that the deposit identifier will remain the same during the draft stage and after finally publishing the deposit. There is no attached EPIC PID yet.
+
+.. _rest-api-add-files-draft-deposit:
 
 Add files to your new draft deposit
 ---------------------
@@ -190,8 +200,9 @@ When the upload file is not accessible:
         "message": "The browser (or proxy) sent a request that this server could not understand."
     }
 
-
 Repeat the above steps to add other files.
+
+.. _rest-api-check-uploaded-files:
 
 Check your uploaded files
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -256,6 +267,8 @@ When all your files have been uploaded, you can check the draft deposit's curren
 
 The links to the file bucket is displayed, as well as the 'contents' list of two files, including the files' sizes. You can do this with every file bucket, as long as you have the file bucket identifier.
 
+.. _rest-api-delete-file-from-draft-deposit:
+
 Delete a file from a draft deposit
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -284,6 +297,8 @@ On a successful request, the response code should be 204 while there is no respo
 	>>> print(r)
     <Response [204]>
     >>> print(r.text)
+
+.. _rest-api-add-metadata-draft-deposit:
 
 Add metadata to your draft deposit
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -319,8 +334,11 @@ The file names (`key`) of each file does not necessarily have to match the file 
 
 Using this list, create a JSON Patch as described in [Create a JSON Patch](06_Update_deposit_metadata.md#creating-a-json-patch) and submit it following the steps described in [Submitting the patch](06_Update_deposit_metadata.md#submitting-the-patch).
 
+.. _rest-api-publish-draft-deposit:
+
+==================
 Publishing your draft deposit
----------------------
+==================
 
 The final step will complete the draft deposit by altering it using a patch request. After this request, the files of the deposit are immutable and your deposit is published!
 
@@ -407,8 +425,11 @@ Using this URL the state of the file bucket of the published deposit can be inve
     >>> print(result["locked"])
     True
 
+.. _rest-api-check-and-display-results-deposit:
+
+==================
 Check and display your results
-------------------------
+==================
 
 Once the deposit process is completed, the results can be checked by requesting the deposit data using the new deposit identifier. Follow the [deposit retrieval guide](01_Retrieve_existing_deposit.md) for an extensive description on how to do this.
 
