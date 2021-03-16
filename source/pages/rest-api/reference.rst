@@ -8,7 +8,7 @@ In this page all available REST API requests are listed, together with examples.
 
 .. contents::
     :depth: 4
-    :mindepth: 2
+    :mindepth: 1
 
 .. _rest-api-ref-structure:
 
