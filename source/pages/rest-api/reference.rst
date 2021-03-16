@@ -653,7 +653,7 @@ Returns:
 .. code-block:: json
 
   {
-    "$schema": "https://tdr-image.surfsara.nl/static/schemas/object-metadata",
+    "$schema": "https://$SDR_HOST/static/schemas/object-metadata",
     "id": "bd387af9afe48d0a",
     "created": "2021-03-10T20:05:43.250000Z",
     "updated": "2021-03-10T20:05:43.250000Z",
@@ -666,16 +666,16 @@ Returns:
       "owner": "user:86"
     },
     "links": {
-      "self": "https://tdr-image.surfsara.nl/api/objects/deposit/bd387af9afe48d0a",
-      "landing": "https://tdr-image.surfsara.nl/deposit/bd387af9afe48d0a",
+      "self": "https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a",
+      "landing": "https://$SDR_HOST/deposit/bd387af9afe48d0a",
       "relationships": {
-        "community": "https://tdr-image.surfsara.nl/api/objects/community/surf",
-        "schema": "https://tdr-image.surfsara.nl"
+        "community": "https://$SDR_HOST/api/objects/community/surf",
+        "schema": "https://$SDR_HOST"
       }
     },
     "metadata": {
       "base": {
-        "$schema": "https://tdr-image.surfsara.nl/api/objects/schema/dublin",
+        "$schema": "https://$SDR_HOST/api/objects/schema/dublin",
         "title": "My dataset deposit",
         "identifier": "deposit:bd387af9afe48d0a",
         "rights": [
@@ -747,7 +747,7 @@ Returns:
 .. code-block:: json
 
   {
-    "$schema": "https://tdr-image.surfsara.nl/static/schemas/object-metadata",
+    "$schema": "https://$SDR_HOST/static/schemas/object-metadata",
     "id": "bd387af9afe48d0a",
     "created": "2021-03-10T20:05:43.250000Z",
     "updated": "2021-03-10T20:09:30.379000Z",
@@ -762,7 +762,7 @@ Returns:
     "files": [
       {
         "name": "$FILE_NAME",
-        "url": "https://tdr-image.surfsara.nl/deposit/bd387af9afe48d0a/files/$FILE_NAME",
+        "url": "https://$SDR_HOST/deposit/bd387af9afe48d0a/files/$FILE_NAME",
         "external": false,
         "size": 691,
         "mimetype": "text/plain",
@@ -771,18 +771,18 @@ Returns:
       }
     ],
     "links": {
-      "self": "https://tdr-image.surfsara.nl/api/objects/deposit/bd387af9afe48d0a",
-      "landing": "https://tdr-image.surfsara.nl/deposit/bd387af9afe48d0a",
+      "self": "https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a",
+      "landing": "https://$SDR_HOST/deposit/bd387af9afe48d0a",
       "relationships": {
-        "community": "https://tdr-image.surfsara.nl/api/objects/community/surf",
-        "schema": "https://tdr-image.surfsara.nl"
+        "community": "https://$SDR_HOST/api/objects/community/surf",
+        "schema": "https://$SDR_HOST"
       },
-      "files": "https://tdr-image.surfsara.nl/api/objects/deposit/bd387af9afe48d0a/files"
+      "files": "https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a/files"
     },
     "metadata": {
       "base": {
-        "$schema": "https://tdr-image.surfsara.nl/api/objects/schema/dublin",
-        "title": "Test API #22",
+        "$schema": "https://$SDR_HOST/api/objects/schema/dublin",
+        "title": "My dataset deposit",
         "identifier": "deposit:bd387af9afe48d0a",
         "rights": [
           "info:eu-repo/semantics/openAccess"
@@ -906,7 +906,7 @@ Returns:
 .. code-block:: json
 
   {
-    "$schema": "https://tdr-image.surfsara.nl/static/schemas/object-metadata",
+    "$schema": "https://$SDR_HOST/static/schemas/object-metadata",
     "id": "bd387af9afe48d0a",
     "created": "2021-03-10T20:05:43.250000Z",
     "updated": "2021-03-10T20:12:15.939000Z",
@@ -919,16 +919,16 @@ Returns:
       "owner": "user:86"
     },
     "links": {
-      "self": "https://tdr-image.surfsara.nl/api/objects/deposit/bd387af9afe48d0a",
-      "landing": "https://tdr-image.surfsara.nl/deposit/bd387af9afe48d0a",
+      "self": "https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a",
+      "landing": "https://$SDR_HOST/deposit/bd387af9afe48d0a",
       "relationships": {
-        "community": "https://tdr-image.surfsara.nl/api/objects/community/surf",
-        "schema": "https://tdr-image.surfsara.nl"
+        "community": "https://$SDR_HOST/api/objects/community/surf",
+        "schema": "https://$SDR_HOST"
       }
     },
     "metadata": {
       "base": {
-        "$schema": "https://tdr-image.surfsara.nl/api/objects/schema/dublin",
+        "$schema": "https://$SDR_HOST/api/objects/schema/dublin",
         "title": "My data deposit",
         "identifier": "deposit:bd387af9afe48d0a",
         "creator": [
@@ -955,7 +955,7 @@ Returns:
 .. code-block:: json
 
   {
-    "$schema": "https://tdr-image.surfsara.nl/static/schemas/object-metadata",
+    "$schema": "https://$SDR_HOST/static/schemas/object-metadata",
     "id": "bd387af9afe48d0a",
     "created": "2021-03-10T20:05:43.250000Z",
     "updated": "2021-03-10T20:14:11.996000Z",
@@ -968,16 +968,16 @@ Returns:
       "owner": "user:86"
     },
     "links": {
-      "self": "https://tdr-image.surfsara.nl/api/objects/deposit/bd387af9afe48d0a",
-      "landing": "https://tdr-image.surfsara.nl/deposit/bd387af9afe48d0a",
+      "self": "https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a",
+      "landing": "https://$SDR_HOST/deposit/bd387af9afe48d0a",
       "relationships": {
-        "community": "https://tdr-image.surfsara.nl/api/objects/community/surf",
-        "schema": "https://tdr-image.surfsara.nl"
+        "community": "https://$SDR_HOST/api/objects/community/surf",
+        "schema": "https://$SDR_HOST"
       }
     },
     "metadata": {
       "base": {
-        "$schema": "https://tdr-image.surfsara.nl/api/objects/schema/dublin",
+        "$schema": "https://$SDR_HOST/api/objects/schema/dublin",
         "title": "New title",
         "identifier": "deposit:bd387af9afe48d0a",
         "creator": [
@@ -1004,7 +1004,7 @@ Returns:
 .. code-block:: json
 
   {
-    "$schema": "https://tdr-image.surfsara.nl/static/schemas/object-metadata",
+    "$schema": "https://$SDR_HOST/static/schemas/object-metadata",
     "id": "bd387af9afe48d0a",
     "created": "2021-03-10T20:05:43.250000Z",
     "updated": "2021-03-10T20:14:11.996000Z",
@@ -1017,16 +1017,16 @@ Returns:
       "owner": "user:86"
     },
     "links": {
-      "self": "https://tdr-image.surfsara.nl/api/objects/deposit/bd387af9afe48d0a",
-      "landing": "https://tdr-image.surfsara.nl/deposit/bd387af9afe48d0a",
+      "self": "https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a",
+      "landing": "https://$SDR_HOST/deposit/bd387af9afe48d0a",
       "relationships": {
-        "community": "https://tdr-image.surfsara.nl/api/objects/community/surf",
-        "schema": "https://tdr-image.surfsara.nl"
+        "community": "https://$SDR_HOST/api/objects/community/surf",
+        "schema": "https://$SDR_HOST"
       }
     },
     "metadata": {
       "base": {
-        "$schema": "https://tdr-image.surfsara.nl/api/objects/schema/dublin",
+        "$schema": "https://$SDR_HOST/api/objects/schema/dublin",
         "title": "New title",
         "identifier": "deposit:bd387af9afe48d0a",
         "creator": [

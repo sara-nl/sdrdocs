@@ -4,7 +4,7 @@
 REST API workflow for deposits
 **************
 
-This page provides information about creating and managging deposit using the REST API of the Data Repository service.
+This page provides information about creating and managging deposit using the REST API of the Data Repository service using Python.
 
 .. contents::
     :depth: 4
@@ -20,6 +20,7 @@ The HTTP REST API does not impose a specific workflow for creating a deposit, bu
 - Identify a target community for your data by using the REST API :ref:`List all communities <rest-api-ref-list-all-communities>` request
 - Using the community's identifier, retrieve the JSON Schema of the deposit's metadata. The submitted metadata will have to conform to this schema. Use the :ref:`Get community schema <rest-api-ref-get-community-schema>` request.
 - Create a draft deposit: use the :ref:`Create draft deposit <rest-api-ref-create-draft-deposit>` request.
+- Add and update metadata of the deposit: use the :ref:`Update metadata of draft deposit <rest-api-ref-update-draft-deposit-metadata>` request.
 - Upload the files into the draft deposit. You will have to use one HTTP request per file. Use the :ref:`Upload file <rest-api-ref-upload-file-into-draft-deposit>` request.
 - Set the complete metadata and publish the deposit. Use the :ref:`Submit draft for publication <rest-api-ref-submit-draft-deposit-for-publication>` request.
 
@@ -36,6 +37,13 @@ When your dataset is ready for publication, it can be uploaded to the Data Repos
  - Committing the draft deposit to publish it
 
 Please note that the Data Repository service makes a distinction between the two terms `deposit` and `draft deposit` (or simply `draft`). A **deposit** is published and therefore unchangeable and has persistent identifiers (PID) assigned to it, as well as checksums. A user can create a deposit by **first creating a draft deposit**, which is modifiable. Files and metadata can be placed into a draft deposit, but not into an already published deposit.
+
+.. _rest-api-workflow-tools:
+
+Tools
+---------------------
+
+In the descriptions of each step of the workflow, the programming language Python is used.
 
 .. _rest-api-deposit-workflow:
 
@@ -59,66 +67,73 @@ Create a new draft deposit
 
 After loading your token a **POST** request will create a new draft deposit. Only some basic metadata is needed, like the title and community, which is sent along with the request as the data argument together with a header defining the content type. All metadata can be changed later during the deposit workflow.
 
-In the following example, a new open access deposit is created for the EUDAT community with the title 'My test upload'. The community is identified using its unique identifier:
+In the following example, a new open access deposit is created for the SURF community with the title 'My first upload'. The community is identified using its unique identifier:
 
 .. code-block:: python
 
     >>> header = {"Content-Type": "application/json"}
-    >>> metadata = {"titles": [{"title":"My test upload"}],
-                    "community": "e9b9792e-79fb-4b07-b6b4-b9c2bd06d095",
-                    "open_access": True}
-    >>> r = requests.post('https://$SDR_HOST/api/deposits/', params={'access_token': token}, data=json.dumps(metadata), headers=header)
+    >>> metadata = {"title": "My first upload",
+                    "community": "community:surf",
+                    "sharelevel": "Open"}
+    >>> r = requests.post('https://$SDR_HOST/api/objects/deposit', params={'token': token}, data=json.dumps(metadata), headers=header)
 
 On success, the response status code and text will be different this time:
 
 .. code-block:: json
 
-    {
-      "created": "2017-03-02T16:34:26.383505+00:00",
-      "id": "b43a0e6914e34de8bd19613bcdc0d364",
-      "links": {
-        "files": "https://$SDR_HOST/api/files/0163d244-5845-40ca-899c-d1d0025f68aa",
-        "publication": "https://$SDR_HOST/api/deposits/b43a0e6914e34de8bd19613bcdc0d364",
-        "self": "https://$SDR_HOST/api/deposits/b43a0e6914e34de8bd19613bcdc0d364/draft"
-      },
-      "metadata": {
-        "$schema": "https://$SDR_HOST/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/draft_json_schema",
-        "community": "e9b9792e-79fb-4b07-b6b4-b9c2bd06d095",
-        "community_specific": {},
-        "open_access": true,
-        "owners": [
-          10
-        ],
-        "publication_state": "draft",
-        "titles": [
-          {
-            "title": "My test upload"
+      {
+        "$schema": "https://$SDR_HOST/static/schemas/object-metadata",
+        "id": "bd387af9afe48d0a",
+        "created": "2021-03-10T20:05:43.250000Z",
+        "updated": "2021-03-10T20:05:43.250000Z",
+        "properties": {
+          "namespace": "deposit",
+          "pid": "deposit:bd387af9afe48d0a",
+          "type": "deposit",
+          "state": "draft",
+          "sharelevel": "open public access",
+          "owner": "user:86"
+        },
+        "links": {
+          "self": "https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a",
+          "landing": "https://$SDR_HOST/deposit/bd387af9afe48d0a",
+          "relationships": {
+            "community": "https://$SDR_HOST/api/objects/community/surf",
+            "schema": "https://$SDR_HOST"
           }
-        ]
-      },
-      "updated": "2017-03-02T16:34:26.383514+00:00"
-    }
+        },
+        "metadata": {
+          "base": {
+            "$schema": "https://$SDR_HOST/api/objects/schema/dublin",
+            "title": "My dataset deposit",
+            "identifier": "deposit:bd387af9afe48d0a",
+            "rights": [
+              "info:eu-repo/semantics/openAccess"
+            ]
+          }
+        }
+      }
 
 Response code 201 indicates the draft deposit has been successfully created. The deposit identifier metadata field `id` in the response text is used to identify the draft deposit during the additional steps of adding files and metadata:
 
 .. code-block:: python
 
-    >>> result = json.loads(r.text)
+    >>> result = r.json()
     >>> depositid = result["id"]
     >>> print(depositid)
-    b43a0e6914e34de8bd19613bcdc0d364
+    bd387af9afe48d0a
 
 
-The deposit is still in a draft state, as is indicated in the `publication_state` property:
+The deposit is still in a draft state, as is indicated in the `state` property:
 
 .. code-block:: python
 
-    >>> print(result["metadata"]["publication_state"])
+    >>> print(result["properties"]["state"])
     draft
 
 After creation, the next steps are to add files and metadata. This can be done in any order and repeatedly after each addition until the draft deposit is finally published. In the next sections, both procedures are explained.
 
-Please note that the deposit identifier will remain the same during the draft stage and after finally publishing the deposit. There is no attached EPIC PID yet.
+Please note that the deposit identifier will remain the same during the draft stage and after finally publishing the deposit. There is no attached EPIC PID or DOI yet.
 
 .. _rest-api-add-files-draft-deposit:
 
@@ -127,19 +142,12 @@ Add files to your new draft deposit
 
 After creation of the draft deposit, files can be added. This is achieved in a similar way as the previous example via a PUT request. Make sure your data files are accessible in the Python session. In this case the files named `sequence.txt` and `sequence2.txt` are added to the draft deposit. For every file to add to the deposit, a separate request is required.
 
-Files in deposits are placed in file buckets attached to a deposit with a specific `file_bucket_id`. This identifier can be extracted from the returned information after creating the draft deposit in the nested property `files` of the property `links`:
-
-.. code-block:: python
-
-    >>> filebucketid = result["links"]["files"].split('/')[-1]
-    >>> print(filebucketid)
-    0163d244-5845-40ca-899c-d1d0025f68aa
-
 First, define a file open handle to send along with the request, e.g. for the `sequence.txt` file:
 
 .. code-block:: python
 
-    >>> upload_file = open('sequence.txt', 'rb')
+    >>> filename = 'sequence.txt'
+    >>> upload_file = open(filename, 'rb')
 
 In this statement, the action of reading the file is not actually performed. The file will be read only when the request is done and send as a direct data stream.
 
@@ -147,15 +155,15 @@ Define the request URL by adding the file bucket identifier to the `files` end p
 
 .. code-block:: python
 
-    >>> url = 'https://$SDR_HOST/api/files/' + filebucketid
+    >>> url = 'https://$SDR_HOST/api/objects/deposit/' + depositid + '/files/' + filename
     >>> params = {'access_token': token}
-    >>> header = {"Accept": "application/json", "Content-Type": "application/octet-stream"}
+    >>> header = {"Content-Type": "application/octet-stream"}
 
 The complete put request looks as follows:
 
 .. code-block:: python
 
-    r = requests.put(url + '/sequence.txt', data=upload_file, params=params, headers=header)
+    r = requests.put(url, data=upload_file, params=params, headers=header)
 
 If the request is successful, the result can be checked:
 
@@ -165,25 +173,53 @@ If the request is successful, the result can be checked:
     200
     >>> result = json.loads(r.text)
     >>> print(json.dumps(result, indent=4))
-    {
-        "mimetype": "text/plain",
-        "updated": "2017-03-02T16:40:14.672198+00:00",
-        "links": {
-            "self": "https://$SDR_HOST/api/files/0163d244-5845-40ca-899c-d1d0025f68aa/sequence.txt",
-            "version": "https://$SDR_HOST/api/files/0163d244-5845-40ca-899c-d1d0025f68aa/sequence.txt?versionId=c616c2c8-531f-4c00-91d8-c0a5c996194f",
-            "uploads": "https://$SDR_HOST/api/files/0163d244-5845-40ca-899c-d1d0025f68aa/sequence.txt?uploads"
+      {
+        "$schema": "https://$SDR_HOST/static/schemas/object-metadata",
+        "id": "bd387af9afe48d0a",
+        "created": "2021-03-10T20:05:43.250000Z",
+        "updated": "2021-03-10T20:09:30.379000Z",
+        "properties": {
+          "namespace": "deposit",
+          "pid": "deposit:bd387af9afe48d0a",
+          "type": "deposit",
+          "state": "draft",
+          "sharelevel": "open public access",
+          "owner": "user:86"
         },
-        "is_head": true,
-        "created": "2017-03-02T16:40:14.668025+00:00",
-        "checksum": "md5:e617f15cd8bded0c4e92e35b5af1609d",
-        "version_id": "c616c2c8-531f-4c00-91d8-c0a5c996194f",
-        "delete_marker": false,
-        "key": "sequence.txt",
-        "size": 440
-    }
+        "files": [
+          {
+            "name": "sequence.txt",
+            "url": "https://$SDR_HOST/deposit/bd387af9afe48d0a/files/sequence.txt",
+            "external": false,
+            "size": 691,
+            "mimetype": "text/plain",
+            "md5": "",
+            "epicpid": "21.T12996/5ddde41c-a461-a861-45fd-76594f2b5a20"
+          }
+        ],
+        "links": {
+          "self": "https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a",
+          "landing": "https://$SDR_HOST/deposit/bd387af9afe48d0a",
+          "relationships": {
+            "community": "https://$SDR_HOST/api/objects/community/surf",
+            "schema": "https://$SDR_HOST"
+          },
+          "files": "https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a/files"
+        },
+        "metadata": {
+          "base": {
+            "$schema": "https://$SDR_HOST/api/objects/schema/dublin",
+            "title": "My dataset deposit",
+            "identifier": "deposit:bd387af9afe48d0a",
+            "rights": [
+              "info:eu-repo/semantics/openAccess"
+            ]
+          }
+        }
+      }
 
 
-The mime-type is detected, direct links are given and a checksum is calculated. The `version_id` can be used to refer to this specific upload of the file in case new versions are uploaded later on.
+The mime-type is detected, direct links are given and a checksum is calculated. As soon as this checksum is ready, it will be added to the metadata of the deposit.
 
 If the request fails, check the error by displaying the response text, for example when the `files` object has errors. The reponse text will, in this case, a HTML page describing the error.
 
@@ -196,8 +232,7 @@ When the upload file is not accessible:
     >>> result = json.loads(r.text)
     >>> print(json.dumps(result, indent=4))
     {
-        "status": 400,
-        "message": "The browser (or proxy) sent a request that this server could not understand."
+        "error": "File not found."
     }
 
 Repeat the above steps to add other files.
@@ -211,59 +246,22 @@ When all your files have been uploaded, you can check the draft deposit's curren
 
 .. code-block:: python
 
-	>>> r = requests.get('https://$SDR_HOST/api/files/' + filebucketid, params=params)
+	>>> r = requests.get('https://$SDR_HOST/api/objects/deposit/' + depositid + '/files', params=params)
     >>> result = json.loads(r.text)
     >>> print(json.dumps(result, indent=4))
 
 .. code-block:: json
-    {
-        "max_file_size": 1048576000,
-        "updated": "2017-03-02T16:42:48.980058+00:00",
-        "locked": false,
-        "links": {
-            "self": "https://$SDR_HOST/api/files/0163d244-5845-40ca-899c-d1d0025f68aa",
-            "uploads": "https://$SDR_HOST/api/files/0163d244-5845-40ca-899c-d1d0025f68aa?uploads",
-            "versions": "https://$SDR_HOST/api/files/0163d244-5845-40ca-899c-d1d0025f68aa?versions"
-        },
-        "created": "2017-03-02T16:34:26.405147+00:00",
-        "quota_size": null,
-        "id": "0163d244-5845-40ca-899c-d1d0025f68aa",
-        "contents": [
-            {
-                "mimetype": "text/plain",
-                "updated": "2017-03-02T16:42:48.974457+00:00",
-                "links": {
-                    "self": "https://$SDR_HOST/api/files/0163d244-5845-40ca-899c-d1d0025f68aa/sequence2.txt",
-                    "version": "https://$SDR_HOST/api/files/0163d244-5845-40ca-899c-d1d0025f68aa/sequence2.txt?versionId=5c13ccc5-d0c4-4e81-b4ba-42a5e6ab4432",
-                    "uploads": "https://$SDR_HOST/api/files/0163d244-5845-40ca-899c-d1d0025f68aa/sequence2.txt?uploads"
-                },
-                "is_head": true,
-                "created": "2017-03-02T16:42:48.970708+00:00",
-                "checksum": "md5:0f8d51036979343c38dcc291c18dae7e",
-                "version_id": "5c13ccc5-d0c4-4e81-b4ba-42a5e6ab4432",
-                "delete_marker": false,
-                "key": "sequence2.txt",
-                "size": 4042
-            },
-            {
-                "mimetype": "text/plain",
-                "updated": "2017-03-02T16:40:14.672198+00:00",
-                "links": {
-                    "self": "https://$SDR_HOST/api/files/0163d244-5845-40ca-899c-d1d0025f68aa/sequence.txt",
-                    "version": "https://$SDR_HOST/api/files/0163d244-5845-40ca-899c-d1d0025f68aa/sequence.txt?versionId=c616c2c8-531f-4c00-91d8-c0a5c996194f",
-                    "uploads": "https://$SDR_HOST/api/files/0163d244-5845-40ca-899c-d1d0025f68aa/sequence.txt?uploads"
-                },
-                "is_head": true,
-                "created": "2017-03-02T16:40:14.668025+00:00",
-                "checksum": "md5:e617f15cd8bded0c4e92e35b5af1609d",
-                "version_id": "c616c2c8-531f-4c00-91d8-c0a5c996194f",
-                "delete_marker": false,
-                "key": "sequence.txt",
-                "size": 440
-            }
-        ],
-        "size": 4482
-    }
+    [
+      {
+        "name": "sequence.txt",
+        "url": "https://$SDR_HOST/deposit/bd387af9afe48d0a/files/sequence.txt",
+        "external": false,
+        "size": 691,
+        "mimetype": "text/plain",
+        "md5": "",
+        "epicpid": "21.T12996/5ddde41c-a461-a861-45fd-76594f2b5a20"
+      }
+    ]
 
 The links to the file bucket is displayed, as well as the 'contents' list of two files, including the files' sizes. You can do this with every file bucket, as long as you have the file bucket identifier.
 
@@ -279,14 +277,14 @@ In order to delete a file from a draft deposit, a request header and your access
 .. code-block:: python
 
 	>>> header = {"Content-Type": 'application/json'}
-    >>> params = {"access_token": token}
+    >>> params = {"token": token}
 
 
-To make the request, the file bucket deposit identifier of the draft deposit and the file name under which you've stored the file are required. Along with the DELETE request operation with the `/api/files/<file_bucket_id>/<file_name>` endpoint in the URL, the request then looks as follows:
+To make the request, the identifier of the draft deposit and the file name under which you've stored the file are required. Along with the DELETE request operation with the `/api/objects/deposit/<depositid>/files/<file_name>` endpoint in the URL, the request then looks as follows:
 
 .. code-block:: python
 
-	>>> url = "https://$SDR_HOST/api/files/513527a8-d3ac-4bd8-a6b0-f8fec9a94cf8/TestFile.txt"
+	>>> url = "https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a/files/sequence.txt"
     >>> r = requests.delete(url, params=params, headers=header)
 
 
@@ -300,19 +298,168 @@ On a successful request, the response code should be 204 while there is no respo
 
 .. _rest-api-add-metadata-draft-deposit:
 
+==================
 Add metadata to your draft deposit
-~~~~~~~~~~~~~~~~~~~~~~~
+==================
 
-Metadata is added to a draft deposit while creating the initial object. By issuing a HTTP patch request with a JSON patch list of operations the current metadata of a deposit can be updated with additional or updated metadata fields and corresponding values.
+Metadata is already added to a draft deposit while creating the initial deposit. By issuing a HTTP patch request with a JSON patch list of operations the current metadata of a deposit can be updated with additional or updated metadata fields and corresponding values.
 
-Since this procedure is quite extensive, refer to the [Update deposit metadata](06_Update_deposit_metadata.md) guide to update your draft deposit's current metadata. This module can also be used to update metadata of existing deposits.
+To update a draft deposit's metadata, the deposit identifier is required while making patch requests. The procedure can be applied to either draft or published deposits.
 
-To see how you can fully employ the metadata schema of a community, refer to the [Updating all community metadata fields](06_Update_deposit_metadata.md#updating-all-community-metadata-fields) section of that same guide.
+.. _rest-api-prepare-metadata:
+
+Prepare your new metadata
+~~~~~~~~~~~~~~~~~~~~
+
+An object with the new and updated metadata fields and values needs to be constructed. As the community, title and share level fields have already been set when the draft deposit was created, only some missing fields are provided:
+
+.. code-block:: python
+
+    >>> metadata = {"creator": "Researcher 1",
+                "description": "My first dataset ingested using the Data Repository API",
+                "rights": "CC-0-BY",
+                "contact": "email@example.com"}
+
+To update community- or collection-specific metadata fields, some additional information needs to be provided. Furthermore, to add or remove an item of a list of value, the JSON Patch requires specific paths.
+
+.. _rest-api-create-json-patch:
+
+Create a JSON patch
+~~~~~~~~~~~~~~~~~~~~
+
+The metadata update call is made using a patch request containing the patch operations and headers. Note that:
+
+- The metadata updates for the deposit must be provided in the `JSON patch format <http://jsonpatch.com>`_ in order to avoid to have to send all the existing metadata as well
+- The patch format contains one or more JSONPath strings. The root of these paths is the metadata object, as this is the only mutable object
+
+In order to successfully update the metadata, a JSON patch is created using the `jsonpatch` Python package. First, the original existing metadata of the deposit is retrieved which will later be altered:
+
+.. code-block:: python
+
+    >>> url = "https://$SDR_HOST/api/objects/deposit/" + depositid
+    >>> r = requests.get(url, params=params)
+    >>> result = json.loads(r.text)
+    >>> metadata_old = result["metadata"]
+    >>> print(json.dumps(metadata_old, indent=4))
+    "base": {
+                "$schema": "https://$SDR_HOST/api/objects/schema/dublin",
+                "title": "My dataset deposit",
+                "identifier": "deposit:bd387af9afe48d0a",
+                "rights": [
+                  "info:eu-repo/semantics/openAccess"
+                ]
+              }
+
+The actual JSON patch is created by:
+
+.. code-block:: python
+
+    >>> import jsonpatch
+    >>> patch = jsonpatch.make_patch(metadata_old, metadata)
+    >>> print(patch)
+    [{"path": "/community_specific", "op": "remove"}, {"path": "/publication_state", "op": "remove"}, {"path": "/owners", "op": "remove"}, {"path": "/open_access", "op": "remove"}, {"path": "/community", "op": "remove"}, {"path": "/titles", "op": "remove"}, {"path": "/$schema", "op": "remove"}, {"path": "/publisher", "value": "EUDAT", "op": "add"}, {"path": "/contact_email", "value": "email@example.com", "op": "add"}, {"path": "/descriptions", "value": [{"description": "My first dataset ingested using the Data Repository API", "description_type": "Abstract"}], "op": "add"}, {"path": "/language", "value": "en_GB", "op": "add"}]
+
+The current patch will remove any existing fields not present in the new metadata object, therefore these need to be removed in the final patch:
+
+.. code-block:: python
+
+    >>> finpatch = filter(lambda x: x["op"] != "remove", patch)
+    >>> print(list(finpatch))
+    [{u'path': u'/publisher', u'value': 'EUDAT', u'op': u'add'}, {u'path': u'/contact_email', u'value': 'email@example.com', u'op': u'add'}, {u'path': u'/descriptions', u'value': [{'description': 'My first dataset ingested using the Data Repository API', 'description_type': 'Abstract'}], u'op': u'add'}, {u'path': u'/language', u'value': 'en_GB', u'op': u'add'}]
+    ```
+
+The patch needs to be provided to the `data` argument as a serialized string for which the JSON package can be used:
+
+.. code-block:: python
+
+    >>> strpatch = json.dumps(list(finpatch))
+    >>> print(strpatch)
+    [{"path": "/publisher", "value": "EUDAT", "op": "add"}, {"path": "/contact_email", "value": "email@example.com", "op": "add"}, {"path": "/descriptions", "value": [{"description": "My first dataset ingested using the Data Repository API", "description_type": "Abstract"}], "op": "add"}, {"path": "/language", "value": "en_GB", "op": "add"}]
+
+This section does not address the altering of community-specific metadata fields and multivalue fields.
+
+.. _rest-api-submit-patch:
+
+Submit the patch
+~~~~~~~~~~~~~~~~
+
+The serialized JSON patch is sent to the service in order to update the metadata.
+
+First, the request headers need to be defined:
+
+.. code-block:: python
+
+>>> headers = {'Content-Type': 'application/json-patch+json'}
+
+Now, the request response text shows the updated metadata:
+
+.. code-block:: python
+
+    >>> url = 'https://$SDR_HOST/api/deposits/' + depositid + "/draft"
+    >>> r = requests.patch(url, data=strpatch, params=params, headers=headers)
+    >>> print(r)
+    <Response [200]>
+    >>> result = json.loads(r.text)
+    >>> print(json.dumps(result, indent=4))
+    {
+        "updated": "2017-03-02T17:03:37.500387+00:00",
+        "metadata": {
+            "community_specific": {},
+            "publication_state": "draft",
+            "open_access": true,
+            "language": "en_GB",
+            "publisher": "EUDAT",
+            "owners": [
+                10
+            ],
+            "community": "e9b9792e-79fb-4b07-b6b4-b9c2bd06d095",
+            "titles": [
+                {
+                    "title": "My test upload"
+                }
+            ],
+            "contact_email": "email@example.com",
+            "descriptions": [
+                {
+                    "description": "My first dataset ingested using the Data Repository API",
+                    "description_type": "Abstract"
+                }
+            ],
+            "$schema": "https://$SDR_HOST/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/draft_json_schema"
+        },
+        "id": "b43a0e6914e34de8bd19613bcdc0d364",
+        "links": {
+            "files": "https://$SDR_HOST/api/files/0163d244-5845-40ca-899c-d1d0025f68aa",
+            "self": "https://$SDR_HOST/api/deposits/b43a0e6914e34de8bd19613bcdc0d364/draft",
+            "publication": "https://$SDR_HOST/api/deposits/b43a0e6914e34de8bd19613bcdc0d364"
+        },
+        "created": "2017-03-02T16:34:26.383505+00:00"
+    }
+
+Compare the created and updated metadata timestamp:
+
+.. code-block:: python
+
+    >>> print(result["created"], result["updated"])
+    2017-03-02T16:34:26.383505+00:00 2017-03-02T17:03:37.500387+00:00
+
+In case the patch request did not succeed (status code 400), an error description containing all errors is returned in the request response text. For example, the `creators` field value needs to be an array:
+
+.. code-block:: python
+
+    >>> patch = '[{"path": "/creator", "value": "Data Repository author", "op": "add"}]'
+    >>> r = requests.patch(url, data=patch, params=params, headers=headers)
+    >>> print(r.status_code)
+    400
+    >>> print(r.text)
+    {"message": "Validation error.", "status": 400, "errors": [{"message": "'Data Repository author' is not of type 'array'", "field": "creators"}]}
+
+.. _rest-api-external-files:
 
 Add references to external files to your draft deposit
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-It is possible to add files to a deposit that are not stored in Data Repository, but this is not recommended due to the fact that Data Repository cannot guarantee the existence of the files at an external location. Although EPIC PIDs must be used to reference to these files, Data Repository cannot manage or update these PIDs when necessary. The service will also not generate these PIDs as needed, this is left to the user.
+It is possible to add files to a deposit that are not stored in the Data Repository, but this is not recommended due to the fact that Data Repository cannot guarantee the existence of the files at an external location. Although EPIC PIDs must be used to reference to these files, Data Repository cannot manage or update these PIDs when necessary. The service will also not generate these PIDs as needed, this is left to the user.
 
 Externally referenced files are not added as files, but as separate metadata and therefore need to be provided as a JSON Patch.
 
@@ -332,7 +479,7 @@ If you have a list of files that can be accessed using an EPIC PID, a JSON Patch
 
 The file names (`key`) of each file does not necessarily have to match the file name provided in the EPIC PIDs, but this is highly recommended in order to not confuse any other user downloading these files.
 
-Using this list, create a JSON Patch as described in [Create a JSON Patch](06_Update_deposit_metadata.md#creating-a-json-patch) and submit it following the steps described in [Submitting the patch](06_Update_deposit_metadata.md#submitting-the-patch).
+Using this list, create a JSON Patch as described in :ref:`Create a JSON Patch <rest-api-create-json-patch>` and submit it following the steps described in :ref:`Submitting the patch <rest-api-submit-patch>`.
 
 .. _rest-api-publish-draft-deposit:
 
@@ -340,90 +487,23 @@ Using this list, create a JSON Patch as described in [Create a JSON Patch](06_Up
 Publishing your draft deposit
 ==================
 
-The final step will complete the draft deposit by altering it using a patch request. After this request, the files of the deposit are immutable and your deposit is published!
+The final step will complete the draft deposit submitting it with a post request. After this request, the files of the deposit are immutable and your deposit is published!
 
-In this case, the only thing that needs to be changed is the value of the `publication_state` metadata field. The metadata field will be set to 'submitted', and therefore the patch can be created directly as a string. Also, the header of the request is set:
-
-.. code-block:: python
-
-	>>> header = {'Content-Type': 'application/json-patch+json'}
-    >>> commit = '[{"op": "add", "path":"/publication_state", "value": "submitted"}]'
-
-The final commit request will return the updated object metadata in case the request is successful (status code 200):
+The final commit request will return the final deposit metadata in case the request is successful (status code 200):
 
 .. code-block:: python
 
-	>>> url = "https://$SDR_HOST/api/deposits/" + depositid + "/draft"
-    >>> r = requests.patch(url, data=commit, params=params, headers=header)
+	>>> url = "https://$SDR_HOST/api/objects/deposit/" + depositid + "/submit"
+    >>> r = requests.post(url, params=params)
     >>> print(r)
     <Response [200]>
     >>> result = json.loads(r.text)
     >>> print(json.dumps(result, indent=4))
-    {
-        "updated": "2017-03-02T17:07:13.958052+00:00",
-        "metadata": {
-            "community_specific": {},
-            "publication_state": "published",
-            "open_access": true,
-            "DOI": "http://doi.org/10.5072/b2share.b43a0e6914e34de8bd19613bcdc0d364",
-            "language": "en_GB",
-            "publisher": "EUDAT",
-            "ePIC_PID": "http://hdl.handle.net/11304/ab379f3b-8ff2-41ff-a96b-a3a066cc820c",
-            "community": "e9b9792e-79fb-4b07-b6b4-b9c2bd06d095",
-            "titles": [
-                {
-                    "title": "My test upload"
-                }
-            ],
-            "contact_email": "email@example.com",
-            "descriptions": [
-                {
-                    "description": "My first dataset ingested using the Data Repository API",
-                    "description_type": "Abstract"
-                }
-            ],
-            "owners": [
-                10
-            ],
-            "$schema": "https://$SDR_HOST/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/draft_json_schema"
-        },
-        "id": "b43a0e6914e34de8bd19613bcdc0d364",
-        "links": {
-            "files": "https://$SDR_HOST/api/files/0163d244-5845-40ca-899c-d1d0025f68aa",
-            "self": "https://$SDR_HOST/api/deposits/b43a0e6914e34de8bd19613bcdc0d364/draft",
-            "publication": "https://$SDR_HOST/api/deposits/b43a0e6914e34de8bd19613bcdc0d364"
-        },
-        "created": "2017-03-02T16:34:26.383505+00:00"
-    }
 
 
-Your draft deposit is now published as a new deposit and is available under the URL `https://$SDR_HOST/api/deposits/b43a0e6914e34de8bd19613bcdc0d364`! Please note that after a successful request the metadata returned is that of the draft deposit. You need to do another request to the published deposit to get its metadata.
+Your draft deposit is now published and is available under the REST API URL `https://$SDR_HOST/api/objects/deposit/`!
 
-An EPIC persistent identifier and DOI (`ePIC_PID` and `DOI` fields) have been automatically generated and added to the metadata. The `owners` field array contains the internal user IDs.
-
-Important
-~~~~~~~~~~~~~~~~~~~~~~~
-
-A published deposit will always have a draft deposit equivalent. If you ever want to change any of the deposits metadata, then the draft deposit can be immediately used for this process.
-
-Please note that the file bucket identifier of the draft deposit differs from the file bucket identifier of the published deposit. By retrieving the published deposit metadata, the new file bucket identifier can be obtained from the corresponding URL:
-
-.. code-block:: python
-
-	>>> r = requests.get('https://$SDR_HOST/api/deposits/' + depositid)
-    >>> result = json.loads(r.text)
-    >>> filebucket = result["links"]["files"]
-    >>> print(filebucket)
-    https://$SDR_HOST/api/files/c1422a22-b8d4-42d6-9e94-1e5590294cb4
-
-Using this URL the state of the file bucket of the published deposit can be investigated. It contains the exact same files as the draft version, but it is locked and therefore cannot be changed anymore:
-
-.. code-block:: python
-
-	>>> r = requests.get(filebucket)
-    >>> result = json.loads(r.text)
-    >>> print(result["locked"])
-    True
+An EPIC persistent identifier and DOI (`epicpid` and `doi` fields) have been automatically generated and added to the metadata.
 
 .. _rest-api-check-and-display-results-deposit:
 
@@ -433,7 +513,6 @@ Check and display your results
 
 Once the deposit process is completed, the results can be checked by requesting the deposit data using the new deposit identifier. Follow the [deposit retrieval guide](01_Retrieve_existing_deposit.md) for an extensive description on how to do this.
 
-The deposit identifier `id` in the response message can directly be used to see the landing page of the newly created deposit: [b43a0e6914e34de8bd19613bcdc0d364](https://$SDR_HOST/deposits/b43a0e6914e34de8bd19613bcdc0d364). If the page displays a restriction message, this is due the server-side processing of the ingestion. As soon as this is finished, the message will disappear.
+The deposit identifier `id` in the response message can directly be used to see the landing page of the newly created deposit: [bd387af9afe48d0a](https://$SDR_HOST/deposit/bd387af9afe48d0a). If the page displays a restriction message, this is due the server-side processing of the ingestion. As soon as this is finished, the message will disappear.
 
-Unfortunately, some of the metadata schema fields are missing since during the metadata update step, these fields were not added to the patch. It is highly recommended to complete all fields during this step in order to increase the discoverability, authenticity and reusability of the dataset. Please check the [Update deposit metadata](06_Update_deposit_metadata.md) module to update your published deposit's metadata.
-
+Unfortunately, some of the metadata schema fields are missing since during the metadata update step, these fields were not added to the patch. It is highly recommended to complete all fields during this step in order to increase the discoverability, authenticity and reusability of the dataset. Please check the :ref:`Update metadata of draft deposit <rest-api-ref-update-draft-deposit-metadata>` reference to update the metadata of your published deposit.
