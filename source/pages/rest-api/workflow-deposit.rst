@@ -91,7 +91,7 @@ On success, the response status code and text will be different this time:
           "pid": "deposit:bd387af9afe48d0a",
           "type": "deposit",
           "state": "draft",
-          "sharelevel": "open public access",
+          "sharelevel": "open",
           "owner": "user:86"
         },
         "links": {
@@ -105,7 +105,6 @@ On success, the response status code and text will be different this time:
           "base": {
             "$schema": "https://$SDR_HOST/api/objects/schema/dublin",
             "title": "My dataset deposit",
-            "identifier": "deposit:bd387af9afe48d0a",
             "rights": [
               "info:eu-repo/semantics/openAccess"
             ]
@@ -183,7 +182,7 @@ If the request is successful, the result can be checked:
           "pid": "deposit:bd387af9afe48d0a",
           "type": "deposit",
           "state": "draft",
-          "sharelevel": "open public access",
+          "sharelevel": "open",
           "owner": "user:86"
         },
         "files": [
@@ -201,8 +200,7 @@ If the request is successful, the result can be checked:
           "self": "https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a",
           "landing": "https://$SDR_HOST/deposit/bd387af9afe48d0a",
           "relationships": {
-            "community": "https://$SDR_HOST/api/objects/community/surf",
-            "schema": "https://$SDR_HOST"
+            "community": "https://$SDR_HOST/api/objects/community/surf"
           },
           "files": "https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a/files"
         },
@@ -210,7 +208,6 @@ If the request is successful, the result can be checked:
           "base": {
             "$schema": "https://$SDR_HOST/api/objects/schema/dublin",
             "title": "My dataset deposit",
-            "identifier": "deposit:bd387af9afe48d0a",
             "rights": [
               "info:eu-repo/semantics/openAccess"
             ]
@@ -344,7 +341,6 @@ In order to successfully update the metadata, a JSON patch is created using the 
     "base": {
                 "$schema": "https://$SDR_HOST/api/objects/schema/dublin",
                 "title": "My dataset deposit",
-                "identifier": "deposit:bd387af9afe48d0a",
                 "rights": [
                   "info:eu-repo/semantics/openAccess"
                 ]

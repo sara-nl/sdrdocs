@@ -355,7 +355,7 @@ Returns:
       "doi": "10.21945/SURF-image.8ff2ae03-c9cac144",
       "type": "schema",
       "state": "published",
-      "sharelevel": "open public access",
+      "sharelevel": "open",
       "owner": "user:1"
     },
     "fields": [
@@ -389,10 +389,7 @@ Returns:
     ],
     "links": {
       "self": "https://$SDR_HOST/api/objects/schema/astrophysics",
-      "landing": "https://$SDR_HOST/schema/astrophysics",
-      "relationships": {
-        "schema": "https://$SDR_HOST"
-      }
+      "landing": "https://$SDR_HOST/schema/astrophysics"
     },
     "metadata": {
       "base": {
@@ -662,22 +659,20 @@ Returns:
       "pid": "deposit:bd387af9afe48d0a",
       "type": "deposit",
       "state": "draft",
-      "sharelevel": "open public access",
+      "sharelevel": "open",
       "owner": "user:86"
     },
     "links": {
       "self": "https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a",
       "landing": "https://$SDR_HOST/deposit/bd387af9afe48d0a",
       "relationships": {
-        "community": "https://$SDR_HOST/api/objects/community/surf",
-        "schema": "https://$SDR_HOST"
+        "community": "https://$SDR_HOST/api/objects/community/surf"
       }
     },
     "metadata": {
       "base": {
         "$schema": "https://$SDR_HOST/api/objects/schema/dublin",
         "title": "My dataset deposit",
-        "identifier": "deposit:bd387af9afe48d0a",
         "rights": [
           "info:eu-repo/semantics/openAccess"
         ]
@@ -756,7 +751,7 @@ Returns:
       "pid": "deposit:bd387af9afe48d0a",
       "type": "deposit",
       "state": "draft",
-      "sharelevel": "open public access",
+      "sharelevel": "open",
       "owner": "user:86"
     },
     "files": [
@@ -774,8 +769,7 @@ Returns:
       "self": "https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a",
       "landing": "https://$SDR_HOST/deposit/bd387af9afe48d0a",
       "relationships": {
-        "community": "https://$SDR_HOST/api/objects/community/surf",
-        "schema": "https://$SDR_HOST"
+        "community": "https://$SDR_HOST/api/objects/community/surf"
       },
       "files": "https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a/files"
     },
@@ -783,7 +777,6 @@ Returns:
       "base": {
         "$schema": "https://$SDR_HOST/api/objects/schema/dublin",
         "title": "My dataset deposit",
-        "identifier": "deposit:bd387af9afe48d0a",
         "rights": [
           "info:eu-repo/semantics/openAccess"
         ]
@@ -801,7 +794,7 @@ Send a DELETE request to the file's URL, which is the same URL used for uploadin
 
 - HTTP method: ``DELETE``
 
-- URL path: ``/api/objects/NAMESPACE/DEPOSIT_ID/files/FILE_NAME``
+- URL path: ``/api/objects/deposit/DEPOSIT_ID/files/FILE_NAME``
 
 - Required parameters: ``token``
 
@@ -915,22 +908,20 @@ Returns:
       "pid": "deposit:bd387af9afe48d0a",
       "type": "deposit",
       "state": "draft",
-      "sharelevel": "open public access",
+      "sharelevel": "open",
       "owner": "user:86"
     },
     "links": {
       "self": "https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a",
       "landing": "https://$SDR_HOST/deposit/bd387af9afe48d0a",
       "relationships": {
-        "community": "https://$SDR_HOST/api/objects/community/surf",
-        "schema": "https://$SDR_HOST"
+        "community": "https://$SDR_HOST/api/objects/community/surf"
       }
     },
     "metadata": {
       "base": {
         "$schema": "https://$SDR_HOST/api/objects/schema/dublin",
         "title": "My data deposit",
-        "identifier": "deposit:bd387af9afe48d0a",
         "creator": [
           "Creator #1"
         ],
@@ -964,22 +955,20 @@ Returns:
       "pid": "deposit:bd387af9afe48d0a",
       "type": "deposit",
       "state": "draft",
-      "sharelevel": "open public access",
+      "sharelevel": "open",
       "owner": "user:86"
     },
     "links": {
       "self": "https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a",
       "landing": "https://$SDR_HOST/deposit/bd387af9afe48d0a",
       "relationships": {
-        "community": "https://$SDR_HOST/api/objects/community/surf",
-        "schema": "https://$SDR_HOST"
+        "community": "https://$SDR_HOST/api/objects/community/surf"
       }
     },
     "metadata": {
       "base": {
         "$schema": "https://$SDR_HOST/api/objects/schema/dublin",
         "title": "New title",
-        "identifier": "deposit:bd387af9afe48d0a",
         "creator": [
           "Creator #1"
         ],
@@ -1013,22 +1002,20 @@ Returns:
       "pid": "deposit:bd387af9afe48d0a",
       "type": "deposit",
       "state": "draft",
-      "sharelevel": "open public access",
+      "sharelevel": "open",
       "owner": "user:86"
     },
     "links": {
       "self": "https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a",
       "landing": "https://$SDR_HOST/deposit/bd387af9afe48d0a",
       "relationships": {
-        "community": "https://$SDR_HOST/api/objects/community/surf",
-        "schema": "https://$SDR_HOST"
+        "community": "https://$SDR_HOST/api/objects/community/surf"
       }
     },
     "metadata": {
       "base": {
         "$schema": "https://$SDR_HOST/api/objects/schema/dublin",
         "title": "New title",
-        "identifier": "deposit:bd387af9afe48d0a",
         "creator": [
           "Creator #1"
         ],
@@ -1138,7 +1125,7 @@ Returns:
       "doi": "10.21945/SURF-image.1f9b3206-f3b7fc8498cf5a17",
       "type": "deposit",
       "state": "published",
-      "sharelevel": "open public access",
+      "sharelevel": "open",
       "owner": "user:86"
     },
     "files": [
@@ -1174,8 +1161,7 @@ Returns:
       "self": "https://$SDR_HOST/api/objects/deposit/f3b7fc8498cf5a17",
       "landing": "https://$SDR_HOST/deposit/f3b7fc8498cf5a17",
       "relationships": {
-        "community": "https://$SDR_HOST/api/objects/community/surf",
-        "schema": "https://$SDR_HOST"
+        "community": "https://$SDR_HOST/api/objects/community/surf"
       },
       "files": "https://$SDR_HOST/api/objects/deposit/f3b7fc8498cf5a17/files"
     },
@@ -1183,7 +1169,6 @@ Returns:
       "base": {
         "$schema": "https://$SDR_HOST/api/objects/schema/dublin",
         "title": "Test API",
-        "identifier": "deposit:f3b7fc8498cf5a17",
         "creator": [
           "Test creator",
           "Test unique"
