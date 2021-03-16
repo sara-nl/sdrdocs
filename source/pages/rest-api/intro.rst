@@ -1,7 +1,7 @@
 .. _rest-api:
 
 **************
-REST API
+Introduction
 **************
 
 This page provides information about the REST API of the Data Repository service.

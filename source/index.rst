@@ -28,6 +28,7 @@ General
 
    pages/general/about
    pages/general/access
+   pages/practices/best_practices
 
 
 .. _basic-usage:
@@ -85,8 +86,6 @@ Best practices
 .. toctree::
    :maxdepth: 1
 
-   pages/practices/best_practices
-
 
 .. _appendix:
 
@@ -96,6 +95,7 @@ Appendix
 
 .. toctree::
    :maxdepth: 1
+   :caption: Appendix
 
    pages/appendix.md
 

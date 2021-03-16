@@ -1,7 +1,7 @@
 .. _rest-api-workflow-deposits:
 
 **************
-REST API workflow for deposits
+Workflow for deposits
 **************
 
 This page provides information about creating and managging deposit using the REST API of the Data Repository service using Python.
@@ -21,7 +21,7 @@ The HTTP REST API does not impose a specific workflow for creating a deposit, bu
 - Using the community's identifier, retrieve the JSON Schema of the deposit's metadata. The submitted metadata will have to conform to this schema. Use the :ref:`Get community schema <rest-api-ref-get-community-schema>` request.
 - Create a draft deposit: use the :ref:`Create draft deposit <rest-api-ref-create-draft-deposit>` request.
 - Add and update metadata of the deposit: use the :ref:`Update metadata of draft deposit <rest-api-ref-update-draft-deposit-metadata>` request.
-- Upload the files into the draft deposit. You will have to use one HTTP request per file. Use the :ref:`Upload file <rest-api-ref-upload-file-into-draft-deposit>` request.
+- Upload files into the draft deposit. You will have to use one HTTP request per file. Use the :ref:`Upload file <rest-api-ref-upload-file-into-draft-deposit>` request.
 - Set the complete metadata and publish the deposit. Use the :ref:`Submit draft for publication <rest-api-ref-submit-draft-deposit-for-publication>` request.
 
 .. _rest-api-preparation:

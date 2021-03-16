@@ -1,7 +1,7 @@
 .. _rest-api-ref:
 
 **************
-REST API reference
+Reference
 **************
 
 In this page all available REST API requests are listed, together with examples. In all examples, the training instance of the Data Repository is used.
