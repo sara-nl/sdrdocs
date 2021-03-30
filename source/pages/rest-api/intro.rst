@@ -43,9 +43,9 @@ Making requests
 
 The REST API is used by making API requests using the `methods`_ of the standard HTTP protocol. Typically an application like cURL is used to make requests, but it is also possible to do this from within your tools or custom-built applications.
 
-If a request is received by the Data Repository, it will be processed and a response will be given. This response is according to the HTTP protocol and will include a `status codes`_ indicating whether the processing was successful or an error occured. Based on this code a body is included that either gives the updated state of the object being requested or modified, or a description of the error that occurred.
+If a request is received by the Data Repository, it will be processed and a response will be given. This response is according to the HTTP protocol and will include a `status code`_ indicating whether the processing of the request was successful or an error occured. Based on this code a body is included that either gives the updated state of the object being requested or modified, or a description of the error that occurred. The response data will almost always be in JSON format, except when for example images, files or XML data is requested.
 
-Of all requests that provide data, the data must be provided in JSON or JSON Patch format. To indicate what kind of data is provided, a request header entry is added, namely the ``Content-type`` header valued ``application/json;charset=UTF-8`` or ``application/json-patch+json;charset=UTF-8`` respectively. This generally only applies to requests that use the POST or PATCH method.
+Of all requests being made, the data must be provided in JSON or JSON Patch format. To indicate what kind of data is provided, a request header entry must be added, namely the ``Content-type`` header valued ``application/json;charset=UTF-8`` or ``application/json-patch+json;charset=UTF-8`` respectively. This generally only applies to requests that use the POST or PATCH method.
 
 By making a set of requests successively, an existing object can be modified in its description, relationship to other objects or visibility on the web interface. More importantly, new objects can be created from scratch that contain descriptive metadata and files for publication.
 
@@ -271,5 +271,5 @@ To intergrate the API in your application using Python, please make use of the '
 .. Links:
 
 .. _`methods`: https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods
-.. _`status codes`: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+.. _`status code`: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
 .. _`JSON Patch`: http://jsonpatch.com/

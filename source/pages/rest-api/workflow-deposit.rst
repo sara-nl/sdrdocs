@@ -4,7 +4,7 @@
 Workflow for deposits
 **************
 
-This page provides information about creating and managging deposit using the REST API of the Data Repository service using Python.
+This page provides information about creating and managing deposits using the REST API of the Data Repository service. All requests are made using Python.
 
 .. contents::
     :depth: 4
@@ -37,6 +37,8 @@ When your dataset is ready for publication, it can be uploaded to the Data Repos
  - Committing the draft deposit to publish it
 
 Please note that the Data Repository service makes a distinction between the two terms `deposit` and `draft deposit` (or simply `draft`). A **deposit** is published and therefore unchangeable and has persistent identifiers (PID) assigned to it, as well as checksums. A user can create a deposit by **first creating a draft deposit**, which is modifiable. Files and metadata can be placed into a draft deposit, but not into an already published deposit.
+
+The following requests will communicate with the training instance of the Data Repository service: ``https://trng-repository.surfsara.nl``
 
 .. _rest-api-workflow-tools:
 
@@ -75,14 +77,14 @@ In the following example, a new open access deposit is created for the SURF comm
     >>> metadata = {"title": "My first upload",
                     "community": "community:surf",
                     "sharelevel": "Open"}
-    >>> r = requests.post('https://$SDR_HOST/api/objects/deposit', params={'token': token}, data=json.dumps(metadata), headers=header)
+    >>> r = requests.post('https://trng-repository.surfsara.nl/api/objects/deposit', params={'token': token}, data=json.dumps(metadata), headers=header)
 
 On success, the response status code and text will be different this time:
 
 .. code-block:: json
 
       {
-        "$schema": "https://$SDR_HOST/static/schemas/object-metadata",
+        "$schema": "https://trng-repository.surfsara.nl/static/schemas/object-metadata",
         "id": "bd387af9afe48d0a",
         "created": "2021-03-10T20:05:43.250000Z",
         "updated": "2021-03-10T20:05:43.250000Z",
@@ -95,15 +97,15 @@ On success, the response status code and text will be different this time:
           "owner": "user:86"
         },
         "links": {
-          "self": "https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a",
-          "landing": "https://$SDR_HOST/deposit/bd387af9afe48d0a",
+          "self": "https://trng-repository.surfsara.nl/api/objects/deposit/bd387af9afe48d0a",
+          "landing": "https://trng-repository.surfsara.nl/deposit/bd387af9afe48d0a",
           "relationships": {
-            "community": "https://$SDR_HOST/api/objects/community/surf"
+            "community": "https://trng-repository.surfsara.nl/api/objects/community/surf"
           }
         },
         "metadata": {
           "base": {
-            "$schema": "https://$SDR_HOST/api/objects/schema/dublin",
+            "$schema": "https://trng-repository.surfsara.nl/api/objects/schema/dublin",
             "title": "My dataset deposit",
             "rights": [
               "info:eu-repo/semantics/openAccess"
@@ -154,7 +156,7 @@ Define the request URL by adding the file bucket identifier to the `files` end p
 
 .. code-block:: python
 
-    >>> url = 'https://$SDR_HOST/api/objects/deposit/' + depositid + '/files/' + filename
+    >>> url = 'https://trng-repository.surfsara.nl/api/objects/deposit/' + depositid + '/files/' + filename
     >>> params = {'access_token': token}
     >>> header = {"Content-Type": "application/octet-stream"}
 
@@ -168,12 +170,12 @@ If the request is successful, the result can be checked:
 
 .. code-block:: python
 
-	>>> print(r.status_code)
+	  >>> print(r.status_code)
     200
     >>> result = json.loads(r.text)
     >>> print(json.dumps(result, indent=4))
       {
-        "$schema": "https://$SDR_HOST/static/schemas/object-metadata",
+        "$schema": "https://trng-repository.surfsara.nl/static/schemas/object-metadata",
         "id": "bd387af9afe48d0a",
         "created": "2021-03-10T20:05:43.250000Z",
         "updated": "2021-03-10T20:09:30.379000Z",
@@ -188,7 +190,7 @@ If the request is successful, the result can be checked:
         "files": [
           {
             "name": "sequence.txt",
-            "url": "https://$SDR_HOST/deposit/bd387af9afe48d0a/files/sequence.txt",
+            "url": "https://trng-repository.surfsara.nl/deposit/bd387af9afe48d0a/files/sequence.txt",
             "external": false,
             "size": 691,
             "mimetype": "text/plain",
@@ -197,16 +199,16 @@ If the request is successful, the result can be checked:
           }
         ],
         "links": {
-          "self": "https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a",
-          "landing": "https://$SDR_HOST/deposit/bd387af9afe48d0a",
+          "self": "https://trng-repository.surfsara.nl/api/objects/deposit/bd387af9afe48d0a",
+          "landing": "https://trng-repository.surfsara.nl/deposit/bd387af9afe48d0a",
           "relationships": {
-            "community": "https://$SDR_HOST/api/objects/community/surf"
+            "community": "https://trng-repository.surfsara.nl/api/objects/community/surf"
           },
-          "files": "https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a/files"
+          "files": "https://trng-repository.surfsara.nl/api/objects/deposit/bd387af9afe48d0a/files"
         },
         "metadata": {
           "base": {
-            "$schema": "https://$SDR_HOST/api/objects/schema/dublin",
+            "$schema": "https://trng-repository.surfsara.nl/api/objects/schema/dublin",
             "title": "My dataset deposit",
             "rights": [
               "info:eu-repo/semantics/openAccess"
@@ -224,12 +226,12 @@ When the upload file is not accessible:
 
 .. code-block:: python
 
-	>>> print(r.status_code)
+    >>> print(r.status_code)
     400
     >>> result = json.loads(r.text)
     >>> print(json.dumps(result, indent=4))
     {
-        "error": "File not found."
+        "error": "File not found"
     }
 
 Repeat the above steps to add other files.
@@ -243,7 +245,7 @@ When all your files have been uploaded, you can check the draft deposit's curren
 
 .. code-block:: python
 
-	>>> r = requests.get('https://$SDR_HOST/api/objects/deposit/' + depositid + '/files', params=params)
+	  >>> r = requests.get('https://trng-repository.surfsara.nl/api/objects/deposit/' + depositid + '/files', params=params)
     >>> result = json.loads(r.text)
     >>> print(json.dumps(result, indent=4))
 
@@ -251,7 +253,7 @@ When all your files have been uploaded, you can check the draft deposit's curren
     [
       {
         "name": "sequence.txt",
-        "url": "https://$SDR_HOST/deposit/bd387af9afe48d0a/files/sequence.txt",
+        "url": "https://trng-repository.surfsara.nl/deposit/bd387af9afe48d0a/files/sequence.txt",
         "external": false,
         "size": 691,
         "mimetype": "text/plain",
@@ -273,7 +275,7 @@ In order to delete a file from a draft deposit, a request header and your access
 
 .. code-block:: python
 
-	>>> header = {"Content-Type": 'application/json'}
+	  >>> header = {"Content-Type": 'application/json'}
     >>> params = {"token": token}
 
 
@@ -281,7 +283,7 @@ To make the request, the identifier of the draft deposit and the file name under
 
 .. code-block:: python
 
-	>>> url = "https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a/files/sequence.txt"
+	  >>> url = "https://trng-repository.surfsara.nl/api/objects/deposit/bd387af9afe48d0a/files/sequence.txt"
     >>> r = requests.delete(url, params=params, headers=header)
 
 
@@ -289,7 +291,7 @@ On a successful request, the response code should be 204 while there is no respo
 
 .. code-block:: python
 
-	>>> print(r)
+	  >>> print(r)
     <Response [204]>
     >>> print(r.text)
 
@@ -333,13 +335,13 @@ In order to successfully update the metadata, a JSON patch is created using the 
 
 .. code-block:: python
 
-    >>> url = "https://$SDR_HOST/api/objects/deposit/" + depositid
+    >>> url = "https://trng-repository.surfsara.nl/api/objects/deposit/" + depositid
     >>> r = requests.get(url, params=params)
     >>> result = json.loads(r.text)
     >>> metadata_old = result["metadata"]
     >>> print(json.dumps(metadata_old, indent=4))
     "base": {
-                "$schema": "https://$SDR_HOST/api/objects/schema/dublin",
+                "$schema": "https://trng-repository.surfsara.nl/api/objects/schema/dublin",
                 "title": "My dataset deposit",
                 "rights": [
                   "info:eu-repo/semantics/openAccess"
@@ -391,7 +393,7 @@ Now, the request response text shows the updated metadata:
 
 .. code-block:: python
 
-    >>> url = 'https://$SDR_HOST/api/deposits/' + depositid + "/draft"
+    >>> url = 'https://trng-repository.surfsara.nl/api/deposits/' + depositid + "/draft"
     >>> r = requests.patch(url, data=strpatch, params=params, headers=headers)
     >>> print(r)
     <Response [200]>
@@ -421,13 +423,13 @@ Now, the request response text shows the updated metadata:
                     "description_type": "Abstract"
                 }
             ],
-            "$schema": "https://$SDR_HOST/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/draft_json_schema"
+            "$schema": "https://trng-repository.surfsara.nl/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/draft_json_schema"
         },
         "id": "b43a0e6914e34de8bd19613bcdc0d364",
         "links": {
-            "files": "https://$SDR_HOST/api/files/0163d244-5845-40ca-899c-d1d0025f68aa",
-            "self": "https://$SDR_HOST/api/deposits/b43a0e6914e34de8bd19613bcdc0d364/draft",
-            "publication": "https://$SDR_HOST/api/deposits/b43a0e6914e34de8bd19613bcdc0d364"
+            "files": "https://trng-repository.surfsara.nl/api/files/0163d244-5845-40ca-899c-d1d0025f68aa",
+            "self": "https://trng-repository.surfsara.nl/api/deposits/b43a0e6914e34de8bd19613bcdc0d364/draft",
+            "publication": "https://trng-repository.surfsara.nl/api/deposits/b43a0e6914e34de8bd19613bcdc0d364"
         },
         "created": "2017-03-02T16:34:26.383505+00:00"
     }
@@ -463,9 +465,9 @@ If you have a list of files that can be accessed using an EPIC PID, a JSON Patch
 
 .. code-block:: python
 
-	>>> external_files = [{
-        "key": "Filename1.dat",
-        "ePIC_PID": "prefix/suffix-file-name-1"
+	  >>> external_files = [{
+            "key": "Filename1.dat",
+            "ePIC_PID": "prefix/suffix-file-name-1"
         },
         {
             "key": "Filename2",
@@ -489,7 +491,7 @@ The final commit request will return the final deposit metadata in case the requ
 
 .. code-block:: python
 
-	>>> url = "https://$SDR_HOST/api/objects/deposit/" + depositid + "/submit"
+	  >>> url = "https://trng-repository.surfsara.nl/api/objects/deposit/" + depositid + "/submit"
     >>> r = requests.post(url, params=params)
     >>> print(r)
     <Response [200]>
@@ -497,7 +499,7 @@ The final commit request will return the final deposit metadata in case the requ
     >>> print(json.dumps(result, indent=4))
 
 
-Your draft deposit is now published and is available under the REST API URL ```https://$SDR_HOST/api/objects/deposit/bd387af9afe48d0a```!
+Your draft deposit is now published and is available under the REST API URL ``https://trng-repository.surfsara.nl/api/objects/deposit/bd387af9afe48d0a``!
 
 An EPIC persistent identifier and DOI (`epicpid` and `doi` fields) have been automatically generated and added to the metadata.
 
@@ -509,6 +511,6 @@ Check and display your results
 
 Once the deposit process is completed, the results can be checked by requesting the deposit data using the new deposit identifier. Follow the [deposit retrieval guide](01_Retrieve_existing_deposit.md) for an extensive description on how to do this.
 
-The deposit identifier `id` in the response message can directly be used to see the landing page of the newly created deposit: `bd387af9afe48d0a <https://$SDR_HOST/deposit/bd387af9afe48d0a>`_. If the page displays a restriction message, this is due the server-side processing of the ingestion. As soon as this is finished, the message will disappear.
+The deposit identifier `id` in the response message can directly be used to see the landing page of the newly created deposit: `bd387af9afe48d0a <https://trng-repository.surfsara.nl/deposit/bd387af9afe48d0a>`_. If the page displays a restriction message, this is due the server-side processing of the ingestion. As soon as this is finished, the message will disappear.
 
 Unfortunately, some of the metadata schema fields are missing since during the metadata update step, these fields were not added to the patch. It is highly recommended to complete all fields during this step in order to increase the discoverability, authenticity and reusability of the dataset. Please check the :ref:`Update metadata of draft deposit <rest-api-ref-update-draft-deposit-metadata>` reference to update the metadata of your published deposit.
