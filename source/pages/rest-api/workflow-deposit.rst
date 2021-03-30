@@ -170,7 +170,7 @@ If the request is successful, the result can be checked:
 
 .. code-block:: python
 
-	  >>> print(r.status_code)
+    >>> print(r.status_code)
     200
     >>> result = json.loads(r.text)
     >>> print(json.dumps(result, indent=4))
@@ -245,7 +245,7 @@ When all your files have been uploaded, you can check the draft deposit's curren
 
 .. code-block:: python
 
-	  >>> r = requests.get('https://trng-repository.surfsara.nl/api/objects/deposit/' + depositid + '/files', params=params)
+    >>> r = requests.get('https://trng-repository.surfsara.nl/api/objects/deposit/' + depositid + '/files', params=params)
     >>> result = json.loads(r.text)
     >>> print(json.dumps(result, indent=4))
 
@@ -275,7 +275,7 @@ In order to delete a file from a draft deposit, a request header and your access
 
 .. code-block:: python
 
-	  >>> header = {"Content-Type": 'application/json'}
+    >>> header = {"Content-Type": 'application/json'}
     >>> params = {"token": token}
 
 
@@ -283,7 +283,7 @@ To make the request, the identifier of the draft deposit and the file name under
 
 .. code-block:: python
 
-	  >>> url = "https://trng-repository.surfsara.nl/api/objects/deposit/bd387af9afe48d0a/files/sequence.txt"
+    >>> url = "https://trng-repository.surfsara.nl/api/objects/deposit/bd387af9afe48d0a/files/sequence.txt"
     >>> r = requests.delete(url, params=params, headers=header)
 
 
@@ -291,7 +291,7 @@ On a successful request, the response code should be 204 while there is no respo
 
 .. code-block:: python
 
-	  >>> print(r)
+    >>> print(r)
     <Response [204]>
     >>> print(r.text)
 
@@ -465,7 +465,7 @@ If you have a list of files that can be accessed using an EPIC PID, a JSON Patch
 
 .. code-block:: python
 
-	  >>> external_files = [{
+    >>> external_files = [{
             "key": "Filename1.dat",
             "ePIC_PID": "prefix/suffix-file-name-1"
         },
@@ -491,7 +491,7 @@ The final commit request will return the final deposit metadata in case the requ
 
 .. code-block:: python
 
-	  >>> url = "https://trng-repository.surfsara.nl/api/objects/deposit/" + depositid + "/submit"
+    >>> url = "https://trng-repository.surfsara.nl/api/objects/deposit/" + depositid + "/submit"
     >>> r = requests.post(url, params=params)
     >>> print(r)
     <Response [200]>
