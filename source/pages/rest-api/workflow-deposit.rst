@@ -250,6 +250,7 @@ When all your files have been uploaded, you can check the draft deposit's curren
     >>> print(json.dumps(result, indent=4))
 
 .. code-block:: json
+
     [
       {
         "name": "sequence.txt",
@@ -261,6 +262,7 @@ When all your files have been uploaded, you can check the draft deposit's curren
         "epicpid": "21.T12996/5ddde41c-a461-a861-45fd-76594f2b5a20"
       }
     ]
+
 
 The links to the file bucket is displayed, as well as the 'contents' list of two files, including the files' sizes. You can do this with every file bucket, as long as you have the file bucket identifier.
 
@@ -341,12 +343,12 @@ In order to successfully update the metadata, a JSON patch is created using the 
     >>> metadata_old = result["metadata"]
     >>> print(json.dumps(metadata_old, indent=4))
     "base": {
-                "$schema": "https://trng-repository.surfsara.nl/api/objects/schema/dublin",
-                "title": "My dataset deposit",
-                "rights": [
-                  "info:eu-repo/semantics/openAccess"
-                ]
-              }
+      "$schema": "https://trng-repository.surfsara.nl/api/objects/schema/dublin",
+      "title": "My dataset deposit",
+      "rights": [
+        "info:eu-repo/semantics/openAccess"
+      ]
+    }
 
 The actual JSON patch is created by:
 
@@ -364,7 +366,6 @@ The current patch will remove any existing fields not present in the new metadat
     >>> finpatch = filter(lambda x: x["op"] != "remove", patch)
     >>> print(list(finpatch))
     [{u'path': u'/publisher', u'value': 'EUDAT', u'op': u'add'}, {u'path': u'/contact_email', u'value': 'email@example.com', u'op': u'add'}, {u'path': u'/descriptions', u'value': [{'description': 'My first dataset ingested using the Data Repository API', 'description_type': 'Abstract'}], u'op': u'add'}, {u'path': u'/language', u'value': 'en_GB', u'op': u'add'}]
-    ```
 
 The patch needs to be provided to the `data` argument as a serialized string for which the JSON package can be used:
 
@@ -387,7 +388,7 @@ First, the request headers need to be defined:
 
 .. code-block:: python
 
->>> headers = {'Content-Type': 'application/json-patch+json'}
+    >>> headers = {'Content-Type': 'application/json-patch+json'}
 
 Now, the request response text shows the updated metadata:
 
