@@ -462,23 +462,21 @@ It is possible to add files to a deposit that are not stored in the Data Reposit
 
 Externally referenced files are not added as files, but as separate metadata and therefore need to be provided as a JSON Patch.
 
-If you have a list of files that can be accessed using an EPIC PID, a JSON Patch must used to add these files to the file listing of the Data Repository deposit. For example, if two files are added, the list must be defined as follows:
+If you have a list of files that can be accessed using an EPIC PID, add these files to the file listing of the Data Repository deposit. For example, if two files are added, the list must be defined as follows:
 
 .. code-block:: python
 
     >>> external_files = [{
-            "key": "Filename1.dat",
-            "ePIC_PID": "prefix/suffix-file-name-1"
+            "name": "file1.csv",
+            "epicpid": "prefix/suffix1"
         },
         {
-            "key": "Filename2",
-            "ePIC_PID": "prefix/suffix-file-name-2"
+            "name": "file2.txt",
+            "epicpid": "prefix/suffix2"
         }]
 
 
-The file names (`key`) of each file does not necessarily have to match the file name provided in the EPIC PIDs, but this is highly recommended in order to not confuse any other user downloading these files.
-
-Using this list, create a JSON Patch as described in :ref:`Create a JSON Patch <rest-api-create-json-patch>` and submit it following the steps described in :ref:`Submitting the patch <rest-api-ref-submit-patch>`.
+Using this list, send the list in JSON format as described in :ref:`Add externally referenced files to draft deposit <rest-api-ref-add-externally-referenced-files-to-draft-deposit>`.
 
 .. _rest-api-publish-draft-deposit:
 
