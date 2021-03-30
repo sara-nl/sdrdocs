@@ -477,7 +477,7 @@ If you have a list of files that can be accessed using an EPIC PID, a JSON Patch
 
 The file names (`key`) of each file does not necessarily have to match the file name provided in the EPIC PIDs, but this is highly recommended in order to not confuse any other user downloading these files.
 
-Using this list, create a JSON Patch as described in :ref:`Create a JSON Patch <rest-api-create-json-patch>` and submit it following the steps described in :ref:`Submitting the patch <rest-api-submit-patch>`.
+Using this list, create a JSON Patch as described in :ref:`Create a JSON Patch <rest-api-create-json-patch>` and submit it following the steps described in :ref:`Submitting the patch <rest-api-ref-submit-patch>`.
 
 .. _rest-api-publish-draft-deposit:
 
@@ -509,7 +509,7 @@ An EPIC persistent identifier and DOI (`epicpid` and `doi` fields) have been aut
 Check and display your results
 ==================
 
-Once the deposit process is completed, the results can be checked by requesting the deposit data using the new deposit identifier. Follow the [deposit retrieval guide](01_Retrieve_existing_deposit.md) for an extensive description on how to do this.
+Once the deposit process is completed, the results can be checked by requesting the deposit data using the new deposit identifier. Check out the :ref:`deposit retrieval request <rest-api-ref-get-specific-deposit>` for an extensive description on how to do this.
 
 The deposit identifier `id` in the response message can directly be used to see the landing page of the newly created deposit: `bd387af9afe48d0a <https://trng-repository.surfsara.nl/deposit/bd387af9afe48d0a>`_. If the page displays a restriction message, this is due the server-side processing of the ingestion. As soon as this is finished, the message will disappear.
 
