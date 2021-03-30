@@ -83,36 +83,36 @@ On success, the response status code and text will be different this time:
 
 .. code-block:: json
 
-      {
-        "$schema": "https://trng-repository.surfsara.nl/static/schemas/object-metadata",
-        "id": "bd387af9afe48d0a",
-        "created": "2021-03-10T20:05:43.250000Z",
-        "updated": "2021-03-10T20:05:43.250000Z",
-        "properties": {
-          "namespace": "deposit",
-          "pid": "deposit:bd387af9afe48d0a",
-          "type": "deposit",
-          "state": "draft",
-          "sharelevel": "open",
-          "owner": "user:86"
-        },
-        "links": {
-          "self": "https://trng-repository.surfsara.nl/api/objects/deposit/bd387af9afe48d0a",
-          "landing": "https://trng-repository.surfsara.nl/deposit/bd387af9afe48d0a",
-          "relationships": {
-            "community": "https://trng-repository.surfsara.nl/api/objects/community/surf"
-          }
-        },
-        "metadata": {
-          "base": {
-            "$schema": "https://trng-repository.surfsara.nl/api/objects/schema/dublin",
-            "title": "My dataset deposit",
-            "rights": [
-              "info:eu-repo/semantics/openAccess"
-            ]
-          }
+    {
+      "$schema": "https://trng-repository.surfsara.nl/static/schemas/object-metadata",
+      "id": "bd387af9afe48d0a",
+      "created": "2021-03-10T20:05:43.250000Z",
+      "updated": "2021-03-10T20:05:43.250000Z",
+      "properties": {
+        "namespace": "deposit",
+        "pid": "deposit:bd387af9afe48d0a",
+        "type": "deposit",
+        "state": "draft",
+        "sharelevel": "open",
+        "owner": "user:86"
+      },
+      "links": {
+        "self": "https://trng-repository.surfsara.nl/api/objects/deposit/bd387af9afe48d0a",
+        "landing": "https://trng-repository.surfsara.nl/deposit/bd387af9afe48d0a",
+        "relationships": {
+          "community": "https://trng-repository.surfsara.nl/api/objects/community/surf"
+        }
+      },
+      "metadata": {
+        "base": {
+          "$schema": "https://trng-repository.surfsara.nl/api/objects/schema/dublin",
+          "title": "My dataset deposit",
+          "rights": [
+            "info:eu-repo/semantics/openAccess"
+          ]
         }
       }
+    }
 
 Response code 201 indicates the draft deposit has been successfully created. The deposit identifier metadata field `id` in the response text is used to identify the draft deposit during the additional steps of adding files and metadata:
 
