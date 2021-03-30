@@ -38,7 +38,7 @@ When your dataset is ready for publication, it can be uploaded to the Data Repos
 
 Please note that the Data Repository service makes a distinction between the two terms `deposit` and `draft deposit` (or simply `draft`). A **deposit** is published and therefore unchangeable and has persistent identifiers (PID) assigned to it, as well as checksums. A user can create a deposit by **first creating a draft deposit**, which is modifiable. Files and metadata can be placed into a draft deposit, but not into an already published deposit.
 
-The following requests will communicate with the training instance of the Data Repository service: ``https://trng-repository.surfsara.nl``
+The requests in the steps described will communicate with the training instance of the Data Repository service: ``https://trng-repository.surfsara.nl``. Make sure to create a token in this instance of the Data Repository.
 
 .. _rest-api-workflow-tools:
 
@@ -157,7 +157,7 @@ Define the request URL by adding the file bucket identifier to the `files` end p
 .. code-block:: python
 
     >>> url = 'https://trng-repository.surfsara.nl/api/objects/deposit/' + depositid + '/files/' + filename
-    >>> params = {'access_token': token}
+    >>> params = {'token': token}
     >>> header = {"Content-Type": "application/octet-stream"}
 
 The complete put request looks as follows:
@@ -174,48 +174,48 @@ If the request is successful, the result can be checked:
     200
     >>> result = json.loads(r.text)
     >>> print(json.dumps(result, indent=4))
-      {
-        "$schema": "https://trng-repository.surfsara.nl/static/schemas/object-metadata",
-        "id": "bd387af9afe48d0a",
-        "created": "2021-03-10T20:05:43.250000Z",
-        "updated": "2021-03-10T20:09:30.379000Z",
-        "properties": {
-          "namespace": "deposit",
-          "pid": "deposit:bd387af9afe48d0a",
-          "type": "deposit",
-          "state": "draft",
-          "sharelevel": "open",
-          "owner": "user:86"
+    {
+      "$schema": "https://trng-repository.surfsara.nl/static/schemas/object-metadata",
+      "id": "bd387af9afe48d0a",
+      "created": "2021-03-10T20:05:43.250000Z",
+      "updated": "2021-03-10T20:09:30.379000Z",
+      "properties": {
+        "namespace": "deposit",
+        "pid": "deposit:bd387af9afe48d0a",
+        "type": "deposit",
+        "state": "draft",
+        "sharelevel": "open",
+        "owner": "user:86"
+      },
+      "files": [
+        {
+          "name": "sequence.txt",
+          "url": "https://trng-repository.surfsara.nl/deposit/bd387af9afe48d0a/files/sequence.txt",
+          "external": false,
+          "size": 691,
+          "mimetype": "text/plain",
+          "md5": "",
+          "epicpid": "21.T12996/5ddde41c-a461-a861-45fd-76594f2b5a20"
+        }
+      ],
+      "links": {
+        "self": "https://trng-repository.surfsara.nl/api/objects/deposit/bd387af9afe48d0a",
+        "landing": "https://trng-repository.surfsara.nl/deposit/bd387af9afe48d0a",
+        "relationships": {
+          "community": "https://trng-repository.surfsara.nl/api/objects/community/surf"
         },
-        "files": [
-          {
-            "name": "sequence.txt",
-            "url": "https://trng-repository.surfsara.nl/deposit/bd387af9afe48d0a/files/sequence.txt",
-            "external": false,
-            "size": 691,
-            "mimetype": "text/plain",
-            "md5": "",
-            "epicpid": "21.T12996/5ddde41c-a461-a861-45fd-76594f2b5a20"
-          }
-        ],
-        "links": {
-          "self": "https://trng-repository.surfsara.nl/api/objects/deposit/bd387af9afe48d0a",
-          "landing": "https://trng-repository.surfsara.nl/deposit/bd387af9afe48d0a",
-          "relationships": {
-            "community": "https://trng-repository.surfsara.nl/api/objects/community/surf"
-          },
-          "files": "https://trng-repository.surfsara.nl/api/objects/deposit/bd387af9afe48d0a/files"
-        },
-        "metadata": {
-          "base": {
-            "$schema": "https://trng-repository.surfsara.nl/api/objects/schema/dublin",
-            "title": "My dataset deposit",
-            "rights": [
-              "info:eu-repo/semantics/openAccess"
-            ]
-          }
+        "files": "https://trng-repository.surfsara.nl/api/objects/deposit/bd387af9afe48d0a/files"
+      },
+      "metadata": {
+        "base": {
+          "$schema": "https://trng-repository.surfsara.nl/api/objects/schema/dublin",
+          "title": "My dataset deposit",
+          "rights": [
+            "info:eu-repo/semantics/openAccess"
+          ]
         }
       }
+    }
 
 
 The mime-type is detected, direct links are given and a checksum is calculated. As soon as this checksum is ready, it will be added to the metadata of the deposit.
@@ -342,12 +342,14 @@ In order to successfully update the metadata, a JSON patch is created using the 
     >>> result = json.loads(r.text)
     >>> metadata_old = result["metadata"]
     >>> print(json.dumps(metadata_old, indent=4))
-    "base": {
-      "$schema": "https://trng-repository.surfsara.nl/api/objects/schema/dublin",
-      "title": "My dataset deposit",
-      "rights": [
-        "info:eu-repo/semantics/openAccess"
-      ]
+    {
+        "base": {
+            "$schema": "https://trng-repository.surfsara.nl/api/objects/schema/dublin",
+            "title": "My dataset deposit",
+            "rights": [
+                "info:eu-repo/semantics/openAccess"
+            ]
+        }
     }
 
 The actual JSON patch is created by:
