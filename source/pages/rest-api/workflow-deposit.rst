@@ -119,7 +119,7 @@ Response code 201 indicates the draft deposit has been successfully created. The
 .. code-block:: python
 
     >>> result = r.json()
-    >>> depositid = result["id"]
+    >>> depositid = result["pid"].split(':')[1]
     >>> print(depositid)
     bd387af9afe48d0a
 
@@ -239,7 +239,7 @@ Repeat the above steps to add other files.
 .. _rest-api-check-uploaded-files:
 
 Check your uploaded files
-~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 When all your files have been uploaded, you can check the draft deposit's current status regarding these files using the URL with a GET request:
 
@@ -269,7 +269,7 @@ The links to the file bucket is displayed, as well as the 'contents' list of two
 .. _rest-api-delete-file-from-draft-deposit:
 
 Delete a file from a draft deposit
-~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------------------
 
 In case you've uploaded the wrong file to a draft deposit, you can delete this file as long as the deposit is in draft state. Data Repository supports deletion of files in draft deposits by the owner of that deposit or the site administrator.
 
@@ -310,7 +310,7 @@ To update a draft deposit's metadata, the deposit identifier is required while m
 .. _rest-api-prepare-metadata:
 
 Prepare your new metadata
-~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 An object with the new and updated metadata fields and values needs to be constructed. As the community, title and share level fields have already been set when the draft deposit was created, only some missing fields are provided:
 
@@ -326,7 +326,7 @@ To update community- or collection-specific metadata fields, some additional inf
 .. _rest-api-create-json-patch:
 
 Create a JSON patch
-~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 The metadata update call is made using a patch request containing the patch operations and headers. Note that:
 
@@ -382,7 +382,7 @@ This section does not address the altering of community-specific metadata fields
 .. _rest-api-submit-patch:
 
 Submit the patch
-~~~~~~~~~~~~~~~~
+-------------------------
 
 The serialized JSON patch is sent to the service in order to update the metadata.
 
@@ -458,7 +458,7 @@ In case the patch request did not succeed (status code 400), an error descriptio
 .. _rest-api-external-files:
 
 Add references to external files to your draft deposit
-~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------------------------------------------
 
 It is possible to add files to a deposit that are not stored in the Data Repository, but this is not recommended due to the fact that Data Repository cannot guarantee the existence of the files at an external location. Although EPIC PIDs must be used to reference to these files, Data Repository cannot manage or update these PIDs when necessary. The service will also not generate these PIDs as needed, this is left to the user.
 

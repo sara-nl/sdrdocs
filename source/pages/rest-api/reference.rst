@@ -1065,7 +1065,7 @@ ______________________
 
 To add files that are located outside of Data Repository, a reference to that file can be added to a draft deposit object by defining a list of external references that include a file name and the corresponding EPIC PID. External references are added as normal metadata using a JSON Patch and can only be added during the draft stage.
 
-- HTTP method: ``PATCH``
+- HTTP method: ``POST``
 
 - URL path: ``/api/objects/NAMESPACE/DEPOSIT_ID/files``
 
