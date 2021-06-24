@@ -18,6 +18,8 @@ Deposit data
 
 Only registered users can deposit data and create publications.
 
+.. warning:: Use the `training instance`_ to create test uploads and the `production instance`_ only for actual publications!
+
 .. _prepare-data:
 
 Prepare data
@@ -82,6 +84,8 @@ If you have many deposits to create, or have an automated workflow set up or app
 
 .. Links:
 
+.. _`training instace`: https://trng-repository.surfsara.nl
+.. _`production instace`: https://repository.surfsara.nl
 .. _`File formats`: https://repository.surfsara.nl/docs/formats
 .. _`Terms of Use`: https://repository.surfsara.nl/docs/terms
 .. _`Data Producer Agreement`: https://repository.surfsara.nl/docs/data-producer

@@ -631,8 +631,7 @@ The following example creates an open-access deposit for a community with identi
 
 Command:
 
-``curl -X POST -H "Content-Type:application/json"
-  -d '{"title":"My dataset deposit", "community":"community:surf", "sharelevel": "Open"}' "https://$SDR_HOST/api/objects/deposit?token=$TOKEN"``
+``curl -X POST -H "Content-Type:application/json" -d '{"title":"My dataset deposit", "community":"community:surf", "sharelevel": "Open"}' "https://$SDR_HOST/api/objects/deposit?token=$TOKEN"``
 
 Payload:
 
@@ -876,7 +875,7 @@ This action updates the draft deposit with new information.
 
 - Required parameters: ``token``
 
-- Payload data: the metadata for the draft deposit to be updated, in the JSON Patch format (see http://jsonpatch.com/)
+- Payload data: the metadata for the draft deposit to be updated, in the JSON Patch format (see [jsonpatch.com](https://jsonpatch.com))
 
 - Status code on success: ``200``
 

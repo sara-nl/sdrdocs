@@ -1,10 +1,10 @@
 .. _about-data-repository:
 
 **************
-About the Data Repository
+About SURF Data Repository
 **************
 
-In this page you will find general information about the Data Repository, how it works and how to get access.
+In this page you will find general information about the SURF Data Repository service, how it works and how to get access.
 
 .. contents::
     :depth: 4

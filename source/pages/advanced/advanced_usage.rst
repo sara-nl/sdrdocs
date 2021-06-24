@@ -1,7 +1,7 @@
 .. _advanced-usage:
 
 ***********
-Advanced Usage
+Advanced usage
 ***********
 
 This page provides information on advanced usage of the SURF Data Repository, such as collection and group creation plus memberships.
