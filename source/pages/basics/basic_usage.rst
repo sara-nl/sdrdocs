@@ -29,6 +29,8 @@ After you login to your account, you will be redirected to the homepage where yo
 
     **Community** is a group of common users that are part of a research domain or initiative
 
+    See :ref::`Objects <advanced-objects` for more information on object types.
+
 The top region allows searching for deposits and collections immediately. It supports faceted search by prepending a field (e.g. 'title') before your search term, for example 'title:data'.
 
 On the top right you can locate your account details and find some links in the dropdown menu when the avatar is clicked. The 'My account' option sends you to your `account page`_. Here you can easily start creating new deposits, collections, groups and, if allowed, communities and schemas.

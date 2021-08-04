@@ -38,19 +38,19 @@ Clicking the deposit link in the main page opens the first of the three steps re
 
  .. note:: Make sure that you are uploading an acceptable file format. Valid file formats can be found on the `File formats`_ documentation page. If the data format you are trying to upload is not supported, you can always contact us for support.
 
- Provide the basic metadata for your deposit such as the title, creator(s), keywords (for searching purposes) and description. The fields in the upper section are mandatory fields, while the optional fields are shown in the lower section.
+Provide the basic metadata for your deposit such as the title, creator(s), keywords (for searching purposes) and description. The fields in the upper section are mandatory fields, while the optional fields are shown in the lower section.
 
  .. image:: ../img/deposit-workflow-1.png
    :align: center
    :width: 75%
 
- In this step you can also set the type of data and language of the data and you must add a license for the publication. The license can be selected through a built-in wizard. If you are not sure which license to choose, answer the questions on the top of the built-in wizard form to find the appropriate license.
+In this step you can also set the type of data and language of the data and you must add a license for the publication. The license can be selected through a built-in wizard. If you are not sure which license to choose, answer the questions on the top of the built-in wizard form to find the appropriate license.
 
-  .. image:: ../img/license.png
+ .. image:: ../img/license.png
    :align: center
    :width: 75%
 
- Click 'Next >>' to go to the second step of the online deposit workflow.
+Click 'Next >>' to go to the second step of the online deposit workflow.
 
 2. Next you must select a community, and optionally a collection and/or a metadata schema (if possible). If you are a member of a community and you want to deposit data in that community, select the community name. The available collections will be pre-populated based on which community you choose and which collections you have created yourself.
 
@@ -84,8 +84,8 @@ If you have many deposits to create, or have an automated workflow set up or app
 
 .. Links:
 
-.. _`training instace`: https://trng-repository.surfsara.nl
-.. _`production instace`: https://repository.surfsara.nl
+.. _`training instance`: https://trng-repository.surfsara.nl
+.. _`production instance`: https://repository.surfsara.nl
 .. _`File formats`: https://repository.surfsara.nl/docs/formats
 .. _`Terms of Use`: https://repository.surfsara.nl/docs/terms
 .. _`Data Producer Agreement`: https://repository.surfsara.nl/docs/data-producer
