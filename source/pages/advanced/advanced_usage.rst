@@ -15,7 +15,8 @@ This page provides information on advanced usage of the SURF Data Repository, su
 =====================
 Creating collections
 =====================
-A collection is a bundle of a (large) number of deposits and/or collections. Collections allow to create structure in your publications and make your data easier to understand and find. Collection are annotated using similar metadata as deposits.
+
+For a complete description of collection objects, see :ref:`Collections <advanced-objects-collections>`.
 
 To create a new collection, go to the profile tab of the account overview page and click on **Create new collection** to go to the collection creation form. Provide the necessary details and optionally set a parent collection. Then hit **Create** to create your collection. The new collection will now be available during the online deposit workflow.
 
@@ -31,7 +32,7 @@ To see a list of your current collections, go to your account page and then choo
 Creating groups
 =====================
 
-A group is a bundling of one or more users. They can be used to provide access or administrative privileges to a bunch of people using only a single relation.
+For a complete description of group objects, see :ref:`Collections <advanced-objects-groups>`.
 
 To create a new group or to see the list of current groups you are a member of, go to your account page and then choose the **Groups** tab on the left.
 

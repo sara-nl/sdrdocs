@@ -1,7 +1,7 @@
 .. _advanced-objects:
 
 *****************
-Objects
+Objects reference
 *****************
 
 This page provides general information about objects stored in the Data Repository.
@@ -23,7 +23,7 @@ Object types
 
 In the Data Repository service several types of objects exist with each having its own function.
 
-.. _advanced-objects-deposit:
+.. _advanced-objects-deposits:
 
 Deposits
 _________________
@@ -32,12 +32,12 @@ A deposit is an object containing one or more files and is described by a set of
 
 Deposits have their own landing page that give a complete description of the object. Deposits are indexed for search and can be harvested by external metadata catalogues.
 
-.. _advanced-objects-collection:
+.. _advanced-objects-collections:
 
 Collections
 _________________
 
-A collection is an object containing one or more deposits or other collections and is described by a set of metadata and can be referred to by a unique DOI and/or PID. Collections do not contain files.
+A collection is a bundle of a (large) number of deposits and/or collections. Collections allow to create structure in your publications and make your data easier to understand and find. Collection are annotated using similar metadata as deposits and can be referred to by a unique DOI and/or PID. Collections do not contain files.
 
 Collections have their own landing page that give a complete description of the object. They are indexed for search and can be harvested by external metadata catalogues.
 
@@ -46,18 +46,29 @@ Collections have their own landing page that give a complete description of the 
 Communities
 _________________
 
-A community is an object that can contain one or more deposits or other collections. It is described by a minimum set of metadata and can be referred to by a unique PID. Communities do not contain files.
+A community bundles collections and deposits under a single entity. With a community, you can add policies to deposit workflows that make sure publications are up to the standards of your community. It is described by a minimum set of metadata and can be referred to by a unique PID. Communities do not contain files.
+
+Communities can have user members with specific roles, such as the community administrator or simply a member. Depending on the policies set, a user has specific priviledges concerning the community.
 
 Communities have their own landing page that give an overview of the objects contained. They are indexed for search.
 
 .. _advanced-objects-schemas:
 
-Schemas
+Metadata schemas
 _________________
 
-A schema is an object that can defines a set of metadata fields. Schemas are used to enable validation and enforcement of metadata for other objects, such as deposits and collections.
+A metadata schema is an object that defines a set of metadata fields and is essentially a logical plan showing the relationships between metadata fields, normally through establishing rules for the use and management of metadata. Metadata schema makes sure that your deposit or collection has complete and understandable information attached to it.
 
 Schemas have their own landing page that give an overview of the metadata fields. They are indexed for search.
+
+.. _advanced-objects-groups:
+
+Groups
+_________________
+
+A group is a bundling of one or more users. They can be used to provide access or administrative privileges to specific objects for a selection of persons using only a single relation.
+
+Groups have their own landing page that give an overview of the managed objects. They are indexed for search.
 
 
 .. _advanced-objects-access:

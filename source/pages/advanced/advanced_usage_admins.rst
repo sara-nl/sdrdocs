@@ -15,7 +15,7 @@ This page provides information on advanced usage of the SURF Data Repository, su
 Creating metadata schemas
 ==================================
 
-A metadata schema is a logical plan showing the relationships between metadata fields, normally through establishing rules for the use and management of metadata. Metadata schema makes sure that your deposit or collection has complete and understandable information attached to it.
+For a complete description of metadata schema objects, see :ref:`Metadata schemas <advanced-objects-schemas>`.
 
 The first question to ask before making a metadata schema is: Is it necessary to create a new metadata schema? or are there already existing metadata schemas which can be adapted for use? We advice to reuse existing schemas. You can find here the `best practices for defining your metadata schema`_.
 
@@ -53,7 +53,7 @@ Once satisfied hit the **Create** button to finalise the creation of the metadat
 Creating communities
 ===============================
 
-Communities bundle collections and deposits under a single entity. With a community, you can add policies to deposit workflows that make sure publications are up to the standards of your community.
+For a complete description of community objects, see :ref:`Communities <advanced-objects-communities>`.
 
 To create a new community or to see the list of current communities you own or are a member of, go to your account page and then choose the **Communities** tab on the left. Hit the **Create new community** to go to the community creation form.
 
