@@ -39,7 +39,7 @@ On the buttom left column, the are  shortcuts for defining new collections, meta
 
  .. image:: ../img/homepage.png
    :align: center
-   :width: 75%
+   :width: 90%
 
 .. _deposit-landing-page:
 
@@ -50,7 +50,7 @@ The landing page of a deposit is created after completion of the online deposit 
 
  .. image:: ../img/deposit-landing-page.png
    :align: center
-   :width: 75%
+   :width: 90%
 
 .. _export-metadata:
 
@@ -61,7 +61,7 @@ To export metadata of an object go to the object's landing page and click on the
 
  .. image:: ../img/deposit-landing-page-export.png
    :align: center
-   :width: 75%
+   :width: 90%
 
 .. _download-zipped:
 
@@ -72,7 +72,7 @@ You can download all files and optionally the metadata using the 'Download as' d
 
  .. image:: ../img/deposit-landing-page-download.png
    :align: center
-   :width: 75%
+   :width: 90%
 
 .. _collection-landing-page:
 
@@ -83,7 +83,7 @@ A landing page of a collection is similar to those of a deposit. In the collecti
 
  .. image:: ../img/collection-landing-page.png
    :align: center
-   :width: 75%
+   :width: 90%
 
 .. _search-data:
 
@@ -96,13 +96,13 @@ Both registered and unregistered users can search for data. You can also make se
 
  .. image:: ../img/search.png
    :align: center
-   :width: 75%
+   :width: 90%
 
 Advanced searches can be performed by clicking the Search button, then entering the additional search criteria on the page that is shown. You can set advanced search criteria to search for deposits, collections, schemas, communities or combinations of any of them. You can also order the search results by Title, Creator, Identifier, or Creation date.
 
  .. image:: ../img/search-advanced.png
    :align: center
-   :width: 75%
+   :width: 90%
 
 .. sidebar::
     If you have the PID (Persistent Identifier) of the data you can directly search in the `Handle Server`_ and get the URL to the location of the data.

@@ -10,26 +10,26 @@ This page provides information on advanced usage of the SURF Data Repository, su
     :depth: 8
 
 
-.. _advanced-collections:
+.. _advanced-creating-collections:
 
-=================
-Collections
-=================
+=====================
+Creating collections
+=====================
 A collection is a bundle of a (large) number of deposits and/or collections. Collections allow to create structure in your publications and make your data easier to understand and find. Collection are annotated using similar metadata as deposits.
 
 To create a new collection, go to the profile tab of the account overview page and click on **Create new collection** to go to the collection creation form. Provide the necessary details and optionally set a parent collection. Then hit **Create** to create your collection. The new collection will now be available during the online deposit workflow.
 
   .. image:: ../img/collection-form-1.png
    :align: center
-   :width: 75%
+   :width: 90%
 
 To see a list of your current collections, go to your account page and then choose the **Collections** tab on the left.
 
-.. _advanced-groups:
+.. _advanced-creating-groups:
 
-=======
-Groups
-=======
+=====================
+Creating groups
+=====================
 
 A group is a bundling of one or more users. They can be used to provide access or administrative privileges to a bunch of people using only a single relation.
 
@@ -37,6 +37,7 @@ To create a new group or to see the list of current groups you are a member of, 
 
  .. image:: ../img/account-groups.png
    :align: center
+   :width: 90%
 
 Click on the 'Create new group' button to start creating a new group.
 
@@ -44,12 +45,13 @@ A new page will be open where you need to provide name and description for the g
 
   .. image:: ../img/group-form-1.png
    :align: center
+   :width: 90%
 
 You can add other members to the group, and assign administrators to the group on the tab 'Permissions'. After you enter the information, click on the **Create** button to create the group.
 
   .. image:: ../img/group-form-2.png
    :align: center
-
+   :width: 90%
 
 .. _advanced-api-tokens:
 
@@ -63,7 +65,7 @@ Go to the **API tokens** tab on the left side of your account page to see an ove
 
   .. image:: ../img/account-tokens.png
    :align: center
-   :width: 75%
+   :width: 90%
 
 .. Links:
 

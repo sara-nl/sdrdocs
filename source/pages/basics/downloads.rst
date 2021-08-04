@@ -35,7 +35,7 @@ Once you have selected all the objects and/or files you want, you can download t
 
 .. image:: ../img/account-basket.png
    :align: center
-   :width: 75%
+   :width: 90%
 
 ==========================
 Adding objects to your favourites
@@ -47,7 +47,7 @@ You can download all downloadable objects directly using the download script. Cl
 
 .. image:: ../img/account-favourites.png
    :align: center
-   :width: 75%
+   :width: 90%
 
 .. _downloads-script:
 
@@ -63,7 +63,7 @@ Before you can start downloading using the script, you need to create an API acc
 
 .. image:: ../img/account-tokens.png
    :align: center
-   :width: 75%
+   :width: 90%
 
 Copy the randomly generated token to your clipboard and add it after the script name's statement in your terminal or command prompt. When executing the tool will automatically download all files contained in the selected objects.
 

@@ -42,7 +42,7 @@ Provide the basic metadata for your deposit such as the title, creator(s), keywo
 
  .. image:: ../img/deposit-workflow-1.png
    :align: center
-   :width: 75%
+   :width: 90%
 
 In this step you can also set the type of data and language of the data and you must add a license for the publication. The license can be selected through a built-in wizard. If you are not sure which license to choose, answer the questions on the top of the built-in wizard form to find the appropriate license.
 
@@ -58,7 +58,7 @@ If a community or collection has a metadata schema attached, the corresponding f
 
  .. image:: ../img/deposit-workflow-2.png
    :align: center
-   :width: 75%
+   :width: 90%
 
 Click 'Next >>' to go to the third and final step of the online deposit workflow.
 
@@ -70,7 +70,7 @@ Please carefully read the `Terms of use`_ and `Data Producer Agreement`_ before 
 
  .. image:: ../img/deposit-workflow-3.png
    :align: center
-   :width: 75%
+   :width: 90%
 
 When you have checked all metadata in the right sidebar, click on the **Complete** button to finalize your deposit.
 

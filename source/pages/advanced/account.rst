@@ -4,7 +4,7 @@
 Account
 =================
 
-The user account page provides an overview of all the objects you own, administer or are a member of. In this overview, tabular listings of these objects are shown in dedicated tabs.
+The user account page provides an overview of all the objects you own, administer or are a member of. For each type of object or task, a tab is available. In these tabs, tabular listings of these objects are shown.
 
 .. _account-profile:
 
@@ -15,7 +15,7 @@ When you navigate to the account page, you will end up on the profile tab with o
 
  .. image:: ../img/account-profile.png
    :align: center
-   :width: 75%
+   :width: 90%
 
 The profile tab shows an overview of the number of objects you have per type, and some statistics about the views and downloads of these objects. The quick action buttons allow rapid creation of new objects.
 
@@ -28,7 +28,7 @@ The administrator tab shows a listing of all the objects you have administrative
 
  .. image:: ../img/account-administrator.png
    :align: center
-   :width: 75%
+   :width: 90%
 
 .. _account-review:
 
@@ -39,7 +39,7 @@ The review tab shows a listing of all the objects that need review before they a
 
  .. image:: ../img/account-review.png
    :align: center
-   :width: 75%
+   :width: 90%
 
 By clicking on the edit icon next to an item listed in the table, you will go to the object's edit form and you will be able to modify metadata and/or approve the publication.
 
@@ -52,7 +52,7 @@ The various tabs for each type of object show a listing of all objects of that t
 
  .. image:: ../img/account-deposits.png
    :align: center
-   :width: 75%
+   :width: 90%
 
 .. _account-basket:
 
@@ -63,7 +63,7 @@ The basket tab shows all items currently in your basket. You can use the 'Downlo
 
  .. image:: ../img/account-basket.png
    :align: center
-   :width: 75%
+   :width: 90%
 
 .. _account-favourites:
 
@@ -74,7 +74,7 @@ The favourites tab shows all items currently marked as favourite. You can use th
 
  .. image:: ../img/account-favourites.png
    :align: center
-   :width: 75%
+   :width: 90%
 
 .. _account-api-tokens:
 
@@ -85,7 +85,7 @@ The API tokens tab shows all generated tokens that can be used to communicate wi
 
  .. image:: ../img/account-tokens.png
    :align: center
-   :width: 75%
+   :width: 90%
 
 By default, a token is valid for one year.
 
@@ -98,6 +98,6 @@ The share links tab shows all generated share links that have been generated for
 
  .. image:: ../img/account-sharelinks.png
    :align: center
-   :width: 75%
+   :width: 90%
 
 Share links are valid for a single year by default.
