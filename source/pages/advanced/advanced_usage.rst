@@ -32,7 +32,7 @@ To see a list of your current collections, go to your account page and then choo
 Creating groups
 =====================
 
-For a complete description of group objects, see :ref:`Collections <advanced-objects-groups>`.
+For a complete description of group objects, see :ref:`Groups <advanced-objects-groups>`.
 
 To create a new group or to see the list of current groups you are a member of, go to your account page and then choose the **Groups** tab on the left.
 

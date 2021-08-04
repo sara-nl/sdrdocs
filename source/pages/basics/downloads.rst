@@ -55,9 +55,9 @@ You can download all downloadable objects directly using the download script. Cl
 Download script
 ================
 
-The download script as provided by the Data Repository service is a tool that automatically downloads all objects and files in your basket or favourites. It is written in Python and therefore needs to have the Python runtime installed. You can download Python from its [website](https://www.python.org/).
+The download script as provided by the Data Repository service is a tool that automatically downloads all objects and files in your basket or favourites. It is written in Python and therefore needs to have the Python runtime installed. You can download Python executable from the `Python website`_.
 
-The script needs to be run using a terminal or command prompt (depending on the operating system you are using). If you are not familiar with the Linux or MacOS terminal, please refer to for example this [introductory tutorial](https://computers.tutsplus.com/tutorials/navigating-the-terminal-a-gentle-introduction--mac-3855) or for Windows, this [introduction to the Windows command prompt](https://www.bleepingcomputer.com/tutorials/windows-command-prompt-introduction/).
+The script needs to be run using a terminal or command prompt (depending on the operating system you are using). If you are not familiar with the Linux or MacOS terminal, please refer to for example this `introductory tutorial`_ or for Windows, this `introduction to the Windows command prompt`_.
 
 Before you can start downloading using the script, you need to create an API access token that allows authentication through the service API using the tool. Go to the API tokens tab in your account page and click 'Add API token' after filling in a unique name for the token.
 
@@ -71,3 +71,6 @@ Copy the randomly generated token to your clipboard and add it after the script 
 
 .. _`Login`: https://repo-test.surfsara.nl/user/login
 .. _`Handle Server`: http://hdl.handle.net/
+.. _`Python website`: https://www.python.org
+.. _`introductory tutorial`: https://computers.tutsplus.com/tutorials/navigating-the-terminal-a-gentle-introduction--mac-3855
+.. _`introduction to the Windows command prompt`: https://www.bleepingcomputer.com/tutorials/windows-command-prompt-introduction

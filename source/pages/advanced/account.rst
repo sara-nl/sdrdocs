@@ -45,7 +45,7 @@ By clicking on the edit icon next to an item listed in the table, you will go to
 
 .. _account-objects:
 
-Objects
+Various objects
 ______________
 
 The various tabs for each type of object show a listing of all objects of that type that you own. Click on the title of an object to go to the landing page of that deposit. Click on the edit icon next to an object listed to edit the metadata. If you have not finalised the publication of an object, a remove icon will be visible that allows you to mark it as deleted.
