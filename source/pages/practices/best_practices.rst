@@ -37,47 +37,45 @@ ____________________
 
 - **Maximum file size**: 4 GB using the online deposit form
 
-The maximum deposit data volume is 10 GB and the maximum number of files that can be uploaded via the onlone deposite is 10 files. If you want to deposit larger volumes of data or larger number of files in a single deposit, please contact us.
+The maximum deposit data volume is 10 GB and the maximum number of files that can be uploaded via the online deposit form is 10 files. If you want to deposit larger volumes of data or a larger number of files in a single deposit, please contact us.
 
 .. _data-documentation:
 
 Data documentation
 __________________
 
-Data documentation ensures that research data are understood and therefore used by current and future users (including the researcher). It is vital to store the data in a structured and consistent way with appropriate data documentation. The documentation can be a description explaining what the data is, what you can do with it and how it can be used. Even more technical documentation about the exact file format could be of use. Documentation can be provided in one of the accepted or preferred file formats.
+Data documentation ensures that research data is understood and therefore used by current and future users (including the researcher). It is vital to store data in a structured and consistent way with appropriate data documentation. The documentation can be a description explaining what the data is, what you can do with it and how it can be used. In some cases addtional technical documentation about the exact file format could be of use. Documentation can be provided in any of the accepted or preferred file formats.
 
 .. _best-practices-metadata:
 
 Metadata
 _________________
 
-Metadata provides structured information about the data. Depending on the type of data, there are different types of metadata:
+Metadata provides structured information about the data. There are different types of metadata:
 
-- **Descriptive metadata** describes and identifies information resources (minimal metdata required to find a digital object). In includes elements such as title, abstract, author, and keywords
+- **Descriptive metadata** describes and identifies information resource. It is the minimal metdata required to find a digital object and may include elements such as title, abstract, author, and keywords
 
 - **Structural metadata** provides information about the internal structure of resources including page, section, chapter numbering, indexes, and relations to other digital objects.
 
-- **Technical metadata** provides information on the technical aspects of the datasets such as data formats, hardware/software used, calibration, version, authentication, encryption.
+- **Technical metadata** provides information on the technical aspects of the dataset such as data formats, hardware/software used, calibration, version, authentication, and encryption.
 
-- **Administrative metadata** provides information on user rights and management of digital objects such as license, rights management, and access control.
+- **Administrative metadata** provides information on user rights and management of digital objects and inlcudes elements such as license, rights management, and access control.
 
-The repository will only ask for descriptive metadata during the deposit workflow, but it is highly recommended to add links to additional documentation or files containing metadata of any kind. Any other kinds of metadata are automatically added, though not always visible for the end-user.
+The repository only requires descriptive metadata during the deposit workflow. However, it is highly recommended to add links to additional documentation or files containing metadata of any kind. Any other kinds of metadata are automatically added, though not always visible for the end-user.
 
 .. _data-organisation:
 
 Data organisation
 _________________
 
-If you want your research data to be easily found and interpreted, the collection and deposit structure and the file names used for the data files should be logical and straightforward. Make sure to use the correct file extensions to avoid files being rejected or misinterpreted by other users. Its also a good practice to note the file naming and its meaning in a separate readme file.
-
-You can create collections and collections of other collections to structure your data. There is no limit on the number of deposits in a single collection.
+If you want your research data to be easily found and interpreted, the collection and deposit structure and the file names used for the data files should be logical and straightforward. You can create collections and collections of other collections to structure your data. There is no limit on the number of deposits in a single collection. Next to a clear structure, it's important to use the correct file extensions to avoid files being rejected or misinterpreted by other users. It's also a good practice to note the file naming and its meaning in a separate readme file.
 
 .. _data-anonymization:
 
 Data anonymization
 __________________
 
-Before you upload the files you should check whether they contain privacy-sensitive information within the meaning of the regulations and guidelines in the `General Data Protection Regulation`_ (GDPR). If you give access to the data publicly or any other user, the data must be completely anonimyzed.
+Before you upload the files you should check whether they contain privacy-sensitive information within the meaning of the regulations and guidelines in the `General Data Protection Regulation`_ (GDPR). If you provide (public) access to the data the data must be completely anonimyzed.
 
 .. Links:
 
