@@ -1,21 +1,21 @@
-.. _get-access:
+.. _access:
 
 *********************
 Accessing the service
 *********************
 
-On this page you will find general information about accessing the Data Repository service once you have obtained an account.
-
 .. contents::
     :depth: 2
 
-.. _general-access:
+.. _get-access:
 
-==============================
-General access
-==============================
+=================
+How to get access
+=================
 
-The repository provides access to mostly open access data which can be found and downloaded by anyone interested. You can find the data repository at https://repository.surfsara.nl.
+You can get access to the service by contacting SURF via the `service desk`_. For large publications an agreement with your institute, research group or on an individual basis is required.
+
+As soon as an agreement is in place, SURF will provision your account. If you already have an account for another service, it might be possible to use the same account. Once your account has been provisioned you can `login`_ to the service, :ref:`search for datasets <search-data>`, and make your :ref:`first deposit <deposit>`.
 
 .. _authenticated-access:
 
@@ -38,6 +38,8 @@ Once successfully authenticated, you can:
 Forgot password
 ==============================
 
-If you have forgotten your user name or password, use the 'Forgot password' link in the `Login`_ page or send an email to helpdesk@surfsara.nl directly.
+If you have forgotten your user name or password, use the 'Forgot password' link in the `login`_ page or send an email to helpdesk@surfsara.nl directly.
 
-.. _`Login`: https://repository.surfsara.nl/user/login
+.. Links:
+.. _`service desk`: https://servicedesk.surfsara.nl/
+.. _`login`: https://repository.surfsara.nl/user/login
