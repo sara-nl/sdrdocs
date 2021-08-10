@@ -35,4 +35,10 @@ The Data Repository service is especially suitable for publishing research data 
 How to get access
 =================
 
-You can get access to the Data Repository by contacting the SURF helpdesk at helpdesk.surfsara.nl or your institute's IT department or research desk. For large publications you will need a contract or be incorporated in an existing contract of your institute.
+You can get access to the service by contacting SURF via the `service desk`_. For large publications an agreement with your institute, research group or on an individual basis is required.
+
+As soon as an agreement is in place, SURF will provision your account. If you already have an account for another service, it might be possible to use the same account. Once your account has been provisioned you can `login`_ to the service, :ref:`search for datasets <search-data>`, and make your :ref:`first deposit <deposit>`.
+
+.. Links:
+.. _`service desk`: https://servicedesk.surfsara.nl/
+.. _`login`: https://repository.surfsara.nl/user/login
