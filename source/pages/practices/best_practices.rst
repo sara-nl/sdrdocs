@@ -4,23 +4,12 @@
 Best Practices
 **************
 
-This page provides information on best practices while using the repository.
-
-.. contents::
-    :depth: 4
-
-.. _prepare-data:
-
-==================
-Preparing data
-==================
-
-To prepare data for a deposit you need to consider the following points:
+To ensure that the deposits in the data repository are easily discoverable and usable by as many users as possible, all deposits and collections need to be well structured and contain proper metadata. This page provides some guide lines to help create high-quality deposits and collections. To prepare data for a deposit you need to consider the following points:
 
 .. _file-formats:
 
 File formats
-_________________
+------------
 
 By default, the repository does not accept all file formats. This is to ensure future compatibility, understanding and support of published data by the repository itself, but also by other users. The repository distinguishes two kinds of formats: preferred and accepted formats.
 
@@ -33,7 +22,7 @@ If you think your file format should be accepted by the repository, but is curre
 .. _file-size:
 
 File sizes and count
-_________________
+--------------------
 
 - **Maximum file size**: 4 GB using the online deposit form
 
@@ -42,14 +31,12 @@ The maximum deposit data volume is 10 GB and the maximum number of files that ca
 .. _data-documentation:
 
 Data documentation
-_________________
+------------------
 
 Data documentation ensures that research data is understood and therefore used by current and future users (including the researcher). It is vital to store data in a structured and consistent way with appropriate data documentation. The documentation can be a description explaining what the data is, what you can do with it and how it can be used. In some cases addtional technical documentation about the exact file format could be of use. Documentation can be provided in any of the accepted or preferred file formats.
 
-.. _metadata:
-
 Metadata
-_________________
+--------
 
 Metadata provides structured information about the data. There are different types of metadata:
 
@@ -66,14 +53,14 @@ The repository only requires descriptive metadata during the deposit workflow. H
 .. _data-organisation:
 
 Data organisation
-_________________
+-----------------
 
 If you want your research data to be easily found and interpreted, the collection and deposit structure and the file names used for the data files should be logical and straightforward. You can create collections and collections of other collections to structure your data. There is no limit on the number of deposits in a single collection. Next to a clear structure, it's important to use the correct file extensions to avoid files being rejected or misinterpreted by other users. It's also a good practice to note the file naming and its meaning in a separate readme file.
 
 .. _data-anonymization:
 
 Data anonymization
-_________________
+------------------
 
 Before you upload the files you should check whether they contain privacy-sensitive information within the meaning of the regulations and guidelines in the `General Data Protection Regulation`_ (GDPR). If you provide (public) access to the data the data must be completely anonimyzed.
 
