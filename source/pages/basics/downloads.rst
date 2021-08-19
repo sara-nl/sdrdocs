@@ -22,6 +22,8 @@ To download multiple files from the same deposit, select multiple files and use 
    :align: center
    :width: 75%
 
+.. _download-script:
+
 Download using a script
 =======================
 
