@@ -23,6 +23,8 @@ To download multiple files from the same deposit, select multiple files and use 
    :width: 75%
    :alt: File table for deposit landing pages
 
+.. _download-script:
+
 Download using a script
 =======================
 
