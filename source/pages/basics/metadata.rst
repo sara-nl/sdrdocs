@@ -4,8 +4,9 @@ Metadata
 
 In the Data Repository service, any deposit is identified and described by metadata. In order to increase the findability, visibility and understanding of your deposit and any related object, metadata is added to describe the deposit using a pre-defined set of fields.
 
-.. contents::
+.. contents:: Contents
     :depth: 8
+    :local:
 
 .. _metadata-default:
 
