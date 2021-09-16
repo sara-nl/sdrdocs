@@ -318,8 +318,7 @@ An object with the new and updated metadata fields and values needs to be constr
 
     >>> metadata = {"creator": "Researcher 1",
                 "description": "My first dataset ingested using the Data Repository API",
-                "rights": "CC-0-BY",
-                "contact": "email@example.com"}
+                "rights": "CC-0-BY"}
 
 To update community- or collection-specific metadata fields, some additional information needs to be provided. Furthermore, to add or remove an item of a list of value, the JSON Patch requires specific paths.
 
@@ -359,7 +358,7 @@ The actual JSON patch is created by:
     >>> import jsonpatch
     >>> patch = jsonpatch.make_patch(metadata_old, metadata)
     >>> print(patch)
-    [{"path": "/community_specific", "op": "remove"}, {"path": "/publication_state", "op": "remove"}, {"path": "/owners", "op": "remove"}, {"path": "/open_access", "op": "remove"}, {"path": "/community", "op": "remove"}, {"path": "/titles", "op": "remove"}, {"path": "/$schema", "op": "remove"}, {"path": "/publisher", "value": "EUDAT", "op": "add"}, {"path": "/contact_email", "value": "email@example.com", "op": "add"}, {"path": "/descriptions", "value": [{"description": "My first dataset ingested using the Data Repository API", "description_type": "Abstract"}], "op": "add"}, {"path": "/language", "value": "en_GB", "op": "add"}]
+    [{"path": "/titles", "op": "remove"}, {"path": "/$schema", "op": "remove"}, {"path": "/publisher", "value": "EUDAT", "op": "add"}, {"path": "/descriptions", "value": [{"description": "My first dataset ingested using the Data Repository API", "description_type": "Abstract"}], "op": "add"}, {"path": "/language", "value": "en_GB", "op": "add"}]
 
 The current patch will remove any existing fields not present in the new metadata object, therefore these need to be removed in the final patch:
 
@@ -367,7 +366,7 @@ The current patch will remove any existing fields not present in the new metadat
 
     >>> finpatch = filter(lambda x: x["op"] != "remove", patch)
     >>> print(list(finpatch))
-    [{u'path': u'/publisher', u'value': 'EUDAT', u'op': u'add'}, {u'path': u'/contact_email', u'value': 'email@example.com', u'op': u'add'}, {u'path': u'/descriptions', u'value': [{'description': 'My first dataset ingested using the Data Repository API', 'description_type': 'Abstract'}], u'op': u'add'}, {u'path': u'/language', u'value': 'en_GB', u'op': u'add'}]
+    [{u'path': u'/publisher', u'value': 'SURF', u'op': u'add'}, {u'path': u'/descriptions', u'value': [{'description': 'My first dataset ingested using the Data Repository API', 'description_type': 'Abstract'}], u'op': u'add'}, {u'path': u'/language', u'value': 'en_GB', u'op': u'add'}]
 
 The patch needs to be provided to the `data` argument as a serialized string for which the JSON package can be used:
 
@@ -375,7 +374,7 @@ The patch needs to be provided to the `data` argument as a serialized string for
 
     >>> strpatch = json.dumps(list(finpatch))
     >>> print(strpatch)
-    [{"path": "/publisher", "value": "EUDAT", "op": "add"}, {"path": "/contact_email", "value": "email@example.com", "op": "add"}, {"path": "/descriptions", "value": [{"description": "My first dataset ingested using the Data Repository API", "description_type": "Abstract"}], "op": "add"}, {"path": "/language", "value": "en_GB", "op": "add"}]
+    [{"path": "/publisher", "value": "SURF", "op": "add"}, {"path": "/descriptions", "value": [{"description": "My first dataset ingested using the Data Repository API", "description_type": "Abstract"}], "op": "add"}, {"path": "/language", "value": "en_GB", "op": "add"}]
 
 This section does not address the altering of community-specific metadata fields and multivalue fields.
 
@@ -396,45 +395,52 @@ Now, the request response text shows the updated metadata:
 
 .. code-block:: python
 
-    >>> url = 'https://trng-repository.surfsara.nl/api/deposits/' + depositid + "/draft"
+    >>> url = 'https://trng-repository.surfsara.nl/api/objects/deposit/' + depositid
     >>> r = requests.patch(url, data=strpatch, params=params, headers=headers)
     >>> print(r)
     <Response [200]>
     >>> result = json.loads(r.text)
     >>> print(json.dumps(result, indent=4))
     {
-        "updated": "2017-03-02T17:03:37.500387+00:00",
-        "metadata": {
-            "community_specific": {},
-            "publication_state": "draft",
-            "open_access": true,
-            "language": "en_GB",
-            "publisher": "EUDAT",
-            "owners": [
-                10
-            ],
-            "community": "e9b9792e-79fb-4b07-b6b4-b9c2bd06d095",
-            "titles": [
-                {
-                    "title": "My test upload"
-                }
-            ],
-            "contact_email": "email@example.com",
-            "descriptions": [
-                {
-                    "description": "My first dataset ingested using the Data Repository API",
-                    "description_type": "Abstract"
-                }
-            ],
-            "$schema": "https://trng-repository.surfsara.nl/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/draft_json_schema"
+      "$schema": "https://trng-repository.surfsara.nl/static/schemas/object-metadata",
+      "id": "bd387af9afe48d0a",
+      "created": "2021-03-10T20:05:43.250000Z",
+      "updated": "2021-03-10T20:21:30.379000Z",
+      "properties": {
+        "namespace": "deposit",
+        "pid": "deposit:bd387af9afe48d0a",
+        "type": "deposit",
+        "state": "draft",
+        "sharelevel": "open",
+        "owner": "user:86"
+      },
+      "files": [
+        {
+          "name": "sequence.txt",
+          "url": "https://trng-repository.surfsara.nl/deposit/bd387af9afe48d0a/files/sequence.txt",
+          "external": false,
+          "size": 691,
+          "mimetype": "text/plain",
+          "md5": "",
+          "epicpid": "21.T12996/5ddde41c-a461-a861-45fd-76594f2b5a20"
+        }
+      ],
+      "links": {
+        "self": "https://trng-repository.surfsara.nl/api/objects/deposit/bd387af9afe48d0a",
+        "landing": "https://trng-repository.surfsara.nl/deposit/bd387af9afe48d0a",
+        "relationships": {
+          "community": "https://trng-repository.surfsara.nl/api/objects/community/surf"
         },
-        "id": "b43a0e6914e34de8bd19613bcdc0d364",
-        "links": {
-            "files": "https://trng-repository.surfsara.nl/api/files/0163d244-5845-40ca-899c-d1d0025f68aa",
-            "self": "https://trng-repository.surfsara.nl/api/deposits/b43a0e6914e34de8bd19613bcdc0d364/draft",
-            "publication": "https://trng-repository.surfsara.nl/api/deposits/b43a0e6914e34de8bd19613bcdc0d364"
-        },
-        "created": "2017-03-02T16:34:26.383505+00:00"
+        "files": "https://trng-repository.surfsara.nl/api/objects/deposit/bd387af9afe48d0a/files"
+      },
+      "metadata": {
+        "base": {
+          "$schema": "https://trng-repository.surfsara.nl/api/objects/schema/dublin",
+          "title": "My dataset deposit",
+          "rights": [
+            "info:eu-repo/semantics/openAccess"
+          ]
+      }
     }
 
 Compare the created and updated metadata timestamp:
