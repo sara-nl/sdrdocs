@@ -258,8 +258,12 @@ When all your files have been uploaded, you can check the draft deposit's curren
         "external": false,
         "size": 691,
         "mimetype": "text/plain",
-        "md5": "",
-        "epicpid": "21.T12996/5ddde41c-a461-a861-45fd-76594f2b5a20"
+        "checksums": {
+            "md5": ""
+        }
+        "identifiers": {
+            "epicpid": "21.T12996/5ddde41c-a461-a861-45fd-76594f2b5a20"
+        }
       }
     ]
 

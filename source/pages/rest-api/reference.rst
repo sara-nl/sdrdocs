@@ -598,7 +598,7 @@ Command:
 .. _rest-api-ref-deposit-administration:
 
 =============
-Object administration
+Object management
 =============
 
 The following requests concern the creation, update and management of objects.
@@ -1210,6 +1210,76 @@ This request updates the metadata of an already published deposit without creati
 
 See the :ref:`Update draft deposit metadata <rest-api-ref-update-draft-deposit-metadata>` request for examples.
 
+.. _rest-api-ref-get-specific-deposit-file:
+
+Get specific deposit file
+_________________________
+
+Download a file ``FILENAME`` of the deposit specified by ``NAMESPACE`` and ``DEPOSIT_ID``. This will succeed if the file is valid and online.
+
+- HTTP method: ``GET``
+
+- URL path: ``/api/objects/NAMESPACE/DEPOSIT_ID/files/FILENAME``
+
+- Optional parameters: ``token``
+
+- Status code on success: ``200``
+
+- Notes: the access token is only required when a deposit is in draft state.
+
+Command:
+
+``curl "https://$SDR_HOST/api/objects/deposit/c800a32839fa47d9/files/data.txt"``
+
+.. _rest-api-ref-get-specific-deposit-file-status:
+
+Get status of specific deposit file
+_________________________
+
+Get the status of a file on index ``ID`` in the file list of the deposit specified by ``NAMESPACE`` and ``DEPOSIT_ID``. This will succeed if the file is valid.
+
+- HTTP method: ``GET``
+
+- URL path: ``/api/objects/NAMESPACE/DEPOSIT_ID/status/ID``
+
+- Optional parameters: ``token``
+
+- Status code on success: ``200``
+
+- Notes:
+
+ - The access token is only required when a deposit is in draft state.
+
+ - You can find the index of a file by listing the files of a deposit using the request :ref:`List files of deposit <rest-api-ref-list-files-of-deposit>`.
+
+Command:
+
+``curl "https://$SDR_HOST/api/objects/deposit/c800a32839fa47d9/status/0"``
+
+.. _rest-api-ref-get-specific-deposit-file-status:
+
+Stage specific deposit file
+_________________________
+
+Stage the file on index ``ID`` in the file list of the deposit specified by ``NAMESPACE`` and ``DEPOSIT_ID``. This will succeed if the file is valid and offline.
+
+- HTTP method: ``GET``
+
+- URL path: ``/api/objects/NAMESPACE/DEPOSIT_ID/stage/ID``
+
+- Optional parameters: ``token``
+
+- Status code on success: ``200``
+
+- Notes:
+
+ - The access token is only required when a deposit is in draft state.
+
+ - You can find the index of a file by listing the files of a deposit using the request :ref:`List files of deposit <rest-api-ref-list-files-of-deposit>`.
+
+Command:
+
+``curl "https://$SDR_HOST/api/objects/deposit/c800a32839fa47d9/stage/0"``
 
 .. _rest-api-ref-other-requests:
 
