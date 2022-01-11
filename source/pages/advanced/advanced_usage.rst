@@ -60,13 +60,35 @@ You can add other members to the group, and assign administrators to the group o
 API tokens
 =================
 
-The REST API can be used for interaction with Data Repository via external services or applications, for example for integration with other websites (research community portals) or for uploading or downloading large data sets that are not easily handled via a web browser. When requesting user-specific information through the REST API, an API access token is required. A token can be generated in your account page via the web interface.
+The REST API can be used for interaction with Data Repository via external services or applications, for example for integration with other websites (research community portals) or for uploading or downloading large data sets that are not easily handled via a web browser. When requesting user-specific information through the REST API, an API access token is required. A token can be generated in your account page via the web interface. API tokens are for personal use only and should not be share publicly or with other persons.
 
 Go to the **API tokens** tab on the left side of your account page to see an overview of all tokens you have generated. To create a new API token, enter a name and click on **Add API token** to generate a new token.
 
   .. image:: ../img/account-tokens.png
    :align: center
    :width: 90%
+
+.. _advanced-share-links:
+
+=================
+Share links
+=================
+
+Data sets that are not public or currently under embargo can be made accessible using share links that contain unique tokens. Share links are specific for a given object and can be generated on the landing page of an object using the share functionality (top-right corner). This can only be done by the owner or an administrator of the object or the community the object resides under.
+
+  .. image:: ../img/share-links.png
+   :align: center
+   :width: 90%
+
+A form will be shown that allows for some settings, including the expiration date of the link and whether it includes access to children objects and their files.
+
+  .. image:: ../img/share-links-form.png
+   :align: center
+   :width: 90%
+
+Click on 'Until embargo' to set the expiration date to the embargo date of the object (if applicable). Click on 'Generate' to create the share token and link. It will be put on your system's clipboard and can be pasted in another application this way.
+
+To see an overview of your share tokens, go to the account page and select the :ref:`Share links <account-sharelinks>` tab.
 
 .. Links:
 
