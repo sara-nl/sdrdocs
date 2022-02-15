@@ -1,8 +1,8 @@
 .. _massive:
 
-***********
+**********************
 Large-scale depositing
-***********
+**********************
 
 This page explains how to get your large-scale dataset into the data repository. It requires access to the storage infrastructure of SURF and assistance of an advisor.
 
@@ -13,7 +13,7 @@ When your dataset is very large in size and/or number of files, it is much more 
 You don't have access by default to the storage infrastructure, so please contact an advisor in order to assist you on this.
 
 Uploading data via the REST API
-______________
+_______________________________
 
 The Data Repository service provides a REST API that enables users to upload data and create deposits and other objects via tools or the command line. See the :ref:`REST API <rest-api>` page of this help documentation.
 
@@ -22,9 +22,9 @@ The Data Repository service provides a REST API that enables users to upload dat
 
 .. _creating-deposits:
 
-==============
+============================
 Creating deposits
-==============
+============================
 
 Contrary to the online deposit workflow some steps in the creation of deposits change in the large-scale deposit workflow.
 

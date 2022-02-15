@@ -8,7 +8,7 @@ The Data Repository REST API can be used for interaction with the service via ex
 
 This page explains the basic concepts, authentication and all existing HTTP requests that can currently be used. In the next pages, the examples given are done using cURL commands. This tool can be freely downloaded for any OS.
 
-.. contents::
+.. contents:
     :depth: 4
 
 .. _rest-api-basic-concepts:
@@ -21,11 +21,11 @@ The Data Repository service uses several concepts which are briefly explained be
 
 A scientific community has the roles of creating and maintaining metadata schemas and curating the datasets which are part of a scientific domain or research project. Users of the Data Repository can be part of one or more communities. Some selected members of a community are also given the role of community administrators, which grants them the special rights needed for the schema definitions and deposit curation tasks.
 
-Any registered user can upload scientific datasets into Data Repository and thus create data deposits. A deposit is comprised of data files and associated metadata. The deposit’s metadata consists of a set of common fixed metadata fields and a set of custom metadata blocks, each block containing related metadata fields. A deposit is always connected to one scientific community which has the role of curating and maintaining it (except for deposits created as part of the generic SURF community).
+Any registered user can upload scientific datasets into Data Repository and thus create data deposits. A deposit is comprised of data files and associated metadata. The deposit's metadata consists of a set of common fixed metadata fields and a set of custom metadata blocks, each block containing related metadata fields. A deposit is always connected to one scientific community which has the role of curating and maintaining it (except for deposits created as part of the generic SURF community).
 
 A deposit contains a set of common metadata fields and a set of custom metadata blocks. This metadata is not free form, however, but is governed by static schemas; the common metadata schema is set by Data Repository and defines a superset of Dublin Core elements, while the schema for the custom metadata block is specific to each community and can be customized by the community administrators. In order to be accepted, the deposits submitted to a community must conform to the schema required by the community.
 
-.. _rest-api-objects:
+.. _rest-api-object-state:
 
 ==================
 Object state
@@ -41,7 +41,7 @@ To update the metadata of a deposit through the API, a `JSON Patch`_ must be sup
 Making requests
 ==================
 
-The REST API is used by making API requests using the `methods`_ of the standard HTTP protocol. Typically an application like cURL is used to make requests, but it is also possible to do this from within your tools or custom-built applications.
+The REST API is used by making API requests using the `methods <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods>`_ of the standard HTTP protocol. Typically an application like cURL is used to make requests, but it is also possible to do this from within your tools or custom-built applications.
 
 If a request is received by the Data Repository, it will be processed and a response will be given. This response is according to the HTTP protocol and will include a `status code`_ indicating whether the processing of the request was successful or an error occured. Based on this code a body is included that either gives the updated state of the object being requested or modified, or a description of the error that occurred. The response data will almost always be in JSON format, except when for example images, files or XML data is requested.
 
@@ -52,9 +52,9 @@ By making a set of requests successively, an existing object can be modified in 
 .. _rest-api-object-identifiers:
 
 Object identifiers
-_________________
+__________________
 
-Every object stored in the Data Repository has a unique identifier. To access a specific object using the REST API, this object identifier needs to be provided as part of the URL. These identifiers `always` consists of a namespace followed by a colon ``:`` and the object identifier itself. For example, a deposit usually looks like ``deposit:c800a32839fa47d9``, where the namespace here is ``deposit``. For large datasets it is possible that the namespace for deposits differ, e.g. ``cosmogrid:128`` is then also possible.
+Every object stored in the Data Repository has a unique identifier. To access a specific object using the REST API, this object identifier needs to be provided as part of the URL. These identifiers ``always`` consists of a namespace followed by a colon ``:`` and the object identifier itself. For example, a deposit usually looks like ``deposit:c800a32839fa47d9``, where the namespace here is ``deposit``. For large datasets it is possible that the namespace for deposits differ, e.g. ``cosmogrid:128`` is then also possible.
 
 For collections, the namespace is always ``collection``. For an overview of all namespaces and example object identifiers, see the table below:
 
@@ -132,21 +132,21 @@ The request status codes indicate whether the request was successfully received,
 
 One of the following status codes is returned in case the request was successful:
 
-    ``200`` - Request was successfully received and executed, see body for results
+``200`` - Request was successfully received and executed, see body for results
 
-    ``201`` - Object created, see body for results
+``201`` - Object created, see body for results
 
-    ``204`` - No contents, this occurs when for example an object is successfully deleted
+``204`` - No contents, this occurs when for example an object is successfully deleted
 
 In case the request failed, the body of the response usually contains details, and one of the following status codes is returned:
 
-    ``400`` - Request was not understood
+``400`` - Request was not understood
 
-    ``401`` - User must authenticate first, usually because no access token was provided with the request
+``401`` - User must authenticate first, usually because no access token was provided with the request
 
-    ``403`` - User is not authorized to perform request, missing permission to do so
+``403`` - User is not authorized to perform request, missing permission to do so
 
-    ``404`` - Requested object not found or API endpoint does not exist
+``404`` - Requested object not found or API endpoint does not exist
 
 Any status code greater then or equal to ``500`` indicates that internally something went wrong in the server. If in this case the problem persists, kindly report this to SURF.
 
@@ -224,7 +224,7 @@ An endpoint uniquely identifies the resource(s) you are requesting or want to mo
 In the table below, some endpoints are listed together with the available methods:
 
 ======================================= ====================== =============
-Endpoint                                Methods                Description
+Endpoint                                Methods2               Description
 ======================================= ====================== =============
 ``/api``                                GET                    General information about the REST API
 ``/api/objects``                        GET                    Object listing and search (with parameters)
@@ -263,13 +263,9 @@ The Data Repository REST API can be integrated in any workflow or application as
 .. _rest-api-integration-python:
 
 Integration with Python
-_________________
+_______________________
 
 To intergrate the API in your application using Python, please make use of the 'requests' package that allows excellent and straightforward interaction possibilities from within your Python scripts.
 
-
-.. Links:
-
-.. _`methods`: https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods
-.. _`status code`: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
-.. _`JSON Patch`: http://jsonpatch.com/
+.. _status code: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+.. _JSON Patch: http://jsonpatch.com/

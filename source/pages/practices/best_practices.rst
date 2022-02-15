@@ -46,7 +46,7 @@ _________________
 
 Data documentation ensures that research data are understood and therefore used by current and future users (including the researcher). It is vital to store the data in a structured and consistent way with appropriate data documentation. The documentation can be a description explaining what the data is, what you can do with it and how it can be used. Even more technical documentation about the exact file format could be of use. Documentation can be provided in one of the accepted or preferred file formats.
 
-.. _metadata:
+.. _best-practices-metadata:
 
 Metadata
 _________________

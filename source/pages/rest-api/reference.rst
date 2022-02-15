@@ -506,19 +506,19 @@ Search all the published objects for a query string.
 
 - Notes:
 
- - The parameter ``query`` determines the keywords to search for, separated by a space.
+  - The parameter ``query`` determines the keywords to search for, separated by a space.
 
- -     If a field name is prepended followed by a colon and the search value, the search is limited to that field, e.g. 'creators.creator:user' searches for deposits with a 'user' in the creator metadata field.
+  -     If a field name is prepended followed by a colon and the search value, the search is limited to that field, e.g. 'creators.creator:user' searches for deposits with a 'user' in the creator metadata field.
 
- -     If the parameter q is omitted, all deposits are returned (in paginated form). See also :ref:`List all deposits <rest-api-ref-list-all-objects>`.
+  -     If the parameter q is omitted, all deposits are returned (in paginated form). See also :ref:`List all deposits <rest-api-ref-list-all-objects>`.
 
- -     For a better understanding of search queries, a listing of available search fields and advanced options like operators, please refer to the Data Repository Advanced Search documentation on how to create them.
+  -     For a better understanding of search queries, a listing of available search fields and advanced options like operators, please refer to the Data Repository Advanced Search documentation on how to create them.
 
- - Using the page and size parameter, pagination can be established by providing integer values for these parameters. The page parameter is 1-based.
+  - Using the page and size parameter, pagination can be established by providing integer values for these parameters. The page parameter is 1-based.
 
- -     For example: using a value of 2 for page and 50 for size will return the deposits from number 51 to 100 (if there are at least 100 deposits available on the instance)
+  -     For example: using a value of 2 for page and 50 for size will return the deposits from number 51 to 100 (if there are at least 100 deposits available on the instance)
 
- - The sort parameter can be either ``asc`` or ``desc``.
+  - The sort parameter can be either ``asc`` or ``desc``.
 
 Command:
 
@@ -545,9 +545,9 @@ List all your draft objects.
 
 - Notes:
 
- - You can only list your own draft objects.
+  - You can only list your own draft objects.
 
- - You can add search parameters to narrow down your search, see :ref:`Search objects <rest-api-ref-search-objects>`.
+  - You can add search parameters to narrow down your search, see :ref:`Search objects <rest-api-ref-search-objects>`.
 
 Command:
 
@@ -597,9 +597,9 @@ Command:
 
 .. _rest-api-ref-deposit-administration:
 
-=============
+=================
 Object management
-=============
+=================
 
 The following requests concern the creation, update and management of objects.
 
@@ -721,11 +721,11 @@ To upload a new file into a draft deposit object, first you need to identify the
 
 - Notes:
 
- - Using the ``--data-binary`` option will load the entire file into memory before being sent to Data Repository
+  - Using the ``--data-binary`` option will load the entire file into memory before being sent to Data Repository
 
- - For large files instead use the ``-T`` option followed by the file name (without a ``@`` sign)
+  - For large files instead use the ``-T`` option followed by the file name (without a ``@`` sign)
 
- - Also, to avoid timeouts please use the ``-H "Transfer-Encoding: chunked"`` option and value to send a file in chunks instead of all at once.
+  - Also, to avoid timeouts please use the ``-H "Transfer-Encoding: chunked"`` option and value to send a file in chunks instead of all at once.
 
 Command:
 
@@ -1248,9 +1248,9 @@ Get the status of a file on index ``ID`` in the file list of the deposit specifi
 
 - Notes:
 
- - The access token is only required when a deposit is in draft state.
+  - The access token is only required when a deposit is in draft state.
 
- - You can find the index of a file by listing the files of a deposit using the request :ref:`List files of deposit <rest-api-ref-list-files-of-deposit>`.
+  - You can find the index of a file by listing the files of a deposit using the request :ref:`List files of deposit <rest-api-ref-list-files-of-deposit>`.
 
 Command:
 
@@ -1273,9 +1273,9 @@ Stage the file on index ``ID`` in the file list of the deposit specified by ``NA
 
 - Notes:
 
- - The access token is only required when a deposit is in draft state.
+  - The access token is only required when a deposit is in draft state.
 
- - You can find the index of a file by listing the files of a deposit using the request :ref:`List files of deposit <rest-api-ref-list-files-of-deposit>`.
+  - You can find the index of a file by listing the files of a deposit using the request :ref:`List files of deposit <rest-api-ref-list-files-of-deposit>`.
 
 Command:
 

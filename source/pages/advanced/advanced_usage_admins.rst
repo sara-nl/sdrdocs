@@ -1,8 +1,8 @@
-.. _advanced-usage:
+.. _advanced-usage-admins:
 
-***********
+***********************************
 Advanced usage for administrators
-***********
+***********************************
 
 This page provides information on advanced usage of the SURF Data Repository, such as metadata schema definition, and community creation and memberships. For these objects, you need advanced permissions in the service.
 

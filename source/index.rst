@@ -1,12 +1,11 @@
 .. _contents:
 
-******************
+*****************************
 Data Repository Documentation
-******************
+*****************************
 
 .. image:: pages/img/logo.png
    :width: 700 px
-   :height: 154 px
    :scale: 50 %
    :alt: Data Repository logo
    :align: right

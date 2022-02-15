@@ -1,8 +1,8 @@
 .. _rest-api-workflow-deposits:
 
-**************
+*********************
 Workflow for deposits
-**************
+*********************
 
 This page provides information about creating and managing deposits using the REST API of the Data Repository service. All requests are made using Python.
 
@@ -11,9 +11,9 @@ This page provides information about creating and managing deposits using the RE
 
 .. _rest-api-general-workflow:
 
-==================
+============================
 General publication workflow
-==================
+============================
 
 The HTTP REST API does not impose a specific workflow for creating a deposit, but some steps need to be taken in order independently from each other. The following example workflow only defines the most basic steps:
 
@@ -32,11 +32,11 @@ Preparation
 
 When your dataset is ready for publication, it can be uploaded to the Data Repository service by creating a draft deposit and adding files and metadata. This page will guide you through the creation process of a new draft deposits, preparing and finally publishing it as a deposit. It covers:
 
- - The creation of a new draft deposit,
- - The addition and removal of files and metadata, and
- - Committing the draft deposit to publish it
+- The creation of a new draft deposit,
+- The addition and removal of files and metadata, and
+- Committing the draft deposit to publish it
 
-Please note that the Data Repository service makes a distinction between the two terms `deposit` and `draft deposit` (or simply `draft`). A **deposit** is published and therefore unchangeable and has persistent identifiers (PID) assigned to it, as well as checksums. A user can create a deposit by **first creating a draft deposit**, which is modifiable. Files and metadata can be placed into a draft deposit, but not into an already published deposit.
+Please note that the Data Repository service makes a distinction between the two terms ``deposit`` and ``draft deposit`` (or simply ``draft``). A **deposit** is published and therefore unchangeable and has persistent identifiers (PID) assigned to it, as well as checksums. A user can create a deposit by **first creating a draft deposit**, which is modifiable. Files and metadata can be placed into a draft deposit, but not into an already published deposit.
 
 The requests in the steps described will communicate with the training instance of the Data Repository service: ``https://trng-repository.surfsara.nl``. Make sure to create a token in this instance of the Data Repository.
 
@@ -55,17 +55,18 @@ Deposit workflow
 
 In the following diagram the general deposit workflow of Data Repository is shown. All blue boxes require a request interaction with the Data Repository service.
 
- .. image:: ../img/deposit-workflow.png
-   :align: center
-   :width: 100%
+.. image:: ../img/deposit-workflow.png
+  :align: center
+  :width: 100%
+  :alt: Deposit workflow
 
 The red boxes indicate an object state, where in this workflow only draft, submitted and published deposits exist. Files and metadata can be added multiple times. Persistent identifiers (PIDs) and checksum are automatically added by Data Repository (green boxes). Once a draft deposit is committed, depending on the community's requirements, the deposit is either in submitted state and needs further approval or is immediately published.
 
 .. _rest-api-create-new-draft-deposit:
 
-==================
+==========================
 Create a new draft deposit
-==================
+==========================
 
 After loading your token a **POST** request will create a new draft deposit. Only some basic metadata is needed, like the title and community, which is sent along with the request as the data argument together with a header defining the content type. All metadata can be changed later during the deposit workflow.
 
@@ -114,7 +115,7 @@ On success, the response status code and text will be different this time:
       }
     }
 
-Response code 201 indicates the draft deposit has been successfully created. The deposit identifier metadata field `id` in the response text is used to identify the draft deposit during the additional steps of adding files and metadata:
+Response code 201 indicates the draft deposit has been successfully created. The deposit identifier metadata field ``id`` in the response text is used to identify the draft deposit during the additional steps of adding files and metadata:
 
 .. code-block:: python
 
@@ -124,7 +125,7 @@ Response code 201 indicates the draft deposit has been successfully created. The
     bd387af9afe48d0a
 
 
-The deposit is still in a draft state, as is indicated in the `state` property:
+The deposit is still in a draft state, as is indicated in the ``state`` property:
 
 .. code-block:: python
 
@@ -137,13 +138,13 @@ Please note that the deposit identifier will remain the same during the draft st
 
 .. _rest-api-add-files-draft-deposit:
 
-==================
+===================================
 Add files to your new draft deposit
-==================
+===================================
 
-After creation of the draft deposit, files can be added. This is achieved in a similar way as the previous example via a PUT request. Make sure your data files are accessible in the Python session. In this case the files named `sequence.txt` and `sequence2.txt` are added to the draft deposit. For every file to add to the deposit, a separate request is required.
+After creation of the draft deposit, files can be added. This is achieved in a similar way as the previous example via a PUT request. Make sure your data files are accessible in the Python session. In this case the files named ``sequence.txt`` and ``sequence2.txt`` are added to the draft deposit. For every file to add to the deposit, a separate request is required.
 
-First, define a file open handle to send along with the request, e.g. for the `sequence.txt` file:
+First, define a file open handle to send along with the request, e.g. for the ``sequence.txt`` file:
 
 .. code-block:: python
 
@@ -152,7 +153,7 @@ First, define a file open handle to send along with the request, e.g. for the `s
 
 In this statement, the action of reading the file is not actually performed. The file will be read only when the request is done and send as a direct data stream.
 
-Define the request URL by adding the file bucket identifier to the `files` end point and define the request header:
+Define the request URL by adding the file bucket identifier to the ``files`` end point and define the request header:
 
 .. code-block:: python
 
@@ -220,7 +221,7 @@ If the request is successful, the result can be checked:
 
 The mime-type is detected, direct links are given and a checksum is calculated. As soon as this checksum is ready, it will be added to the metadata of the deposit.
 
-If the request fails, check the error by displaying the response text, for example when the `files` object has errors. The reponse text will, in this case, a HTML page describing the error.
+If the request fails, check the error by displaying the response text, for example when the ``files`` object has errors. The reponse text will, in this case, a HTML page describing the error.
 
 When the upload file is not accessible:
 
@@ -285,7 +286,7 @@ In order to delete a file from a draft deposit, a request header and your access
     >>> params = {"token": token}
 
 
-To make the request, the identifier of the draft deposit and the file name under which you've stored the file are required. Along with the DELETE request operation with the `/api/objects/deposit/<depositid>/files/<file_name>` endpoint in the URL, the request then looks as follows:
+To make the request, the identifier of the draft deposit and the file name under which you've stored the file are required. Along with the DELETE request operation with the ``/api/objects/deposit/<depositid>/files/<file_name>`` endpoint in the URL, the request then looks as follows:
 
 .. code-block:: python
 
@@ -303,9 +304,9 @@ On a successful request, the response code should be 204 while there is no respo
 
 .. _rest-api-add-metadata-draft-deposit:
 
-==================
+==================================
 Add metadata to your draft deposit
-==================
+==================================
 
 Metadata is already added to a draft deposit while creating the initial deposit. By issuing a HTTP patch request with a JSON patch list of operations the current metadata of a deposit can be updated with additional or updated metadata fields and corresponding values.
 
@@ -336,7 +337,7 @@ The metadata update call is made using a patch request containing the patch oper
 - The metadata updates for the deposit must be provided in the `JSON patch format <http://jsonpatch.com>`_ in order to avoid to have to send all the existing metadata as well
 - The patch format contains one or more JSONPath strings. The root of these paths is the metadata object, as this is the only mutable object
 
-In order to successfully update the metadata, a JSON patch is created using the `jsonpatch` Python package. First, the original existing metadata of the deposit is retrieved which will later be altered:
+In order to successfully update the metadata, a JSON patch is created using the ``jsonpatch`` Python package. First, the original existing metadata of the deposit is retrieved which will later be altered:
 
 .. code-block:: python
 
@@ -372,7 +373,7 @@ The current patch will remove any existing fields not present in the new metadat
     >>> print(list(finpatch))
     [{u'path': u'/publisher', u'value': 'SURF', u'op': u'add'}, {u'path': u'/descriptions', u'value': [{'description': 'My first dataset ingested using the Data Repository API', 'description_type': 'Abstract'}], u'op': u'add'}, {u'path': u'/language', u'value': 'en_GB', u'op': u'add'}]
 
-The patch needs to be provided to the `data` argument as a serialized string for which the JSON package can be used:
+The patch needs to be provided to the ``data`` argument as a serialized string for which the JSON package can be used:
 
 .. code-block:: python
 
@@ -454,7 +455,7 @@ Compare the created and updated metadata timestamp:
     >>> print(result["created"], result["updated"])
     2017-03-02T16:34:26.383505+00:00 2017-03-02T17:03:37.500387+00:00
 
-In case the patch request did not succeed (status code 400), an error description containing all errors is returned in the request response text. For example, the `creators` field value needs to be an array:
+In case the patch request did not succeed (status code 400), an error description containing all errors is returned in the request response text. For example, the ``creators`` field value needs to be an array:
 
 .. code-block:: python
 
@@ -492,9 +493,9 @@ Using this list, send the list in JSON format as described in :ref:`Add external
 
 .. _rest-api-publish-draft-deposit:
 
-==================
+=============================
 Publishing your draft deposit
-==================
+=============================
 
 The final step will complete the draft deposit submitting it with a post request. After this request, the files of the deposit are immutable and your deposit is published!
 
@@ -512,16 +513,16 @@ The final commit request will return the final deposit metadata in case the requ
 
 Your draft deposit is now published and is available under the REST API URL ``https://trng-repository.surfsara.nl/api/objects/deposit/bd387af9afe48d0a``!
 
-An EPIC persistent identifier and DOI (`epicpid` and `doi` fields) have been automatically generated and added to the metadata.
+An EPIC persistent identifier and DOI (``epicpid`` and ``doi`` fields) have been automatically generated and added to the metadata.
 
 .. _rest-api-check-and-display-results-deposit:
 
-==================
+==============================
 Check and display your results
-==================
+==============================
 
 Once the deposit process is completed, the results can be checked by requesting the deposit data using the new deposit identifier. Check out the :ref:`deposit retrieval request <rest-api-ref-get-specific-deposit>` for an extensive description on how to do this.
 
-The deposit identifier `id` in the response message can directly be used to see the landing page of the newly created deposit: `bd387af9afe48d0a <https://trng-repository.surfsara.nl/deposit/bd387af9afe48d0a>`_. If the page displays a restriction message, this is due the server-side processing of the ingestion. As soon as this is finished, the message will disappear.
+The deposit identifier ``id`` in the response message can directly be used to see the landing page of the newly created deposit: `bd387af9afe48d0a <https://trng-repository.surfsara.nl/deposit/bd387af9afe48d0a>`_. If the page displays a restriction message, this is due the server-side processing of the ingestion. As soon as this is finished, the message will disappear.
 
 Unfortunately, some of the metadata schema fields are missing since during the metadata update step, these fields were not added to the patch. It is highly recommended to complete all fields during this step in order to increase the discoverability, authenticity and reusability of the dataset. Please check the :ref:`Update metadata of draft deposit <rest-api-ref-update-draft-deposit-metadata>` reference to update the metadata of your published deposit.
