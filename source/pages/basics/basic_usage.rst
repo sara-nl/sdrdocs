@@ -44,9 +44,10 @@ On the buttom left column, the are  shortcuts for defining new collections, meta
 
 .. _deposit-landing-page:
 
-==============
+============================
 Deposit landing page
-==============
+============================
+
 The landing page of a deposit is created after completion of the online deposit workflow. In the deposit landing page you can see the deposit's basic details, additional metadata and information about the status of the files contained in the deposit, for example if the data is currently online or offline and therefore needs to be staged.
 
 .. image:: ../img/deposit-landing-page.png
@@ -69,7 +70,7 @@ To export metadata of an object go to the object's landing page and click on the
 .. _download-zipped:
 
 Download zipped archive
-_________________
+__________________________________
 
 You can download all files and optionally the metadata using the 'Download as' dropdown button and choosing 'ZIP'. If all files are online, a ZIP archive file will be offered for download. You can also get a BagIt format archive file.
 
@@ -77,6 +78,15 @@ You can download all files and optionally the metadata using the 'Download as' d
    :align: center
    :width: 90%
    :alt: Deposit landing page download
+
+.. _deposit-citations:
+
+Deposit citations
+__________________________________
+
+If you want to add a citation of the data set you can copy the provided text shown in the box at the bottom right in the right sidebar of the landing page. Click on the clipboard icon to copy the text to your clipboard.
+
+Select a different citation style in the dropdown selection box to change it to the style you need.
 
 .. _collection-landing-page:
 
@@ -90,6 +100,15 @@ A landing page of a collection is similar to those of a deposit. In the collecti
    :align: center
    :width: 90%
    :alt: Collection landing page
+
+.. _collection-citations:
+
+Collection citations
+__________________________________
+
+If you want to add a citation of the collection you can copy the provided text shown in the box at the bottom right in the right sidebar of the landing page. Click on the clipboard icon to copy the text to your clipboard.
+
+Select a different citation style in the dropdown selection box to change it to the style you need.
 
 .. _search-data:
 
