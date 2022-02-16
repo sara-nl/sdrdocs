@@ -49,7 +49,7 @@ By clicking on the edit icon next to an item listed in the table, you will go to
 .. _account-objects:
 
 Various objects
-______________
+_______________
 
 The various tabs for each type of object show a listing of all objects of that type that you own. Click on the title of an object to go to the landing page of that deposit. Click on the edit icon next to an object listed to edit the metadata. If you have not finalised the publication of an object, a remove icon will be visible that allows you to mark it as deleted.
 
@@ -77,9 +77,10 @@ ______________
 
 The favourites tab shows all items currently marked as favourite. You can use the 'Download JSON' button to obtain the listing in JSON format and the 'Download script' button to download a script that allows you to download all items in your favourites to your system. The 'Remove all' button will remove all items currently in your favourites listing.
 
- .. image:: ../img/account-favourites.png
-   :align: center
-   :width: 90%
+.. image:: ../img/account-favourites.png
+  :align: center
+  :width: 90%
+  :alt: Account favourites
 
 .. _account-api-tokens:
 

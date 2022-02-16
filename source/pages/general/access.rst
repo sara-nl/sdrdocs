@@ -1,8 +1,8 @@
 .. _get-access:
 
-*****************
+**********************************
 Accessing the service
-*****************
+**********************************
 
 On this page you will find general information about accessing the Data Repository service once you have obtained an account.
 
@@ -31,7 +31,7 @@ Once you have successfully authenticated, you can start:
 - Select files for your basket and favourites
 - Administer digital objects of other users that belong to your community (community administrator only)
 
-.. _forgot-password
+.. _forgot-password:
 
 ==============================
 Forgot password

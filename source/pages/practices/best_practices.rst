@@ -33,7 +33,7 @@ If you think your file format should be accepted by the repository, but is curre
 .. _file-size:
 
 File sizes and count
-_________________
+____________________
 
 - **Maximum file size**: 4 GB using the online deposit form
 
@@ -42,7 +42,7 @@ The maximum deposit data volume is 10 GB and the maximum number of files that ca
 .. _data-documentation:
 
 Data documentation
-_________________
+__________________
 
 Data documentation ensures that research data are understood and therefore used by current and future users (including the researcher). It is vital to store the data in a structured and consistent way with appropriate data documentation. The documentation can be a description explaining what the data is, what you can do with it and how it can be used. Even more technical documentation about the exact file format could be of use. Documentation can be provided in one of the accepted or preferred file formats.
 
@@ -75,7 +75,7 @@ You can create collections and collections of other collections to structure you
 .. _data-anonymization:
 
 Data anonymization
-_________________
+__________________
 
 Before you upload the files you should check whether they contain privacy-sensitive information within the meaning of the regulations and guidelines in the `General Data Protection Regulation`_ (GDPR). If you give access to the data publicly or any other user, the data must be completely anonimyzed.
 

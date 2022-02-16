@@ -26,9 +26,9 @@ You can download single files by clicking on the **download** link next to the f
 
 .. _downloads-basket:
 
-==========================
+======================================
 Adding objects or files to your basket
-==========================
+======================================
 
 To download several files at the same time, your can add objects or files to your basket. This can be done by clicking on the 'Add to basket' button in the top-right corner, or by selecting individual files in the files table and then clicking on the basket icon button directly above the table.
 
@@ -39,9 +39,9 @@ Once you have selected all the objects and/or files you want, you can download t
    :width: 90%
    :alt: Account basket
 
-==========================
+=====================================
 Adding objects to your favourites
-==========================
+=====================================
 
 You can add any object to your favourites by clicking on the 'Favourite' button in the top-right corner of the landing page of an object. Go to the favourites tab in your account overview to see the list of favourited items.
 

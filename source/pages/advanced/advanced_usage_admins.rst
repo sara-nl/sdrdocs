@@ -21,29 +21,33 @@ The first question to ask before making a metadata schema is: Is it necessary to
 
 To define a metadata schema for your data, go to the account overview page and click on the **Metadata schemas** tab on the left. Hit the **Create new metadata schema** button to go to the metadata schema creation form.
 
- .. image:: ../img/account-schemas.png
-   :align: center
-   :width: 90%
+.. image:: ../img/account-schemas.png
+  :align: center
+  :width: 90%
+  :alt: Account schemas
 
 You need to provide a title, creator, and description for the metadata schema:
 
- .. image:: ../img/schema-form-1.png
-   :align: center
-   :width: 90%
+.. image:: ../img/schema-form-1.png
+  :align: center
+  :width: 90%
+  :alt: Schema form 1
 
 Then add metadata fields to the schema on the tab 'Fields'. A metadata field contains information about the field such as description, default value, type and if the field is optional or not.
 
- .. image:: ../img/schema-form-2.png
-   :align: center
-   :width: 90%
+.. image:: ../img/schema-form-2.png
+  :align: center
+  :width: 90%
+  :alt: Schema form 2
 
 To save the field click on the **Save** icon under **Actions**. You can move a field up or down in position by using the arrow buttons after each field.
 
 On the 'Permissions' tab you can add administrators who can also manage the schema.
 
- .. image:: ../img/schema-form-3.png
-   :align: center
-   :width: 90%
+.. image:: ../img/schema-form-3.png
+  :align: center
+  :width: 90%
+  :alt: Schema form 3
 
 Once satisfied hit the **Create** button to finalise the creation of the metadata schema. Please note that all schemas are public and can be used by any user.
 
@@ -57,33 +61,38 @@ For a complete description of community objects, see :ref:`Communities <advanced
 
 To create a new community or to see the list of current communities you own or are a member of, go to your account page and then choose the **Communities** tab on the left. Hit the **Create new community** to go to the community creation form.
 
-  .. image:: ../img/account-communities.png
-   :align: center
-   :width: 90%
+.. image:: ../img/account-communities.png
+  :align: center
+  :width: 90%
+  :alt: Account communities
 
 You can also create the community from the profile tab of your account overview page click on **Create new community** to go to the community creation form. A new page will be open where you need to provide more information about the new community you make such as the title, creator, and description:
 
-  .. image:: ../img/community-form-1.png
-   :align: center
-   :width: 90%
+.. image:: ../img/community-form-1.png
+  :align: center
+  :width: 90%
+  :alt: Community form 1
 
 More information such as description, default collection and default metadata schema can be defined for the community on the 'Relationships' tab:
 
-  .. image:: ../img/community-form-2.png
-   :align: center
-   :width: 90%
+.. image:: ../img/community-form-2.png
+  :align: center
+  :width: 90%
+  :alt: Community form 2
 
 On the 'Policies' tab you can choose the policies you want to apply to the community.
 
- .. image:: ../img/community-form-3.png
-   :align: center
-   :width: 90%
+.. image:: ../img/community-form-3.png
+  :align: center
+  :width: 90%
+  :alt: Community form 3
 
 If you have a closed-member community, you should assign at least one member to the community on the 'Permissions' tab. Here you can also choose who can be the administrators of the community. If you are a community administrator, you have special privileges regarding the reviewing of objects, and editing their metadata:
 
- .. image:: ../img/community-form-5.png
-   :align: center
-   :width: 90%
+.. image:: ../img/community-form-5.png
+  :align: center
+  :width: 90%
+  :alt: Community form 5
 
 After you enter the information, click **Create** to make the community.
 

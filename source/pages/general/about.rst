@@ -1,8 +1,8 @@
 .. _about-data-repository:
 
-**************
+****************************
 About SURF Data Repository
-**************
+****************************
 
 In this page you will find general information about the SURF Data Repository service, how it works and how to get access.
 
@@ -11,9 +11,9 @@ In this page you will find general information about the SURF Data Repository se
 
 .. _intro-datarepo:
 
-====================
+========================================
 Introduction to Data Repository
-====================
+========================================
 
 Data Repository Service is a trusted digital repository that ensures long-term data preservation. The Data Repository provides an an online data publication platform service to share and publish research data. The aim of the service is to provide support for researcher to publish research data and to preserve published datasets for the long-term, thereby satisfying the requirements of publishers, financiers and (Dutch) science organisations regarding data publication. Furthermore, the user is complete freedom to decide on the structure of the published data, attached metadata schemas, community and access levels.
 

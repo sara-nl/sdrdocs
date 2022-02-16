@@ -61,9 +61,9 @@ For most requests, an example is shown using a cURL command. If a payload is sen
 
 .. _rest-api-ref-object-retrieval:
 
-==============
+================
 Object retrieval
-==============
+================
 
 The following requests concern the retrieval of information about deposits and communities.
 
@@ -161,7 +161,7 @@ Returns (example):
 .. _rest-api-ref-list-deposits-per-community:
 
 List all community deposits
-______________________
+___________________________
 
 List all deposits of a specific community.
 
@@ -231,7 +231,7 @@ Returns:
 .. _rest-api-ref-list-all-community-collections:
 
 List all community collections
-______________________
+______________________________
 
 List all collections of a community.
 
@@ -577,7 +577,7 @@ Command:
 .. _rest-api-ref-get-specific-collection:
 
 Get specific collection
-______________________
+_______________________
 
 List the metadata of the collection specified by ``COLLECTION_ID``. The metadata of all collections are always public.
 
@@ -703,7 +703,7 @@ On metadata validation error when a required field is missing:
 .. _rest-api-ref-upload-file-into-draft-deposit:
 
 Upload file into draft deposit
-______________________
+______________________________
 
 To upload a new file into a draft deposit object, first you need to identify the file bucket URL. This URL can be found in the information returned when querying a draft deposit, in the 'links/files' section of the returned data.
 
@@ -786,7 +786,7 @@ Returns:
 .. _rest-api-ref-delete-file-from-draft-deposit:
 
 Delete file from draft deposit
-______________________
+______________________________
 
 Send a DELETE request to the file's URL, which is the same URL used for uploading.
 
@@ -865,7 +865,7 @@ Returns:
 .. _rest-api-ref-update-draft-deposit-metadata:
 
 Update draft deposit metadata
-______________________
+_____________________________
 
 This action updates the draft deposit with new information.
 
@@ -886,7 +886,7 @@ This action updates the draft deposit with new information.
 Example 1
 -----------
 
-The following example adds two values to the metadata field `keywords` of an existing draft deposit.
+The following example adds two values to the metadata field ``keywords`` of an existing draft deposit.
 
 Command:
 
@@ -980,7 +980,7 @@ Returns:
 Example 3
 -----------
 
-The next example updates the community-specific metadata fields ``field_1`` and ``field_2`` of an existing draft deposit of community with identifier ``community:surf``. Note that in order to update a community-specific field, the JSONPath `/community/FIELD_NAME` is required.
+The next example updates the community-specific metadata fields ``field_1`` and ``field_2`` of an existing draft deposit of community with identifier ``community:surf``. Note that in order to update a community-specific field, the JSONPath ``/community/FIELD_NAME`` is required.
 
 Command:
 
@@ -1060,7 +1060,7 @@ The supplied value for the metadata field is invalid.
 .. _rest-api-ref-add-externally-referenced-files-to-draft-deposit:
 
 Add externally referenced files to draft deposit
-______________________
+________________________________________________
 
 To add files that are located outside of Data Repository, a reference to that file can be added to a draft deposit object by defining a list of external references that include a file name and the corresponding EPIC PID. External references are added as normal metadata using a JSON Patch and can only be added during the draft stage.
 
@@ -1085,7 +1085,7 @@ Command:
 .. _rest-api-ref-submit-draft-deposit-for-publication:
 
 Submit draft deposit for publication
-______________________
+____________________________________
 
 This action marks the draft deposit as complete and submits it for publication. Please be advised that publishing the draft will make its files immutable.
 
@@ -1192,7 +1192,7 @@ Returns:
 .. _rest-api-ref-update-published-deposit-metadata:
 
 Update published deposit metadata
-______________________
+_________________________________
 
 This request updates the metadata of an already published deposit without creating a new version.
 
@@ -1234,7 +1234,7 @@ Command:
 .. _rest-api-ref-get-specific-deposit-file-status:
 
 Get status of specific deposit file
-_________________________
+___________________________________
 
 Get the status of a file on index ``ID`` in the file list of the deposit specified by ``NAMESPACE`` and ``DEPOSIT_ID``. This will succeed if the file is valid.
 
@@ -1256,10 +1256,10 @@ Command:
 
 ``curl "https://$SDR_HOST/api/objects/deposit/c800a32839fa47d9/status/0"``
 
-.. _rest-api-ref-get-specific-deposit-file-status:
+.. _rest-api-ref-stage-specific-deposit-file:
 
 Stage specific deposit file
-_________________________
+___________________________
 
 Stage the file on index ``ID`` in the file list of the deposit specified by ``NAMESPACE`` and ``DEPOSIT_ID``. This will succeed if the file is valid and offline.
 
@@ -1316,7 +1316,7 @@ Command:
 .. _rest-api-ref-delete-published-object:
 
 Delete published object
-______________________
+_______________________
 
 Delete a published object, either a collection or deposit. This can only be done by a site administrator.
 
