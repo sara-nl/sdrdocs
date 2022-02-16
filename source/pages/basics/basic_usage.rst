@@ -1,7 +1,7 @@
 .. _basic-usage:
 
 ******************************
-Navigating the data repository
+Navigating the Data Repository
 ******************************
 
 The main goal of the SURF data repository is to make large datasets findable and accessible. This page provides information on the basic usage of the data repository, such as discovering, searching, and downloading data. For the majority of the functionality described on this page registration is not required.
@@ -23,13 +23,13 @@ Homepage
 
    **Community** is a group of common users that are part of a research domain or initiative
 
-   See the :ref:`objects reference <advanced-objects>` for more information on object types.
+   See the :ref:`Objects reference <advanced-objects>` for more information on object types.
 
 On the homepage you can quickly find the latest deposits and collections, start depositing your own data, or search for existing digital objects for download.
 
 The search bar can be used to quickly find deposits and collections. It supports faceted search by prepending a field before your search term, for example *title:data*.
 
-Clicking on the avatar in the top right corner presents you with a dropdown menu where you can locate your account details. The ``My account`` button sends you to your `account page`_. Here you can create and manage your deposits, collections, groups and, if allowed, communities and schemas. Please refer to the :ref:`advanced usage <advanced-usage>` section of the documentation for more information.
+Clicking on the avatar in the top right corner presents you with a dropdown menu where you can locate your account details. The ``My account`` button sends you to your `account page`_. Here you can create and manage your deposits, collections, groups and, if allowed, communities and schemas. Please refer to the :ref:`Advanced usage <advanced-usage>` section of the documentation for more information.
 
 .. image:: ../img/homepage.png
    :align: center
@@ -78,7 +78,7 @@ Download the deposit
 
 To download a single file of the deposit use the ``Download`` button in the files overview. A file can be *online* or *offline*. If a file is *online* it can be downloaded immediately. If a file is *offline* it needs to be staged before it is available for download. To stage a file, login to the data repository and click the ``Request`` button.
 
-To download the entire deposit click the ``Download as`` button in the top right corner of the page. The deposit can be downloaded as ZIP archive or as a BagIt. If not all files are *online* you will receive an error message. To resolve this please stage all files before retrying the operation.
+To download the entire deposit click the ``Download as`` button in the top right corner of the page. The deposit can be downloaded as ZIP archive or as a BagIt archive file. If not all files are *online* you will receive an error message. To resolve this please stage all files before retrying the operation.
 
 .. image:: ../img/deposit-landing-page-download.png
    :align: center
