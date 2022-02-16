@@ -1,5 +1,3 @@
-.. _contents:
-
 *****************************
 Data Repository Documentation
 *****************************
@@ -14,8 +12,9 @@ Welcome to the user documentation of the Data Repository service provided by `SU
 
 We welcome your comments at helpdesk@surfsara.nl to help us improve the documentation.
 
+.. sidebar:: Need help?
 
-.. _general:
+    Do you need help with the use of the Data Repository or this user documentation? We are more than willing to assist! Just contact us at helpdesk@surfsara.nl.
 
 .. toctree::
    :maxdepth: 1
@@ -24,9 +23,6 @@ We welcome your comments at helpdesk@surfsara.nl to help us improve the document
    pages/general/about
    pages/general/access
    pages/practices/best_practices
-
-
-.. _basic-usage:
 
 .. toctree::
    :maxdepth: 1
@@ -37,12 +33,9 @@ We welcome your comments at helpdesk@surfsara.nl to help us improve the document
    pages/basics/metadata
    pages/basics/downloads
 
-
-.. _advanced-usage:
-
 .. toctree::
    :maxdepth: 1
-   :caption: Advanced
+   :caption: Advanced Usage
 
    pages/advanced/advanced_usage
    pages/advanced/advanced_usage_admins
@@ -50,34 +43,19 @@ We welcome your comments at helpdesk@surfsara.nl to help us improve the document
    pages/advanced/account
    pages/advanced/objects
 
-.. _rest-api:
-
 .. toctree::
-   :caption: REST API
    :maxdepth: 1
+   :caption: REST API
 
    pages/rest-api/intro
    pages/rest-api/workflow-deposit
    pages/rest-api/reference
 
-.. _practices:
-
-.. toctree::
-   :maxdepth: 1
-
-
-.. _appendix:
-
 .. toctree::
    :maxdepth: 1
    :caption: Appendix
 
-   pages/appendix.md
-
-
-.. sidebar:: Need help?
-
-    Do you need help with the use of the Data Repository or this user documentation? We are more than willing to assist! Just contact us at helpdesk@surfsara.nl.
+   pages/appendix
 
 
 .. Links:
