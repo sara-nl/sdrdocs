@@ -11,14 +11,10 @@ The process of getting data into the data repository and publishing it is called
 .. contents::
     :depth: 8
 
-.. _prepare-data:
-
 Prepare data
 ============
 
 To prepare data for a deposit there are some best practices for the file format, file size, metadata, data documentation and structuring. For more information, visit the :ref:`best practices <best-practices>` page.
-
-.. _deposit-workflow:
 
 Deposit via the browser
 =======================
@@ -64,8 +60,6 @@ To deposit a new data set login to the service and use the ``Deposit now`` or ``
     :alt: Deposit workflow 3
 
    When you have checked all metadata in the right sidebar, click on the ``Complete`` button to finalize your deposit.
-
-.. _deposit-rest-api-:
 
 Deposit via the REST API
 ========================
