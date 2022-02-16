@@ -29,11 +29,12 @@ To download multiple files from the same deposit, select multiple files and use 
 Download using a script
 =======================
 
-The recommended method to download multiple deposits or entire collections is the download script. The download script is a tool that automatically downloads all objects and files in your basket or favourites. To download objects using the download script is a three step process:
+The recommended method to download multiple deposits or entire collections is the download script. The download script is a tool that automatically downloads all objects and files in your basket or favourites. To download objects using the download script is a four step process:
 
 1. install and configure the script;
-2. select objects for downloading;
-3. run the download script.
+2. get an API token;
+3. select objects for downloading;
+4. run the download script.
 
 Each of these steps is described in more detail below.
 
@@ -53,6 +54,9 @@ To acquire the script, login to the repository and go to the `basket menu`_ (cli
 
    cd /home/user/script-directory
    pip install -r requirements.txt
+
+Get an API token
+----------------
 
 The script requires API access to download files. The script uses an access token that can be acquired through the API tokens tab on the account page. To create an API token go to the `API tokens tab`_ and create a new token by filling in a token name in the top right corner and clicking ``Add API token``. Copy the token and store it in a safe place. If the token is lost the old token can be removed and a new token can be generated via the API tokens tab.
 
