@@ -1,8 +1,6 @@
-.. _contents:
-
-*****************************
-Data Repository Documentation
-*****************************
+**********************************
+Data Repository User documentation
+**********************************
 
 .. image:: pages/img/logo.png
    :width: 700 px
@@ -15,7 +13,7 @@ Welcome to the user documentation of the Data Repository service provided by `SU
 We welcome your comments at helpdesk@surfsara.nl to help us improve the documentation.
 
 
-.. _general:
+.. _general-toc:
 
 .. toctree::
    :maxdepth: 1
@@ -26,7 +24,7 @@ We welcome your comments at helpdesk@surfsara.nl to help us improve the document
    pages/practices/best_practices
 
 
-.. _basic-usage:
+.. _basic-usage-toc:
 
 .. toctree::
    :maxdepth: 1
@@ -38,7 +36,7 @@ We welcome your comments at helpdesk@surfsara.nl to help us improve the document
    pages/basics/downloads
 
 
-.. _advanced-usage:
+.. _advanced-usage-toc:
 
 .. toctree::
    :maxdepth: 1
@@ -50,7 +48,7 @@ We welcome your comments at helpdesk@surfsara.nl to help us improve the document
    pages/advanced/account
    pages/advanced/objects
 
-.. _rest-api:
+.. _rest-api-toc:
 
 .. toctree::
    :caption: REST API
@@ -66,13 +64,13 @@ We welcome your comments at helpdesk@surfsara.nl to help us improve the document
    :maxdepth: 1
 
 
-.. _appendix:
+.. _appendix-toc:
 
 .. toctree::
    :maxdepth: 1
    :caption: Appendix
 
-   pages/appendix.md
+   pages/appendix.rst
 
 
 .. sidebar:: Need help?

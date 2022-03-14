@@ -29,7 +29,7 @@ For what data
 
 The Data Repository service is suitable for publishing research data especially in the field of Big Data sciences. The repository imposes no limits on the data volume and number of files, but does have some guidelines on how to efficiently store your data for publication.
 
-.. _get-access:
+.. _get-access-about:
 
 ====================
 How to get access

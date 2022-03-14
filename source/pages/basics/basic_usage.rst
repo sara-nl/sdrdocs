@@ -132,10 +132,6 @@ Advanced searches can be performed by clicking the Search button, then entering 
    :width: 90%
    :alt: Search advanced
 
-.. sidebar::
-    If you have the PID (Persistent Identifier) of the data you can directly search in the `Handle Server`_ and get the URL to the location of the data.
-
-
 .. note:: If you have the PID (Persistent Identifier) of the data you can directly search in the `Handle Server`_ and get the URL to the location of the data.
 
 .. Links:

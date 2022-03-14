@@ -9,7 +9,7 @@ This page provides information on best practices while using the repository.
 .. contents::
     :depth: 4
 
-.. _prepare-data:
+.. _preparing-data:
 
 ==================
 Preparing data
@@ -48,7 +48,7 @@ Data documentation ensures that research data are understood and therefore used 
 
 .. _best-practices-metadata:
 
-Metadata
+Object metadata
 _________________
 
 Metadata provides structured information about the data. Depending on the type of data, there are different types of metadata:
