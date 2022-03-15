@@ -56,6 +56,8 @@ To use the advanced search function, click on the search button on the homepage 
    :width: 90%
    :alt: Advanced search
 
+.. note:: If you have the PID (Persistent Identifier) of the data you can directly search in the `Handle Server`_ and get the URL to the location of the data.
+
 .. _deposit-landing-page:
 
 Deposit landing page
@@ -119,30 +121,6 @@ Collection citations
 If you want to add a citation of the collection you can copy the provided text shown in the box at the bottom right in the right sidebar of the landing page. Click on the clipboard icon to copy the text to your clipboard.
 
 Select a different citation style in the dropdown selection box to change it to the style you need.
-
-.. _search-data:
-
-==================================
-Search and discover datasets
-==================================
-
-To search for data use the search functionality on the home page. The text entered can be part of a title, keyword, abstract or any other metadata.
-
-Both registered and unregistered users can search for data. You can also make search within specific communities, which means the search results will be limited to that community.
-
-.. image:: ../img/search.png
-   :align: center
-   :width: 90%
-   :alt: Search
-
-Advanced searches can be performed by clicking the Search button, then entering the additional search criteria on the page that is shown. You can set advanced search criteria to search for deposits, collections, schemas, communities or combinations of any of them. You can also order the search results by Title, Creator, Identifier, or Creation date.
-
-.. image:: ../img/search-advanced.png
-   :align: center
-   :width: 90%
-   :alt: Search advanced
-
-.. note:: If you have the PID (Persistent Identifier) of the data you can directly search in the `Handle Server`_ and get the URL to the location of the data.
 
 .. Links:
 

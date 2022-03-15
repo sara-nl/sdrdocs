@@ -14,7 +14,7 @@ We welcome your comments at helpdesk@surfsara.nl to help us improve the document
 
 .. sidebar:: Need help?
 
-Do you need help with the use of the Data Repository or this user documentation? We are more than willing to assist! Just contact us at helpdesk@surfsara.nl.
+   Do you need help with the use of the Data Repository or this user documentation? We are more than willing to assist! Just contact us at helpdesk@surfsara.nl.
 
 .. _general-toc:
 
@@ -37,7 +37,7 @@ Do you need help with the use of the Data Repository or this user documentation?
    pages/basics/metadata
    pages/basics/downloads
 
-.. _advanced-usage-toc:
+.. _toc-advanced-usage:
 
 .. toctree::
    :maxdepth: 1

@@ -11,10 +11,10 @@ The process of getting data into the data repository and publishing it is called
 .. contents::
     :depth: 8
 
-Prepare data
-============
+Prepare files
+=============
 
-To prepare data for a deposit there are some best practices for the file format, file size, metadata, data documentation and structuring. For more information, visit the :ref:`best practices <best-practices>` page.
+To prepare the data files for a deposit there are some best practices for the file format, file size, metadata, data documentation and structuring. For more information, visit the :ref:`best practices <best-practices>` page.
 
 Deposit via the browser
 =======================
@@ -72,4 +72,4 @@ If you have many deposits to create, or have an automated workflow set up or app
 .. _`production instance`: https://repository.surfsara.nl
 .. _`file formats`: https://repository.surfsara.nl/docs/formats
 .. _`Terms of Use`: https://repository.surfsara.nl/docs/terms
-.. _`Data Producer Agreement`: https://repository.surfsara.nl/docs/data-producer
+.. _`Data Producer Agreement`: https://servicedesk.surfsara.nl/wiki/display/WIKI/Data+Repository%3A+Data+Producer+Agreement
