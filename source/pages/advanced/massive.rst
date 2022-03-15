@@ -28,7 +28,7 @@ Creating deposits
 
 Contrary to the online deposit workflow some steps in the creation of deposits change in the large-scale deposit workflow.
 
-.. _prepare-data:
+.. _prepare-data-massive:
 
 Prepare data
 ______________

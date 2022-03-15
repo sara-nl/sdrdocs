@@ -16,7 +16,7 @@ SURF Data Repository is designed for the publication of large datasets: research
 If your group or institute wishes to publish several datasets of different sizes, please inquire about the possibilities. If you want to know whether your dataset is eligible for this service, please visit the website of `Research Data Netherlands`_ (RDNL) and use the decision tool. RDNL is a collaboration between DANS, 4TU and SURF.
 
 .. Links
-.. _`Dans`: https://dans.knaw.nl/en/front-page?set_language=en
+.. _`DANS`: https://dans.knaw.nl/en/front-page?set_language=en
 .. _`4TU`: https://data.4tu.nl/portal
 .. _`EUDAT`: http://eudat.eu/
 .. _`Zenodo`: http://zenodo.org/

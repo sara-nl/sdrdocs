@@ -6,6 +6,17 @@ Best Practices
 
 To ensure that the deposits in the data repository are easily discoverable and usable by as many users as possible, all deposits and collections need to be well structured and contain proper metadata. This page provides some guide lines to help create high-quality deposits and collections. To prepare data for a deposit you need to consider the following points:
 
+.. contents::
+    :depth: 4
+
+.. _preparing-data:
+
+==================
+Preparing data
+==================
+
+To prepare data for a deposit you need to consider the following points:
+
 .. _file-formats:
 
 File formats
@@ -35,8 +46,8 @@ Data documentation
 
 Data documentation ensures that research data is understood and therefore used by current and future users (including the researcher). It is vital to store data in a structured and consistent way with appropriate data documentation. The documentation can be a description explaining what the data is, what you can do with it and how it can be used. In some cases additional technical documentation about the exact file format could be of use. Documentation can be provided in any of the accepted or preferred file formats.
 
-Metadata
---------
+Object metadata
+_________________
 
 Metadata provides structured information about the data. There are different types of metadata:
 

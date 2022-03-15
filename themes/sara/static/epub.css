@@ -61,7 +61,6 @@ div.footer a {
 }
 
 div.related {
-    background-color: {{ theme_relbarbgcolor }};
     line-height: 30px;
     color: {{ theme_relbartextcolor }};
 }

@@ -1,6 +1,6 @@
-*****************************
-Data Repository Documentation
-*****************************
+**********************************
+Data Repository User documentation
+**********************************
 
 .. image:: pages/img/logo.png
    :width: 700 px
@@ -14,7 +14,9 @@ We welcome your comments at helpdesk@surfsara.nl to help us improve the document
 
 .. sidebar:: Need help?
 
-    Do you need help with the use of the Data Repository or this user documentation? We are more than willing to assist! Just contact us at helpdesk@surfsara.nl.
+Do you need help with the use of the Data Repository or this user documentation? We are more than willing to assist! Just contact us at helpdesk@surfsara.nl.
+
+.. _general-toc:
 
 .. toctree::
    :maxdepth: 1
@@ -24,6 +26,8 @@ We welcome your comments at helpdesk@surfsara.nl to help us improve the document
    pages/general/access
    pages/practices/best_practices
 
+.. _basic-usage-toc:
+
 .. toctree::
    :maxdepth: 1
    :caption: Basic usage
@@ -32,6 +36,8 @@ We welcome your comments at helpdesk@surfsara.nl to help us improve the document
    pages/basics/deposit
    pages/basics/metadata
    pages/basics/downloads
+
+.. _advanced-usage-toc:
 
 .. toctree::
    :maxdepth: 1
@@ -43,6 +49,8 @@ We welcome your comments at helpdesk@surfsara.nl to help us improve the document
    pages/advanced/account
    pages/advanced/objects
 
+.. _rest-api-toc:
+
 .. toctree::
    :maxdepth: 1
    :caption: REST API
@@ -51,11 +59,23 @@ We welcome your comments at helpdesk@surfsara.nl to help us improve the document
    pages/rest-api/workflow-deposit
    pages/rest-api/reference
 
+.. _practices:
+
+.. toctree::
+   :maxdepth: 1
+
+
+.. _appendix-toc:
+
 .. toctree::
    :maxdepth: 1
    :caption: Appendix
 
    pages/appendix
+
+.. sidebar:: Need help?
+
+    Do you need help with the use of the Data Repository or this user documentation? We are more than willing to assist! Just contact us at helpdesk@surfsara.nl.
 
 
 .. Links:
