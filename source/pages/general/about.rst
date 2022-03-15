@@ -1,40 +1,23 @@
-.. _about-data-repository:
-
-****************************
+**************************
 About SURF Data Repository
-****************************
+**************************
 
-In this page you will find general information about the SURF Data Repository service, how it works and how to get access.
+The Data Repository Service is a trusted digital repository that ensures long-term data preservation and provides an online data publication platform service to share and publish research data. The aim of the service is to provide support for researcher to publish research data and to preserve published datasets for the long-term, thereby satisfying the requirements of publishers, financiers and (Dutch) science organisations regarding data publication. Furthermore, the user has complete freedom to decide on the structure, the metadata schemas, the designated community, and access levels of the published data.
 
-.. contents::
-    :depth: 4
+The repository provides access to mostly open access data which can be found and downloaded by anyone interested. You can find the data repository at https://repository.surfsara.nl. For publishing datasets an account is required, please see :ref:`this page <get-access>` for information on how to obtain an account.
 
-.. _intro-datarepo:
+There is a direct connection between the data repository service and other SURF services such as the Data Archive. All data in the data repository will eventually end up in the data archive for long-term storage and preservation. The repository is tape-aware, this means that data can automatically be put offline when it is not required for a certain amount of time.
 
-========================================
-Introduction to Data Repository
-========================================
+Does my dataset qualify for this service?
+=========================================
 
-Data Repository Service is a trusted digital repository that ensures long-term data preservation. The Data Repository provides an an online data publication platform service to share and publish research data. The aim of the service is to provide support for researcher to publish research data and to preserve published datasets for the long-term, thereby satisfying the requirements of publishers, financiers and (Dutch) science organisations regarding data publication. Furthermore, the user is complete freedom to decide on the structure of the published data, attached metadata schemas, community and access levels.
+SURF Data Repository is designed for the publication of large datasets: research data that is several TBs to PBs in size. For smaller datasets, please consult `DANS`_ and/or `4TU`_. In a European context, you can also make use of the data services of `EUDAT`_ or `Zenodo`_ (CERN).
 
-There is a direct connection between the data repository service and other SURF services such as the Data Archive. The data that you publish in the data repository will eventually end up on the data archive for long-term storage and preservation. The repository is tape-aware, that means that data can automatically be put offline when it is not required for a certain amount of time.
+If your group or institute wishes to publish several datasets of different sizes, please inquire about the possibilities. If you want to know whether your dataset is eligible for this service, please visit the website of `Research Data Netherlands`_ (RDNL) and use the decision tool. RDNL is a collaboration between DANS, 4TU and SURF.
 
-This document is the user guide for basic and advanced usage of the data repository service and also provide best practice in preparing your data and using the service.
-
-.. _what-data:
-
-====================
-For what data
-====================
-
-The Data Repository service is suitable for publishing research data especially in the field of Big Data sciences. The repository imposes no limits on the data volume and number of files, but does have some guidelines on how to efficiently store your data for publication.
-
-.. _get-access-about:
-
-====================
-How to get access
-====================
-
-You can get access to the Data Repository by contacting the SURF helpdesk at helpdesk.surfsara.nl. For large publications you will need a contract or be incorporated in existing contracts of your institute.
-
-You can also contact your institute's IT department or research desk for more information and further assistance.
+.. Links
+.. _`DANS`: https://dans.knaw.nl/en/front-page?set_language=en
+.. _`4TU`: https://data.4tu.nl/portal
+.. _`EUDAT`: http://eudat.eu/
+.. _`Zenodo`: http://zenodo.org/
+.. _`Research Data Netherlands`: https://researchdata.nl/research-data-decision-tree/

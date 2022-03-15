@@ -61,3 +61,4 @@ Linked data
 ==============================
 
 A term used to describe a recommended best practice for exposing, sharing, and connecting pieces of data, information and knowledge on the Semantic Web using RDF. Linked data refers to data published on the web in such a way that it is machine-readable, that its meaning is explicitly defined, that it is linked to other external data sets, and that in turn it can be linked to from external data sets ( [more info](http://linkeddata.org)).
+

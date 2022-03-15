@@ -1,25 +1,19 @@
-.. _metadata:
-
 ********
 Metadata
 ********
 
-In the Data Repository service, any digital resource is identified and described by metadata. In order to increase the findability, visibility and understanding of your publication or any related object, metadata is added that describes the object using a pre-defined set of fields.
+In the Data Repository service, any deposit is identified and described by metadata. In order to increase the findability, visibility and understanding of your deposit and any related object, metadata is added to describe the deposit using a pre-defined set of fields.
 
-.. contents::
+.. contents:: Contents
     :depth: 8
+    :local:
 
 .. _metadata-default:
 
-================
 Default metadata
 ================
 
-Every digital resource must be described by a number of default set of metadata fields in order to uniquely identify it. Some of these fields are optional, but it is recommended to provide as much information as possible.
-
-Without the mandatory fields provided, the repository will not allow completing the publication.
-
-The set of metadata fields is based on the `Dublin Core metadata definition v1.1`_. The following fields are mandatory:
+Every deposit or collection must be described by a default set of metadata fields in order to uniquely identify it. Some of these fields are optional, but it is recommended to provide as much information as possible. The set of metadata fields is based on the `Dublin Core metadata definition v1.1`_. The following fields are mandatory:
 
 ================= =========== =============
 Field name        Type        Description
@@ -48,19 +42,17 @@ Contact email     String      Contact email address for users
 
 .. _metadata-community:
 
-==================
 Community metadata
 ==================
 
-If an object is published under a community, it is possible that additional fields need to be provided before a publication can be completed. If some of these fields are mandatory, a publication cannot be completed without providing the values for these fields.
+Some communities may provide an additional set of metadata fields. Some of these fields might be mandatory and need to be filled in before the object can be published in the community.
 
 .. _metadata-collection:
 
-===================
 Collection metadata
 ===================
 
-In addition to the community metadata fields, an object can be published under a collection. Again, it is possible that additional fields need to be provided before a publication can be completed. If some of these fields are mandatory, a publication cannot be completed without providing the values for these fields.
+In addition to a community, an object can also be published under a collection. Some collections may provide additional optional or required metadata fields that need to be provided before a publication can be completed.
 
 .. Links:
 
