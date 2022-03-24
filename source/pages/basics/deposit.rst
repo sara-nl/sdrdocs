@@ -19,9 +19,16 @@ To prepare the data files for a deposit there are some best practices for the fi
 Deposit via the browser
 =======================
 
-To deposit a new data set login to the service and use the ``Deposit now`` or ``Upload`` button to start the process. This process consists of the following three steps:
+To deposit a new data set login to the service and use the ``Deposit now`` or ``Upload`` button to start the process. This process consists of the following steps:
 
-1. On the 'Create a new deposit' page, use the ``Add files`` button to select the files to deposit and click ``Start upload`` to upload the file(s).
+0. On the 'Create new deposit' page, select a community to deposit under and click 'Next'. The community influences your abilities and might trigger specific workflows. Also, additional metadata fields might have to be annotated.
+
+   .. image:: ../img/deposit-workflow-0.png
+    :align: center
+    :width: 90%
+    :alt: Deposit workflow 0
+
+1. On the 'Create new deposit' page, use the ``Add files`` button to select the files to deposit and click ``Start upload`` to upload the file(s).
 
    .. note:: Make sure that all files are uploaded in an acceptable file format. Valid file formats can be found on the `file formats`_ documentation page. If the data format you are trying to upload is not supported, please contact the helpdesk.
 
