@@ -88,7 +88,7 @@ Where ``<token>`` is the API token you acquired in step one. By default the down
 
 .. code-block:: bash
 
-   ./repository-download.py --target https://tdr-test.surfsara.nl/ <token>
+   ./repository-download.py --target https://repository.surfsara.nl/ <token>
 
 To download the all items from your favourites run:
 
@@ -109,5 +109,5 @@ And for a full list of options and general usage instructions, please run:
 .. _`Python website`: https://www.python.org
 .. _`introductory tutorial for the terminal`: https://computers.tutsplus.com/tutorials/navigating-the-terminal-a-gentle-introduction--mac-3855
 .. _`introduction to the Windows command prompt`: https://www.bleepingcomputer.com/tutorials/windows-command-prompt-introduction
-.. _`basket menu`: https://tdr-test.surfsara.nl/user#basket-tab\
-.. _`API tokens tab`: https://tdr-test.surfsara.nl/user#tokens-tab
+.. _`basket menu`: https://repository.surfsara.nl/user#basket-tab\
+.. _`API tokens tab`: https://repository.surfsara.nl/user#tokens-tab
