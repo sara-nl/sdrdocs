@@ -169,7 +169,6 @@ Unless you are using an instance of Data Repository hosted by yourself or your i
 ============ =================================== ==============
 Host         Address                             Use when
 ============ =================================== ==============
-Test         https://tdr-test.surfsara.nl        You are actively participating in a pilot or test project with SURF.
 Training     https://trng-repository.surfsara.nl You want to make a test upload or are participating in a training.
 Production   https://repository.surfsara.nl      You want to make an actual data publication.
 ============ =================================== ==============
